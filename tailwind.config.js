@@ -5,8 +5,12 @@ module.exports = {
     extend: {
       fontFamily:{
 
-        'titulo':['"Prompt"', 'sans-serif']
-      }
+        'titulo':['"Amaranth"', 'sans-serif'],
+        'descrip':['"Coda"','cursive']
+      },
+      backgroundImage: theme => ({
+        'fondo': "url('/img/portada.svg')",
+       })
       
     },
   },

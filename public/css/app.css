@@ -4229,6 +4229,10 @@ video {
   background-image: linear-gradient(to top left, var(--tw-gradient-stops));
 }
 
+.bg-fondo {
+  background-image: url('/img/portada.svg');
+}
+
 .from-transparent {
   --tw-gradient-from: transparent;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -11856,7 +11860,11 @@ video {
 }
 
 .font-titulo {
-  font-family: "Prompt", sans-serif;
+  font-family: "Amaranth", sans-serif;
+}
+
+.font-descrip {
+  font-family: "Coda", cursive;
 }
 
 .font-thin {
@@ -36248,6 +36256,10 @@ video {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .sm\:bg-fondo {
+    background-image: url('/img/portada.svg');
+  }
+
   .sm\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -43875,7 +43887,11 @@ video {
   }
 
   .sm\:font-titulo {
-    font-family: "Prompt", sans-serif;
+    font-family: "Amaranth", sans-serif;
+  }
+
+  .sm\:font-descrip {
+    font-family: "Coda", cursive;
   }
 
   .sm\:font-thin {
@@ -68097,6 +68113,10 @@ video {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .md\:bg-fondo {
+    background-image: url('/img/portada.svg');
+  }
+
   .md\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -75724,7 +75744,11 @@ video {
   }
 
   .md\:font-titulo {
-    font-family: "Prompt", sans-serif;
+    font-family: "Amaranth", sans-serif;
+  }
+
+  .md\:font-descrip {
+    font-family: "Coda", cursive;
   }
 
   .md\:font-thin {
@@ -99946,6 +99970,10 @@ video {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .lg\:bg-fondo {
+    background-image: url('/img/portada.svg');
+  }
+
   .lg\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -107573,7 +107601,11 @@ video {
   }
 
   .lg\:font-titulo {
-    font-family: "Prompt", sans-serif;
+    font-family: "Amaranth", sans-serif;
+  }
+
+  .lg\:font-descrip {
+    font-family: "Coda", cursive;
   }
 
   .lg\:font-thin {
@@ -131795,6 +131827,10 @@ video {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .xl\:bg-fondo {
+    background-image: url('/img/portada.svg');
+  }
+
   .xl\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -139422,7 +139458,11 @@ video {
   }
 
   .xl\:font-titulo {
-    font-family: "Prompt", sans-serif;
+    font-family: "Amaranth", sans-serif;
+  }
+
+  .xl\:font-descrip {
+    font-family: "Coda", cursive;
   }
 
   .xl\:font-thin {
@@ -163644,6 +163684,10 @@ video {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .\32xl\:bg-fondo {
+    background-image: url('/img/portada.svg');
+  }
+
   .\32xl\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -171271,7 +171315,11 @@ video {
   }
 
   .\32xl\:font-titulo {
-    font-family: "Prompt", sans-serif;
+    font-family: "Amaranth", sans-serif;
+  }
+
+  .\32xl\:font-descrip {
+    font-family: "Coda", cursive;
   }
 
   .\32xl\:font-thin {
