@@ -40,7 +40,7 @@
           </div>            
         </nav>
         
-          <div class="w-full fondo-uno">
+          <div class="w-full bg-gray-800">
 
             <div class="w-full flex flex-wrap">
 
@@ -68,7 +68,7 @@
           {{-- Seccion de las empresas --}}
 
           <div class="w-full h-auto border-gray-100">
-                <h1 class="py-5 font-titulo text-3xl uppercase text-center text-black">empresas y gobiernos que confian en nosotros</h1>
+                <h1 class="font-titulo text-3xl uppercase text-center text-black">empresas y gobiernos que confian en nosotros</h1>
                 {{-- Contenedor padre --}}
                 <div class="w-full flex flex-wrap justify-center items-center">
                   {{-- Targeta de precentacion, primera empresa --}}
@@ -93,11 +93,118 @@
 
                     {{-- Targeta de{{-- Targeta de precentacion, quinta empresa --}}
                     <div class="w-80 h-32 m-4 text-center">
-                      <div class="flex justify-center items-center"><img src="{{asset('img/peta-h.png')}}" class="opacity-30   img-empresas"></div>
+                      <div class="flex justify-center items-center"><img src="{{asset('img/peta-h.png')}}" class="opacity-30 img-empresas"></div>
                     </div>                    
                     
                 </div>
           </div>
+
+          {{-- Sesion de Servicios que ofrece la empresa --}}
+          <div class="w-full h-auto mt-20">
+            <h1 class=" text-black text-center font-titulo text-3xl">SOPORTE TÉCNICO</h1>
+            <div class=" w-full h-auto flex flex-wrap justify-center items-center pr-10 pl-10">
+              
+              <div class="w-3/4 h-64 pr-3 pl-3 mt-5">
+                
+                <div class="w-full flex">
+                  <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
+                    <i class="fas fa-tasks text-6xl pt-6 mt-3 text-white bg-gray-800 rounded-full w-28 h-28"></i>
+                    <h3 class=" text-black font-titulo text-1xl pt-2">MATENIMIENTO PREVENTIVO</h3>
+                    <P class="text-sm font-descrip p-3 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nemo error quibusdam voluptatum adipisci ab similique cumque repellat distinctio aspernatur enim possimus in doloribus recusandae, tempora autem tempore. Nam, itaque?</P>
+                    <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3">Ver mas..</button>
+                </div>
+
+                <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
+                  <i class="fas fa-tools text-6xl pt-6 mt-3 text-white bg-gray-800 rounded-full w-28 h-28"></i>
+                  <h3 class="text-black font-titulo text-1xl pt-2">MATENIMIENTO CORRECTIVO</h3>
+                  <P class="text-sm font-descrip p-3 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nemo error quibusdam voluptatum adipisci ab similique cumque repellat distinctio aspernatur enim possimus in doloribus recusandae, tempora autem tempore. Nam, itaque?</P>
+                  <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3">Ver mas..</button>
+              </div>
+
+              <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
+                <i class="fas fa-user-cog text-6xl pt-6 mt-3 text-white bg-gray-800 rounded-full w-28 h-28"></i>
+                <h3 class=" text-black font-titulo text-1xl pt-2">CONFIGURACIÓN DE USUARIO</h3>
+                <P class="text-sm font-descrip p-3 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nemo error quibusdam voluptatum adipisci ab similique cumque repellat distinctio aspernatur enim possimus in doloribus recusandae, tempora autem tempore. Nam, itaque?</P>
+                <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3">Ver mas..</button>
+              </div>
+
+                </div>
+               
+
+              </div>
+  
+              
+            </div>
+            {{-- <div class="mt-20">
+              <img src="{{asset('img/wave.svg')}}" alt="">
+            </div> --}}
+          </div>
+
+
+          {{-- Sesion de planes de renta --}}
+          <div class="w-full h-auto mt-60">
+            <h1 class=" text-black text-center font-titulo text-3xl">PLANES DE RENTA</h1>
+            <div class=" w-full h-auto flex flex-wrap justify-center items-center pr-10 pl-10">
+              
+              <div class="w-3/4 h-64 pr-3 pl-3 mt-5">
+                
+                <div class="w-full flex">
+                  <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
+                    <i class="fas fa-tasks text-6xl pt-6 mt-3 text-white bg-gray-800 rounded-full w-28 h-28"></i>
+                    <h3 class=" text-black font-titulo text-1xl pt-2">PLAN DE RENTA 1</h3>
+                    <P class="text-sm font-descrip p-3 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nemo error quibusdam voluptatum adipisci ab similique cumque repellat distinctio aspernatur enim possimus in doloribus recusandae, tempora autem tempore. Nam, itaque?</P>
+                    <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3">Ver mas..</button>
+                </div>
+
+                <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
+                  <i class="fas fa-tools text-6xl pt-6 mt-3 text-white bg-gray-800 rounded-full w-28 h-28"></i>
+                  <h3 class="text-black font-titulo text-1xl pt-2">PLAN DE RENTA DOS</h3>
+                  <P class="text-sm font-descrip p-3 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nemo error quibusdam voluptatum adipisci ab similique cumque repellat distinctio aspernatur enim possimus in doloribus recusandae, tempora autem tempore. Nam, itaque?</P>
+                  <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3">Ver mas..</button>
+              </div>
+
+              <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
+                <i class="fas fa-user-cog text-6xl pt-6 mt-3 text-white bg-gray-800 rounded-full w-28 h-28"></i>
+                <h3 class=" text-black font-titulo text-1xl pt-2">PLAN DE RENTA 3</h3>
+                <P class="text-sm font-descrip p-3 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nemo error quibusdam voluptatum adipisci ab similique cumque repellat distinctio aspernatur enim possimus in doloribus recusandae, tempora autem tempore. Nam, itaque?</P>
+                <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3">Ver mas..</button>
+              </div>
+
+                </div>
+               
+
+              </div>
+  
+              
+            </div>
+            {{-- <div class="mt-20">
+              <img src="{{asset('img/wave.svg')}}" alt="">
+            </div> --}}
+          </div>
+
+
+          {{-- footer de la pagina --}}
+          <footer class="w-full h-96 bg-gray-800 mt-80 pt-5">
+            <div class="bg-green-500 flex justify-between justify-items-center w-4/5 m-auto pt-10">
+
+              <div class="bg-white w-1/3 m-4">
+                <img class="w-24 h-24 rounded-full" src="{{asset('img/logo.jpeg')}}" alt="">
+              </div>
+
+              <div class="bg-white w-1/3 m-4 text-center items-center flex flex-col">
+                <h4 class="text-xl">contactos</h4>
+                <div><i class="fas fa-map-marker-alt"><span> Guerrero.</span></i></div>
+                <div><i class="fas fa-phone-alt"><span> 758-103-60-78</span></i></div>
+                <div><i class="fas fa-envelope"> cadenagarc@hotmail.com</i></div>
+              </div>
+
+              <div class="bg-white w-1/3 m-4 text-center">
+                <h4 class="text-xl">Redes sociales</h4>
+                <div><i class="fab fa-facebook-square"><span> SOLUCIONES EN IMPRECIÓN</span></i></div>
+                <div><i class="fab fa-whatsapp"></i> 758-103-60-78</div>
+              </div>
+            </div>
+          </footer>
       
         <script src="{{asset('js/index.js')}}"></script>
     </body>

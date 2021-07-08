@@ -1,4 +1,12 @@
+.img-empresas{
+    height: 150px;
+    image-rendering: auto;
+}
 .fondo-uno{
-    background-color: cyan;
+    background-color: yellow;
+}
+
+body{
+background-color: #f8f9fa;
 }
 

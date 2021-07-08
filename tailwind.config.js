@@ -9,7 +9,7 @@ module.exports = {
         'descrip':['"Coda"','cursive']
       },
       backgroundImage: theme => ({
-        'fondo': "url('/img/portada.svg')",
+        'fondo': "url('/img/amarillo.svg')",
        })
       
     },
