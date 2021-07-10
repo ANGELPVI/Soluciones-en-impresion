@@ -20,7 +20,8 @@
             
         </style>
     </head>
-    <body>     
+    <body>    
+        {{-- NavBar de la pagina --}}
         <nav class="flex items-center bg-gray-800 p-3 flex-wrap">
 
           <div class="p-2 mr-4 inline-flex items-center ">
@@ -32,9 +33,9 @@
           <div id="menu" class="hidden top-nav w-full lg:inline-flex lg:flex-grow lg:w-auto" >
 
             <div class="lg:inline-flex lg:flex-row lg:ml-auto flex flex-col">
-              <a href="#" class="font-titulo lg:inline-flex lg:w-auto  uppercase m-3 px-2 py-2 text-gray-400 hover:text-white hover:border-b-2 border-blue-400"><i class="fas fa-print text-xl mr-2"></i>Impresoras</a>
-              <a href="#" class="font-titulo lg:inline-flex lg:w-auto uppercase hover:text-white hover:border-b-2 border-blue-400 m-3 px-2 py-2 text-gray-400"><i class="fas fa-store text-xl mr-2"></i>Consumibles</a>
-              <a href="#" class="font-titulo lg:inline-flex lg:w-auto uppercase hover:text-white hover:border-b-2 border-blue-400 m-3 px-2 py-2 text-gray-400"><i class="fas fa-wrench text-xl mr-2"></i>Soporte Técnico</a>
+              <a href="#" class="transition duration-500 ease-in-out border-blue-400 hover:border-b-2 hover:text-white transform hover:-translate-y-1 hover:scale-110 font-titulo lg:inline-flex lg:w-auto uppercase m-3 px-2 py-2 text-gray-400"><i class="fas fa-print text-xl mr-2"></i>Impresoras</a>
+              <a href="#" class="transition duration-500 ease-in-out font-titulo transform hover:-translate-y-1 hover:scale-110 lg:inline-flex lg:w-auto uppercase hover:text-white hover:border-b-2 border-blue-400 m-3 px-2 py-2 text-gray-400"><i class="fas fa-store text-xl mr-2"></i>Consumibles</a>
+              <a href="#" class="transition duration-500 ease-in-out font-titulo transform hover:-translate-y-1 hover:scale-110 lg:inline-flex lg:w-auto uppercase hover:text-white hover:border-b-2 border-blue-400 m-3 px-2 py-2 text-gray-400"><i class="fas fa-wrench text-xl mr-2"></i>Soporte Técnico</a>
             </div>
             
           </div>            
