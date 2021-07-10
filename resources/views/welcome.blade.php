@@ -44,9 +44,9 @@
 
             <div class="w-full flex flex-wrap">
 
-              <div class="w-2/4 h-full flex flex-col">
-                <h1 class="font-titulo text-3xl text-black px-14 pt-32">SOLUCIONES EN IMPRECIÓN</h1>
-                <p class="text-black w-full px-14 pt-4 text-sm font-descrip">
+              <div class="w-2/4 h-full flex flex-col text-white">
+                <h1 class="font-titulo text-3xl px-14 pt-32">SOLUCIONES EN IMPRECIÓN</h1>
+                <p class="w-full px-14 pt-4 text-sm font-descrip">
                   Empresa dedicada a dar suluciones en impresoras de laser,de las marcas <strong>konica minolta</strong> y <strong>Brother.</strong>
                   Contando con años de esperiencia en el mercado de la tecnólogia de las impresoras los cuales nos respaldan para brindar
                   el mejor servicio a nuestros clientes. 
@@ -177,32 +177,46 @@
   
               
             </div>
-            {{-- <div class="mt-20">
-              <img src="{{asset('img/wave.svg')}}" alt="">
-            </div> --}}
+           
           </div>
 
 
           {{-- footer de la pagina --}}
           <footer class="w-full h-96 bg-gray-800 mt-80 pt-5">
-            <div class="bg-green-500 flex justify-between justify-items-center w-4/5 m-auto pt-10">
+            <div class=" flex justify-between justify-items-center w-full m-auto pt-10">
 
-              <div class="bg-white w-1/3 m-4">
+              <div class="w-1/3 m-4">
                 <img class="w-24 h-24 rounded-full" src="{{asset('img/logo.jpeg')}}" alt="">
               </div>
 
-              <div class="bg-white w-1/3 m-4 text-center items-center flex flex-col">
-                <h4 class="text-xl">contactos</h4>
-                <div><i class="fas fa-map-marker-alt"><span> Guerrero.</span></i></div>
-                <div><i class="fas fa-phone-alt"><span> 758-103-60-78</span></i></div>
-                <div><i class="fas fa-envelope"> cadenagarc@hotmail.com</i></div>
+              <div class="w-1/4 m-4 items-center flex flex-col">
+                  <div class="w-auto flex flex-col text-white">
+                    <h4 class="text-xl">Contactos</h4>
+                    <ul class="pt-2">
+                      <li><i class="far fa-map"><span class="pl-3 pt-3">San Geronimito Gro.</span></i></li>
+                      <li><i class="fas fa-phone-square-alt"><span class="pl-3 pt-3"> 758-103-60-78</span></i></li>
+                      <li><i class="far fa-envelope-open"><span class="pl-3">solucionesenimprecion@gmail.com</span></i></li>
+                    </ul>
+                  </div>
+                    
               </div>
 
-              <div class="bg-white w-1/3 m-4 text-center">
-                <h4 class="text-xl">Redes sociales</h4>
-                <div><i class="fab fa-facebook-square"><span> SOLUCIONES EN IMPRECIÓN</span></i></div>
-                <div><i class="fab fa-whatsapp"></i> 758-103-60-78</div>
+              <div class="w-1/4 m-4 items-center flex flex-col">
+                <div class="w-auto flex flex-col text-white">
+                  <h4 class="text-xl">Redes sociales</h4>
+                  <ul class="pt-2">
+                    <li><i class="fab fa-facebook-square"><span class="pl-3">SOLUCIONES EN IMPRESIÓN</span></i></li>
+                    <li><i class="fab fa-whatsapp"></i><span class="pl-3">758-103-60-78</span></li>
+                  </ul>
+                 
+                </div>
               </div>
+
+            </div>
+            <div class="bg-gray-900 w-full h-28 mt-20 flex items-center justify-center">
+                <div class="w-1/2 h-auto text-center">
+                  <i class="far fa-copyright text-white"><span class="pl-3 text-sm text-white">2021 Solucines en impresión. Todos los derechos  reservados</span></i>
+                </div>
             </div>
           </footer>
       
