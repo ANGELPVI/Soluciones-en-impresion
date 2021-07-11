@@ -71,7 +71,7 @@
           {{-- Seccion de las empresas --}}
 
           <div class="w-full h-auto border-gray-100">
-                <h1 class="font-titulo text-3xl uppercase text-center text-black">empresas y gobiernos que confian en nosotros</h1>
+                <h1 class="font-titulo text-3xl uppercase text-center text-black">empresas y gobiernos que confían en nosotros</h1>
                 {{-- Contenedor padre --}}
                 <div class="w-full flex flex-wrap justify-center items-center">
                   {{-- Targeta de precentacion, primera empresa --}}
@@ -112,22 +112,22 @@
                 <div class="w-full flex">
                   <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
                     <i class="fas fa-tasks text-6xl pt-6 mt-3 text-white bg-gray-800 rounded-full w-28 h-28"></i>
-                    <h3 class=" text-black font-titulo text-1xl pt-2">MATENIMIENTO PREVENTIVO</h3>
-                    <P class="text-sm font-descrip p-3 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nemo error quibusdam voluptatum adipisci ab similique cumque repellat distinctio aspernatur enim possimus in doloribus recusandae, tempora autem tempore. Nam, itaque?</P>
+                    <h3 class=" text-black font-titulo text-1xl pt-2">MANTENIMIENTO PREVENTIVO</h3>
+                    <P class="text-sm font-descrip p-3 text-black text-justify">Se realiza una rutina de limpieza de hardware y módulos en el equipo, así mismo se examina detalladamente las partes que están llegando a su vida útil. Se le informa al cliente las posibles fallas que pueden presentarse en la impresora.</P>
                     <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3">Ver mas..</button>
                 </div>
 
                 <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
                   <i class="fas fa-tools text-6xl pt-6 mt-3 text-white bg-gray-800 rounded-full w-28 h-28"></i>
-                  <h3 class="text-black font-titulo text-1xl pt-2">MATENIMIENTO CORRECTIVO</h3>
-                  <P class="text-sm font-descrip p-3 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nemo error quibusdam voluptatum adipisci ab similique cumque repellat distinctio aspernatur enim possimus in doloribus recusandae, tempora autem tempore. Nam, itaque?</P>
+                  <h3 class="text-black font-titulo text-1xl pt-2">MANTENIMIENTO CORRECTIVO</h3>
+                  <P class="text-sm font-descrip p-3 text-black text-justify">Se corrige o se repara el daño que presente el equipo del cliente, además se hace un análisis exhaustivo para identificar el porqué ocurrió la falla de la impresora, también se le informa al usuario cual es la mejor forma de manipular su equipo.</P>
                   <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3">Ver mas..</button>
               </div>
 
               <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
                 <i class="fas fa-user-cog text-6xl pt-6 mt-3 text-white bg-gray-800 rounded-full w-28 h-28"></i>
                 <h3 class=" text-black font-titulo text-1xl pt-2">CONFIGURACIÓN DE USUARIO</h3>
-                <P class="text-sm font-descrip p-3 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nemo error quibusdam voluptatum adipisci ab similique cumque repellat distinctio aspernatur enim possimus in doloribus recusandae, tempora autem tempore. Nam, itaque?</P>
+                <P class="text-sm font-descrip p-3 text-black text-justify">Realizamos las configuraciones que el usuario necesite para un mejor uso de su equipo, también le sugerimos al cliente como puede hacer para que su impresora tenga un ahorro en consumibles conservando la mejor calidad y nitidez.</P>
                 <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3">Ver mas..</button>
               </div>
 
@@ -138,9 +138,6 @@
   
               
             </div>
-            {{-- <div class="mt-20">
-              <img src="{{asset('img/wave.svg')}}" alt="">
-            </div> --}}
           </div>
 
 
