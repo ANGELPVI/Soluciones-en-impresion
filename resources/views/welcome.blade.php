@@ -41,21 +41,23 @@
           </div>            
         </nav>
         
-          <div class="w-full bg-gray-800">
+          <div class="w-full bg-green-500">
 
             <div class="w-full flex flex-wrap">
 
               <div class="w-2/4 h-full flex flex-col text-white">
-                <h1 class="font-titulo text-3xl px-14 pt-32">SOLUCIONES EN IMPRECIÓN</h1>
+                <h1 class="font-titulo text-3xl px-14 pt-20">SOLUCIONES EN IMPRESIÓN</h1>
                 <p class="w-full px-14 pt-4 text-sm font-descrip">
-                  Empresa dedicada a dar suluciones en impresoras de laser,de las marcas <strong>konica minolta</strong> y <strong>Brother.</strong>
-                  Contando con años de esperiencia en el mercado de la tecnólogia de las impresoras los cuales nos respaldan para brindar
-                  el mejor servicio a nuestros clientes. 
+                  Somos una empresa dedicada a resolver problemas en equipos de impresión de láser de las marcas <strong>KONICA MINOLTA</strong>
+                  y <strong>BROTHER</strong>, ayudamos a nuestros clientes a solventar dudas. Así mismo guiarlos para que puedan tomar una
+                  decisión correcta al momento de seleccionar un equipo que pueda cubrir todas sus necesidades. 
                 </p>
+                <h3 class="text-2xl px-14 mt-10 font-titulo">80% de nuestros clientes están satisfechos por el gran servicio que otorgamos.</h3>
+                <h3 class="text-2xl px-14 mt-10 font-titulo">20% Regresa para solicitar una ayuda con sus equipos.</h3>
               </div>
   
               <div class="w-2/4">
-                <img src="{{asset('img/portada2.svg')}}" class="h-96 w-full">
+                <img src="{{asset('img/copiadora.svg')}}" class="h-96 w-full">
               </div>
             </div>
 
@@ -64,7 +66,7 @@
           </div>
 
           </div>
-          
+         
 
           {{-- Seccion de las empresas --}}
 
