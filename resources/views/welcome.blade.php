@@ -53,7 +53,7 @@
                   decisión correcta al momento de seleccionar un equipo que pueda cubrir todas sus necesidades. 
                 </p>
                 <h3 class="text-2xl px-14 mt-10 font-titulo">80% de nuestros clientes están satisfechos por el gran servicio que otorgamos.</h3>
-                <h3 class="text-2xl px-14 mt-10 font-titulo">20% Regresa para solicitar una ayuda con sus equipos.</h3>
+                <h3 class="text-2xl px-14 mt-10 font-titulo">100% Regresa para solicitar una ayuda con sus equipos.</h3>
               </div>
   
               <div class="w-2/4">
@@ -132,17 +132,33 @@
               </div>
 
                 </div>
-               
-
               </div>
-  
-              
             </div>
           </div>
 
+          {{-- Sesión de las marcas de las Impresoras y sus detalles --}}
+          <div class="w-full h-80 mt-52 flex items-center justify-center">
+              <img src="{{asset('img/konica-minolta-1.svg')}}" width="400px" height="200px" class=" ml-36">
+                <div class="w-2/4 flex flex-col ml-16">
+                  <div class=" w-5/6 h-5 m-4"><span class="text-green-400 font-titulo text-3xl">10% En atoramiento de hojas <i class="fas fa-check-square"></i></span></div>
+                  <div class="w-4/6 h-5 m-4"><span class="text-green-400 font-titulo text-3xl">60% En el Ahorro de toner <i class="fas fa-check-square"></i></span></div>
+                  <div class="w-4/6 h-5 m-4"><span class="text-green-400 font-titulo text-3xl">50% En Ahorro de refacciones <i class="fas fa-check-square"></i></span></div>
+                </div>
+          </div>
+
+          <div class="w-full h-80 mt-16 flex items-center justify-center">
+            <div class="w-2/4 flex flex-col ml-16">
+              <div class=" w-4/6 h-5 m-4 ml-40"><span class="text-green-400 font-titulo text-3xl">12% En atoramiento de hojas <i class="fas fa-check-square"></i></span></div>
+              <div class="w-4/6 h-5 m-4 ml-40"><span class="text-green-400 font-titulo text-3xl">40% En el Ahorro de toner <i class="fas fa-check-square"></i></span></div>
+              <div class="w-4/6 h-5 m-4 ml-40"><span class="text-green-400 font-titulo text-3xl">30% En Ahorro de refacciones <i class="fas fa-check-square"></i></span></div>
+            </div>
+            <img src="{{asset('img/BROTHER-LOGO.png')}}" width="500px" height="200px" class="">
+        </div>
+
+
 
           {{-- Sesion de planes de renta --}}
-          <div class="w-full h-auto mt-60">
+          <div class="w-full h-auto mt-32">
             <h1 class=" text-black text-center font-titulo text-3xl">PLANES DE RENTA</h1>
             <div class=" w-full h-auto flex flex-wrap justify-center items-center pr-10 pl-10">
               
