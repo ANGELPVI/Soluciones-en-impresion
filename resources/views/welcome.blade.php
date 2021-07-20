@@ -166,25 +166,64 @@
                 
                 <div class="w-full flex">
                   <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
-                    <i class="fas fa-tasks text-6xl pt-6 mt-3 text-white bg-gray-800 rounded-full w-28 h-28"></i>
-                    <h3 class=" text-black font-titulo text-1xl pt-2">PLAN DE RENTA 1</h3>
-                    <P class="text-sm font-descrip p-3 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nemo error quibusdam voluptatum adipisci ab similique cumque repellat distinctio aspernatur enim possimus in doloribus recusandae, tempora autem tempore. Nam, itaque?</P>
-                    <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3">Ver mas..</button>
+                    <div class="bg-green-500 h-auto rounded-sm">
+                      <h3 class=" text-black font-titulo text-2xl pt-2">PLAN OFICINA</h3>
+                    </div>
+                    <small class="text-ms text-gray-500">Se recomienda para oficinas de 5 a 10</small>
+                      <h3 class="text-4xl font-titulo mt-3">MX$1,800</h3>
+                      <span class="text-sm text-gray-500">Al mes</span>
+                      <ul class=" font-descrip flex flex-col items-start ml-10 mt-2 text-sm">
+                        <li class="pt-2">Impresora Konica minolta</li>
+                        <li class="pt-2">300 copias-impresiones color</li>
+                        <li class="pt-2">8,000 copias-impresione blanco y negro</li>
+                        <li class="pt-2">Escanner gratis</li>
+                        <li class="pt-2">Refacciones por averio gratis</li>
+                        <li class="pt-2">consumibles gratis</li>
+                        <li class="pt-2">2 mantenimiento al mes gratis</li>
+                        <li class="pt-2">Acesoria remota gratis</li>
+                      </ul>
+                      <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-5 font-titulo">OBTENER</button>
                 </div>
 
                 <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
-                  <i class="fas fa-tools text-6xl pt-6 mt-3 text-white bg-gray-800 rounded-full w-28 h-28"></i>
-                  <h3 class="text-black font-titulo text-1xl pt-2">PLAN DE RENTA DOS</h3>
-                  <P class="text-sm font-descrip p-3 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nemo error quibusdam voluptatum adipisci ab similique cumque repellat distinctio aspernatur enim possimus in doloribus recusandae, tempora autem tempore. Nam, itaque?</P>
-                  <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3">Ver mas..</button>
+                  <div class="bg-blue-500 h-auto rounded-sm">
+                    <h3 class=" text-black font-titulo text-2xl pt-2">Plan por volumen</h3>
+                  </div>
+                  <small class="text-ms text-gray-500">Se recomiendanda para estudiantes</small>
+                    <h3 class="text-4xl font-titulo mt-3">MX1,080</h3>
+                    <span class="text-sm text-gray-500">Al mes</span>
+                    <div class="bg-red-500 rounded-lg text-md text-white m-1 font-titulo">Más Vendido</div>
+                    <ul class=" font-descrip flex flex-col items-start ml-10 mt-2 text-sm">
+                      <li class="pt-2">Impresora <strong>Brother</strong> monocromatica</li>
+                      <li class="pt-2">6,000 copias-impresione blanco y negro</li>
+                      <li class="pt-2">Escanner gratis</li>
+                      <li class="pt-2">Refacciones por averio gratis</li>
+                      <li class="pt-2">consumibles gratis</li>
+                      <li class="pt-2">2 mantenimiento al mes gratis</li>
+                      <li class="pt-2">Acesoria remota gratis</li>
+                    </ul>
+                    <button class="hover:bg-blue-400 rounded-full py-3 px-6 bg-blue-500 mb-3 mt-5 font-titulo">OBTENER</button>
               </div>
 
               <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
-                <i class="fas fa-user-cog text-6xl pt-6 mt-3 text-white bg-gray-800 rounded-full w-28 h-28"></i>
-                <h3 class=" text-black font-titulo text-1xl pt-2">PLAN DE RENTA 3</h3>
-                <P class="text-sm font-descrip p-3 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nemo error quibusdam voluptatum adipisci ab similique cumque repellat distinctio aspernatur enim possimus in doloribus recusandae, tempora autem tempore. Nam, itaque?</P>
-                <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3">Ver mas..</button>
-              </div>
+                <div class=" bg-purple-500 h-auto rounded-sm">
+                  <h3 class=" text-black font-titulo text-2xl pt-2">PLAN OFICINA</h3>
+                </div>
+                <small class="text-ms text-gray-500">Pagas solo lo que consumes</small>
+                  <h3 class="text-4xl font-titulo mt-3">MX$00.00</h3>
+                  <span class="text-sm text-gray-500">Al mes</span>
+                  <ul class=" font-descrip flex flex-col items-start ml-10 mt-2 text-sm">
+                    <li class="pt-2">copias-impresiones color</li>
+                    <li class="pt-2">copias-impresione blanco y negro</li>
+                    <li class="pt-2">Escanner gratis</li>
+                    <li class="pt-2">Refacciones por averio gratis</li>
+                    <li class="pt-2">consumibles gratis</li>
+                    <li class="pt-2">2 mantenimiento al mes gratis</li>
+                    <li class="pt-2">Acesoria remota gratis</li>
+                    <li class="pt-2">1,000 copias minimo</li>
+                  </ul>
+                  <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-5 font-titulo">OBTENER</button>
+            </div>
 
                 </div>
                
