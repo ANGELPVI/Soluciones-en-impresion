@@ -25,7 +25,7 @@
         <nav class="flex items-center bg-gray-800 p-3 flex-wrap">
 
           <div class="p-2 mr-4 inline-flex items-center ">
-            <img class="w-24 h-24 rounded-full" src="{{asset('img/logo.jpeg')}}" alt="">
+            <img class="w-24 h-24 rounded-full" src="{{asset('img/logo-bien.png')}}" alt="">
           </div>
 
           <button class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto nav-toggler" data-targets="#navegation" id="navegation"><i class="fas fa-align-justify"></i></button>
@@ -137,25 +137,25 @@
           </div>
 
           {{-- Sesión de las marcas de las Impresoras y sus detalles --}}
-          <div class="w-full h-80 mt-52 flex items-center justify-center">
-              <img src="{{asset('img/konica-minolta-1.svg')}}" width="400px" height="200px" class=" ml-36">
+          <div class="w-full mt-52 flex flex-col items-center justify-center fondo-uno h-auto">
+              <div class="mt-20 flex w-full items-center justify-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Logo_Konica_Minolta.svg/1280px-Logo_Konica_Minolta.svg.png" width="400px" height="200px" class=" ml-56"> 
                 <div class="w-2/4 flex flex-col ml-16">
                   <div class=" w-5/6 h-5 m-4"><span class="text-green-400 font-titulo text-3xl">10% En atoramiento de hojas <i class="fas fa-check-square"></i></span></div>
                   <div class="w-4/6 h-5 m-4"><span class="text-green-400 font-titulo text-3xl">60% En el Ahorro de toner <i class="fas fa-check-square"></i></span></div>
                   <div class="w-4/6 h-5 m-4"><span class="text-green-400 font-titulo text-3xl">50% En Ahorro de refacciones <i class="fas fa-check-square"></i></span></div>
                 </div>
+              </div>
+               
+              <div class="flex w-full items-center justify-center">
+                <div class="w-1/3 flex flex-col h-auto">
+                  <div class=" w-full h-5"><span class="text-green-400 font-titulo text-3xl">12% En atoramiento de hojas <i class="fas fa-check-square"></i></span></div>
+                  <div class="w-full h-5 mt-7"><span class="text-green-400 font-titulo text-3xl">40% En el Ahorro de toner <i class="fas fa-check-square"></i></span></div>
+                  <div class="w-full h-5 mt-7"><span class="text-green-400 font-titulo text-3xl">30% En Ahorro de refacciones <i class="fas fa-check-square"></i></span></div>
+                </div>
+                <img src="{{asset('img/BROTHER-LOGO.png')}}" width="400px" height="200px" class="">
+              </div>
           </div>
-
-          <div class="w-full h-80 mt-16 flex items-center justify-center">
-            <div class="w-2/4 flex flex-col ml-16">
-              <div class=" w-4/6 h-5 m-4 ml-40"><span class="text-green-400 font-titulo text-3xl">12% En atoramiento de hojas <i class="fas fa-check-square"></i></span></div>
-              <div class="w-4/6 h-5 m-4 ml-40"><span class="text-green-400 font-titulo text-3xl">40% En el Ahorro de toner <i class="fas fa-check-square"></i></span></div>
-              <div class="w-4/6 h-5 m-4 ml-40"><span class="text-green-400 font-titulo text-3xl">30% En Ahorro de refacciones <i class="fas fa-check-square"></i></span></div>
-            </div>
-            <img src="{{asset('img/BROTHER-LOGO.png')}}" width="500px" height="200px" class="">
-        </div>
-
-
 
           {{-- Sesion de planes de renta --}}
           <div class="w-full h-auto mt-32">
@@ -241,7 +241,7 @@
             <div class=" flex justify-between justify-items-center w-full m-auto pt-10">
 
               <div class="w-1/3 m-4">
-                <img class="w-24 h-24 rounded-full" src="{{asset('img/logo.jpeg')}}" alt="">
+                <img class="w-24 h-24 rounded-full" src="{{asset('img/logo-bien.png')}}" alt="">
               </div>
 
               <div class="w-1/4 m-4 items-center flex flex-col">
