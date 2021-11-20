@@ -11867,6 +11867,10 @@ video {
   font-family: "Coda", cursive;
 }
 
+.font-logo {
+  font-family: "Oswald", sans-serif;
+}
+
 .font-thin {
   font-weight: 100;
 }
@@ -43894,6 +43898,10 @@ video {
     font-family: "Coda", cursive;
   }
 
+  .sm\:font-logo {
+    font-family: "Oswald", sans-serif;
+  }
+
   .sm\:font-thin {
     font-weight: 100;
   }
@@ -75749,6 +75757,10 @@ video {
 
   .md\:font-descrip {
     font-family: "Coda", cursive;
+  }
+
+  .md\:font-logo {
+    font-family: "Oswald", sans-serif;
   }
 
   .md\:font-thin {
@@ -107608,6 +107620,10 @@ video {
     font-family: "Coda", cursive;
   }
 
+  .lg\:font-logo {
+    font-family: "Oswald", sans-serif;
+  }
+
   .lg\:font-thin {
     font-weight: 100;
   }
@@ -139465,6 +139481,10 @@ video {
     font-family: "Coda", cursive;
   }
 
+  .xl\:font-logo {
+    font-family: "Oswald", sans-serif;
+  }
+
   .xl\:font-thin {
     font-weight: 100;
   }
@@ -171320,6 +171340,10 @@ video {
 
   .\32xl\:font-descrip {
     font-family: "Coda", cursive;
+  }
+
+  .\32xl\:font-logo {
+    font-family: "Oswald", sans-serif;
   }
 
   .\32xl\:font-thin {

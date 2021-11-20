@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
         <link rel="stylesheet" href="{{asset('css/index.css')}}">
         
@@ -24,8 +25,9 @@
         {{-- NavBar de la pagina --}}
         <nav class="flex items-center bg-gray-800 p-3 flex-wrap">
 
-          <div class="p-2 mr-4 inline-flex items-center ">
-            <img class="w-24 h-24 rounded-full" src="{{asset('img/logo-bien.png')}}" alt="">
+          <div class="p-2 mr-4 inline-flex items-center">
+            <img class="w-24 h-24" src="{{asset('img/logo-bien.png')}}">
+            <span class="text-white text-lg pl-3 font-logo"> Soluciones En Impresión</span>
           </div>
 
           <button class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto nav-toggler" data-targets="#navegation" id="navegation"><i class="fas fa-align-justify"></i></button>

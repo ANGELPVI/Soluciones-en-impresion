@@ -6,7 +6,9 @@ module.exports = {
       fontFamily:{
 
         'titulo':['"Amaranth"', 'sans-serif'],
-        'descrip':['"Coda"','cursive']
+        'descrip':['"Coda"','cursive'],
+        'logo':['"Oswald"','sans-serif']
+
       },
       backgroundImage: theme => ({
         'fondo': "url('/img/amarillo.svg')",
