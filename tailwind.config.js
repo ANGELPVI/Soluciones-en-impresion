@@ -4,8 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-
-        'titulo':['"Amaranth"', 'sans-serif'],
+        'titulo':['"Allerta"', 'sans-serif'],
         'descrip':['"Coda"','cursive'],
         'logo':['"Oswald"','sans-serif']
 

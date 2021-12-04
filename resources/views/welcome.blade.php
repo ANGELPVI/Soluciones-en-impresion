@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Allerta&display=swap" rel="stylesheet">       
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
         <link rel="stylesheet" href="{{asset('css/index.css')}}">
         
@@ -50,12 +51,12 @@
               <div class="w-2/4 h-full flex flex-col text-white">
                 <h1 class="font-titulo text-3xl px-14 pt-20">SOLUCIONES EN IMPRESIÓN</h1>
                 <p class="w-full px-14 pt-4 text-sm font-descrip">
-                  Somos una empresa dedicada a resolver problemas en equipos de impresión de láser de las marcas <strong>KONICA MINOLTA</strong>
+                  Somos una empresa dedicada a resolver problemas en equipos de impresión de láser de las marcas <strong>KONICA MINOLTA,</strong> <strong> EPSON</strong>
                   y <strong>BROTHER</strong>, ayudamos a nuestros clientes a solventar dudas. Así mismo guiarlos para que puedan tomar una
                   decisión correcta al momento de seleccionar un equipo que pueda cubrir todas sus necesidades. 
                 </p>
-                <h3 class="text-2xl px-14 mt-10 font-titulo">80% de nuestros clientes están satisfechos por el gran servicio que otorgamos.</h3>
-                <h3 class="text-2xl px-14 mt-10 font-titulo">100% Regresa para solicitar una ayuda con sus equipos.</h3>
+                <h3 class="text-2xl px-14 mt-10 font-titulo">100% de nuestros clientes están satisfechos por el gran servicio que otorgamos.</h3>
+                <h3 class="text-2xl px-14 mt-10 font-titulo">100% Regresan para solicitar una hacesoría con sus equipos.</h3>
               </div>
   
               <div class="w-2/4">
@@ -73,7 +74,7 @@
           {{-- Seccion de las empresas --}}
 
           <div class="w-full h-auto border-gray-100">
-                <h1 class="font-titulo text-3xl uppercase text-center text-black">empresas y gobiernos que confían en nosotros</h1>
+                <h1 class="font-titulo text-3xl text-center text-black">EMPRESAS Y GOBIERNOS QUE CONFIAN EN NOSOTROS</h1>
                 {{-- Contenedor padre --}}
                 <div class="w-full flex flex-wrap justify-center items-center">
                   {{-- Targeta de precentacion, primera empresa --}}
