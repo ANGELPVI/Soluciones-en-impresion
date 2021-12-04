@@ -99,8 +99,13 @@
 
                     {{-- Targeta de{{-- Targeta de precentacion, quinta empresa --}}
                     <div class="w-80 h-32 m-4 text-center">
-                      <div class="flex justify-center items-center"><img src="{{asset('img/peta-h.png')}}" class="opacity-30 img-empresas"></div>
-                    </div>                    
+                      <div class="flex justify-center items-center"><img src="{{asset('img/peta-nuevo.png')}}" class="opacity-30 img-empresas"></div>
+                    </div> 
+                    
+                    {{-- Targeta de{{-- Targeta de precentacion, quinta empresa --}}
+                    <div class="w-80 h-32 m-4 text-center">
+                      <div class="flex justify-center items-center"><img src="{{asset('img/cediz.png')}}" class="opacity-30 img-empresas"></div>
+                    </div> 
                     
                 </div>
           </div>
