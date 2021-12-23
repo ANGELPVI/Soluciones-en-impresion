@@ -9,7 +9,12 @@
     
 }
 
-
+.fondo-mante-pre{
+    background-image: url(../img/mante-preventivo.svg);
+    background-repeat: no-repeat;
+    background-position: 0px 160px;
+    
+}
 
 body{
 background-color: #f8f9fa;

@@ -111,37 +111,44 @@
           </div>
 
           {{-- Sesion de Servicios que ofrece la empresa --}}
-          <div class="w-full h-auto mt-20">
-            <h1 class=" text-black text-center font-titulo text-3xl">SOPORTE TÉCNICO</h1>
-            <div class=" w-full h-auto flex flex-wrap justify-center items-center pr-10 pl-10">
-              
-              <div class="w-3/4 h-64 pr-3 pl-3 mt-5">
+         
+          <div class="flex flex-col w-full h-auto mt-20">
+          
+           {{-- Primer servicio tecnico --}}
+          <div class="flex w-full h-auto bg-gray-900">
+                <div class="grid grid-cols-2 w-2/4 h-auto text-white text-center gap-4 place-items-center">
+                  <h1 class="text-3xl m-4 col-span-2 font-titulo">Mantenimiento Preventivo</h1>
+                  <p class="text-xl m-8 font-titulo">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p class="text-xl m-8 font-titulo">2. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p class="text-xl m-8 font-titulo">3. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p class="text-xl m-8 font-titulo">4. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <button class="hover:bg-green-400 col-span-2 rounded-full py-3 px-6 bg-green-500 mb-3 mt-5 font-titulo">Ver Mas...</button>
+                </div>
+
+                <div class="fondo-mante-pre w-2/4">
+                <img src="{{asset('img/ma-pre.svg')}}" class="h-96 m-auto mt-10">
+                </div>
                 
-                <div class="w-full flex">
-                  <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
-                    <i class="fas fa-tasks text-6xl pt-6 mt-3 text-white bg-gray-800 rounded-full w-28 h-28"></i>
-                    <h3 class=" text-black font-titulo text-1xl pt-2">MANTENIMIENTO PREVENTIVO</h3>
-                    <P class="text-sm font-descrip p-3 text-black text-justify">Se realiza una rutina de limpieza de hardware y módulos en el equipo, así mismo se examina detalladamente las partes que están llegando a su vida útil. Se le informa al cliente las posibles fallas que pueden presentarse en la impresora.</P>
-                    <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3">Ver mas..</button>
+                
+           </div>
+
+           <div class="flex w-full h-auto bg-gray-800">
+           <div class="fondo-mante-pre w-2/4">
+                <img src="{{asset('img/ma-pre.svg')}}" class="h-96 m-auto mt-10">
                 </div>
+                
+                <div class="grid grid-cols-2 w-2/4 h-auto text-white text-center gap-4 place-items-center">
+                  <h1 class="text-3xl m-4 col-span-2 font-titulo">Mantenimiento Preventivo</h1>
+                  <p class="text-xl m-8 font-titulo">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p class="text-xl m-8 font-titulo">2. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p class="text-xl m-8 font-titulo">3. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p class="text-xl m-8 font-titulo">4. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <button class="hover:bg-green-400 col-span-2 rounded-full py-3 px-6 bg-green-500 mb-3 mt-5 font-titulo">Ver Mas...</button>
+                </div>             
+                
+           </div>
 
-                <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
-                  <i class="fas fa-tools text-6xl pt-6 mt-3 text-white bg-gray-800 rounded-full w-28 h-28"></i>
-                  <h3 class="text-black font-titulo text-1xl pt-2">MANTENIMIENTO CORRECTIVO</h3>
-                  <P class="text-sm font-descrip p-3 text-black text-justify">Se corrige o se repara el daño que presente el equipo del cliente, además se hace un análisis exhaustivo para identificar el porqué ocurrió la falla de la impresora, también se le informa al usuario cual es la mejor forma de manipular su equipo.</P>
-                  <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3">Ver mas..</button>
-              </div>
-
-              <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
-                <i class="fas fa-user-cog text-6xl pt-6 mt-3 text-white bg-gray-800 rounded-full w-28 h-28"></i>
-                <h3 class=" text-black font-titulo text-1xl pt-2">CONFIGURACIÓN DE USUARIO</h3>
-                <P class="text-sm font-descrip p-3 text-black text-justify">Realizamos las configuraciones que el usuario necesite para un mejor uso de su equipo, también le sugerimos al cliente como puede hacer para que su impresora tenga un ahorro en consumibles conservando la mejor calidad y nitidez.</P>
-                <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3">Ver mas..</button>
-              </div>
-
-                </div>
-              </div>
-            </div>
+           <div class="w-full bg-gray-700">3</div>
           </div>
 
           {{-- Sesión de las marcas de las Impresoras y sus detalles --}}
