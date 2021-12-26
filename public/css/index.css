@@ -25,6 +25,13 @@
     background-position: -100px;    
 }
 
+.fondo-online{
+    background-image: url(../img/onliene-fondo.svg);
+    background-repeat: no-repeat;
+    background-position: -40px -100px;    
+}
+
+
 body{
     background-color: #ffffff;
     /*background-color: #f8f9fa;*/

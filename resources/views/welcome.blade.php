@@ -25,7 +25,7 @@
 
 <body>
   {{-- NavBar de la pagina --}}
-  <nav class="flex items-center bg-gray-800 p-3 flex-wrap">
+  <nav class="flex items-center bg-gray-900 p-3 flex-wrap">
 
     <div class="p-2 mr-4 inline-flex items-center">
       <img class="w-24 h-24" src="{{asset('img/logo-bien.png')}}">
@@ -118,12 +118,12 @@
     {{-- Primer servicio tecnico --}}
     <div class="flex w-full h-auto bg-gray-900">
       <div class="grid grid-cols-2 w-2/4 h-auto text-white text-center gap-4 place-items-center">
-        <h1 class="text-3xl m-4 col-span-2 font-titulo">Mantenimiento Preventivo</h1>
-        <p class="text-xl m-8 font-titulo">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-8 font-titulo">2. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-8 font-titulo">3. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-8 font-titulo">4. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <button class="hover:bg-green-400 col-span-2 rounded-full py-3 px-6 bg-green-500 mb-3 font-titulo">Ver Mas...</button>
+        <h1 class="text-3xl m-1 col-span-2 font-titulo">Mantenimiento Preventivo</h1>
+        <p class="text-xl m-1 font-titulo">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p class="text-xl m-1 font-titulo">2. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p class="text-xl m-1 font-titulo">3. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p class="text-xl m-1 font-titulo">4. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button class="hover:bg-green-400 col-span-2 rounded-full py-3 px-6 bg-green-500 mb-1 font-titulo">Ver Mas...</button>
       </div>
 
       <div class="fondo-mante-pre w-2/4">
@@ -133,35 +133,35 @@
 
     </div>
     {{-- Segundo servicio tecnico --}}
-    <div class="flex w-full h-auto bg-gray-800">
+    <div class="flex w-full h-auto bg-gray-900">
       <div class="fondo-mante-corre w-2/4">
         <img src="{{asset('img/ma-corre.svg')}}" class="h-auto m-auto mt-10">
       </div>
 
       <div class="grid grid-cols-2 w-2/4 h-auto text-white text-center gap-4 place-items-center">
-        <h1 class="text-3xl m-4 col-span-2 font-titulo">Mantenimiento Correctivo</h1>
-        <p class="text-xl m-8 font-titulo">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-8 font-titulo">2. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-8 font-titulo">3. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-8 font-titulo">4. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <button class="hover:bg-green-400 col-span-2 rounded-full py-3 px-6 bg-green-500 mb-3  font-titulo">Ver Mas...</button>
+        <h1 class="text-3xl m-1 col-span-2 font-titulo">Mantenimiento Correctivo</h1>
+        <p class="text-xl m-1 font-titulo">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p class="text-xl m-1 font-titulo">2. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p class="text-xl m-1 font-titulo">3. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p class="text-xl m-1 font-titulo">4. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button class="hover:bg-green-400 col-span-2 rounded-full py-3 px-6 bg-green-500 mb-1  font-titulo">Ver Mas...</button>
       </div>
 
     </div>
 
     {{-- Tercer servicio tecnico --}}
-    <div class="flex w-full h-auto bg-gray-700">
+    <div class="flex w-full h-auto bg-gray-900">
       
       <div class="grid grid-cols-2 w-2/4 h-auto text-white text-center gap-4 place-items-center">
-        <h1 class="text-3xl m-4 col-span-2 font-titulo">Asesoaria Online</h1>
-        <p class="text-xl m-8 font-titulo">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-8 font-titulo">2. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-8 font-titulo">3. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-8 font-titulo">4. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <button class="hover:bg-green-400 col-span-2 rounded-full py-3 px-6 bg-green-500 mb-3  font-titulo">Ver Mas...</button>
+        <h1 class="text-3xl m-1 col-span-2 font-titulo">Asesoaria Online</h1>
+        <p class="text-xl m-1 font-titulo">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p class="text-xl m-1 font-titulo">2. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p class="text-xl m-1 font-titulo">3. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p class="text-xl m-1 font-titulo">4. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button class="hover:bg-green-400 col-span-2 rounded-full py-3 px-6 bg-green-500 mb-1  font-titulo">Ver Mas...</button>
       </div>
 
-      <div class="w-2/4">
+      <div class="fondo-online w-2/4">
         <img src="{{asset('img/onliene.svg')}}" class=" h-auto m-auto mt-10">
       </div>
 
