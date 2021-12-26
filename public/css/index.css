@@ -2,21 +2,31 @@
     height: 150px;
     image-rendering: auto;
 }
+
+.fondo-wave{
+    background-color: #00B0FF;
+}
 .fondo-uno{
     background-image: url(../img/Fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
 }
-
 .fondo-mante-pre{
     background-image: url(../img/mante-preventivo.svg);
     background-repeat: no-repeat;
-    background-position: 0px 160px;
+    background-position: 0px 190px;
     
 }
 
+.fondo-mante-corre{
+    background-image: url(../img/ma-corre-honda.svg);
+    background-repeat: no-repeat;
+    background-position: -100px;    
+}
+
 body{
-background-color: #f8f9fa;
+    background-color: #ffffff;
+    /*background-color: #f8f9fa;*/
 }
 
