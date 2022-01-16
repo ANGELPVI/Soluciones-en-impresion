@@ -1,39 +1,61 @@
-.img-empresas{
+.img-empresas {
     height: 150px;
     image-rendering: auto;
 }
 
-.fondo-wave{
-    background-color: #00B0FF;
+.fondo-wave {
+    background-color: #00b0ff;
 }
-.fondo-uno{
+/* .fondo-uno{
     background-image: url(../img/Fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
-}
-.fondo-mante-pre{
+} */
+
+.fondo-mante-pre {
     background-image: url(../img/mante-preventivo.svg);
     background-repeat: no-repeat;
     background-position: 0px 190px;
-    
 }
 
-.fondo-mante-corre{
+.fondo-mante-corre {
     background-image: url(../img/ma-corre-honda.svg);
     background-repeat: no-repeat;
-    background-position: -100px;    
+    background-position: -100px;
 }
 
-.fondo-online{
+.fondo-online {
     background-image: url(../img/onliene-fondo.svg);
     background-repeat: no-repeat;
-    background-position: -40px -100px;    
+    background-position: -40px -100px;
+    z-index: 2;
 }
 
+.fondo-impresoras {
+    background: rgb(17, 24, 39);
+    background: linear-gradient(
+        180deg,
+        rgba(17, 24, 39, 1) 30%,
+        rgb(55, 65, 81, 1) 100%
+    );
+}
 
-body{
+.letras {
+    background: #ccc;
+    background: linear-gradient(
+        180deg,
+        rgb(41, 96, 214) 30%,
+        rgb(255, 255, 255) 100%
+    );
+    font-family: system-ui;
+    font-size: 4rem;
+    line-height: 115%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+body {
     background-color: #ffffff;
     /*background-color: #f8f9fa;*/
 }
-

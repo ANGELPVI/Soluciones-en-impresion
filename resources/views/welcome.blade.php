@@ -152,7 +152,7 @@
     {{-- Tercer servicio tecnico --}}
     <div class="flex w-full h-auto bg-gray-900">
       
-      <div class="grid grid-cols-2 w-2/4 h-auto text-white text-center gap-4 place-items-center">
+      <div class="grid grid-cols-2 w-2/4 h-auto text-white text-center gap-4 place-items-center z-0">
         <h1 class="text-3xl m-1 col-span-2 font-titulo">Asesoaria Online</h1>
         <p class="text-xl m-1 font-titulo">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <p class="text-xl m-1 font-titulo">2. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -169,25 +169,23 @@
   </div>
 
   {{-- Sesión de las marcas de las Impresoras y sus detalles --}}
-  <div class="w-full mt-52 flex flex-col items-center justify-center fondo-uno h-auto">
-    <div class="mt-20 flex w-full items-center justify-center">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Logo_Konica_Minolta.svg/1280px-Logo_Konica_Minolta.svg.png" width="400px" height="200px" class=" ml-56">
-      <div class="w-2/4 flex flex-col ml-16">
-        <div class=" w-5/6 h-5 m-4"><span class="text-green-400 font-titulo text-3xl">10% En atoramiento de hojas <i class="fas fa-check-square"></i></span></div>
-        <div class="w-4/6 h-5 m-4"><span class="text-green-400 font-titulo text-3xl">60% En el Ahorro de toner <i class="fas fa-check-square"></i></span></div>
-        <div class="w-4/6 h-5 m-4"><span class="text-green-400 font-titulo text-3xl">50% En Ahorro de refacciones <i class="fas fa-check-square"></i></span></div>
-      </div>
-    </div>
-
-    <div class="flex w-full items-center justify-center">
-      <div class="w-1/3 flex flex-col h-auto">
-        <div class=" w-full h-5"><span class="text-green-400 font-titulo text-3xl">12% En atoramiento de hojas <i class="fas fa-check-square"></i></span></div>
-        <div class="w-full h-5 mt-7"><span class="text-green-400 font-titulo text-3xl">40% En el Ahorro de toner <i class="fas fa-check-square"></i></span></div>
-        <div class="w-full h-5 mt-7"><span class="text-green-400 font-titulo text-3xl">30% En Ahorro de refacciones <i class="fas fa-check-square"></i></span></div>
-      </div>
-      <img src="{{asset('img/BROTHER-LOGO.png')}}" width="400px" height="200px" class="">
-    </div>
+  <div class="w-full h-auto fondo-impresoras text-white text-center pt-28">
+    <h1 class="text-4xl font-titulo letras">Elige tu forma de trabajar</h1>
+  <div class="w-full h-auto grid grid-cols-3 justify-items-center">
+  <img class="m-8 mt-14" src="{{asset('img/brother.svg')}}" alt="300px" width="300">
+  <img class="m-8 mt-16" src="{{asset('img/epson.svg')}}" alt="300px" width="300">
+  <img class="m-8 mt-10" src="{{asset('img/konica.svg')}}" alt="300px" width="300">
   </div>
+
+  <div class="grid grid-cols-4 justify-items-center m-10">
+    <h5 class="text-1xl font-titulo p-5">Diseño</h5>
+    <h5 class="text-1xl font-titulo p-5">Arquitectura</h5>
+    <h5 class="text-1xl font-titulo p-5">Oficina</h5>
+    <h5 class="text-1xl font-titulo p-5">Volumen</h5>
+  </div>
+  </div>
+  
+
 
   {{-- Sesion de planes de renta --}}
   <div class="w-full h-auto mt-32">
