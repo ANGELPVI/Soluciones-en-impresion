@@ -4,9 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        'titulo':['"Allerta"', 'sans-serif'],
-        'descrip':['"Coda"','cursive'],
-        'logo':['"Oswald"','sans-serif']
+        'titulo':['"Calistoga"', 'cursive'],
+        'descrip':['"Open Sans"','sans-seri'],
 
       },
       backgroundImage: theme => ({

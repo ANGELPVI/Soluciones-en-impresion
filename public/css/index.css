@@ -44,15 +44,16 @@
 .letras {
     background: #ccc;
     background: linear-gradient(
-        180deg,
-        rgb(41, 96, 214) 30%,
-        rgb(255, 255, 255) 100%
+        100deg,
+        rgba(9, 240, 255,1) 30%,
+        rgba(210, 9, 242,1) 50%,
+        rgba(250,255,5,1) 100%
     );
-    font-family: system-ui;
-    font-size: 4rem;
     line-height: 115%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+
+    text-shadow:0px 0px 50px #ffffff;
 }
 
 body {

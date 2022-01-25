@@ -11860,15 +11860,11 @@ video {
 }
 
 .font-titulo {
-  font-family: "Allerta", sans-serif;
+  font-family: "Calistoga", cursive;
 }
 
 .font-descrip {
-  font-family: "Coda", cursive;
-}
-
-.font-logo {
-  font-family: "Oswald", sans-serif;
+  font-family: "Open Sans", sans-seri;
 }
 
 .font-thin {
@@ -43891,15 +43887,11 @@ video {
   }
 
   .sm\:font-titulo {
-    font-family: "Allerta", sans-serif;
+    font-family: "Calistoga", cursive;
   }
 
   .sm\:font-descrip {
-    font-family: "Coda", cursive;
-  }
-
-  .sm\:font-logo {
-    font-family: "Oswald", sans-serif;
+    font-family: "Open Sans", sans-seri;
   }
 
   .sm\:font-thin {
@@ -75752,15 +75744,11 @@ video {
   }
 
   .md\:font-titulo {
-    font-family: "Allerta", sans-serif;
+    font-family: "Calistoga", cursive;
   }
 
   .md\:font-descrip {
-    font-family: "Coda", cursive;
-  }
-
-  .md\:font-logo {
-    font-family: "Oswald", sans-serif;
+    font-family: "Open Sans", sans-seri;
   }
 
   .md\:font-thin {
@@ -107613,15 +107601,11 @@ video {
   }
 
   .lg\:font-titulo {
-    font-family: "Allerta", sans-serif;
+    font-family: "Calistoga", cursive;
   }
 
   .lg\:font-descrip {
-    font-family: "Coda", cursive;
-  }
-
-  .lg\:font-logo {
-    font-family: "Oswald", sans-serif;
+    font-family: "Open Sans", sans-seri;
   }
 
   .lg\:font-thin {
@@ -139474,15 +139458,11 @@ video {
   }
 
   .xl\:font-titulo {
-    font-family: "Allerta", sans-serif;
+    font-family: "Calistoga", cursive;
   }
 
   .xl\:font-descrip {
-    font-family: "Coda", cursive;
-  }
-
-  .xl\:font-logo {
-    font-family: "Oswald", sans-serif;
+    font-family: "Open Sans", sans-seri;
   }
 
   .xl\:font-thin {
@@ -171335,15 +171315,11 @@ video {
   }
 
   .\32xl\:font-titulo {
-    font-family: "Allerta", sans-serif;
+    font-family: "Calistoga", cursive;
   }
 
   .\32xl\:font-descrip {
-    font-family: "Coda", cursive;
-  }
-
-  .\32xl\:font-logo {
-    font-family: "Oswald", sans-serif;
+    font-family: "Open Sans", sans-seri;
   }
 
   .\32xl\:font-thin {

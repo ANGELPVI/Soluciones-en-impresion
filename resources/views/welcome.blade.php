@@ -8,11 +8,8 @@
   <title>Soluciones En Impresión</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Allerta&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/app.css')}}">
   <link rel="stylesheet" href="{{asset('css/index.css')}}">
 
@@ -29,14 +26,15 @@
 
     <div class="p-2 mr-4 inline-flex items-center">
       <img class="w-24 h-24" src="{{asset('img/logo-bien.png')}}">
-      <span class="text-white text-lg pl-3 font-logo"> Soluciones En Impresión</span>
+      <span class="text-white text-4xl pl-3 font-titulo letras"> Soluciones En Impresión</span>
     </div>
 
     <button class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto nav-toggler" data-targets="#navegation" id="navegation"><i class="fas fa-align-justify"></i></button>
-
+    
     <div id="menu" class="hidden top-nav w-full lg:inline-flex lg:flex-grow lg:w-auto">
 
       <div class="lg:inline-flex lg:flex-row lg:ml-auto flex flex-col">
+      <a href="#" class="transition duration-500 ease-in-out border-blue-400 hover:border-b-2 hover:text-white transform hover:-translate-y-1 hover:scale-110 font-titulo lg:inline-flex lg:w-auto uppercase m-3 px-2 py-2 text-gray-400"><i class="fas fa-home text-xl mr-2"></i>Inicio</a>
         <a href="#" class="transition duration-500 ease-in-out border-blue-400 hover:border-b-2 hover:text-white transform hover:-translate-y-1 hover:scale-110 font-titulo lg:inline-flex lg:w-auto uppercase m-3 px-2 py-2 text-gray-400"><i class="fas fa-print text-xl mr-2"></i>Impresoras</a>
         <a href="#" class="transition duration-500 ease-in-out font-titulo transform hover:-translate-y-1 hover:scale-110 lg:inline-flex lg:w-auto uppercase hover:text-white hover:border-b-2 border-blue-400 m-3 px-2 py-2 text-gray-400"><i class="fas fa-store text-xl mr-2"></i>Consumibles</a>
         <a href="#" class="transition duration-500 ease-in-out font-titulo transform hover:-translate-y-1 hover:scale-110 lg:inline-flex lg:w-auto uppercase hover:text-white hover:border-b-2 border-blue-400 m-3 px-2 py-2 text-gray-400"><i class="fas fa-wrench text-xl mr-2"></i>Soporte Técnico</a>
@@ -44,7 +42,7 @@
 
     </div>
   </nav>
-
+  
   <div class="w-full fondo-wave">
 
     <div class="w-full flex flex-wrap">
