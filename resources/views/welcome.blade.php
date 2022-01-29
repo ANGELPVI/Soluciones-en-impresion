@@ -9,7 +9,7 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/app.css')}}">
   <link rel="stylesheet" href="{{asset('css/index.css')}}">
 
@@ -30,11 +30,11 @@
     </div>
 
     <button class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto nav-toggler" data-targets="#navegation" id="navegation"><i class="fas fa-align-justify"></i></button>
-    
+
     <div id="menu" class="hidden top-nav w-full lg:inline-flex lg:flex-grow lg:w-auto">
 
       <div class="lg:inline-flex lg:flex-row lg:ml-auto flex flex-col">
-      <a href="#" class="transition duration-500 ease-in-out border-blue-400 hover:border-b-2 hover:text-white transform hover:-translate-y-1 hover:scale-110 font-titulo lg:inline-flex lg:w-auto uppercase m-3 px-2 py-2 text-gray-400"><i class="fas fa-home text-xl mr-2"></i>Inicio</a>
+        <a href="#" class="transition duration-500 ease-in-out border-blue-400 hover:border-b-2 hover:text-white transform hover:-translate-y-1 hover:scale-110 font-titulo lg:inline-flex lg:w-auto uppercase m-3 px-2 py-2 text-gray-400"><i class="fas fa-home text-xl mr-2"></i>Inicio</a>
         <a href="#" class="transition duration-500 ease-in-out border-blue-400 hover:border-b-2 hover:text-white transform hover:-translate-y-1 hover:scale-110 font-titulo lg:inline-flex lg:w-auto uppercase m-3 px-2 py-2 text-gray-400"><i class="fas fa-print text-xl mr-2"></i>Impresoras</a>
         <a href="#" class="transition duration-500 ease-in-out font-titulo transform hover:-translate-y-1 hover:scale-110 lg:inline-flex lg:w-auto uppercase hover:text-white hover:border-b-2 border-blue-400 m-3 px-2 py-2 text-gray-400"><i class="fas fa-store text-xl mr-2"></i>Consumibles</a>
         <a href="#" class="transition duration-500 ease-in-out font-titulo transform hover:-translate-y-1 hover:scale-110 lg:inline-flex lg:w-auto uppercase hover:text-white hover:border-b-2 border-blue-400 m-3 px-2 py-2 text-gray-400"><i class="fas fa-wrench text-xl mr-2"></i>Soporte Técnico</a>
@@ -42,33 +42,14 @@
 
     </div>
   </nav>
-  
-  <div class="w-full fondo-wave">
-
-    <div class="w-full flex flex-wrap">
-
-      <div class="w-2/4 h-full flex flex-col text-white">
-        <h1 class="font-titulo text-3xl px-14 pt-20">SOLUCIONES EN IMPRESIÓN</h1>
-        <p class="w-full px-14 pt-4 text-sm font-descrip">
-          Somos una empresa dedicada a resolver problemas en equipos de impresión de láser de las marcas <strong>KONICA MINOLTA,</strong> <strong> EPSON</strong>
-          y <strong>BROTHER</strong>, ayudamos a nuestros clientes a solventar dudas. Así mismo guiarlos para que puedan tomar una
-          decisión correcta al momento de seleccionar un equipo que pueda cubrir todas sus necesidades.
-        </p>
-        <h3 class="text-2xl px-14 mt-10 font-titulo">100% de nuestros clientes están satisfechos por el gran servicio que otorgamos.</h3>
-        <h3 class="text-2xl px-14 mt-10 font-titulo">100% Regresan para solicitar una hacesoría con sus equipos.</h3>
-      </div>
-
-      <div class="w-2/4">
-        <img src="{{asset('img/copiadora.svg')}}" class="h-96 w-full">
-      </div>
-    </div>
-
-    <div class="-mt-10">
-      <img src="{{asset('img/wave.svg')}}" alt="">
-    </div>
-
+      {{-- Header --}}
+  <div class="grid grid-cols-3 fondo-header justify-items-center content-center">
+            <h1 class="col-span-12 text-white text-6xl relative -mt-28 font-titulo titulo-header">Calidad y experiencia en fotocopiadoras</h1>
+            <p class="col-span-12 font-semibold text-white relative w-1/2 text-justify font-descrip">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum laborum quaerat odio ipsum rerum, unde dolorem incidunt.
+              Cupiditate ipsa rerum, animi labore repudiandae quae quod, sapiente possimus accusantium id totam. Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <button class="w-1/4 font-semibold col-span-12 text-white text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-descrip relative">Cotizar Ahora</button>
   </div>
-
 
   {{-- Seccion de las empresas --}}
 
@@ -149,7 +130,7 @@
 
     {{-- Tercer servicio tecnico --}}
     <div class="flex w-full h-auto bg-gray-900">
-      
+
       <div class="grid grid-cols-2 w-2/4 h-auto text-white text-center gap-4 place-items-center z-0">
         <h1 class="text-3xl m-1 col-span-2 font-titulo">Asesoaria Online</h1>
         <p class="text-xl m-1 font-titulo">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -169,20 +150,20 @@
   {{-- Sesión de las marcas de las Impresoras y sus detalles --}}
   <div class="w-full h-auto fondo-impresoras text-white text-center pt-28">
     <h1 class="text-4xl font-titulo letras">Elige tu forma de trabajar</h1>
-  <div class="w-full h-auto grid grid-cols-3 justify-items-center">
-  <img class="m-8 mt-14" src="{{asset('img/brother.svg')}}" alt="300px" width="300">
-  <img class="m-8 mt-16" src="{{asset('img/epson.svg')}}" alt="300px" width="300">
-  <img class="m-8 mt-10" src="{{asset('img/konica.svg')}}" alt="300px" width="300">
+    <div class="w-full h-auto grid grid-cols-3 justify-items-center">
+      <img class="m-8 mt-14" src="{{asset('img/brother.svg')}}" alt="300px" width="300">
+      <img class="m-8 mt-16" src="{{asset('img/epson.svg')}}" alt="300px" width="300">
+      <img class="m-8 mt-10" src="{{asset('img/konica.svg')}}" alt="300px" width="300">
+    </div>
+
+    <div class="grid grid-cols-4 justify-items-center m-10">
+      <h5 class="text-1xl font-titulo p-5">Diseño</h5>
+      <h5 class="text-1xl font-titulo p-5">Arquitectura</h5>
+      <h5 class="text-1xl font-titulo p-5">Oficina</h5>
+      <h5 class="text-1xl font-titulo p-5">Volumen</h5>
+    </div>
   </div>
 
-  <div class="grid grid-cols-4 justify-items-center m-10">
-    <h5 class="text-1xl font-titulo p-5">Diseño</h5>
-    <h5 class="text-1xl font-titulo p-5">Arquitectura</h5>
-    <h5 class="text-1xl font-titulo p-5">Oficina</h5>
-    <h5 class="text-1xl font-titulo p-5">Volumen</h5>
-  </div>
-  </div>
-  
 
 
   {{-- Sesion de planes de renta --}}

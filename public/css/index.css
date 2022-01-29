@@ -3,9 +3,23 @@
     image-rendering: auto;
 }
 
-.fondo-wave {
-    background-color: #00b0ff;
+.fondo-header{
+    background-image: url(../img/fondo-header.jpg);
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    position: relative;
+    
 }
+.fondo-header::before{
+    content: '';
+    width: 100%;
+    height: 600px;
+    background-color: #111827;
+    position: absolute;
+    opacity: 0.7;
+}
+
 /* .fondo-uno{
     background-image: url(../img/Fondo.jpg);
     background-repeat: no-repeat;
@@ -54,6 +68,20 @@
     -webkit-background-clip: text;
 
     text-shadow:0px 0px 50px #ffffff;
+}
+
+.titulo-header{
+    background: #ccc;
+    background: linear-gradient(
+        100deg,
+        rgba(0, 198, 255,1) 30%,
+        rgba(0, 114, 255,1) 70%);
+    line-height: 115%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+    /* text-shadow:0px 0px 50px #ffffff; */
+
 }
 
 body {
