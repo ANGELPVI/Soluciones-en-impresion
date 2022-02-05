@@ -48,7 +48,8 @@
             <p class="col-span-12 font-semibold text-white relative w-1/2 text-justify font-descrip">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum laborum quaerat odio ipsum rerum, unde dolorem incidunt.
               Cupiditate ipsa rerum, animi labore repudiandae quae quod, sapiente possimus accusantium id totam. Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            <button class="w-1/4 font-semibold col-span-12 text-white text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-descrip relative">Cotizar Ahora</button>
+            
+              <button class="botones w-1/4 font-semibold col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-descrip relative">Cotizar Ahora</button>
   </div>
 
   {{-- Seccion de las empresas --}}
