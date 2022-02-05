@@ -54,38 +54,39 @@
   {{-- Seccion de las empresas --}}
 
   <div class="w-full h-auto border-gray-100">
-    <h1 class="font-titulo text-3xl text-center text-black">EMPRESAS Y GOBIERNOS QUE CONFIAN EN NOSOTROS</h1>
+    <h1 class="font-titulo mt-20 text-5xl text-center text-titulos">Empresas y gobiernos que confian en nosotros</h1>
     {{-- Contenedor padre --}}
-    <div class="w-full flex flex-wrap justify-center items-center">
+    <div class="w-full h-auto grid grid-cols-6 justify-items-center content-center mt-20">
       {{-- Targeta de precentacion, primera empresa --}}
-      <div class="w-96 h-32 m-4 text-center">
-        <div><img src="{{asset('img/oma.png')}}" class="opacity-30 img-empresas"></div>
+      <div class="w-48 h-auto m-4 text-center">
+        <div><img src="{{asset('img/oma.png')}}" class="opacity-30 h-32"></div>
       </div>
 
       {{-- Targeta de precentacion, segunda empresa --}}
-      <div class="w-96 h-32 m-4 text-center">
-        <div><img src="{{asset('img/tres-guerras.png')}}" class="opacity-30 "></div>
+      <div class=" w-52 h-auto m-4 text-center">
+        <div><img src="{{asset('img/tres-guerras.png')}}" class="opacity-30 h-36"></div>
       </div>
 
       {{-- Targeta de precentacion, tercera empresa --}}
-      <div class="w-96 h-32 m-4 text-center">
-        <div class="flex justify-center"><img src="{{asset('img/h-ayunta-zihu.png')}}" class="py-9 opacity-30"></div>
+      <div class="w-48 h-auto m-4 text-center">
+        <div class=""><img src="{{asset('img/h-ayunta-zihu 1.png')}}" class="opacity-30 h-32"></div>
       </div>
 
       {{-- Targeta de precentacion, cuarta empresa --}}
-      <div class="w-80 h-32 m-4">
-        <div class="flex justify-center items-center"><img src="{{asset('img/hospital.png')}}" class="opacity-30 img-empresas"></div>
+      <div class="w-48 h-auto m-4">
+        <div class=""><img src="{{asset('img/hospital.png')}}" class="opacity-30 h-32"></div>
       </div>
 
       {{-- Targeta de{{-- Targeta de precentacion, quinta empresa --}}
-      <div class="w-80 h-32 m-4 text-center">
-        <div class="flex justify-center items-center"><img src="{{asset('img/peta-nuevo.png')}}" class="opacity-30 img-empresas"></div>
+      <div class="w-48 h-auto m-4 text-center">
+        <div class=""><img src="{{asset('img/cediz.png')}}" class="opacity-30 h-32"></div>
       </div>
 
-      {{-- Targeta de{{-- Targeta de precentacion, quinta empresa --}}
-      <div class="w-80 h-32 m-4 text-center">
-        <div class="flex justify-center items-center"><img src="{{asset('img/cediz.png')}}" class="opacity-30 img-empresas"></div>
+      {{-- Targeta de{{-- Targeta de precentacion, sexta empresa --}}
+      <div class="w-52 h-auto m-4 text-center">
+        <div class=""><img src="{{asset('img/peta-nuevo.png')}}" class="opacity-30 h-32"></div>
       </div>
+      
 
     </div>
   </div>

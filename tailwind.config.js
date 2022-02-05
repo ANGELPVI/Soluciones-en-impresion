@@ -3,6 +3,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      textColor: {
+        'titulos': '#505556',
+      },
+
       fontFamily:{
         'titulo':['"Calistoga"', 'cursive'],
         'descrip':['"Open Sans"','sans-seri'],
