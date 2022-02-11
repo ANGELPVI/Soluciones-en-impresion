@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       textColor: {
         'titulos': '#505556',
+        'comentario':'#656363'
       },
 
       fontFamily:{

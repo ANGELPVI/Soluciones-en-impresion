@@ -49,7 +49,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum laborum quaerat odio ipsum rerum, unde dolorem incidunt.
               Cupiditate ipsa rerum, animi labore repudiandae quae quod, sapiente possimus accusantium id totam. Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
             
-              <button class="botones w-1/4 font-semibold col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-descrip relative">Cotizar Ahora</button>
+              <button class="botones w-1/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo relative">Cotizar Ahora</button>
   </div>
 
   {{-- Seccion de las empresas --}}
@@ -94,83 +94,95 @@
 
   {{-- Sesion de Servicios que ofrece la empresa --}}
 
-  <div class="flex flex-col w-full h-auto mt-20">
-
     {{-- Primer servicio tecnico --}}
-    <div class="flex w-full h-auto bg-gray-900">
-      <div class="grid grid-cols-2 w-2/4 h-auto text-white text-center gap-4 place-items-center">
-        <h1 class="text-3xl m-1 col-span-2 font-titulo">Mantenimiento Preventivo</h1>
-        <p class="text-xl m-1 font-titulo">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-1 font-titulo">2. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-1 font-titulo">3. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-1 font-titulo">4. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <button class="hover:bg-green-400 col-span-2 rounded-full py-3 px-6 bg-green-500 mb-1 font-titulo">Ver Mas...</button>
-      </div>
+    <div class="fondo-azul grid grid-cols-2 w-full h-auto bg-gray-900 justify-items-center content-center">
 
-      <div class="fondo-mante-pre w-2/4">
-        <img src="{{asset('img/ma-pre.svg')}}" class="h-auto m-auto mt-10">
-      </div>
+     <div class="w-full m-20 p-5 h-auto grid grid-cols-3 content-center justify-items-center">
 
+      <h1 class="col-span-12 m-5 ml-20 w-full text-5xl text-white font-titulo">Lo más nuevo en tecnología de fotocopiado</h1>
+      <p class="col-span-12 m-5 ml-20 w-full text-2xl text-white font-descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, cumque.</p>
+      <button class="botones w-2/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo relative">Ver mas..</button>
+     
+    </div>
+
+      <img class="col-span-1 mt-40" src="{{asset('img/konica.svg')}}" alt="" width="500" height="500">
 
     </div>
+
     {{-- Segundo servicio tecnico --}}
-    <div class="flex w-full h-auto bg-gray-900">
-      <div class="fondo-mante-corre w-2/4">
-        <img src="{{asset('img/ma-corre.svg')}}" class="h-auto m-auto mt-10">
-      </div>
+    <div class="fondo-amarillo grid grid-cols-2 w-full h-auto bg-gray-900 justify-items-center content-center">
+      <img class="col-span-1 mt-40" src="{{asset('img/brother.svg')}}" alt="" width="500" height="500">
 
-      <div class="grid grid-cols-2 w-2/4 h-auto text-white text-center gap-4 place-items-center">
-        <h1 class="text-3xl m-1 col-span-2 font-titulo">Mantenimiento Correctivo</h1>
-        <p class="text-xl m-1 font-titulo">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-1 font-titulo">2. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-1 font-titulo">3. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-1 font-titulo">4. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <button class="hover:bg-green-400 col-span-2 rounded-full py-3 px-6 bg-green-500 mb-1  font-titulo">Ver Mas...</button>
-      </div>
-
-    </div>
+      <div class="w-full m-20 p-5 h-auto grid grid-cols-3 content-center justify-items-center">
+       <h1 class="col-span-12 m-5 w-full text-5xl text-white font-titulo">Solo las mejores marcas para ti y tu negocio</h1>
+       <p class="col-span-12 m-5 w-full text-2xl text-white font-descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, cumque.</p>
+       <button class="botones w-2/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo relative">Ver mas..</button>
+      
+     </div>
+     </div>
 
     {{-- Tercer servicio tecnico --}}
-    <div class="flex w-full h-auto bg-gray-900">
+    <div class="fondo-magenta grid grid-cols-2 w-full h-auto bg-gray-900 justify-items-center content-center">
+      
+      <div class="w-full p-5 h-auto grid grid-cols-3 content-center justify-items-center">
+       <h1 class="col-span-12 m-5 ml-20 w-full text-5xl text-white font-titulo">Asesoría online</h1>
+       <p class="col-span-12 m-5 ml-20 w-full text-2xl text-white font-descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, cumque.</p>
+       <button class="botones w-2/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-ti relative">Pedir Asesoría</button>
+        
+     </div>
+     <img class="col-span-1 mt-40" src="{{asset('img/onliene.svg')}}" alt="" width="500" height="500">
+     <img class="col-span-12" src="{{asset("img/honda.svg")}}" alt="">
+     </div>
 
-      <div class="grid grid-cols-2 w-2/4 h-auto text-white text-center gap-4 place-items-center z-0">
-        <h1 class="text-3xl m-1 col-span-2 font-titulo">Asesoaria Online</h1>
-        <p class="text-xl m-1 font-titulo">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-1 font-titulo">2. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-1 font-titulo">3. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="text-xl m-1 font-titulo">4. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <button class="hover:bg-green-400 col-span-2 rounded-full py-3 px-6 bg-green-500 mb-1  font-titulo">Ver Mas...</button>
+  {{-- Sesión de las plataformas conpatibles --}}
+  <div class="grid grid-cols-8 gap-2 w-full h-auto justify-items-center content-center">
+    {{-- Titulo de la sesion --}}
+      <h1 class="col-span-8 text-center text-titulos text-4xl font-titulo">Compatible con todas tus plataformas</h1>
+      {{-- Primera targeta Windows--}}
+      <div class="col-span-4 w-96 targetas h-auto text-black rounded-lg mt-10 transition duration-700 ease-in-out transform hover:-translate-y-6">
+        <div class="grid grid-cols-4 p-4">
+            <p class="col-span-2"><i class="fab fa-windows text-9xl text-blue-500 w-full text-center"></i></p>
+            <div class="col-span-2 m-2 text-center w-full">
+              <h1 class="col-span-4 w-full font-titulo text-center">Windows</h1>
+              <p class="pt-5 font-descrip text-sm">Lorem ipsum dolor, sit amet consectetur.</p>
+            </div>
+        </div>
       </div>
-
-      <div class="fondo-online w-2/4">
-        <img src="{{asset('img/onliene.svg')}}" class=" h-auto m-auto mt-10">
-      </div>
-
-    </div>
+        {{-- Segunda targeta Android --}}
+        <div class="col-span-4 w-96 targetas h-auto text-black rounded-lg mt-10 transition duration-700 ease-in-out transform hover:-translate-y-6">
+          <div class="grid grid-cols-4 p-4">
+              <p class="col-span-2"><i class="fab fa-android text-9xl text-green-400 w-full text-center"></i></p>
+              <div class="col-span-2 m-2 text-center w-full">
+                <h1 class="col-span-4 w-full font-titulo text-center">Android</h1>
+                <p class="pt-5 font-descrip text-sm">Lorem ipsum dolor, sit amet consectetur.</p>
+              </div>
+          </div>
+        </div>
+        {{-- Tersera targeta Linux--}}
+        <div class="col-span-4 w-96 targetas h-auto text-black rounded-lg mt-10 transition duration-700 ease-in-out transform hover:-translate-y-6">
+          <div class="grid grid-cols-4 p-4">
+              <p class="col-span-2"><i class="fab fa-linux text-9xl text-gray-500 w-full text-center"></i></p>
+              <div class="col-span-2 m-2 text-center w-full">
+                <h1 class="col-span-4 w-full font-titulo text-center">Linux</h1>
+                <p class="pt-5 font-descrip text-sm">Lorem ipsum dolor, sit amet consectetur.</p>
+              </div>
+          </div>
+        </div>
+        {{-- Cuarta targeta Apple--}}
+        <div class="col-span-4 w-96 targetas h-auto text-black rounded-lg mt-10 transition duration-700 ease-in-out transform hover:-translate-y-6">
+          <div class="grid grid-cols-4 p-4">
+              <p class="col-span-2"><i class="fab fa-apple text-9xl text-gray-600 w-full text-center"></i></p>
+              <div class="col-span-2 m-2 text-center w-full">
+                <h1 class="col-span-4 w-full font-titulo text-center">Apple</h1>
+                <p class="pt-5 font-descrip text-sm">Lorem ipsum dolor, sit amet consectetur.</p>
+              </div>
+          </div>
+        </div>
   </div>
-
-  {{-- Sesión de las marcas de las Impresoras y sus detalles --}}
-  <div class="w-full h-auto fondo-impresoras text-white text-center pt-28">
-    <h1 class="text-4xl font-titulo letras">Elige tu forma de trabajar</h1>
-    <div class="w-full h-auto grid grid-cols-3 justify-items-center">
-      <img class="m-8 mt-14" src="{{asset('img/brother.svg')}}" alt="300px" width="300">
-      <img class="m-8 mt-16" src="{{asset('img/epson.svg')}}" alt="300px" width="300">
-      <img class="m-8 mt-10" src="{{asset('img/konica.svg')}}" alt="300px" width="300">
-    </div>
-
-    <div class="grid grid-cols-4 justify-items-center m-10">
-      <h5 class="text-1xl font-titulo p-5">Diseño</h5>
-      <h5 class="text-1xl font-titulo p-5">Arquitectura</h5>
-      <h5 class="text-1xl font-titulo p-5">Oficina</h5>
-      <h5 class="text-1xl font-titulo p-5">Volumen</h5>
-    </div>
-  </div>
-
-
 
   {{-- Sesion de planes de renta --}}
   <div class="w-full h-auto mt-32">
-    <h1 class=" text-black text-center font-titulo text-3xl">PLANES DE RENTA</h1>
+    <h1 class=" text-titulos text-center font-titulo text-3xl">PLANES DE RENTA</h1>
     <div class=" w-full h-auto flex flex-wrap justify-center items-center pr-10 pl-10">
 
       <div class="w-3/4 h-64 pr-3 pl-3 mt-5">
@@ -193,7 +205,7 @@
               <li class="pt-2">2 mantenimiento al mes gratis</li>
               <li class="pt-2">Acesoria remota gratis</li>
             </ul>
-            <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-5 font-titulo">OBTENER</button>
+            <button class="hover:bg-green-400 w-3/4 rounded-full  py-1 px-6 bg-green-500 mb-3 mt-5 font-titulo text-sm">OBTENER</button>
           </div>
 
           <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
@@ -213,7 +225,7 @@
               <li class="pt-2">2 mantenimiento al mes gratis</li>
               <li class="pt-2">Acesoria remota gratis</li>
             </ul>
-            <button class="hover:bg-blue-400 rounded-full py-3 px-6 bg-blue-500 mb-3 mt-5 font-titulo">OBTENER</button>
+            <button class="hover:bg-blue-400 w-3/4 rounded-full py-1 px-6 bg-blue-500 mb-3 mt-5 font-titulo">OBTENER</button>
           </div>
 
           <div class="bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl w-2/4 h-auto text-center mt-2 mr-4">
@@ -233,7 +245,7 @@
               <li class="pt-2">Acesoria remota gratis</li>
               <li class="pt-2">1,000 copias minimo</li>
             </ul>
-            <button class="hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-5 font-titulo">OBTENER</button>
+            <button class="hover:bg-green-400 w-3/4 rounded-full py-1 px-6 bg-purple-500 mb-3 mt-5 font-titulo">OBTENER</button>
           </div>
 
         </div>
@@ -245,40 +257,102 @@
     </div>
 
   </div>
+  
+  {{-- Sesion de comentarios --}}
+  <div class="grid grid-cols-12 w-full h-auto mt-80 justify-items-center content-center">
+    <h1 class="col-span-12 text-center text-titulos text-4xl font-titulo p-10">Los más importante para nosotros</h1>
+      {{-- Primer comentarios --}}
+      <div class="col-span-12 w-2/4 h-auto bg-white rounded-2xl targetaComentario">
+        <div class="grid grid-cols-12 w-full justify-items-center content-center">
+
+            <img class="col-span-2 w-24 h-24 rounded-full p-2" src="https://static1.abc.es/media/bienestar/2021/09/09/personas-magneticas-1-kdVD--620x349@abc.jpg" alt="">
+            <div class="col-span-10 w-full h-auto m-2 p-2">
+              <h1 class="text-black font-titulo text-1xl">Sergio García</h1>
+              <span class="text-comentario font-descrip text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo omnis doloribus eos.
+              </span>
+            </div>
+          
+        </div>
+      </div>
+
+      {{-- Segundo comentario --}}
+      <div class="col-span-12 w-2/4 h-auto mt-5 bg-white rounded-2xl targetaComentario">
+        <div class="grid grid-cols-12 w-full justify-items-center content-center">
+
+            <img class="col-span-2 w-24 h-24 rounded-full p-2" src="https://estudiantes.ucontinental.edu.pe/wp-content/uploads/2020/09/Madurez-emocional-7.jpg" alt="">
+            <div class="col-span-10 w-full h-auto m-2 p-2">
+              <h1 class="text-black font-titulo text-1xl">Reyna Nava</h1>  
+              <span class="text-comentario font-descrip text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo omnis doloribus eos.
+              </span>
+            </div>
+          
+        </div>
+      </div>
+      {{-- tercer comentario --}}
+      <div class="col-span-12 w-2/4 h-auto mt-5 bg-white rounded-2xl targetaComentario">
+        <div class="grid grid-cols-12 w-full justify-items-center content-center">
+
+            <img class="col-span-2 w-24 h-24 rounded-full p-2" src="https://www.hola.com/imagenes/estar-bien/20210706192625/personalidad-adultos-altas-capacidades-psicologia/0-974-472/altas-capacidades-m.jpg?filter=w500" alt="">
+            <div class="col-span-10 w-full h-auto m-2 p-2">
+              <h1 class="text-black font-titulo text-1xl">Sofía Torres</h1>
+              <span class="text-comentario font-descrip text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo omnis doloribus eos.
+              </span>
+            </div>
+          
+        </div>
+      </div>
+      {{-- cuarto comentario --}}
+      <div class="col-span-12 w-2/4 h-auto mt-5 bg-white rounded-2xl targetaComentario">
+        <div class="grid grid-cols-12 w-full justify-items-center content-center">
+
+            <img class="col-span-2 w-24 h-24 rounded-full p-2" src="https://cdn.pixabay.com/photo/2018/05/01/16/19/young-man-3366016_960_720.jpg" alt="">
+            <div class="col-span-10 w-full h-auto m-2 p-2">
+              <h1 class="text-black font-titulo text-1xl">Carlos Sánchez</h1>
+              <span class="text-comentario font-descrip text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo omnis doloribus eos.
+              </span>
+            </div>
+          
+        </div>
+      </div>
+  </div>
 
 
   {{-- footer de la pagina --}}
-  <footer class="w-full h-96 bg-gray-800 mt-80 pt-5">
-    <div class=" flex justify-between justify-items-center w-full m-auto pt-10">
-
-      <div class="w-1/3 m-4">
-        <img class="w-24 h-24 rounded-full" src="{{asset('img/logo-bien.png')}}" alt="">
-      </div>
-
-      <div class="w-1/4 m-4 items-center flex flex-col">
-        <div class="w-auto flex flex-col text-white">
-          <h4 class="text-xl">Contactos</h4>
-          <ul class="pt-2">
-            <li><i class="far fa-map"><span class="pl-3 pt-3">San Geronimito Gro.</span></i></li>
-            <li><i class="fas fa-phone-square-alt"><span class="pl-3 pt-3"> 758-103-60-78</span></i></li>
-            <li><i class="far fa-envelope-open"><span class="pl-3">solucionesenimprecion@gmail.com</span></i></li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="w-1/4 m-4 items-center flex flex-col">
-        <div class="w-auto flex flex-col text-white">
-          <h4 class="text-xl">Redes sociales</h4>
-          <ul class="pt-2">
-            <li><i class="fab fa-facebook-square"><span class="pl-3">SOLUCIONES EN IMPRESIÓN</span></i></li>
-            <li><i class="fab fa-whatsapp"></i><span class="pl-3">758-103-60-78</span></li>
-          </ul>
-
+  <footer class="w-full h-96 bg-gray-800 mt-20">
+    <div class="grid grid-cols-12 w-full">
+      {{-- Logotipo y leyenda --}}
+      <div class="grid col-span-5 w-full">
+        <div class="grid grid-cols-4 w-full content-evenly">
+          <img class="col-span-1 w-full h-28 p-2" src="{{asset('img/logo-bien.png')}}" alt="">
+          <span class="col-span-2 w-full h-auto pt-10 text-2xl text-white font-titulo">Soluciones en impresión</span>
+          <p class="col-span-2 p-5 font-descrip text-white text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, necessitatibus!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, ab.
+          </p>
         </div>
       </div>
-
+      {{-- Contactos y redes sociales --}}
+      <div class="grid col-span-4 w-full h-auto">
+        <div class="flex flex-col h-auto text-white w-full">
+          <h1 class="w-full pt-11 font-titulo text-1xl">Contactos</h1>
+          <p class="h-auto w-full pt-1 font-descrip text-lg"><i class="fa-brands fa-whatsapp text-lg"></i> 755-117-75-73</p>
+          <p class="h-auto w-full pt-1 font-descrip text-lg"><i class="fa-regular fa-envelope text-lg"></i> solucionesenimpresion@gmail.com</p>
+        </div>
+      </div>
+        {{-- Redes sociales --}}
+      <div class="grid col-span-3 w-full h-auto text-white">
+        <div class="flex flex-col h-auto w-full">
+          <h1 class="w-full pt-11 font-titulo text-1xl">Redes sociales</h1>
+          <p class="h-auto w-full pt-1 font-descrip text-lg"><i class="fa-brands fa-facebook lg"></i> Soluciones en impresión</p>
+        </div>
+      </div>
+      
     </div>
+
+    {{-- copyright --}}
     <div class="bg-gray-900 w-full h-28 mt-20 flex items-center justify-center">
       <div class="w-1/2 h-auto text-center">
         <i class="far fa-copyright text-white"><span class="pl-3 text-sm text-white">2021 Solucines en impresión. Todos los derechos reservados</span></i>
