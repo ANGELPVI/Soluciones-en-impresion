@@ -1,3 +1,100 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+.nav-bar{
+    @apply flex items-center bg-gray-900 p-3 flex-wrap w-full
+}
+.boto-responsi{
+    @apply text-white inline-flex p-3 hover:bg-gray-900 rounded ml-auto 
+}
+
+.nav-imagen{
+    @apply p-2 mr-4 inline-flex items-center
+}
+.img-logo{
+    @apply w-24 h-24
+}
+.letras-logo{
+    @apply text-white pl-3 font-titulo xs:hidden sm:text-sm md:text-sm lg:text-base xl:text-4xl 2xl:text-5xl
+}
+.nav-items{
+    @apply transition duration-500 ease-in-out border-blue-400 hover:border-b-2 hover:text-white transform hover:-translate-y-1 hover:scale-110 font-titulo uppercase m-3 px-2 py-2 text-gray-400 lg:inline-flex lg:w-auto
+}
+.title-header{
+    @apply col-span-12 lg:col-span-12 text-white relative font-titulo md:mt-2 lg:-mt-28 xs:text-sm sm:text-3xl lg:text-5xl xl:text-6xl 2xl:text-6xl 
+}
+.div-header{
+    @apply grid grid-cols-3 justify-items-center content-center w-full
+}
+.parrafo-header{
+    @apply col-span-12 lg:col-span-12  text-white relative xs:p-3 xs:text-sm sm:text-lg xs:text-center sm:text-justify xs:mt-5 sm:mt-11 xs:w-full sm:w-1/2 font-descrip
+}
+.button-header{
+    @apply w-1/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo relative xs:w-1/2 xs:m-10 xs:text-sm sm:text-sm lg:text-2xl
+}
+.div-empresas{
+    @apply w-full h-auto
+}
+.titulo-empresas{
+    @apply font-titulo mt-20 text-5xl text-center text-titulos xs:text-2xl xs:mt-5
+}
+.div-secundario{
+    @apply w-full h-auto grid grid-cols-6 justify-items-center content-center mt-20 xs:mt-2
+}
+.img-empresa{
+    @apply w-48 h-auto m-4 text-center xs:col-span-6 sm:col-span-2 lg:col-span-1
+}
+.div-principal-servisios{
+    @apply grid grid-cols-2 w-full h-auto bg-gray-900 justify-items-center content-center
+}
+.div-secundario-primer-servicio{
+    @apply w-full m-20 p-5 h-auto grid grid-cols-3 content-center justify-items-center xs:col-span-2 xs:text-center xs:mt-3
+}
+.titulo-primer-servicio{
+    @apply col-span-12 m-5 ml-20 w-full text-5xl text-white font-titulo xs:text-2xl xs:m-0
+}
+.parrafo-primer-servicio{
+    @apply col-span-12 m-5 ml-20 w-full text-2xl text-white font-descrip xs:text-sm xs:m-0 xs:mt-5
+}
+.boton-servicios{
+    @apply xs:w-full xs:text-sm xs:m-8 w-2/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo
+}
+.img-primer-servicio{
+    @apply col-span-1 mt-40 xs:col-span-2 xs:-mt-32 xs:p-10
+}
+.img-segundo-servicio{
+    @apply col-span-1 mt-40 xs:col-span-2 xs:-mt-1 xs:p-10
+}
+.div-secundario-segundo-servicio{
+    @apply w-full m-20 p-5 h-auto grid grid-cols-3 content-center justify-items-center xs:col-span-2 xs:text-center xs:-m-10
+}
+.titulo-segundo-servicio{
+    @apply col-span-12 m-5 w-full text-5xl text-white font-titulo xs:text-2xl
+}
+.parrafo-segundo-servicio{
+    @apply col-span-12 m-5 w-full text-2xl text-white font-descrip xs:text-sm
+}
+.boton-segundo-servicio{
+    @apply xs:w-full xs:text-sm xs:m-8 xs:mt-5 w-2/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo relative
+}
+.div-secundario-tercer-servicio{
+    @apply w-full p-5 h-auto grid grid-cols-3 content-center justify-items-center xs:col-span-2 xs:text-center xs:mt-5
+}
+.titulo-terser-servicio{
+    @apply col-span-12 m-5 ml-20 w-full text-5xl text-white font-titulo xs:text-2xl xs:m-0
+}
+.parrafo-tercer-servicio{
+    @apply col-span-12 m-5 ml-20 w-full text-2xl text-white font-descrip xs:text-sm xs:m-0 xs:mt-5
+}
+.boton-tercer-servicio{
+    @apply xs:w-full xs:text-sm xs:m-8 w-2/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo
+}
+.img-tercer-servicio{
+    @apply col-span-1 mt-40 xs:col-span-2 xs:-mt-20 xs:p-10
+}
+.wave-servicios{
+    @apply col-span-12 w-full xs:col-span-2
+}
+}

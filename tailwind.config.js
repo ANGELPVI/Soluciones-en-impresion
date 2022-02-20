@@ -2,7 +2,12 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+
     extend: {
+      // fontSize:{'xs': '.7rem'},
+      screens:{
+        'xs': {'min': '280px', 'max': '640px'},
+      },
       textColor: {
         'titulos': '#505556',
         'comentario':'#656363'
