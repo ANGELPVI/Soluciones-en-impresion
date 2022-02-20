@@ -137,6 +137,52 @@
      <img class="wave-servicios" src="{{asset("img/honda.svg")}}" alt="">
      </div>
 
+     {{-- Sesión de las plataformas conpatibles --}}
+  <div class="grid grid-cols-8 gap-2 w-full h-auto justify-items-center content-center">
+    {{-- Titulo de la sesion --}}
+      <h1 class="col-span-8 text-center text-titulos text-4xl font-titulo">Compatible con todas tus plataformas</h1>
+      {{-- Primera targeta Windows--}}
+      <div class="col-span-4 w-96 targetas h-auto text-black rounded-lg mt-10 transition duration-700 ease-in-out transform hover:-translate-y-6">
+        <div class="grid grid-cols-4 p-4">
+            <p class="col-span-2"><i class="fab fa-windows text-9xl text-blue-500 w-full text-center"></i></p>
+            <div class="col-span-2 m-2 text-center w-full">
+              <h1 class="col-span-4 w-full font-titulo text-center">Windows</h1>
+              <p class="pt-5 font-descrip text-sm">Lorem ipsum dolor, sit amet consectetur.</p>
+            </div>
+        </div>
+      </div>
+        {{-- Segunda targeta Android --}}
+        <div class="col-span-4 w-96 targetas h-auto text-black rounded-lg mt-10 transition duration-700 ease-in-out transform hover:-translate-y-6">
+          <div class="grid grid-cols-4 p-4">
+              <p class="col-span-2"><i class="fab fa-android text-9xl text-green-400 w-full text-center"></i></p>
+              <div class="col-span-2 m-2 text-center w-full">
+                <h1 class="col-span-4 w-full font-titulo text-center">Android</h1>
+                <p class="pt-5 font-descrip text-sm">Lorem ipsum dolor, sit amet consectetur.</p>
+              </div>
+          </div>
+        </div>
+        {{-- Tersera targeta Linux--}}
+        <div class="col-span-4 w-96 targetas h-auto text-black rounded-lg mt-10 transition duration-700 ease-in-out transform hover:-translate-y-6">
+          <div class="grid grid-cols-4 p-4">
+              <p class="col-span-2"><i class="fab fa-linux text-9xl text-gray-500 w-full text-center"></i></p>
+              <div class="col-span-2 m-2 text-center w-full">
+                <h1 class="col-span-4 w-full font-titulo text-center">Linux</h1>
+                <p class="pt-5 font-descrip text-sm">Lorem ipsum dolor, sit amet consectetur.</p>
+              </div>
+          </div>
+        </div>
+        {{-- Cuarta targeta Apple--}}
+        <div class="col-span-4 w-96 targetas h-auto text-black rounded-lg mt-10 transition duration-700 ease-in-out transform hover:-translate-y-6">
+          <div class="grid grid-cols-4 p-4">
+              <p class="col-span-2"><i class="fab fa-apple text-9xl text-gray-600 w-full text-center"></i></p>
+              <div class="col-span-2 m-2 text-center w-full">
+                <h1 class="col-span-4 w-full font-titulo text-center">Apple</h1>
+                <p class="pt-5 font-descrip text-sm">Lorem ipsum dolor, sit amet consectetur.</p>
+              </div>
+          </div>
+        </div>
+  </div>
+
      {{-- sesion de planes de renta con grid--}}
      <h1 class=" text-titulos text-center font-titulo text-3xl">PLANES DE RENTA</h1>
      <div class="grid grid-cols-12 w-full h-auto p-5 gap-3">
