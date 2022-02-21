@@ -97,4 +97,26 @@
 .wave-servicios{
     @apply col-span-12 w-full xs:col-span-2
 }
+/* sesion de las plataformas compartidas */
+.div-principal{
+    @apply grid grid-cols-8 gap-2 w-full h-auto justify-items-center content-center
+}
+.titulo-plataforma{
+    @apply col-span-8 text-center text-titulos text-4xl font-titulo xs:text-2xl xs:text-center xs:m-4
+}
+.div-targeta{
+    @apply xs:col-span-8 xs:w-64 sm:col-span-8 lg:col-span-4 w-96 h-auto text-black rounded-lg mt-10 transition duration-700 ease-in-out transform hover:-translate-y-6
+}
+.div-secundario-targetas{
+    @apply grid grid-cols-4 p-4
+}
+.div-parrafos{
+    @apply col-span-2 m-2 text-center w-full
+}
+.titulo-targeta{
+    @apply col-span-4 w-full font-titulo text-center
+}
+.parrafo-targeta{
+    @apply pt-5 font-descrip text-sm
+}
 }
