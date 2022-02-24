@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
+
 .nav-bar{
     @apply flex items-center bg-gray-900 p-3 flex-wrap w-full
 }
@@ -119,4 +119,45 @@
 .parrafo-targeta{
     @apply pt-5 font-descrip text-sm
 }
+.titulo-planes-renta{
+    @apply xs:text-2xl text-titulos text-center font-titulo text-3xl pt-32
+}
+.div-principal-renta{
+    @apply grid grid-cols-12 w-full h-auto p-5 gap-3
+}
+.targeta-renta{
+    @apply xs:col-span-12 xs:mr-0 sm:col-span-12 lg:col-span-4 bg-white w-auto h-auto rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl mt-2 mr-4
+}
+.div-contenido-targeta{
+    @apply grid grid-cols-6 justify-items-center content-center
+}
+.header-targeta{
+    @apply col-span-6 text-black font-titulo text-2xl pt-2 bg-green-500 w-full text-center
+}
+/* .targeta-recomendacion{
+    @apply col-span-6 text-ms text-gray-500 mt-3
+} */
+.titulo-precio-targeta{
+    @apply col-span-6 text-4xl font-titulo mt-3
+}
+.targera-timpo-renta{
+    @apply col-span-6 text-sm text-gray-500
+}
+.targeta-lista-carateristicas{
+    @apply col-span-6 font-descrip flex flex-col ml-12 mt-2 text-sm xs:text-center xs:m-4
+}
+.button-primera-renta{
+    @apply col-span-6 hover:bg-green-400 w-3/4 rounded-full  py-1 px-6 bg-green-500 mb-3 mt-5 font-titulo text-sm
+}
+.header-targeta-segundo-plan{
+    @apply col-span-6 text-black font-titulo text-2xl pt-2 bg-blue-500 w-full text-center
+}
+.button-segunda-renta{
+    @apply col-span-6 hover:bg-blue-400 w-3/4 rounded-full  py-1 px-6 bg-blue-500 mb-3 mt-5 font-titulo text-sm
+}
+.heder-tercera-renta{
+    @apply col-span-6 text-black font-titulo text-2xl pt-2 bg-purple-500 w-full text-center
+}
+.button-tercera-targeta{
+    @apply col-span-6 hover:bg-purple-400 w-3/4 rounded-full  py-1 px-6 bg-purple-500 mb-3 mt-5 font-titulo text-sm
 }

@@ -186,18 +186,18 @@
   </div>
 
      {{-- sesion de planes de renta con grid--}}
-     <h1 class=" text-titulos text-center font-titulo text-3xl">PLANES DE RENTA</h1>
-     <div class="grid grid-cols-12 w-full h-auto p-5 gap-3">
+     <h1 class="titulo-planes-renta">PLANES DE RENTA</h1>
+     <div class="div-principal-renta">
 
-       <div class="col-span-4 bg-white w-auto h-auto rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl mt-2 mr-4">
+       <div class="targeta-renta">
 
-         <div class="grid grid-cols-6 justify-items-center content-center">
+         <div class="div-contenido-targeta">
 
-             <h4 class="col-span-6 text-black font-titulo text-2xl pt-2 bg-green-500 w-full text-center">PLAN OFICINA</h4>
+             <h4 class="header-targeta">PLAN OFICINA</h4>
              <small class="col-span-6 text-ms text-gray-500 mt-3">Se recomienda para oficinas de 5 a 10</small>
-             <h3 class="col-span-6 text-4xl font-titulo mt-3">$1,800 MX</h3>
-             <span class="col-span-6 text-sm text-gray-500">Al mes</span>
-           <ul class="col-span-6 font-descrip flex flex-col ml-12 mt-2 text-sm">
+             <h3 class="titulo-precio-targeta">$1,800 MX</h3>
+             <span class="targera-timpo-renta">Al mes</span>
+           <ul class="targeta-lista-carateristicas">
              <li class="pt-2">Impresora Konica minolta</li>
              <li class="pt-2">300 copias-impresiones color</li>
              <li class="pt-2">8,000 copias-impresione blanco y negro</li>
@@ -207,21 +207,21 @@
              <li class="pt-2">2 mantenimiento al mes gratis</li>
              <li class="pt-2">Acesoria remota gratis</li>
            </ul>
-           <button class="col-span-6 hover:bg-green-400 w-3/4 rounded-full  py-1 px-6 bg-green-500 mb-3 mt-5 font-titulo text-sm">OBTENER</button>
+           <button class="button-primera-renta">OBTENER</button>
          
          </div>
 
        </div>
+        {{-- Segunda taregta de plan de renta --}}
+       <div class="targeta-renta">
+         <div class="div-contenido-targeta">
 
-       <div class="col-span-4 w-auto h-auto bg-white rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl mt-2 mr-4">
-         <div class="grid grid-cols-6 justify-items-center content-center">
-
-           <h4 class="col-span-6 text-black font-titulo text-2xl pt-2 bg-blue-500 w-full text-center">PLAN OFICINA</h4>
+           <h4 class="header-targeta-segundo-plan">PLAN OFICINA</h4>
            <small class="col-span-6 text-ms text-gray-500 mt-3">Se recomienda para oficinas de 5 a 10</small>
-           <h3 class="col-span-6 text-4xl font-titulo mt-3">$1,800 MX</h3>
-           <span class="col-span-6 text-sm text-gray-500">Al mes</span>
+           <h3 class="titulo-precio-targeta">$1,800 MX</h3>
+           <span class="targera-timpo-renta">Al mes</span>
            <div class="col-span-6 w-3/4 text-center bg-red-500 rounded-lg text-md text-white font-titulo">Más Vendido</div>
-         <ul class="col-span-6 font-descrip flex flex-col ml-12 mt-2 text-sm">
+         <ul class="targeta-lista-carateristicas">
            <li class="pt-2">Impresora Konica minolta</li>
            <li class="pt-2">300 copias-impresiones color</li>
            <li class="pt-2">8,000 copias-impresione blanco y negro</li>
@@ -231,19 +231,20 @@
            <li class="pt-2">2 mantenimiento al mes gratis</li>
            
          </ul>
-         <button class="col-span-6 hover:bg-green-400 w-3/4 rounded-full  py-1 px-6 bg-blue-500 mb-3 mt-5 font-titulo text-sm">OBTENER</button>
+         <button class="button-segunda-renta">OBTENER</button>
        
        </div>
        </div>
 
-       <div class="col-span-4 bg-white w-auto h-auto rounded-lg transition duration-700 ease-in-out transform hover:-translate-y-6 shadow-2xl mt-2 mr-4">
-         <div class="grid grid-cols-6 justify-items-center content-center">
+       {{-- Tersera targeta plan de renta --}}
+       <div class="targeta-renta">
+         <div class="div-contenido-targeta">
 
-           <h4 class="col-span-6 text-black font-titulo text-2xl pt-2 bg-purple-500 w-full text-center">PLAN OFICINA</h4>
+           <h4 class="heder-tercera-renta">PLAN OFICINA</h4>
            <small class="col-span-6 text-ms text-gray-500 mt-3">Se recomienda para oficinas de 5 a 10</small>
-           <h3 class="col-span-6 text-4xl font-titulo mt-3">$1,800 MX</h3>
-           <span class="col-span-6 text-sm text-gray-500">Al mes</span>
-         <ul class="col-span-6 font-descrip flex flex-col ml-12 mt-2 text-sm">
+           <h3 class="titulo-precio-targeta">$1,800 MX</h3>
+           <span class="targera-timpo-renta">Al mes</span>
+         <ul class="targeta-lista-carateristicas">
            <li class="pt-2">Impresora Konica minolta</li>
            <li class="pt-2">300 copias-impresiones color</li>
            <li class="pt-2">8,000 copias-impresione blanco y negro</li>
@@ -253,7 +254,7 @@
            <li class="pt-2">2 mantenimiento al mes gratis</li>
            <li class="pt-2">Acesoria remota gratis</li>
          </ul>
-         <button class="col-span-6 hover:bg-green-400 w-3/4 rounded-full  py-1 px-6 bg-purple-500 mb-3 mt-5 font-titulo text-sm">OBTENER</button>
+         <button class="button-tercera-targeta">OBTENER</button>
        
        </div>
        </div>
@@ -264,7 +265,7 @@
  
   
   {{-- Sesion de comentarios --}}
-  <div class="grid grid-cols-12 w-full h-auto mt-80 justify-items-center content-center">
+  <div class="grid grid-cols-12 w-full h-auto mt-20 justify-items-center content-center">
     <h1 class="col-span-12 text-center text-titulos text-4xl font-titulo p-10">Los más importante para nosotros</h1>
       {{-- Primer comentarios --}}
       <div class="col-span-12 w-2/4 h-auto bg-white rounded-2xl targetaComentario">
