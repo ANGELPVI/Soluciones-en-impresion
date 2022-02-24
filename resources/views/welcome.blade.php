@@ -265,16 +265,16 @@
  
   
   {{-- Sesion de comentarios --}}
-  <div class="grid grid-cols-12 w-full h-auto mt-20 justify-items-center content-center">
-    <h1 class="col-span-12 text-center text-titulos text-4xl font-titulo p-10">Los más importante para nosotros</h1>
+  <div class="div-principal-comentarios">
+    <h1 class="title-comentarios">Los más importante para nosotros</h1>
       {{-- Primer comentarios --}}
-      <div class="col-span-12 w-2/4 h-auto bg-white rounded-2xl targetaComentario">
-        <div class="grid grid-cols-12 w-full justify-items-center content-center">
+      <div class="tergeta-comentarios targetaComentario">
+        <div class="div-img-parrafos">
 
-            <img class="col-span-2 w-24 h-24 rounded-full p-2" src="https://static1.abc.es/media/bienestar/2021/09/09/personas-magneticas-1-kdVD--620x349@abc.jpg" alt="">
-            <div class="col-span-10 w-full h-auto m-2 p-2">
-              <h1 class="text-black font-titulo text-1xl">Sergio García</h1>
-              <span class="text-comentario font-descrip text-sm">
+            <img class="img-usuario-comentarios" src="https://static1.abc.es/media/bienestar/2021/09/09/personas-magneticas-1-kdVD--620x349@abc.jpg" alt="">
+            <div class="div-parrafos-comentarios">
+              <h1 class="titulo-usuario-cometario">Sergio García</h1>
+              <span class="parrafo-comentario">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo omnis doloribus eos.
               </span>
             </div>
@@ -283,13 +283,13 @@
       </div>
 
       {{-- Segundo comentario --}}
-      <div class="col-span-12 w-2/4 h-auto mt-5 bg-white rounded-2xl targetaComentario">
-        <div class="grid grid-cols-12 w-full justify-items-center content-center">
+      <div class="tergeta-comentarios targetaComentario">
+        <div class="div-img-parrafos">
 
-            <img class="col-span-2 w-24 h-24 rounded-full p-2" src="https://estudiantes.ucontinental.edu.pe/wp-content/uploads/2020/09/Madurez-emocional-7.jpg" alt="">
-            <div class="col-span-10 w-full h-auto m-2 p-2">
-              <h1 class="text-black font-titulo text-1xl">Reyna Nava</h1>  
-              <span class="text-comentario font-descrip text-sm">
+            <img class="img-usuario-comentarios" src="https://estudiantes.ucontinental.edu.pe/wp-content/uploads/2020/09/Madurez-emocional-7.jpg" alt="">
+            <div class="div-parrafos-comentarios">
+              <h1 class="titulo-usuario-cometario">Reyna Nava</h1>  
+              <span class="parrafo-comentario">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo omnis doloribus eos.
               </span>
             </div>
@@ -297,13 +297,13 @@
         </div>
       </div>
       {{-- tercer comentario --}}
-      <div class="col-span-12 w-2/4 h-auto mt-5 bg-white rounded-2xl targetaComentario">
-        <div class="grid grid-cols-12 w-full justify-items-center content-center">
+      <div class="tergeta-comentarios targetaComentario">
+        <div class="div-img-parrafos">
 
-            <img class="col-span-2 w-24 h-24 rounded-full p-2" src="https://www.hola.com/imagenes/estar-bien/20210706192625/personalidad-adultos-altas-capacidades-psicologia/0-974-472/altas-capacidades-m.jpg?filter=w500" alt="">
-            <div class="col-span-10 w-full h-auto m-2 p-2">
-              <h1 class="text-black font-titulo text-1xl">Sofía Torres</h1>
-              <span class="text-comentario font-descrip text-sm">
+            <img class="img-usuario-comentarios" src="https://www.hola.com/imagenes/estar-bien/20210706192625/personalidad-adultos-altas-capacidades-psicologia/0-974-472/altas-capacidades-m.jpg?filter=w500" alt="">
+            <div class="div-parrafos-comentarios">
+              <h1 class="titulo-usuario-cometario">Sofía Torres</h1>
+              <span class="parrafo-comentario">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo omnis doloribus eos.
               </span>
             </div>
@@ -311,13 +311,13 @@
         </div>
       </div>
       {{-- cuarto comentario --}}
-      <div class="col-span-12 w-2/4 h-auto mt-5 bg-white rounded-2xl targetaComentario">
-        <div class="grid grid-cols-12 w-full justify-items-center content-center">
+      <div class="tergeta-comentarios targetaComentario">
+        <div class="div-img-parrafos">
 
-            <img class="col-span-2 w-24 h-24 rounded-full p-2" src="https://cdn.pixabay.com/photo/2018/05/01/16/19/young-man-3366016_960_720.jpg" alt="">
-            <div class="col-span-10 w-full h-auto m-2 p-2">
-              <h1 class="text-black font-titulo text-1xl">Carlos Sánchez</h1>
-              <span class="text-comentario font-descrip text-sm">
+            <img class="img-usuario-comentarios" src="https://cdn.pixabay.com/photo/2018/05/01/16/19/young-man-3366016_960_720.jpg" alt="">
+            <div class="div-parrafos-comentarios">
+              <h1 class="titulo-usuario-cometario">Carlos Sánchez</h1>
+              <span class="parrafo-comentario">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo omnis doloribus eos.
               </span>
             </div>

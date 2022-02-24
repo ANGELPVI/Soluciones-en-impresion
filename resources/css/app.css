@@ -161,3 +161,27 @@
 .button-tercera-targeta{
     @apply col-span-6 hover:bg-purple-400 w-3/4 rounded-full  py-1 px-6 bg-purple-500 mb-3 mt-5 font-titulo text-sm
 }
+.div-principal-comentarios{
+    @apply grid grid-cols-12 w-full h-auto mt-20 justify-items-center content-center
+}
+.title-comentarios{
+    @apply col-span-12 text-center text-titulos text-4xl font-titulo p-10 xs:text-2xl xs:text-center
+}
+.tergeta-comentarios{
+    @apply col-span-12 xs:w-9/12 xs:text-center w-2/4 h-auto bg-white rounded-2xl mt-10
+}
+.div-img-parrafos{
+    @apply grid grid-cols-12 w-full justify-items-center content-center
+}
+.img-usuario-comentarios{
+    @apply col-span-2 xs:col-span-12 w-24 h-24 rounded-full p-2
+}
+.div-parrafos-comentarios{
+    @apply col-span-10 xs:col-span-12 w-full h-auto m-2 p-2
+}
+.titulo-usuario-cometario{
+    @apply text-black font-titulo
+}
+.parrafo-comentario{
+    @apply text-comentario font-descrip text-sm
+}
