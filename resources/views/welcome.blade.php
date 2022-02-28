@@ -328,28 +328,28 @@
 
 
   {{-- footer de la pagina --}}
-  <footer class="w-full h-96 bg-gray-800 mt-20">
+  <footer class="w-full h-auto bg-gray-800 mt-20">
     <div class="grid grid-cols-12 w-full">
       {{-- Logotipo y leyenda --}}
-      <div class="grid col-span-5 w-full">
-        <div class="grid grid-cols-4 w-full content-evenly">
-          <img class="col-span-1 w-full h-28 p-2" src="{{asset('img/logo-bien.png')}}" alt="">
-          <span class="col-span-2 w-full h-auto pt-10 text-2xl text-white font-titulo">Soluciones en impresión</span>
-          <p class="col-span-2 p-5 font-descrip text-white text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, necessitatibus!
+      <div class="grid lg:col-span-5 w-full xs:col-span-12 sm:col-span-12">
+        <div class="grid grid-cols-4 w-full content-evenly xs:justify-items-center xs:content-center sm:justify-items-center sm:content-center">
+          <img class="lg:col-span-1 xs:col-span-4 sm:col-span-4 lg:w-full xs:w-1/2 h-28 xs:h-20 p-2" src="{{asset('img/logo-bien.png')}}" alt="">
+          <span class="lg:col-span-2 xs:col-span-4 sm:col-span-4 sm:text-center xs:text-center w-full h-auto pt-10 xs:-mt-10 text-2xl text-white font-titulo xs:text-2xl">Soluciones en impresión</span>
+          <p class="lg:col-span-2 xs:col-span-4 sm:col-span-4 sm:text-center xs:p-2 p-5 font-descrip text-white text-sm xs:text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, necessitatibus!
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, ab.
           </p>
         </div>
       </div>
       {{-- Contactos y redes sociales --}}
-      <div class="grid col-span-4 w-full h-auto">
+      <div class="grid lg:col-span-4 xs:col-span-12 sm:col-span-12 w-full h-auto xs:-mt-5 xs:text-center sm:text-center lg:text-justify">
         <div class="flex flex-col h-auto text-white w-full">
           <h1 class="w-full pt-11 font-titulo text-1xl">Contactos</h1>
-          <p class="h-auto w-full pt-1 font-descrip text-lg"><i class="fa-brands fa-whatsapp text-lg"></i> 755-117-75-73</p>
-          <p class="h-auto w-full pt-1 font-descrip text-lg"><i class="fa-regular fa-envelope text-lg"></i> solucionesenimpresion@gmail.com</p>
+          <p class="h-auto w-full pt-1 font-descrip text-lg xs:text-sm"><i class="fa-brands fa-whatsapp text-lg"></i> 755-117-75-73</p>
+          <p class="h-auto w-full pt-1 font-descrip text-lg xs:text-sm"><i class="fa-regular fa-envelope text-lg"></i> solucionesenimpresion@gmail.com</p>
         </div>
       </div>
         {{-- Redes sociales --}}
-      <div class="grid col-span-3 w-full h-auto text-white">
+      <div class="grid lg:col-span-3 xs:col-span-12 sm:col-span-12 w-full h-auto text-white xs:-mt-7 xs:text-center sm:text-center lg:text-justify">
         <div class="flex flex-col h-auto w-full">
           <h1 class="w-full pt-11 font-titulo text-1xl">Redes sociales</h1>
           <p class="h-auto w-full pt-1 font-descrip text-lg"><i class="fa-brands fa-facebook lg"></i> Soluciones en impresión</p>
@@ -360,7 +360,7 @@
 
     {{-- copyright --}}
     <div class="bg-gray-900 w-full h-28 mt-20 flex items-center justify-center">
-      <div class="w-1/2 h-auto text-center">
+      <div class="w-1/2 xs:w-full h-auto text-center">
         <i class="far fa-copyright text-white"><span class="pl-3 text-sm text-white">2021 Solucines en impresión. Todos los derechos reservados</span></i>
       </div>
     </div>
