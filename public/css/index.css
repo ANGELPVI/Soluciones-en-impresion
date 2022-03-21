@@ -89,7 +89,7 @@ body {
         rgba(0, 198, 255,1) 30%,
         rgba(0, 114, 255,1) 70%);
     line-height: 115%;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-colo640r: transparent;
     -webkit-background-clip: text;
     /* text-shadow:0px 0px 50px #ffffff; */
 }

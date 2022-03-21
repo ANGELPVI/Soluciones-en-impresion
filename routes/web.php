@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\pageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[pageController::class, 'inicio']);
+
+Route::get('/',[pageController::class, 'inicio'])->name('inicio');
+
+Route::get('/impresoras',[pageController::class, 'impresoras'])->name('impresoras');
+
+Route::get('/consumibles',[pageController::class,'consumibles'])->name('consumibles');
+
+Route::get('/soporte',[pageController::class,'soporte'])->name('soporte');
+
+
+
+
+
