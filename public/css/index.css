@@ -108,3 +108,10 @@ backdrop-filter: blur(10px);
     box-shadow: -10px -4px 10px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.25);
     
 }
+
+.targetaVentaimpresora{
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.25);
+}
+.imgImpresoras{
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.26);
+}
