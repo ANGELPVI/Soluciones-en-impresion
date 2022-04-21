@@ -22,4 +22,13 @@ class pageController extends Controller
     public function soporte(){
         return view('soporte');
     }
+
+    public function login(){
+        return view('login');
+    }
+    public function registro(){
+        return view('registro');
+    }
+
+    
 }

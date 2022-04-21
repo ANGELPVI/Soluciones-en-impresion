@@ -38,6 +38,17 @@
         <a href="{{route('impresoras')}}" class="nav-items"><i class="fas fa-print text-xl mr-2"></i>Impresoras</a>
         <a href="{{route('consumibles')}}" class="nav-items"><i class="fas fa-store text-xl mr-2"></i>Consumibles</a>
         <a href="{{route('soporte')}}" class="nav-items"><i class="fas fa-wrench text-xl mr-2"></i>Soporte Técnico</a>
+
+        @if (auth()->check())
+            <p class=" text-5xl text-white">Welcome <b>{{ auth()->user()->nombre }}</b></p>
+            <a href="{{route('destroy')}}">Salir</a>
+            
+        @else
+        <a href="{{route('login')}}" class="nav-items"><i class="fas fa-wrench text-xl mr-2"></i>Login</a>
+        <a href="{{route('registro')}}" class="nav-items"><i class="fas fa-wrench text-xl mr-2"></i>Registro</a>
+        @endif
+        
+
       </div>
 
     </div>

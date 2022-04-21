@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\pageController;
+use App\Http\Controllers\registro;
+use App\Http\Controllers\login;
+use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +26,17 @@ Route::get('/impresoras',[pageController::class, 'impresoras'])->name('impresora
 Route::get('/consumibles',[pageController::class,'consumibles'])->name('consumibles');
 
 Route::get('/soporte',[pageController::class,'soporte'])->name('soporte');
+
+Route::get('/login',[pageController::class,'login'])->name('login')->middleware('guest');
+
+Route::post('/login', [login::class,'store'])->name('store');
+
+Route::get('/registro',[pageController::class,'registro'])->name('registro')->middleware('guest');
+
+Route::post('/registro',[registro::class,'store'])->name('store');
+
+Route::get('/destroy',[login::class,'destroy'])->name('destroy');
+
 
 
 

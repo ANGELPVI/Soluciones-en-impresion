@@ -17,9 +17,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
+        'nombre',
         'email',
         'password',
+        'telefono',
+        'estado',
+        'ciudad',
+        'cp'
     ];
 
     /**
@@ -40,4 +44,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // Funcion que encripta la contraseña del usuario al registrarse
+    public function setPasswordAttribute($password){
+        $this->attributes['password']=bcrypt($password);
+    }
 }
