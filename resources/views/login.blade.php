@@ -7,9 +7,11 @@
         <input type="text" placeholder="email" name="email">
         <input type="password" placeholder="password" name="password">
         @error('message')
-            <p>Error</p>
+            <p>{{$message}}</p>
         @enderror
         <button type="submit">Login</button>
 
     </form>
+
+    <a href="{{route('registro')}}">No tengo una cuenta</a>
 @endsection
