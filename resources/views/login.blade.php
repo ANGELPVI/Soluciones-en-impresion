@@ -2,16 +2,27 @@
 
 @section('sesion')
 
-    <form method="post" action="login">
+    <div class="divPrincipal">
+
+    <form name="login" method="post" action="login" class="fomularioLogin">
+        <img src="{{asset('img/logo-bien.png')}}" alt="" width="160px" height="160px">
+        <h2 class="tituloFormulario">Soluciones En Impresión</h2>
         @csrf
-        <input type="text" placeholder="email" name="email">
-        <input type="password" placeholder="password" name="password">
-        @error('message')
-            <p>{{$message}}</p>
+        <input  class="inputs" type="text" placeholder="Email" name="email" autofocus>  
+        <input class="inputs" type="password" placeholder="Contraseña" name="password">
+        <div id="error" class="hidden textoError"><p>Los formatos del los campos son incorrectos</p></div>
+                 
+        @error('error')
+            <div class="textoError"><p>{{$message}}</p></div>
         @enderror
-        <button type="submit">Login</button>
 
+        <div class="registroPassword">
+            <a href="{{route('registro')}}" class="textosRegistroPasw">No tengo una cuenta</a>
+            <a href="{{route('registro')}}" class="textosRegistroPasw">Olvide mi contraseña</a>
+        </div>
+        <button class="buttonLogin" type="submit">Login</button>
     </form>
+    
 
-    <a href="{{route('registro')}}">No tengo una cuenta</a>
+    </div>
 @endsection
