@@ -13,7 +13,7 @@
         <div id="error" class="hidden textoError"><p>Los formatos del los campos son incorrectos</p></div>
                  
         @error('error')
-            <div class="textoError"><p>{{$message}}</p></div>
+            <div id="usuarioError" class="textoError"><p>{{$message}}</p></div>
         @enderror
 
         <div class="registroPassword">
@@ -23,6 +23,5 @@
         <button class="buttonLogin" type="submit">Login</button>
     </form>
     
-
     </div>
 @endsection

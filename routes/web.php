@@ -41,4 +41,3 @@ Route::get('/destroy',[login::class,'destroy'])->name('destroy');
 
 
 
-
