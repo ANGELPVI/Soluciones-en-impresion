@@ -214,3 +214,21 @@
 .buttonLogin{
     @apply w-1/2 h-10 bg-green-500 rounded-2xl font-descrip mb-8 hover:bg-green-400
 }
+
+/* Formulario de registro */
+.divpadreRegistro{
+    @apply grid grid-cols-1 justify-items-center w-full h-auto mt-8 mb-96
+}
+
+.formRegistro{
+    @apply grid grid-cols-4 gap-4 w-1/2 h-auto bg-white p-8 rounded-3xl shadow-2xl
+}
+
+.inputsRegistro{
+    @apply col-span-2 w-full h-9 p-3 font-descrip border-gray-300 border-2 rounded-xl shadow-lg bg-gray-100
+}
+.tituloFormularioRegistro{
+    @apply md:text-2xl font-titulo -mt-2 opacity-50 xs:text-sm sm:text-sm
+}
+
+

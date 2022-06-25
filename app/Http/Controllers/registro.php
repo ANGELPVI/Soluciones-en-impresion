@@ -10,7 +10,7 @@ class registro extends Controller{
     // Funcion que registra a los usuario 
     public function store(){
 
-        $user = User::create(request(['nombre','email','password','telefono','estado','ciudad','cp']));
+        $user = User::create(request(['nombre','apellidos','email','password','telefono','estado','ciudad','cp']));
 
         auth()->login($user);
         return redirect()->to('/');
