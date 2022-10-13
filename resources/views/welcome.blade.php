@@ -10,8 +10,8 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://secret-garden-63670.herokuapp.com/css/index.css">
-  <link rel="stylesheet" href="https://secret-garden-63670.herokuapp.com/css/app.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/app.css">
 
   <script src="https://kit.fontawesome.com/315f51bd5c.js" crossorigin="anonymous"></script>
   <!-- Styles -->
@@ -98,7 +98,7 @@
     </div>
   </footer>
 
-  <script src="https://secret-garden-63670.herokuapp.com/js/index.js"></script>
+  <script src="/js/index.js"></script>
 </body>
 
 </html>

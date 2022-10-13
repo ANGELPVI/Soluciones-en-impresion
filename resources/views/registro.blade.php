@@ -13,7 +13,7 @@
             <input class="inputsRegistro" type="email" name="email" placeholder="Email">
             <input class="inputsRegistro" type="password" name="password" placeholder="Contraseña">
             <input class="inputsRegistro" type="text" name="telefono" placeholder="Teléfono">
-            <select class="inputsRegistro" name="estados" id="estados">
+            <select class="sele" name="estados" id="estados">
                 <option>Selecciona un Estado</option>
             </select>
             <select class="inputsRegistro" name="municipios" id="municipios">
