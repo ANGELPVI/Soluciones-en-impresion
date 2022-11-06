@@ -23,6 +23,8 @@ class CreateUsersTable extends Migration
             $table->string('estado');
             $table->string('ciudad');
             $table->integer('cp');
+            $table->string('colonia');
+            $table->string('calle');
             $table->timestamps();
         });
 

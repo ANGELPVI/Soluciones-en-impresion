@@ -13,10 +13,10 @@
             <input class="inputsRegistro" type="email" name="email" placeholder="Email">
             <input class="inputsRegistro" type="password" name="password" placeholder="Contraseña">
             <input class="inputsRegistro" type="text" name="telefono" placeholder="Teléfono">
-            <select class="inputsRegistro" name="estados" id="estados">
+            <select class="inputsRegistro" name="estado" id="estados">
                 <option>Selecciona un Estado</option>
             </select>
-            <select class="inputsRegistro" name="municipios" id="municipios">
+            <select class="inputsRegistro" name="ciudad" id="municipios">
                 <option>Seleccione un municipio</option>
             </select>
             <input class="inputsRegistro" type="text" name="cp" placeholder="Codigo Postal">
