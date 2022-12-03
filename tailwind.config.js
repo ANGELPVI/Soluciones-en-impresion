@@ -30,6 +30,7 @@ module.exports = {
       borderColor: ['hover','active'],
       transform: ['hover', 'focus'],
       transitionDuration: ['hover', 'focus'],
+      display: ['group-focus']
     },
   },
   plugins: [],

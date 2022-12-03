@@ -21,7 +21,7 @@ body {
     width: 100%;
     height: 600px;
     background-size: cover;
-    position: relative;
+    position: relative
     
 }
 .fondo-header::before{

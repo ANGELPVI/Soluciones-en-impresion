@@ -232,6 +232,14 @@
     @apply md:text-2xl font-titulo -mt-2 opacity-50 xs:text-sm sm:text-sm
 }
 
+.optionUser{
+    @apply bg-white
+}
+
+.optionItemUser{
+    @apply block text-xl mr-2
+}
+
 
 
 

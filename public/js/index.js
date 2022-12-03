@@ -1,3 +1,11 @@
+// Activar el menu de usuario
+const userMenu=document.getElementById('userMenu');
+let optionUser=document.getElementById('optionUser');
+userMenu.addEventListener('click', ()=>{
+  optionUser.classList.toggle('hidden');
+      
+})
+
 
 //Funcion que rellena el select del los estados
 let select=document.getElementById('estados');
@@ -65,6 +73,9 @@ login.addEventListener('submit', e=>{
  login.password.addEventListener('click', ()=>{
   textoError.classList.add('hidden');
 })
+
+
+
  
 
 
