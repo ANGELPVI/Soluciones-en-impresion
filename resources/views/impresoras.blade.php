@@ -1,11 +1,11 @@
 @extends('welcome')
 
 @section('sesion')    
-    <div class="grid grid-cols-2 justify-items-center w-full h-auto">
+    <div class="grid grid-cols-3 p-4 m-auto mt-10 justify-items-center w-5/6 gap-4 h-auto">
         @foreach ($impresoras as $item)
 
-            <div class="col-span-1 w-1/2 h-auto bg-white m-4 rounded-lg targetaVentaimpresora">
-                <img class="mt-4 imgImpresoras" src="https://www.copyservice.es/WebRoot/StoreES3/Shops/ec9319/MediaGallery/Categories/PRODUCTOS/_0022_BIZHUB_0020_COLOR_0022_/BIZHUB_C458/C458_01.png" 
+            <div class="col-span-1 w-full mt-5 h-auto bg-white rounded-lg targetaVentaimpresora">
+                <img class="mt-4 imgImpresoras p-3" src="https://m.media-amazon.com/images/I/71PcE3eig6L.jpg" 
                 alt="" width="400px" height="400px">
                 <div class="text-center mt-6">
                     <h3 class="text-3xl font-titulo">${{$item->precio}}</h3>
