@@ -1,25 +1,22 @@
 @extends('welcome')
 
 @section('sesion')
-<div class="grid grid-cols-3 p-4 m-auto mt-10 justify-items-center w-5/6 gap-4 h-auto">
+<div class="grid grid-cols-6 p-4 m-auto mt-10 justify-items-center w-5/6 gap-x-3">
     @foreach ($consumibles as $item)
 
-        <div class="col-span-1 w-full mt-5 h-auto bg-white rounded-lg targetaVentaimpresora">
-            <img class="mt-4 imgImpresoras p-3" src="{{$item->rutaImg}}" 
-            alt="" width="400px" height="400px">
-            <div class="text-center mt-6">
-                <h3 class="text-3xl font-titulo">{{$item->modelo}}</h3>
-                <h5 class="text-2xl font-titulo m-2"><span>{{$item->marca}} </span>{{$item->modelo}}</h5>
+        <div class="w-full mt-5 h-auto bg-white rounded-lg targetaVentaimpresora">
+            <img class="rounded-lg imgImpresoras w-full h-3/5 p-3" src="{{$item->rutaImg}}">
+
+            <div class="grid grid-cols-1 justify-items-center mt-2 gap-y-2 ">
+                <h2 class=" font-titulo text-2xl">${{$item->presio}}</h2>
+                <h3 class="font-titulo text-xl">{{$item->modelo}} {{$item->marca}}</h3>
+                
             </div>
 
-            <div class="text-justify font-descrip p-3">
-                <p>{{$item->Descripcion}} Lorem ipsum dolor sit amet.</p>
+            <div class="text-justify font-descrip p-2">
+                <p>{{$item->descripcion}}</p>
             </div>
 
-            <div class="grid grid-cols-2 w-full">
-                <button class="m-4 col-span-1 w-auto h-8 bg-blue-400 rounded-lg font-descrip hover:bg-blue-300">Ficha Tecnica</button>
-                <button class="m-4 col-span-1 w-auto h-8 bg-green-500 rounded-lg font-descrip hover:bg-green-400">Agregar al carrito</button>
-            </div>
         </div>
 
     @endforeach
