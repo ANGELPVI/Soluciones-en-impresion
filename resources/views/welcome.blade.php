@@ -110,6 +110,7 @@
   </footer>
 
   <script src="{{asset('js/index.js')}}"></script>
+  <script src="{{asset('js/menuUser.js')}}"></script>
 </body>
 
 </html>

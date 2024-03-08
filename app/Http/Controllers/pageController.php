@@ -16,6 +16,13 @@ class pageController extends Controller
         return view('impresoras',compact('impresoras'));
     }
 
+    public function equipoSoporte(Request $request){
+        $name = $request->input('equipo');
+        $equipo = Flight::where('modelo', $name);
+        return view('soporte',compact('equipo'));
+        
+    }
+
     public function consumibles(){
         return view('consumibles');
     }
