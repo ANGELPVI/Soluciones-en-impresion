@@ -24,7 +24,8 @@ class pageController extends Controller
     }
 
     public function consumibles(){
-        return view('consumibles');
+        $consumibles=App\Models\Consumibles::all();
+        return view('consumibles',compact('consumibles'));
     }
     public function soporte(){
         return view('soporte');
