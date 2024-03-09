@@ -18,8 +18,8 @@ class pageController extends Controller
 
     public function equipoSoporte(Request $request){
         $name = $request->input('equipo');
-        $equipo = Flight::where('modelo', $name);
-        return view('soporte',compact('equipo'));
+        //$equipo = Flight::where('modelo', $name);
+        return view('soporte');
         
     }
 
