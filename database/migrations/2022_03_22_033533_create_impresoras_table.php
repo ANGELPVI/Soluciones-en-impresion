@@ -17,6 +17,7 @@ class CreateImpresorasTable extends Migration
         Schema::create('impresoras', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('modelo');
+            $table->string('img');
             $table->string('marca');
             $table->text('Descripcion');
             $table->integer('precio');
