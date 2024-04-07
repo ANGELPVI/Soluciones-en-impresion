@@ -5,7 +5,7 @@
         @foreach ($impresoras as $item)
 
             <div class="contenedorImagen targetaVentaimpresora">
-                <img class="imgImpresoras" src="https://konicaminolta.ca/wps/wcm/connect/bca/6e544c3b-602b-4b05-8fb9-548f1f05e45a/308-large.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_0IDCHAS0L03T10A5N5R0IT3PU6-6e544c3b-602b-4b05-8fb9-548f1f05e45a-mwfUruy" 
+                <img class="imgImpresoras" src="{{$item->img}}" 
                 alt="" width="400px" height="400px">
                 <div class="contenedorPrecio">
                     <h3 class="textoPrecio">${{$item->precio}}</h3>
