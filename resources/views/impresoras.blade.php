@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="textoDescripcion">
-                    <p>{{$item->Descripcion}} Lorem ipsum dolor sit amet.</p>
+                    <p>{{$item->Descripcion}}</p>
                 </div>
                    
                 

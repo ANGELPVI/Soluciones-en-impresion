@@ -1,20 +1,22 @@
 @extends('welcome')
 
 @section('sesion')
-<div class="grid grid-cols-6 p-4 m-auto mt-10 justify-items-center w-5/6 gap-x-3">
+<div class="cotenedorPadre">
     @foreach ($consumibles as $item)
 
-        <div class="w-full mt-5 h-auto bg-white rounded-lg targetaVentaimpresora">
-            <img class="rounded-lg imgImpresoras w-full h-3/5 p-3" src="{{$item->rutaImg}}">
+        <div class="contenedorImagen targetaVentaimpresora">
+            <img class="imgImpresoras" src="{{$item->rutaImg}}" alt="" width="400px" height="400px">
 
-            <div class="grid grid-cols-1 justify-items-center mt-2 gap-y-2 ">
-                <h2 class=" font-titulo text-2xl">${{$item->presio}}</h2>
-                <h3 class="font-titulo text-xl">{{$item->modelo}} {{$item->marca}}</h3>
+            <div class="contenedorPrecio">
+                <h2 class="textoPrecio">${{$item->presio}}</h2>
+                <h3 class="textoModelo">{{$item->modelo}} {{$item->marca}}</h3>
                 
             </div>
 
-            <div class="text-justify font-descrip p-2">
-                <p>{{$item->descripcion}}</p>
+            <div class="textoDescripcion">
+                <p>{{$item->descripcion}} Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, nesciunt. 
+                    Placeat assumenda tenetur eius! Quo, qui. 
+                    Obcaecati illo, officia aliquid temporibus porro, officiis vero animi nisi iusto possimus libero et.</p>
             </div>
 
         </div>
