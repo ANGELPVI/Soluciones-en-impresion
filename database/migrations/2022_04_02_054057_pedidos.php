@@ -17,10 +17,9 @@ class Pedidos extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('userId');
             $table->foreign('userId')->references('id')->on('users');
-            $table->integer('producto')->unique();
-            $table->integer('cantidad');
-            $table->double('total');
-            $table->string('estado');
+            $table->json('productos');
+            $table->double('total',$precision = 9, $scale = 2);
+            $table->string('estado',20);
             $table->timestamps('');
             
             
