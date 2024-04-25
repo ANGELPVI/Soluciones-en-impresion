@@ -111,6 +111,7 @@
 
   <script src="{{asset('js/index.js')}}"></script>
   <script src="{{asset('js/menuUser.js')}}"></script>
+  <script src="{{asset('js/validaciones.js')}}"></script>
 </body>
 
 </html>

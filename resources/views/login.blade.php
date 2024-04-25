@@ -20,7 +20,7 @@
             <a href="{{route('registro')}}" class="textosRegistroPasw">No tengo una cuenta</a>
             <a href="{{route('registro')}}" class="textosRegistroPasw">Olvide mi contraseña</a>
         </div>
-        <button class="buttonLogin" type="submit">Login</button>
+        <button id="bottonLogion" class="buttonLogin" type="submit" disabled>Ingresar</button>
     </form>
     
     </div>
