@@ -40,13 +40,13 @@ class registro extends Controller{
             'calle'=>$request->calle
         ]);
 
-        //If que valida si el usuario se registro correctamente. Lo pasa a inisiar seción si no manda un error. 
+        //If que valida si el usuario se registro correctamente. Lo pasa a inisiar sesión si no manda un error. 
         if ($user) {
             auth()->login($user);
             return redirect()->to('/');
         }else{
             return back()->with([
-                'mensaje','¡Ha ocurrido un error al registrarte, rebisa tus datos!'
+                'mensaje','¡Ha ocurrido un error al inisiar sesión, intente de nuevo!'
             ]);
         }
        

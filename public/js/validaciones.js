@@ -35,3 +35,5 @@ login.addEventListener('input', function(){
   login.password.addEventListener('click', ()=>{
    textoError.classList.add('hidden');
   })
+
+  // VALIDACION DE LOS INPUTS DE EL FORMULARIO REGISTRO. 
