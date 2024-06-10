@@ -1,5 +1,9 @@
 @extends('welcome')
 
 @section('sesion')
-    <h1>soy la seccion de soporte tecnico</h1>
+<form action="soporte" method="get" class="">
+    @csrf
+    <input class="" type="text" name="equipo" placeholder="Ejm: konica c458"> 
+</form>
+{{$equipo}}
 @endsection

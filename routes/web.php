@@ -23,6 +23,10 @@ Route::get('/',[pageController::class, 'inicio'])->name('inicio');
 
 Route::get('/impresoras',[pageController::class, 'impresoras'])->name('impresoras');
 
+
+Route::get('/soporte/{equipo?}',[pageController::class, 'equipoSoporte'])->name('soporte');
+
+
 Route::get('/consumibles',[pageController::class,'consumibles'])->name('consumibles');
 
 Route::get('/soporte',[pageController::class,'soporte'])->name('soporte');

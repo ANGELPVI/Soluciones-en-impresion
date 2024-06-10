@@ -19351,7 +19351,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 /* provided dependency */ var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js")["Buffer"];
+<<<<<<< HEAD
 // Axios v1.7.2 Copyright (c) 2024 Matt Zabriskie and contributors
+=======
+// Axios v1.6.8 Copyright (c) 2024 Matt Zabriskie and contributors
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
 
 
 function bind(fn, thisArg) {
@@ -19567,8 +19571,11 @@ const isFormData = (thing) => {
  */
 const isURLSearchParams = kindOfTest('URLSearchParams');
 
+<<<<<<< HEAD
 const [isReadableStream, isRequest, isResponse, isHeaders] = ['ReadableStream', 'Request', 'Response', 'Headers'].map(kindOfTest);
 
+=======
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
 /**
  * Trim excess whitespace off the beginning and end of a string
  *
@@ -19957,7 +19964,12 @@ const toObjectSet = (arrayOrString, delimiter) => {
 const noop = () => {};
 
 const toFiniteNumber = (value, defaultValue) => {
+<<<<<<< HEAD
   return value != null && Number.isFinite(value = +value) ? value : defaultValue;
+=======
+  value = +value;
+  return Number.isFinite(value) ? value : defaultValue;
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
 };
 
 const ALPHA = 'abcdefghijklmnopqrstuvwxyz';
@@ -20038,10 +20050,13 @@ var utils$1 = {
   isBoolean,
   isObject,
   isPlainObject,
+<<<<<<< HEAD
   isReadableStream,
   isRequest,
   isResponse,
   isHeaders,
+=======
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
   isUndefined,
   isDate,
   isFile,
@@ -20638,14 +20653,21 @@ const hasStandardBrowserWebWorkerEnv = (() => {
   );
 })();
 
+<<<<<<< HEAD
 const origin = hasBrowserEnv && window.location.href || 'http://localhost';
 
+=======
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
 var utils = /*#__PURE__*/Object.freeze({
   __proto__: null,
   hasBrowserEnv: hasBrowserEnv,
   hasStandardBrowserWebWorkerEnv: hasStandardBrowserWebWorkerEnv,
+<<<<<<< HEAD
   hasStandardBrowserEnv: hasStandardBrowserEnv,
   origin: origin
+=======
+  hasStandardBrowserEnv: hasStandardBrowserEnv
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
 });
 
 var platform = {
@@ -20785,7 +20807,11 @@ const defaults = {
 
   transitional: transitionalDefaults,
 
+<<<<<<< HEAD
   adapter: ['xhr', 'http', 'fetch'],
+=======
+  adapter: ['xhr', 'http'],
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
 
   transformRequest: [function transformRequest(data, headers) {
     const contentType = headers.getContentType() || '';
@@ -20806,8 +20832,12 @@ const defaults = {
       utils$1.isBuffer(data) ||
       utils$1.isStream(data) ||
       utils$1.isFile(data) ||
+<<<<<<< HEAD
       utils$1.isBlob(data) ||
       utils$1.isReadableStream(data)
+=======
+      utils$1.isBlob(data)
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
     ) {
       return data;
     }
@@ -20850,10 +20880,13 @@ const defaults = {
     const forcedJSONParsing = transitional && transitional.forcedJSONParsing;
     const JSONRequested = this.responseType === 'json';
 
+<<<<<<< HEAD
     if (utils$1.isResponse(data) || utils$1.isReadableStream(data)) {
       return data;
     }
 
+=======
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
     if (data && utils$1.isString(data) && ((forcedJSONParsing && !this.responseType) || JSONRequested)) {
       const silentJSONParsing = transitional && transitional.silentJSONParsing;
       const strictJSONParsing = !silentJSONParsing && JSONRequested;
@@ -21057,10 +21090,13 @@ class AxiosHeaders {
       setHeaders(header, valueOrRewrite);
     } else if(utils$1.isString(header) && (header = header.trim()) && !isValidHeaderName(header)) {
       setHeaders(parseHeaders(header), valueOrRewrite);
+<<<<<<< HEAD
     } else if (utils$1.isHeaders(header)) {
       for (const [key, value] of header.entries()) {
         setHeader(value, key, rewrite);
       }
+=======
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
     } else {
       header != null && setHeader(valueOrRewrite, header, rewrite);
     }
@@ -21328,6 +21364,7 @@ function settle(resolve, reject, response) {
   }
 }
 
+<<<<<<< HEAD
 function parseProtocol(url) {
   const match = /^([-+\w]{1,25})(:?\/\/|:)/.exec(url);
   return match && match[1] || '';
@@ -21510,6 +21547,8 @@ var isURLSameOrigin = platform.hasStandardBrowserEnv ?
     };
   })();
 
+=======
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
 var cookies = platform.hasStandardBrowserEnv ?
 
   // Standard browser envs support document.cookie
@@ -21594,6 +21633,7 @@ function buildFullPath(baseURL, requestedURL) {
   return requestedURL;
 }
 
+<<<<<<< HEAD
 const headersToObject = (thing) => thing instanceof AxiosHeaders$1 ? { ...thing } : thing;
 
 /**
@@ -21743,11 +21783,162 @@ var resolveConfig = (config) => {
 
   return newConfig;
 };
+=======
+var isURLSameOrigin = platform.hasStandardBrowserEnv ?
+
+// Standard browser envs have full support of the APIs needed to test
+// whether the request URL is of the same origin as current location.
+  (function standardBrowserEnv() {
+    const msie = /(msie|trident)/i.test(navigator.userAgent);
+    const urlParsingNode = document.createElement('a');
+    let originURL;
+
+    /**
+    * Parse a URL to discover its components
+    *
+    * @param {String} url The URL to be parsed
+    * @returns {Object}
+    */
+    function resolveURL(url) {
+      let href = url;
+
+      if (msie) {
+        // IE needs attribute set twice to normalize properties
+        urlParsingNode.setAttribute('href', href);
+        href = urlParsingNode.href;
+      }
+
+      urlParsingNode.setAttribute('href', href);
+
+      // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
+      return {
+        href: urlParsingNode.href,
+        protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
+        host: urlParsingNode.host,
+        search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
+        hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
+        hostname: urlParsingNode.hostname,
+        port: urlParsingNode.port,
+        pathname: (urlParsingNode.pathname.charAt(0) === '/') ?
+          urlParsingNode.pathname :
+          '/' + urlParsingNode.pathname
+      };
+    }
+
+    originURL = resolveURL(window.location.href);
+
+    /**
+    * Determine if a URL shares the same origin as the current location
+    *
+    * @param {String} requestURL The URL to test
+    * @returns {boolean} True if URL shares the same origin, otherwise false
+    */
+    return function isURLSameOrigin(requestURL) {
+      const parsed = (utils$1.isString(requestURL)) ? resolveURL(requestURL) : requestURL;
+      return (parsed.protocol === originURL.protocol &&
+          parsed.host === originURL.host);
+    };
+  })() :
+
+  // Non standard browser envs (web workers, react-native) lack needed support.
+  (function nonStandardBrowserEnv() {
+    return function isURLSameOrigin() {
+      return true;
+    };
+  })();
+
+function parseProtocol(url) {
+  const match = /^([-+\w]{1,25})(:?\/\/|:)/.exec(url);
+  return match && match[1] || '';
+}
+
+/**
+ * Calculate data maxRate
+ * @param {Number} [samplesCount= 10]
+ * @param {Number} [min= 1000]
+ * @returns {Function}
+ */
+function speedometer(samplesCount, min) {
+  samplesCount = samplesCount || 10;
+  const bytes = new Array(samplesCount);
+  const timestamps = new Array(samplesCount);
+  let head = 0;
+  let tail = 0;
+  let firstSampleTS;
+
+  min = min !== undefined ? min : 1000;
+
+  return function push(chunkLength) {
+    const now = Date.now();
+
+    const startedAt = timestamps[tail];
+
+    if (!firstSampleTS) {
+      firstSampleTS = now;
+    }
+
+    bytes[head] = chunkLength;
+    timestamps[head] = now;
+
+    let i = tail;
+    let bytesCount = 0;
+
+    while (i !== head) {
+      bytesCount += bytes[i++];
+      i = i % samplesCount;
+    }
+
+    head = (head + 1) % samplesCount;
+
+    if (head === tail) {
+      tail = (tail + 1) % samplesCount;
+    }
+
+    if (now - firstSampleTS < min) {
+      return;
+    }
+
+    const passed = startedAt && now - startedAt;
+
+    return passed ? Math.round(bytesCount * 1000 / passed) : undefined;
+  };
+}
+
+function progressEventReducer(listener, isDownloadStream) {
+  let bytesNotified = 0;
+  const _speedometer = speedometer(50, 250);
+
+  return e => {
+    const loaded = e.loaded;
+    const total = e.lengthComputable ? e.total : undefined;
+    const progressBytes = loaded - bytesNotified;
+    const rate = _speedometer(progressBytes);
+    const inRange = loaded <= total;
+
+    bytesNotified = loaded;
+
+    const data = {
+      loaded,
+      total,
+      progress: total ? (loaded / total) : undefined,
+      bytes: progressBytes,
+      rate: rate ? rate : undefined,
+      estimated: rate && total && inRange ? (total - loaded) / rate : undefined,
+      event: e
+    };
+
+    data[isDownloadStream ? 'download' : 'upload'] = true;
+
+    listener(data);
+  };
+}
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
 
 const isXHRAdapterSupported = typeof XMLHttpRequest !== 'undefined';
 
 var xhrAdapter = isXHRAdapterSupported && function (config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
+<<<<<<< HEAD
     const _config = resolveConfig(config);
     let requestData = _config.data;
     const requestHeaders = AxiosHeaders$1.from(_config.headers).normalize();
@@ -21760,15 +21951,56 @@ var xhrAdapter = isXHRAdapterSupported && function (config) {
 
       if (_config.signal) {
         _config.signal.removeEventListener('abort', onCanceled);
+=======
+    let requestData = config.data;
+    const requestHeaders = AxiosHeaders$1.from(config.headers).normalize();
+    let {responseType, withXSRFToken} = config;
+    let onCanceled;
+    function done() {
+      if (config.cancelToken) {
+        config.cancelToken.unsubscribe(onCanceled);
+      }
+
+      if (config.signal) {
+        config.signal.removeEventListener('abort', onCanceled);
+      }
+    }
+
+    let contentType;
+
+    if (utils$1.isFormData(requestData)) {
+      if (platform.hasStandardBrowserEnv || platform.hasStandardBrowserWebWorkerEnv) {
+        requestHeaders.setContentType(false); // Let the browser set it
+      } else if ((contentType = requestHeaders.getContentType()) !== false) {
+        // fix semicolon duplication issue for ReactNative FormData implementation
+        const [type, ...tokens] = contentType ? contentType.split(';').map(token => token.trim()).filter(Boolean) : [];
+        requestHeaders.setContentType([type || 'multipart/form-data', ...tokens].join('; '));
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
       }
     }
 
     let request = new XMLHttpRequest();
 
+<<<<<<< HEAD
     request.open(_config.method.toUpperCase(), _config.url, true);
 
     // Set the request timeout in MS
     request.timeout = _config.timeout;
+=======
+    // HTTP basic authentication
+    if (config.auth) {
+      const username = config.auth.username || '';
+      const password = config.auth.password ? unescape(encodeURIComponent(config.auth.password)) : '';
+      requestHeaders.set('Authorization', 'Basic ' + btoa(username + ':' + password));
+    }
+
+    const fullPath = buildFullPath(config.baseURL, config.url);
+
+    request.open(config.method.toUpperCase(), buildURL(fullPath, config.params, config.paramsSerializer), true);
+
+    // Set the request timeout in MS
+    request.timeout = config.timeout;
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
 
     function onloadend() {
       if (!request) {
@@ -21830,7 +22062,11 @@ var xhrAdapter = isXHRAdapterSupported && function (config) {
         return;
       }
 
+<<<<<<< HEAD
       reject(new AxiosError('Request aborted', AxiosError.ECONNABORTED, _config, request));
+=======
+      reject(new AxiosError('Request aborted', AxiosError.ECONNABORTED, config, request));
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
 
       // Clean up request
       request = null;
@@ -21840,7 +22076,11 @@ var xhrAdapter = isXHRAdapterSupported && function (config) {
     request.onerror = function handleError() {
       // Real errors are hidden from us by the browser
       // onerror should only fire if it's a network error
+<<<<<<< HEAD
       reject(new AxiosError('Network Error', AxiosError.ERR_NETWORK, _config, request));
+=======
+      reject(new AxiosError('Network Error', AxiosError.ERR_NETWORK, config, request));
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
 
       // Clean up request
       request = null;
@@ -21848,21 +22088,51 @@ var xhrAdapter = isXHRAdapterSupported && function (config) {
 
     // Handle timeout
     request.ontimeout = function handleTimeout() {
+<<<<<<< HEAD
       let timeoutErrorMessage = _config.timeout ? 'timeout of ' + _config.timeout + 'ms exceeded' : 'timeout exceeded';
       const transitional = _config.transitional || transitionalDefaults;
       if (_config.timeoutErrorMessage) {
         timeoutErrorMessage = _config.timeoutErrorMessage;
+=======
+      let timeoutErrorMessage = config.timeout ? 'timeout of ' + config.timeout + 'ms exceeded' : 'timeout exceeded';
+      const transitional = config.transitional || transitionalDefaults;
+      if (config.timeoutErrorMessage) {
+        timeoutErrorMessage = config.timeoutErrorMessage;
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
       }
       reject(new AxiosError(
         timeoutErrorMessage,
         transitional.clarifyTimeoutError ? AxiosError.ETIMEDOUT : AxiosError.ECONNABORTED,
+<<<<<<< HEAD
         _config,
+=======
+        config,
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
         request));
 
       // Clean up request
       request = null;
     };
 
+<<<<<<< HEAD
+=======
+    // Add xsrf header
+    // This is only done if running in a standard browser environment.
+    // Specifically not if we're in a web worker, or react-native.
+    if(platform.hasStandardBrowserEnv) {
+      withXSRFToken && utils$1.isFunction(withXSRFToken) && (withXSRFToken = withXSRFToken(config));
+
+      if (withXSRFToken || (withXSRFToken !== false && isURLSameOrigin(fullPath))) {
+        // Add xsrf header
+        const xsrfValue = config.xsrfHeaderName && config.xsrfCookieName && cookies.read(config.xsrfCookieName);
+
+        if (xsrfValue) {
+          requestHeaders.set(config.xsrfHeaderName, xsrfValue);
+        }
+      }
+    }
+
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
     // Remove Content-Type if data is undefined
     requestData === undefined && requestHeaders.setContentType(null);
 
@@ -21874,12 +22144,18 @@ var xhrAdapter = isXHRAdapterSupported && function (config) {
     }
 
     // Add withCredentials to request if needed
+<<<<<<< HEAD
     if (!utils$1.isUndefined(_config.withCredentials)) {
       request.withCredentials = !!_config.withCredentials;
+=======
+    if (!utils$1.isUndefined(config.withCredentials)) {
+      request.withCredentials = !!config.withCredentials;
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
     }
 
     // Add responseType to request if needed
     if (responseType && responseType !== 'json') {
+<<<<<<< HEAD
       request.responseType = _config.responseType;
     }
 
@@ -21894,6 +22170,22 @@ var xhrAdapter = isXHRAdapterSupported && function (config) {
     }
 
     if (_config.cancelToken || _config.signal) {
+=======
+      request.responseType = config.responseType;
+    }
+
+    // Handle progress if needed
+    if (typeof config.onDownloadProgress === 'function') {
+      request.addEventListener('progress', progressEventReducer(config.onDownloadProgress, true));
+    }
+
+    // Not all browsers support upload events
+    if (typeof config.onUploadProgress === 'function' && request.upload) {
+      request.upload.addEventListener('progress', progressEventReducer(config.onUploadProgress));
+    }
+
+    if (config.cancelToken || config.signal) {
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
       // Handle cancellation
       // eslint-disable-next-line func-names
       onCanceled = cancel => {
@@ -21905,6 +22197,7 @@ var xhrAdapter = isXHRAdapterSupported && function (config) {
         request = null;
       };
 
+<<<<<<< HEAD
       _config.cancelToken && _config.cancelToken.subscribe(onCanceled);
       if (_config.signal) {
         _config.signal.aborted ? onCanceled() : _config.signal.addEventListener('abort', onCanceled);
@@ -21912,6 +22205,15 @@ var xhrAdapter = isXHRAdapterSupported && function (config) {
     }
 
     const protocol = parseProtocol(_config.url);
+=======
+      config.cancelToken && config.cancelToken.subscribe(onCanceled);
+      if (config.signal) {
+        config.signal.aborted ? onCanceled() : config.signal.addEventListener('abort', onCanceled);
+      }
+    }
+
+    const protocol = parseProtocol(fullPath);
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
 
     if (protocol && platform.protocols.indexOf(protocol) === -1) {
       reject(new AxiosError('Unsupported protocol ' + protocol + ':', AxiosError.ERR_BAD_REQUEST, config));
@@ -21924,6 +22226,7 @@ var xhrAdapter = isXHRAdapterSupported && function (config) {
   });
 };
 
+<<<<<<< HEAD
 const composeSignals = (signals, timeout) => {
   let controller = new AbortController();
 
@@ -22242,6 +22545,11 @@ const knownAdapters = {
   http: httpAdapter,
   xhr: xhrAdapter,
   fetch: fetchAdapter
+=======
+const knownAdapters = {
+  http: httpAdapter,
+  xhr: xhrAdapter
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
 };
 
 utils$1.forEach(knownAdapters, (fn, value) => {
@@ -22385,7 +22693,113 @@ function dispatchRequest(config) {
   });
 }
 
+<<<<<<< HEAD
 const VERSION = "1.7.2";
+=======
+const headersToObject = (thing) => thing instanceof AxiosHeaders$1 ? { ...thing } : thing;
+
+/**
+ * Config-specific merge-function which creates a new config-object
+ * by merging two configuration objects together.
+ *
+ * @param {Object} config1
+ * @param {Object} config2
+ *
+ * @returns {Object} New object resulting from merging config2 to config1
+ */
+function mergeConfig(config1, config2) {
+  // eslint-disable-next-line no-param-reassign
+  config2 = config2 || {};
+  const config = {};
+
+  function getMergedValue(target, source, caseless) {
+    if (utils$1.isPlainObject(target) && utils$1.isPlainObject(source)) {
+      return utils$1.merge.call({caseless}, target, source);
+    } else if (utils$1.isPlainObject(source)) {
+      return utils$1.merge({}, source);
+    } else if (utils$1.isArray(source)) {
+      return source.slice();
+    }
+    return source;
+  }
+
+  // eslint-disable-next-line consistent-return
+  function mergeDeepProperties(a, b, caseless) {
+    if (!utils$1.isUndefined(b)) {
+      return getMergedValue(a, b, caseless);
+    } else if (!utils$1.isUndefined(a)) {
+      return getMergedValue(undefined, a, caseless);
+    }
+  }
+
+  // eslint-disable-next-line consistent-return
+  function valueFromConfig2(a, b) {
+    if (!utils$1.isUndefined(b)) {
+      return getMergedValue(undefined, b);
+    }
+  }
+
+  // eslint-disable-next-line consistent-return
+  function defaultToConfig2(a, b) {
+    if (!utils$1.isUndefined(b)) {
+      return getMergedValue(undefined, b);
+    } else if (!utils$1.isUndefined(a)) {
+      return getMergedValue(undefined, a);
+    }
+  }
+
+  // eslint-disable-next-line consistent-return
+  function mergeDirectKeys(a, b, prop) {
+    if (prop in config2) {
+      return getMergedValue(a, b);
+    } else if (prop in config1) {
+      return getMergedValue(undefined, a);
+    }
+  }
+
+  const mergeMap = {
+    url: valueFromConfig2,
+    method: valueFromConfig2,
+    data: valueFromConfig2,
+    baseURL: defaultToConfig2,
+    transformRequest: defaultToConfig2,
+    transformResponse: defaultToConfig2,
+    paramsSerializer: defaultToConfig2,
+    timeout: defaultToConfig2,
+    timeoutMessage: defaultToConfig2,
+    withCredentials: defaultToConfig2,
+    withXSRFToken: defaultToConfig2,
+    adapter: defaultToConfig2,
+    responseType: defaultToConfig2,
+    xsrfCookieName: defaultToConfig2,
+    xsrfHeaderName: defaultToConfig2,
+    onUploadProgress: defaultToConfig2,
+    onDownloadProgress: defaultToConfig2,
+    decompress: defaultToConfig2,
+    maxContentLength: defaultToConfig2,
+    maxBodyLength: defaultToConfig2,
+    beforeRedirect: defaultToConfig2,
+    transport: defaultToConfig2,
+    httpAgent: defaultToConfig2,
+    httpsAgent: defaultToConfig2,
+    cancelToken: defaultToConfig2,
+    socketPath: defaultToConfig2,
+    responseEncoding: defaultToConfig2,
+    validateStatus: mergeDirectKeys,
+    headers: (a, b) => mergeDeepProperties(headersToObject(a), headersToObject(b), true)
+  };
+
+  utils$1.forEach(Object.keys(Object.assign({}, config1, config2)), function computeConfigValue(prop) {
+    const merge = mergeMap[prop] || mergeDeepProperties;
+    const configValue = merge(config1[prop], config2[prop], prop);
+    (utils$1.isUndefined(configValue) && merge !== mergeDirectKeys) || (config[prop] = configValue);
+  });
+
+  return config;
+}
+
+const VERSION = "1.6.8";
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
 
 const validators$1 = {};
 
@@ -22511,6 +22925,7 @@ class Axios {
 
         // slice off the Error: ... line
         const stack = dummy.stack ? dummy.stack.replace(/^.+\n/, '') : '';
+<<<<<<< HEAD
         try {
           if (!err.stack) {
             err.stack = stack;
@@ -22520,6 +22935,14 @@ class Axios {
           }
         } catch (e) {
           // ignore the case where "stack" is an un-writable property
+=======
+
+        if (!err.stack) {
+          err.stack = stack;
+          // match without the 2 top stack lines
+        } else if (stack && !String(err.stack).endsWith(stack.replace(/^.+\n.+\n/, ''))) {
+          err.stack += '\n' + stack;
+>>>>>>> e737e108151101d5b77b10eebf02de0d9e97d490
         }
       }
 

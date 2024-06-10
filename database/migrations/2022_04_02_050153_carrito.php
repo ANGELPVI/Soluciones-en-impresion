@@ -17,9 +17,9 @@ class Carrito extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('userId');
             $table->foreign('userId')->references('id')->on('users');
-            $table->integer('producto')->unique();
+            $table->json('productos');
             $table->integer('cantidad');
-            $table->double('total');
+            $table->double('total', $precision = 9, $scale = 2);
             
             
         });
