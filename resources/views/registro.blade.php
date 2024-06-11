@@ -8,35 +8,68 @@
                 <h2 class="tituloFormularioRegistro">Soluciones En Impresión</h2>
             </div>
             @csrf
-            <input class="inputsRegistro" type="text" name="nombre" placeholder="Nombre(s)" value="{{ old('nombre') }}">
-            <input class="inputsRegistro" type="text" name="apellidos" placeholder="Apellidos"
-                value="{{ old('apellidos') }}">
-            <input class="inputsRegistro" type="email" name="email" placeholder="Email" value="{{ old('email') }}">
-            <input class="inputsRegistro" type="password" name="password" placeholder="Contraseña" value="{{ old('password') }}">
-            <input class="inputsRegistro" type="text" name="telefono" placeholder="Teléfono"
-                value="{{ old('telefono') }}">
-            <select class="inputsRegistro" name="estado" id="estados" value="{{ old('estado') }}">
-                <option>Selecciona un Estado</option>
-            </select>
-            <select class="inputsRegistro" name="ciudad" id="municipios" value="{{ old('ciudad') }}">
-                <option>Seleccione un municipio</option>
-            </select>
-            <input class="inputsRegistro" type="text" name="cp" placeholder="Codigo Postal"
-                value="{{ old('cp') }}">
-            <input class="inputsRegistro" type="text" name="colonia" placeholder="Colonia" value="{{ old('colonia') }}">
-            <input class="inputsRegistro" type="text" name="calle" placeholder="Calle" value="{{ old('calle') }}">
+            <div class="divSubPareInput">
+                <input class="inputsRegistro" type="text" name="nombre" placeholder="Nombre(s)"
+                    value="{{ old('nombre') }}">
+                <p>El compo nombre esta vacio</p>
+            </div>
+
+            <div class="divSubPareInput">
+                <input class="inputsRegistro" type="text" name="apellidos" placeholder="Apellidos"
+                    value="{{ old('apellidos') }}">
+            </div>
+
+            <div class="divSubPareInput">
+                <input class="inputsRegistro" type="email" name="email" placeholder="Email" value="{{ old('email') }}">
+            </div>
+
+            <div class="divSubPareInput">
+                <input class="inputsRegistro" type="password" name="password" placeholder="Contraseña"
+                    value="{{ old('password') }}">
+            </div>
+
+            <div class="divSubPareInput">
+                <input class="inputsRegistro" type="text" name="telefono" placeholder="Teléfono"
+                    value="{{ old('telefono') }}">
+            </div>
+
+            <div class="divSubPareInput">
+                <select class="inputsRegistro" name="estado" id="estados" value="{{ old('estado') }}">
+                    <option>Selecciona un Estado</option>
+                </select>
+            </div>
+
+            <div class="divSubPareInput">
+                <select class="inputsRegistro" name="ciudad" id="municipios" value="{{ old('ciudad') }}">
+                    <option>Seleccione un municipio</option>
+                </select>
+            </div>
+
+            <div class="divSubPareInput">
+                <input class="inputsRegistro" type="text" name="cp" placeholder="Codigo Postal"
+                    value="{{ old('cp') }}">
+            </div>
+
+            <div class="divSubpareInput">
+                <input class="inputsRegistro" type="text" name="colonia" placeholder="Colonia"
+                    value="{{ old('colonia') }}">
+            </div>
+
+            <div class="divSubPareInput">
+                <input class="inputsRegistro" type="text" name="calle" placeholder="Calle"
+                    value="{{ old('calle') }}">
+            </div>
+
 
             @if ($errors->any())
                 <ul>
                     @foreach ($errors->all() as $error)
-                    <li>{{$error}}</li>
-                        
+                        <li>{{ $error }}</li>
                     @endforeach
                 </ul>
-                
             @endif
 
-             {{-- @error('registroError')
+            {{-- @error('registroError')
                 <div id="usuarioError" class="textoError">
                     <p>{{ $message }}</p>
                 </div>
