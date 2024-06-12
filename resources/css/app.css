@@ -229,7 +229,7 @@
     @apply grid grid-cols-4 gap-4 w-1/2 h-auto bg-white p-8 rounded-3xl shadow-2xl
 }
 
-.divSubPareInput{
+.divSubPadreInput{
     @apply col-span-2 w-full h-auto 
 }
 

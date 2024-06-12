@@ -8,54 +8,57 @@
                 <h2 class="tituloFormularioRegistro">Soluciones En Impresión</h2>
             </div>
             @csrf
-            <div class="divSubPareInput">
+            <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="text" name="nombre" placeholder="Nombre(s)"
                     value="{{ old('nombre') }}">
-                <p>El compo nombre esta vacio</p>
+                <span>Campo vacio o letras no validas</span>
             </div>
 
-            <div class="divSubPareInput">
+            <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="text" name="apellidos" placeholder="Apellidos"
                     value="{{ old('apellidos') }}">
+                    <span>Campo vacio o letras no validas</span>
             </div>
-
-            <div class="divSubPareInput">
+            
+            <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="email" name="email" placeholder="Email" value="{{ old('email') }}">
+                <span>Formato de email incorrecto</span>
             </div>
 
-            <div class="divSubPareInput">
+            <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="password" name="password" placeholder="Contraseña"
                     value="{{ old('password') }}">
+                    <span>La contraseña deve tener 8 letras o numero</span>
             </div>
 
-            <div class="divSubPareInput">
+            <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="text" name="telefono" placeholder="Teléfono"
                     value="{{ old('telefono') }}">
             </div>
 
-            <div class="divSubPareInput">
+            <div class="divSubPadreInput">
                 <select class="inputsRegistro" name="estado" id="estados" value="{{ old('estado') }}">
                     <option>Selecciona un Estado</option>
                 </select>
             </div>
 
-            <div class="divSubPareInput">
+            <div class="divSubPadreInput">
                 <select class="inputsRegistro" name="ciudad" id="municipios" value="{{ old('ciudad') }}">
                     <option>Seleccione un municipio</option>
                 </select>
             </div>
 
-            <div class="divSubPareInput">
+            <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="text" name="cp" placeholder="Codigo Postal"
                     value="{{ old('cp') }}">
             </div>
 
-            <div class="divSubpareInput">
+            <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="text" name="colonia" placeholder="Colonia"
                     value="{{ old('colonia') }}">
             </div>
 
-            <div class="divSubPareInput">
+            <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="text" name="calle" placeholder="Calle"
                     value="{{ old('calle') }}">
             </div>
