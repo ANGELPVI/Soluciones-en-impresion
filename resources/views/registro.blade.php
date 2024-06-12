@@ -11,29 +11,34 @@
             <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="text" name="nombre" placeholder="Nombre(s)"
                     value="{{ old('nombre') }}">
-                <span>Campo vacio o letras no validas</span>
+                <span class="textoError">*Campo vacío o caracteres no validos</span>
+                <br><span><strong>Ejemplo: Pablo</strong></span>
             </div>
 
             <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="text" name="apellidos" placeholder="Apellidos"
                     value="{{ old('apellidos') }}">
-                    <span>Campo vacio o letras no validas</span>
+                    <span class="textoError">*Campo vacío o caracteres no validos</span>
+                    <br><span><strong>Ejemplo: Hernández Sánchez</strong></span>
             </div>
             
             <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="email" name="email" placeholder="Email" value="{{ old('email') }}">
-                <span>Formato de email incorrecto</span>
+                <span class="textoError">*Formato de email incorrecto</span>
+                <br><span><strong>Ejemplo: tu.email@gmail.com</strong></span>
             </div>
 
             <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="password" name="password" placeholder="Contraseña"
                     value="{{ old('password') }}">
-                    <span>La contraseña deve tener 8 letras o numero</span>
+                    <span class="textoError">*La contraseña debe tener 8 o más caracteres</span>
             </div>
 
             <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="text" name="telefono" placeholder="Teléfono"
                     value="{{ old('telefono') }}">
+                    <span class="textoError">El número de teléfono deben ser 10 digitos</span>
+                    <br><span><strong>Ejemplo: 7551021049</strong></span>
             </div>
 
             <div class="divSubPadreInput">
@@ -51,16 +56,22 @@
             <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="text" name="cp" placeholder="Codigo Postal"
                     value="{{ old('cp') }}">
+                    <span class="textoError">*El código postal debe tener 5 digitos</span>
+                    <br><span><strong>Ejemplo: 80410</strong></span>
             </div>
 
             <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="text" name="colonia" placeholder="Colonia"
                     value="{{ old('colonia') }}">
+                    <span class="textoError">*Campo vacío o caracteres no validos</span>
+                    <br><span><strong>Ejemplo: Morelos</strong></span>
             </div>
 
             <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="text" name="calle" placeholder="Calle"
                     value="{{ old('calle') }}">
+                    <span class="textoError">*Campo vacío o caracteres no validos</span>
+                    <br><span><strong>Ejemplo: Luis Donaldo colocio</strong></span>
             </div>
 
 
