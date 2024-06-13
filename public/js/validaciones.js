@@ -37,3 +37,9 @@ login.addEventListener('input', function(){
   })
 
   // VALIDACION DE LOS INPUTS DE EL FORMULARIO REGISTRO. 
+// let formularioRegistro=document.getElementsByName('registro')[0];
+
+// formularioRegistro.addEventListener('input', function(){
+//   console.log(formularioRegistro.nombre.value);
+
+// });
