@@ -6,8 +6,9 @@ let botonLogin=document.getElementById('bottonLogion');
 const expreciones={
     email: /^[a-zA-Z0-9_.ñÑ+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 }
-
-login.addEventListener('input', function(){
+//El && evalua que el objeto login no este vacio o sea null
+//Así evitamos que el codigo se detenga y no se ejecuten las otras funciones.
+login && login.addEventListener('input', function(){
     
   if(expreciones.email.test(login.email.value)!=true||login.password.value==''){
     botonLogin.setAttribute('disabled','disabled');
@@ -25,21 +26,36 @@ login.addEventListener('input', function(){
 });
 
 
- //Quitar error de usuario o contraseñac
-  login.email.addEventListener('click', ()=>{
+ //Quitar error de usuario o contraseña
+  login && login.email.addEventListener('click', ()=>{
     textoError.classList.add('hidden');
     textErrorUsuario.classList.add('hidden');
 
   })
 
-  login.password.addEventListener('click', ()=>{
+  login && login.password.addEventListener('click', ()=>{
    textoError.classList.add('hidden');
   })
 
   // VALIDACION DE LOS INPUTS DE EL FORMULARIO REGISTRO. 
-// let formularioRegistro=document.getElementsByName('registro')[0];
+ let formularioRegistro=document.getElementsByName('registro')[0];
 
-// formularioRegistro.addEventListener('input', function(){
-//   console.log(formularioRegistro.nombre.value);
+ formularioRegistro.addEventListener('input', function(){
+  //Objeto que guarda todos los valores que reciva el formulario de registro.
+  let entradaFormReg={
+    nombre:nombre=formularioRegistro.nombre.value.length,
+    apellidos:nombre=formularioRegistro.apellidos.value.length,
+  }
+  
+  if (entradaFormReg.nombre>=4 && entradaFormReg.apellidos>=4) {
+    console.log('Esta bien');
+  }else{
+    console.log('Faltan letras');
+  }
+  
+      
+      
+   
+   //console.log(formularioRegistro.apellidos.value);
 
-// });
+ });
