@@ -90,7 +90,7 @@
             @enderror  --}}
 
 
-            <button class="buttonRegistro"
+            <button id="buttonRegistro" class="buttonRegistro"
                 type="submit" disabled>Registrarme</button>
         </form>
     </div>

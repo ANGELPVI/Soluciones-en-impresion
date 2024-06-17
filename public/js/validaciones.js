@@ -39,18 +39,30 @@ login && login.addEventListener('input', function(){
 
   // VALIDACION DE LOS INPUTS DE EL FORMULARIO REGISTRO. 
  let formularioRegistro=document.getElementsByName('registro')[0];
-
+ let buttonReg=document.getElementById('buttonRegistro');
  formularioRegistro.addEventListener('input', function(){
   //Objeto que guarda todos los valores que reciva el formulario de registro.
   let entradaFormReg={
-    nombre:nombre=formularioRegistro.nombre.value.length,
-    apellidos:nombre=formularioRegistro.apellidos.value.length,
+    nombre:formularioRegistro.nombre.value.length,
+    apellidos:formularioRegistro.apellidos.value.length,
+    email:formularioRegistro.email.value,
+    password:formularioRegistro.password.value,
+    telefono:formularioRegistro.telefono.value,
+    estado:formularioRegistro.estado.value,
+    ciudad:formularioRegistro.ciudad.value,
+    postal:formularioRegistro.cp.value,
+    colonia:formularioRegistro.colonia.value,
+    calle:formularioRegistro.calle.value
   }
+
+  //Hay que estudiar cual es la mejor practica para validar cada input de formulario registro
   
-  if (entradaFormReg.nombre>=4 && entradaFormReg.apellidos>=4) {
-    console.log('Esta bien');
+  if (entradaFormReg.nombre>=4){
+    console.log('se bloquea');
+    buttonReg.removeAttribute('disabled');
   }else{
-    console.log('Faltan letras');
+    console.log('se desbloquea');
+    buttonReg.setAttribute('disabled','disabled');
   }
   
       
