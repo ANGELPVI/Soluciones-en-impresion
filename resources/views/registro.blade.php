@@ -11,7 +11,7 @@
             <div class="divSubPadreInput">
                 <input class="inputsRegistro" type="text" name="nombre" placeholder="Nombre(s)"
                     value="{{ old('nombre') }}">
-                <span class="textoError hidden">*Campo vacío o caracteres no validos</span>
+                <span id="errorNombre" class="textoError hidden">*Campo vacío o caracteres no validos</span>
                 <br><span class="hidden"><strong>Ejemplo: Pablo</strong></span>
             </div>
 

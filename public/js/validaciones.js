@@ -42,6 +42,7 @@ login && login.password.addEventListener('click', () => {
 let formularioRegistro = document.getElementsByName('registro')[0];
 let buttonReg = document.getElementById('buttonRegistro');
 
+let textErrorNombre=document.getElementById('errorNombre');
 formularioRegistro.addEventListener('input', function () {
   //Objeto que guarda todos los valores que reciva el formulario de registro.
   let entradaFormReg = {
@@ -59,25 +60,16 @@ formularioRegistro.addEventListener('input', function () {
 
   //Hay que estudiar cual es la mejor practica para validar cada input de formulario registro
   //Validar existencia, tipo de dato, longitud y duplicación.
-  if (entradaFormReg.nombre.length >= 3 &&
-    entradaFormReg.nombre.length <= 25 &&
-    expreciones.soloString.test(entradaFormReg.nombre) == true &&
-    entradaFormReg.apellidos.length >= 3 &&
-    entradaFormReg.apellidos.length <= 30 &&
-    expreciones.soloString.test(entradaFormReg.apellidos) == true &&
-    entradaFormReg.email.length >= 3 &&
-    entradaFormReg.email.length <= 25 &&
-    expreciones.email.test(entradaFormReg.email)) {
-
+  if (entradaFormReg.nombre.length <=2 || entradaFormReg.nombre.length >= 25 || expreciones.soloString.test(entradaFormReg.nombre)!=true) {
     console.log('se bloquea');
-    buttonReg.removeAttribute('disabled');
-    buttonReg.classList.remove('buttonRegistro');
-    buttonReg.classList.add('buttonRegistroEnable');
+    textErrorNombre.classList.remove('hidden');
+
+
+
   } else {
     console.log('se desbloquea');
-    buttonReg.setAttribute('disabled', 'disabled');
-    buttonReg.classList.remove('buttonRegistroEnable');
-    buttonReg.classList.add('buttonRegistro');
+    textErrorNombre.classList.add('hidden');
+
   }
 
 
