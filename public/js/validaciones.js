@@ -5,7 +5,7 @@ let textErrorUsuario = document.getElementById('usuarioError');
 let botonLogin = document.getElementById('bottonLogion');
 const expreciones = {
   email: /^[a-zA-Z0-9_.ñÑ+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-  soloString: /^[a-zA-Z]+$/
+  soloString: /^[a-zA-Z\s]+$/
 }
 //El && evalua que el objeto login no este vacio o sea null
 //Así evitamos que el codigo se detenga y no se ejecuten las otras funciones.
@@ -42,7 +42,8 @@ login && login.password.addEventListener('click', () => {
 let formularioRegistro = document.getElementsByName('registro')[0];
 let buttonReg = document.getElementById('buttonRegistro');
 
-let textErrorNombre=document.getElementById('errorNombre');
+let mensajeErrorNombre=document.getElementById('mensajeNombre');
+let sugerenciaNombre=document.getElementById('sugerenciaNombre');
 formularioRegistro.addEventListener('input', function () {
   //Objeto que guarda todos los valores que reciva el formulario de registro.
   let entradaFormReg = {
@@ -58,18 +59,26 @@ formularioRegistro.addEventListener('input', function () {
     calle: formularioRegistro.calle.value
   }
 
-  //Hay que estudiar cual es la mejor practica para validar cada input de formulario registro
   //Validar existencia, tipo de dato, longitud y duplicación.
-  if (entradaFormReg.nombre.length <=2 || entradaFormReg.nombre.length >= 25 || expreciones.soloString.test(entradaFormReg.nombre)!=true) {
+  if (entradaFormReg.nombre.length <=2 || entradaFormReg.nombre.length >= 26 || expreciones.soloString.test(entradaFormReg.nombre)!=true) {
     console.log('se bloquea');
-    textErrorNombre.classList.remove('hidden');
+    mensajeErrorNombre.classList.remove('hidden');
+    sugerenciaNombre.classList.remove('hidden');
 
 
 
   } else {
     console.log('se desbloquea');
-    textErrorNombre.classList.add('hidden');
+    mensajeErrorNombre.classList.add('hidden');
+    sugerenciaNombre.classList.add('hidden');
 
+  }
+
+  //Validar el input apellido
+  if (entradaFormReg.apellidos.length<=2 || entradaFormReg.apellidos.length>=30 || expreciones.soloString.test(entradaFormReg.apellidos)!=true) {
+    console.log('apellido mal');
+  }else{
+    console.log('apellido bien');
   }
 
 
