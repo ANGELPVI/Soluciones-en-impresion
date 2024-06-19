@@ -21,9 +21,6 @@ login && login.addEventListener('input', function () {
     botonLogin.classList.remove('buttonLogin')
     botonLogin.classList.add('buttonLoginEnable')
   }
-
-
-
 });
 
 
@@ -32,32 +29,39 @@ login && login.email.addEventListener('click', () => {
   textoError.classList.add('hidden');
   textErrorUsuario.classList.add('hidden');
 
-})
+});
 
 login && login.password.addEventListener('click', () => {
   textoError.classList.add('hidden');
-})
+});
 
 // VALIDACION DE LOS INPUTS DE EL FORMULARIO REGISTRO. 
 let formularioRegistro = document.getElementsByName('registro')[0];
 let buttonReg = document.getElementById('buttonRegistro');
 
+//Objeto que guarda todos los valores que reciva el formulario de registro.
+let entradaFormReg = {
+  nombre: document.getElementsByName('nombre'),
+  apellidos: formularioRegistro.apellidos.value,
+  email: formularioRegistro.email.value,
+  password: formularioRegistro.password.value,
+  telefono: formularioRegistro.telefono.value,
+  estado: formularioRegistro.estado.value,
+  ciudad: formularioRegistro.ciudad.value,
+  postal: formularioRegistro.cp.value,
+  colonia: formularioRegistro.colonia.value,
+  calle: formularioRegistro.calle.value
+}
+
 let mensajeErrorNombre=document.getElementById('mensajeNombre');
 let sugerenciaNombre=document.getElementById('sugerenciaNombre');
-formularioRegistro.addEventListener('input', function () {
-  //Objeto que guarda todos los valores que reciva el formulario de registro.
-  let entradaFormReg = {
-    nombre: formularioRegistro.nombre.value,
-    apellidos: formularioRegistro.apellidos.value,
-    email: formularioRegistro.email.value,
-    password: formularioRegistro.password.value,
-    telefono: formularioRegistro.telefono.value,
-    estado: formularioRegistro.estado.value,
-    ciudad: formularioRegistro.ciudad.value,
-    postal: formularioRegistro.cp.value,
-    colonia: formularioRegistro.colonia.value,
-    calle: formularioRegistro.calle.value
-  }
+
+entradaFormReg.addEventListener('input',function(){
+  console.log(entradaFormReg.nombre);
+})
+
+/*formularioRegistro.addEventListener('input', function () {
+  
 
   //Validar existencia, tipo de dato, longitud y duplicación.
   if (entradaFormReg.nombre.length <=2 || entradaFormReg.nombre.length >= 26 || expreciones.soloString.test(entradaFormReg.nombre)!=true) {
@@ -74,16 +78,4 @@ formularioRegistro.addEventListener('input', function () {
 
   }
 
-  //Validar el input apellido
-  if (entradaFormReg.apellidos.length<=2 || entradaFormReg.apellidos.length>=30 || expreciones.soloString.test(entradaFormReg.apellidos)!=true) {
-    console.log('apellido mal');
-  }else{
-    console.log('apellido bien');
-  }
-
-
-
-
-  //console.log(formularioRegistro.apellidos.value);
-
-});
+})*/
