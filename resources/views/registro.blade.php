@@ -9,17 +9,17 @@
             </div>
             @csrf
             <div class="divSubPadreInput">
-                <input class="inputsRegistro" type="text" name="nombre" placeholder="Nombre(s)"
+                <input id="regNombre" class="inputsRegistro" type="text" name="nombre" placeholder="Nombre(s)"
                     value="{{ old('nombre') }}">
                 <span id="mensajeNombre" class="textoError hidden">* Campo vacío o caracteres no validos</span>
                 <br><small id="sugerenciaNombre" class="hidden text-gray-400"><strong>* Ejemplo: Jose Alberto</strong></small>
             </div>
 
             <div class="divSubPadreInput">
-                <input class="inputsRegistro" type="text" name="apellidos" placeholder="Apellidos"
+                <input id="regApellidos" class="inputsRegistro" type="text" name="apellidos" placeholder="Apellidos"
                     value="{{ old('apellidos') }}">
-                    <span class="textoError hidden">*Campo vacío o caracteres no validos</span>
-                    <br><span class="hidden"><strong>Ejemplo: Hernández Sánchez</strong></span>
+                    <span id="mensajeApellido" class="textoError hidden">*Campo vacío o caracteres no validos</span>
+                    <br><span id="sujerenciaApellidos" class="hidden"><strong>Ejemplo: Hernández Sánchez</strong></span>
             </div>
             
             <div class="divSubPadreInput">

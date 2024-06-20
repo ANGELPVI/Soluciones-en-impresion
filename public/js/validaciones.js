@@ -36,35 +36,23 @@ login && login.password.addEventListener('click', () => {
 });
 
 // VALIDACION DE LOS INPUTS DE EL FORMULARIO REGISTRO. 
-let formularioRegistro = document.getElementsByName('registro')[0];
 let buttonReg = document.getElementById('buttonRegistro');
-
-//Objeto que guarda todos los valores que reciva el formulario de registro.
+//Objeto que guarda todos los valores que reciba el formulario de registro.
 let entradaFormReg = {
-  nombre: document.getElementsByName('nombre'),
-  apellidos: formularioRegistro.apellidos.value,
-  email: formularioRegistro.email.value,
-  password: formularioRegistro.password.value,
-  telefono: formularioRegistro.telefono.value,
-  estado: formularioRegistro.estado.value,
-  ciudad: formularioRegistro.ciudad.value,
-  postal: formularioRegistro.cp.value,
-  colonia: formularioRegistro.colonia.value,
-  calle: formularioRegistro.calle.value
+  nombre: document.getElementById('regNombre'),
+  apellidos: document.getElementById('regApellidos')
+  
 }
 
 let mensajeErrorNombre=document.getElementById('mensajeNombre');
 let sugerenciaNombre=document.getElementById('sugerenciaNombre');
 
-entradaFormReg.addEventListener('input',function(){
-  console.log(entradaFormReg.nombre);
-})
+let mensajeErrorApellidos=document.getElementById('mensajeNombre');
+let sugerenciaApellidos=document.getElementById('sugerenciaNombre');
 
-/*formularioRegistro.addEventListener('input', function () {
-  
-
+entradaFormReg.nombre.addEventListener('input', function(){
   //Validar existencia, tipo de dato, longitud y duplicación.
-  if (entradaFormReg.nombre.length <=2 || entradaFormReg.nombre.length >= 26 || expreciones.soloString.test(entradaFormReg.nombre)!=true) {
+  if (entradaFormReg.nombre.value.length <=2 || entradaFormReg.nombre.value.length >= 26 || expreciones.soloString.test(entradaFormReg.nombre.value)!=true) {
     console.log('se bloquea');
     mensajeErrorNombre.classList.remove('hidden');
     sugerenciaNombre.classList.remove('hidden');
@@ -77,5 +65,23 @@ entradaFormReg.addEventListener('input',function(){
     sugerenciaNombre.classList.add('hidden');
 
   }
+})
 
-})*/
+//VALIDAR EL INPUT DE APELLIDOS.
+entradaFormReg.apellidos.addEventListener('input', function(){
+  if (entradaFormReg.apellidos.value.length <=2 || entradaFormReg.apellidos.value.length >= 35 || expreciones.soloString.test(entradaFormReg.apellidos.value)!=true) {
+    console.log('se bloquea');
+    mensajeErrorApellidos.classList.remove('hidden');
+    sugerenciaApellidos.classList.remove('hidden');
+
+
+
+  } else {
+    console.log('se desbloquea');
+    mensajeErrorApellidos.classList.add('hidden');
+    sugerenciaApellidos.classList.add('hidden');
+
+  }
+  
+})
+
