@@ -35,53 +35,72 @@ login && login.password.addEventListener('click', () => {
   textoError.classList.add('hidden');
 });
 
-// VALIDACION DE LOS INPUTS DE EL FORMULARIO REGISTRO. 
+
+/*---------- VALIDACION DE LOS INPUTS DE EL FORMULARIO REGISTRO.----------*/
 let buttonReg = document.getElementById('buttonRegistro');
-//Objeto que guarda todos los valores que reciba el formulario de registro.
+
 let entradaFormReg = {
   nombre: document.getElementById('regNombre'),
-  apellidos: document.getElementById('regApellidos')
-  
+  apellidos: document.getElementById('regApellidos'),
+  email: document.getElementById('regEmail'),
+
 }
 
-let mensajeErrorNombre=document.getElementById('mensajeNombre');
-let sugerenciaNombre=document.getElementById('sugerenciaNombre');
+let mensajesYSugerencias = {
+  mensajeErrorNombre: document.getElementById('mensajeNombre'),
+  sugerenciaNombre: document.getElementById('sugerenciaNombre'),
+  mensajeErrorApellidos: document.getElementById('mensajeApellidos'),
+  sugerenciaApellidos: document.getElementById('sugerenciaApellidos')
 
-let mensajeErrorApellidos=document.getElementById('mensajeNombre');
-let sugerenciaApellidos=document.getElementById('sugerenciaNombre');
+}
 
-entradaFormReg.nombre.addEventListener('input', function(){
+/*
+2-Hay que ver como funcionarioa llamar auna funcion que valide
+al input osea que cuando este escribiendo se llame esa funcion que
+validara si los carateres o la cadena es coresta. 
+ */
+
+entradaFormReg.nombre.addEventListener('input', function () {
   //Validar existencia, tipo de dato, longitud y duplicación.
-  if (entradaFormReg.nombre.value.length <=2 || entradaFormReg.nombre.value.length >= 26 || expreciones.soloString.test(entradaFormReg.nombre.value)!=true) {
+  if (entradaFormReg.nombre.value.length <= 2 || entradaFormReg.nombre.value.length >= 26 || expreciones.soloString.test(entradaFormReg.nombre.value) != true) {
     console.log('se bloquea');
-    mensajeErrorNombre.classList.remove('hidden');
-    sugerenciaNombre.classList.remove('hidden');
-
+    mensajesYSugerencias.mensajeErrorNombre.classList.remove('hidden');
+    mensajesYSugerencias.sugerenciaNombre.classList.remove('hidden');
 
 
   } else {
     console.log('se desbloquea');
-    mensajeErrorNombre.classList.add('hidden');
-    sugerenciaNombre.classList.add('hidden');
+    mensajesYSugerencias.mensajeErrorNombre.classList.add('hidden');
+    mensajesYSugerencias.sugerenciaNombre.classList.add('hidden');
 
   }
 })
 
 //VALIDAR EL INPUT DE APELLIDOS.
-entradaFormReg.apellidos.addEventListener('input', function(){
-  if (entradaFormReg.apellidos.value.length <=2 || entradaFormReg.apellidos.value.length >= 35 || expreciones.soloString.test(entradaFormReg.apellidos.value)!=true) {
+entradaFormReg.apellidos.addEventListener('input', function () {
+  if (entradaFormReg.apellidos.value.length <= 2 || entradaFormReg.apellidos.value.length >= 35 || expreciones.soloString.test(entradaFormReg.apellidos.value) != true) {
     console.log('se bloquea');
-    mensajeErrorApellidos.classList.remove('hidden');
-    sugerenciaApellidos.classList.remove('hidden');
+    mensajesYSugerencias.mensajeErrorApellidos.classList.remove('hidden');
+    mensajesYSugerencias.sugerenciaApellidos.classList.remove('hidden');
 
 
 
   } else {
     console.log('se desbloquea');
-    mensajeErrorApellidos.classList.add('hidden');
-    sugerenciaApellidos.classList.add('hidden');
+    mensajesYSugerencias.mensajeErrorApellidos.classList.add('hidden');
+    mensajesYSugerencias.sugerenciaApellidos.classList.add('hidden');
 
   }
-  
+
 })
+
+entradaFormReg.email.addEventListener('input', function(){
+  validarFomulario();
+})
+
+
+function validarFomulario(){
+  console.log('hola funcion validar');
+
+}
 
