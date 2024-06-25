@@ -95,12 +95,17 @@ entradaFormReg.apellidos.addEventListener('input', function () {
 })
 
 entradaFormReg.email.addEventListener('input', function(){
-  validarFomulario();
+  validarFomularioRegistro(entradaFormReg.email.value);
 })
 
 
-function validarFomulario(){
-  console.log('hola funcion validar');
+function validarFomularioRegistro(valor){
+  /*Validar el input de correo electronico */
+  if (valor.length>=3 || valor.length<=55){
+    console.log('Todo bien');
+  }else{
+    console.log('Todo mal');
+  }
 
 }
 
