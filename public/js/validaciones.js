@@ -95,16 +95,17 @@ entradaFormReg.apellidos.addEventListener('input', function () {
 })
 
 entradaFormReg.email.addEventListener('input', function(){
-  validarFomularioRegistro(entradaFormReg.email.value);
+  validarInputsDeNuevoRegistro(entradaFormReg.email.value);
 })
 
 
-function validarFomularioRegistro(valor){
+function validarInputsDeNuevoRegistro(valor){
   /*Validar el input de correo electronico */
-  if (valor.length>=3 || valor.length<=55){
-    console.log('Todo bien');
+  /** Empezar a llamar a la funcion validar InputsDeNuevoRegistro*/
+  if (valor.length=='' || valor.length>40 || expreciones.email.test(valor)!=true){
+    console.log('Boton bloqueado');
   }else{
-    console.log('Todo mal');
+    console.log('Boton habilitado');
   }
 
 }
