@@ -61,8 +61,23 @@ validara si los carateres o la cadena es coresta.
  */
 
 entradaFormReg.nombre.addEventListener('input', function () {
+  validarInputsDeNuevoRegistro(entradaFormReg.nombre.value, entradaFormReg.nombre.id);
+})
+
+//VALIDAR EL INPUT DE APELLIDOS.
+entradaFormReg.apellidos.addEventListener('input', function () {
+
+})
+
+entradaFormReg.email.addEventListener('input', function () {
+  validarInputsDeNuevoRegistro(entradaFormReg.email.value);
+})
+
+
+function validarInputsDeNuevoRegistro(valor, id) {
   //Validar existencia, tipo de dato, longitud y duplicación.
-  if (entradaFormReg.nombre.value.length <= 2 || entradaFormReg.nombre.value.length >= 26 || expreciones.soloString.test(entradaFormReg.nombre.value) != true) {
+  console.log(id);
+  if (valor == '' || valor.length > 26 || expreciones.soloString.test(valor) != true) {
     console.log('se bloquea');
     mensajesYSugerencias.mensajeErrorNombre.classList.remove('hidden');
     mensajesYSugerencias.sugerenciaNombre.classList.remove('hidden');
@@ -74,11 +89,9 @@ entradaFormReg.nombre.addEventListener('input', function () {
     mensajesYSugerencias.sugerenciaNombre.classList.add('hidden');
 
   }
-})
 
-//VALIDAR EL INPUT DE APELLIDOS.
-entradaFormReg.apellidos.addEventListener('input', function () {
-  if (entradaFormReg.apellidos.value.length <= 2 || entradaFormReg.apellidos.value.length >= 35 || expreciones.soloString.test(entradaFormReg.apellidos.value) != true) {
+  //Validar input apellidos
+  if (valor == '' || valor.length >= 35 || expreciones.soloString.test(valor) != true) {
     console.log('se bloquea');
     mensajesYSugerencias.mensajeErrorApellidos.classList.remove('hidden');
     mensajesYSugerencias.sugerenciaApellidos.classList.remove('hidden');
@@ -92,21 +105,13 @@ entradaFormReg.apellidos.addEventListener('input', function () {
 
   }
 
-})
-
-entradaFormReg.email.addEventListener('input', function(){
-  validarInputsDeNuevoRegistro(entradaFormReg.email.value);
-})
 
 
-function validarInputsDeNuevoRegistro(valor){
-  /*Validar el input de correo electronico */
-  /** Empezar a llamar a la funcion validar InputsDeNuevoRegistro*/
-  if (valor.length=='' || valor.length>40 || expreciones.email.test(valor)!=true){
+  /*if (valor.length=='' || valor.length>40 || expreciones.email.test(valor)!=true){
     console.log('Boton bloqueado');
   }else{
     console.log('Boton habilitado');
-  }
+  }*/
 
 }
 
