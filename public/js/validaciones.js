@@ -5,7 +5,7 @@ let textErrorUsuario = document.getElementById('usuarioError');
 let botonLogin = document.getElementById('bottonLogion');
 const expreciones = {
   email: /^[a-zA-Z0-9_.ñÑ+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-  soloString: /^[a-zA-Z\s]+$/
+  soloString: /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/
 }
 //El && evalua que el objeto login no este vacio o sea null
 //Así evitamos que el codigo se detenga y no se ejecuten las otras funciones.
@@ -66,52 +66,55 @@ entradaFormReg.nombre.addEventListener('input', function () {
 
 //VALIDAR EL INPUT DE APELLIDOS.
 entradaFormReg.apellidos.addEventListener('input', function () {
-
+  validarInputsDeNuevoRegistro(entradaFormReg.apellidos.value, entradaFormReg.apellidos.id);
 })
 
 entradaFormReg.email.addEventListener('input', function () {
-  validarInputsDeNuevoRegistro(entradaFormReg.email.value);
+  validarInputsDeNuevoRegistro(entradaFormReg.email.value, entradaFormReg.email.id);
 })
 
 
 function validarInputsDeNuevoRegistro(valor, id) {
   //Validar existencia, tipo de dato, longitud y duplicación.
-  console.log(id);
-  if (valor == '' || valor.length > 26 || expreciones.soloString.test(valor) != true) {
-    console.log('se bloquea');
-    mensajesYSugerencias.mensajeErrorNombre.classList.remove('hidden');
-    mensajesYSugerencias.sugerenciaNombre.classList.remove('hidden');
+  if (id == 'regNombre') {
+    if (valor == '' || valor.length > 26 || expreciones.soloString.test(valor) != true) {
+      console.log('se bloquea');
+      mensajesYSugerencias.mensajeErrorNombre.classList.remove('hidden');
+      mensajesYSugerencias.sugerenciaNombre.classList.remove('hidden');
 
 
-  } else {
-    console.log('se desbloquea');
-    mensajesYSugerencias.mensajeErrorNombre.classList.add('hidden');
-    mensajesYSugerencias.sugerenciaNombre.classList.add('hidden');
+    } else {
+      console.log('se desbloquea');
+      mensajesYSugerencias.mensajeErrorNombre.classList.add('hidden');
+      mensajesYSugerencias.sugerenciaNombre.classList.add('hidden');
 
+    }
   }
 
-  //Validar input apellidos
-  if (valor == '' || valor.length >= 35 || expreciones.soloString.test(valor) != true) {
-    console.log('se bloquea');
-    mensajesYSugerencias.mensajeErrorApellidos.classList.remove('hidden');
-    mensajesYSugerencias.sugerenciaApellidos.classList.remove('hidden');
+  if (id == 'regApellidos') {
+    console.log('yo me ejecuto');
+    if (valor == '' || valor.length >= 35 || expreciones.soloString.test(valor) != true) {
+      console.log('se bloquea');
+      mensajesYSugerencias.mensajeErrorApellidos.classList.remove('hidden');
+      mensajesYSugerencias.sugerenciaApellidos.classList.remove('hidden');
 
+    } else {
+      console.log('se desbloquea');
+      mensajesYSugerencias.mensajeErrorApellidos.classList.add('hidden');
+      mensajesYSugerencias.sugerenciaApellidos.classList.add('hidden');
 
-
-  } else {
-    console.log('se desbloquea');
-    mensajesYSugerencias.mensajeErrorApellidos.classList.add('hidden');
-    mensajesYSugerencias.sugerenciaApellidos.classList.add('hidden');
-
+    }
   }
 
 
-
-  /*if (valor.length=='' || valor.length>40 || expreciones.email.test(valor)!=true){
-    console.log('Boton bloqueado');
-  }else{
-    console.log('Boton habilitado');
-  }*/
+  if (id=='regEmail'){
+    if (valor.length == '' || valor.length > 40 || expreciones.email.test(valor) != true) {
+      console.log('Email no valido');
+    } else {
+      console.log('Email valido');
+    }
+    
+  }
 
 }
 
