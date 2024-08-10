@@ -1,5 +1,15 @@
 /*organizar los archivos para que el codigo sea mas lejible*/
-import { expreciones } from "./validaciones.js";
+import { expreciones } from "./regExpresion.js";
+
+let mensajesYSugerencias = {
+  mensajeErrorNombre: document.getElementById('mensajeNombre'),
+  sugerenciaNombre: document.getElementById('sugerenciaNombre'),
+  mensajeErrorApellidos: document.getElementById('mensajeApellidos'),
+  sugerenciaApellidos: document.getElementById('sugerenciaApellidos')
+
+}
+
+
 export function validarInputsDeNuevoRegistro(valor, id) {
     //Validar existencia, tipo de dato, longitud y duplicación.
     console.log(valor);

@@ -3,10 +3,7 @@ let login = document.getElementsByName('login')[0];
 let textoError = document.getElementById('error');
 let textErrorUsuario = document.getElementById('usuarioError');
 let botonLogin = document.getElementById('bottonLogion');
-export const expreciones = {
-  email: /^[a-zA-Z0-9_.ñÑ+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-  soloString: /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/
-}
+
 //El && evalua que el objeto login no este vacio o sea null
 //Así evitamos que el codigo se detenga y no se ejecuten las otras funciones.
 login && login.addEventListener('input', function () {
@@ -46,13 +43,7 @@ let entradaFormReg = {
 
 }
 
-let mensajesYSugerencias = {
-  mensajeErrorNombre: document.getElementById('mensajeNombre'),
-  sugerenciaNombre: document.getElementById('sugerenciaNombre'),
-  mensajeErrorApellidos: document.getElementById('mensajeApellidos'),
-  sugerenciaApellidos: document.getElementById('sugerenciaApellidos')
 
-}
 
 /*
 2-Hay que ver como funcionarioa llamar auna funcion que valide
