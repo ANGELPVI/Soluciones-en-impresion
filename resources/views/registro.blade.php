@@ -24,12 +24,12 @@
             
             <div class="divSubPadreInput">
                 <input id="regEmail" class="inputsRegistro" type="email" name="email" placeholder="Email" value="{{ old('email') }}">
-                <span class="textoError hidden">*Formato de email incorrecto</span>
-                <br><span class="hidden"><strong>Ejemplo: tu.email@gmail.com</strong></span>
+                <span id="mensajeEmail" class="textoError hidden">*Formato de email incorrecto</span>
+                <br><small id="sugerenciaEmail" class="hidden"><strong>Ejemplo: tu.email@gmail.com</strong></small>
             </div>
 
             <div class="divSubPadreInput">
-                <input class="inputsRegistro" type="password" name="password" placeholder="Contraseña"
+                <input id="regPassword" class="inputsRegistro" type="password" name="password" placeholder="Contraseña"
                     value="{{ old('password') }}">
                     <span class="textoError hidden">*La contraseña debe tener 8 o más caracteres</span>
             </div>

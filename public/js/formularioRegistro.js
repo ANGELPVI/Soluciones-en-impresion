@@ -7,6 +7,7 @@ let entradaFormReg = {
   nombre: document.getElementById('regNombre'),
   apellidos: document.getElementById('regApellidos'),
   email: document.getElementById('regEmail'),
+  password: document.getElementById('regPassword')
 
 }
 
@@ -22,4 +23,8 @@ entradaFormReg.apellidos && entradaFormReg.apellidos.addEventListener('input', f
 
 entradaFormReg.email && entradaFormReg.email.addEventListener('input', function () {
   validarInputsDeNuevoRegistro(entradaFormReg.email.value, entradaFormReg.email.id);
+})
+
+entradaFormReg.password && entradaFormReg.password.addEventListener('input', function () {
+  validarInputsDeNuevoRegistro(entradaFormReg.password.value, entradaFormReg.password.id);
 })
