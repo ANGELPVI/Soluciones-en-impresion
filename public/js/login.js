@@ -22,15 +22,12 @@ login && login.addEventListener('input', function () {
 
 
 //Quitar error de usuario o contraseña
-/*login && login.email.addEventListener('click', () => {
+// 1- Hacer que se quite el error que la variable textErrorUsurio proboca por iniciar vacia.
+login && login.email.addEventListener('click', () => {
   textoError.classList.add('hidden');
-  textErrorUsuario.classList.add('hidden');
+  textErrorUsuario && textErrorUsuario.classList.add('hidden');
 
-});*/
-
-/*login && login.password.addEventListener('click', () => {
-  textoError.classList.add('hidden');
-});*/
+});
 
 
 

@@ -11,15 +11,15 @@ let entradaFormReg = {
 }
 
 
-entradaFormReg.nombre.addEventListener('input', function () {
+entradaFormReg.nombre && entradaFormReg.nombre.addEventListener('input', function () {
   validarInputsDeNuevoRegistro(entradaFormReg.nombre.value, entradaFormReg.nombre.id);
 })
 
 //VALIDAR EL INPUT DE APELLIDOS.
-entradaFormReg.apellidos.addEventListener('input', function () {
+entradaFormReg.apellidos && entradaFormReg.apellidos.addEventListener('input', function () {
   validarInputsDeNuevoRegistro(entradaFormReg.apellidos.value, entradaFormReg.apellidos.id);
 })
 
-entradaFormReg.email.addEventListener('input', function () {
+entradaFormReg.email && entradaFormReg.email.addEventListener('input', function () {
   validarInputsDeNuevoRegistro(entradaFormReg.email.value, entradaFormReg.email.id);
 })
