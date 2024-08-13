@@ -55,9 +55,16 @@ export function validarInputsDeNuevoRegistro(valor, id) {
     }
 
     if (id=='regPassword') {
-      console.log('Aquí esta la password');
+      console.log('Aquí esta la password');      
       
-      
+    }
+
+    if (id=='regTel') {
+      console.log('Se valida el telefono');
+    }
+
+    if (id=='regCP') {
+      console.log('Se valida el CP');
     }
   
   }

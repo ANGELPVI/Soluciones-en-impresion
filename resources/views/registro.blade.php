@@ -11,21 +11,21 @@
             <div class="divSubPadreInput">
                 <input id="regNombre" class="inputsRegistro" type="text" name="nombre" placeholder="Nombre(s)"
                     value="{{ old('nombre') }}">
-                <span id="mensajeNombre" class="textoError hidden">* Campo vacío o caracteres no validos</span>
-                <br><small id="sugerenciaNombre" class="hidden text-gray-400"><strong>* Ejemplo: Jose Alberto</strong></small>
+                <span id="mensajeNombre" class="textoError hidden">Campo vacío o caracteres no validos</span>
+                <br><small id="sugerenciaNombre" class="hidden text-gray-400"><strong>Ejemplo: Jose Alberto</strong></small>
             </div>
 
             <div class="divSubPadreInput">
                 <input id="regApellidos" class="inputsRegistro" type="text" name="apellidos" placeholder="Apellidos"   
                     value="{{ old('apellidos') }}">
-                    <span id="mensajeApellidos" class="textoError hidden">*Campo vacío o caracteres no validos</span>
-                    <br><small id="sugerenciaApellidos" class="hidden text-gray-400"><strong>* Ejemplo: Hernández Sánchez</strong></small>
+                    <span id="mensajeApellidos" class="textoError hidden">Campo vacío o caracteres no validos</span>
+                    <br><small id="sugerenciaApellidos" class="hidden text-gray-400"><strong>Ejemplo: Hernández Sánchez</strong></small>
             </div>
             
             <div class="divSubPadreInput">
                 <input id="regEmail" class="inputsRegistro" type="email" name="email" placeholder="Email" value="{{ old('email') }}">
-                <span id="mensajeEmail" class="textoError hidden">*Formato de email incorrecto</span>
-                <br><small id="sugerenciaEmail" class="hidden"><strong>Ejemplo: tu.email@gmail.com</strong></small>
+                <span id="mensajeEmail" class="textoError hidden">Formato de email incorrecto</span>
+                <br><small id="sugerenciaEmail" class="hidden text-gray-400"><strong>Ejemplo: tu.email@gmail.com</strong></small>
             </div>
 
             <div class="divSubPadreInput">
@@ -35,7 +35,7 @@
             </div>
 
             <div class="divSubPadreInput">
-                <input class="inputsRegistro" type="text" name="telefono" placeholder="Teléfono"
+                <input id="regTel" class="inputsRegistro" type="text" name="telefono" placeholder="Teléfono"
                     value="{{ old('telefono') }}">
                     <span class="textoError hidden">El número de teléfono deben ser 10 digitos</span>
                     <br><span class="hidden"><strong>Ejemplo: 7551021049</strong></span>
@@ -54,21 +54,21 @@
             </div>
 
             <div class="divSubPadreInput">
-                <input class="inputsRegistro" type="text" name="cp" placeholder="Codigo Postal"
+                <input id="regCP" class="inputsRegistro" type="text" name="cp" placeholder="Codigo Postal"
                     value="{{ old('cp') }}">
                     <span class="textoError hidden">*El código postal debe tener 5 digitos</span>
                     <br><span class="hidden"><strong>Ejemplo: 80410</strong></span>
             </div>
 
             <div class="divSubPadreInput">
-                <input class="inputsRegistro" type="text" name="colonia" placeholder="Colonia"
+                <input id="regColonia" class="inputsRegistro" type="text" name="colonia" placeholder="Colonia"
                     value="{{ old('colonia') }}">
                     <span class="textoError hidden">*Campo vacío o caracteres no validos</span>
                     <br><span class="hidden"><strong>Ejemplo: Morelos</strong></span>
             </div>
 
             <div class="divSubPadreInput">
-                <input class="inputsRegistro" type="text" name="calle" placeholder="Calle"
+                <input id="regCalle" class="inputsRegistro" type="text" name="calle" placeholder="Calle"
                     value="{{ old('calle') }}">
                     <span class="textoError hidden">*Campo vacío o caracteres no validos</span>
                     <br><span class="hidden"><strong>Ejemplo: Luis Donaldo colocio</strong></span>
