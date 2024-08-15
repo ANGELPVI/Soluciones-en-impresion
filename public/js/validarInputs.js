@@ -53,9 +53,16 @@ export function validarInputsDeNuevoRegistro(valor, id) {
       }
       
     }
-
+      //Analisas si es mejor poner el total de longitud de carateres en en las expresiones regulares de soloString
     if (id=='regPassword') {
-      console.log('Aquí esta la password');      
+      if (expreciones.password.test(valor) != true) {
+            console.log('La contraseña debe tener 8 digitos, mayusculas, minusculas y signos');
+            
+        
+      }else{
+        console.log('El formato de la contraseña es correcto');
+        
+      }    
       
     }
 
@@ -65,6 +72,17 @@ export function validarInputsDeNuevoRegistro(valor, id) {
 
     if (id=='regCP') {
       console.log('Se valida el CP');
+    }
+
+    if (id=='regColonia') {
+      console.log('Se valida la colonia');
+      
+    }
+
+    if (id=='regCalle') {
+      console.log('se valida la calle');
+      
+      
     }
   
   }
