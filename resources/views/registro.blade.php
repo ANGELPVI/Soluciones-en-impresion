@@ -31,7 +31,7 @@
             <div class="divSubPadreInput">
                 <input id="regPassword" class="inputsRegistro" type="password" name="password" placeholder="Contraseña"
                     value="{{ old('password') }}">
-                    <span class="textoError hidden">*La contraseña debe tener 8 o más caracteres</span>
+                    <span id="mensajePass" class="textoError hidden">*La contraseña debe tener 8 o más caracteres</span>
             </div>
 
             <div class="divSubPadreInput">

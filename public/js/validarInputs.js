@@ -7,7 +7,8 @@ let mensajesYSugerencias = {
   mensajeErrorApellidos: document.getElementById('mensajeApellidos'),
   sugerenciaApellidos: document.getElementById('sugerenciaApellidos'),
   mensajeErrorEmail: document.getElementById('mensajeEmail'),
-  sugerenciaEmail: document.getElementById('sugerenciaEmail')
+  sugerenciaEmail: document.getElementById('sugerenciaEmail'),
+  mensajeErrorPasword: document.getElementById('mensajePass')
 
 }
 
@@ -56,12 +57,11 @@ export function validarInputsDeNuevoRegistro(valor, id) {
       //Analisas si es mejor poner el total de longitud de carateres en en las expresiones regulares de soloString
     if (id=='regPassword') {
       if (expreciones.password.test(valor) != true) {
-            console.log('La contraseña debe tener 8 digitos, mayusculas, minusculas y signos');
-            
-        
+        mensajesYSugerencias.mensajeErrorPasword.classList.remove('hidden');
+
       }else{
-        console.log('El formato de la contraseña es correcto');
-        
+        mensajesYSugerencias.mensajeErrorPasword.classList.add('hidden')
+                
       }    
       
     }
