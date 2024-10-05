@@ -1,4 +1,5 @@
 /*organizar los archivos para que el codigo sea mas lejible*/
+//import { document } from "postcss";
 import { expreciones } from "./regExpresion.js";
 
 let mensajesYSugerencias = {
@@ -8,14 +9,18 @@ let mensajesYSugerencias = {
   sugerenciaApellidos: document.getElementById('sugerenciaApellidos'),
   mensajeErrorEmail: document.getElementById('mensajeEmail'),
   sugerenciaEmail: document.getElementById('sugerenciaEmail'),
-  mensajeErrorPasword: document.getElementById('mensajePass')
+  mensajeErrorPasword: document.getElementById('mensajePass'),
+  mensajeErrorTel: document.getElementById('mensajeTel'),
+  sugerenciaTel: document.getElementById('sugerenciaTel')
+
 
 }
 
 
+
 export function validarInputsDeNuevoRegistro(valor, id) {
     /*Validar existencia, tipo de dato, longitud y duplicación la duplicacion
-      es para el email y telefono*/
+      es para el email y telefono*/     
     
     if (id == 'regNombre') {
       if (valor == '' || valor.length > 26 || expreciones.soloString.test(valor) != true) {
@@ -67,7 +72,19 @@ export function validarInputsDeNuevoRegistro(valor, id) {
     }
 
     if (id=='regTel') {
-      console.log('Se valida el telefono');
+      console.log(valor);
+      
+      if (expreciones.telefono.test(valor)==true) {
+        mensajesYSugerencias.mensajeErrorTel.remove('hidden');
+        mensajesYSugerencias.sugerenciaTel.remove('hidden');
+        
+      } else {
+        mensajesYSugerencias.mensajeErrorTel.add('hidden');
+        mensajesYSugerencias.sugerenciaTel.add('hidden');
+        
+        
+      }
+     
     }
 
     if (id=='regCP') {

@@ -37,8 +37,8 @@
             <div class="divSubPadreInput">
                 <input id="regTel" class="inputsRegistro" type="text" name="telefono" placeholder="Teléfono"
                     value="{{ old('telefono') }}">
-                    <span class="textoError hidden">El número de teléfono deben ser 10 digitos</span>
-                    <br><span class="hidden"><strong>Ejemplo: 7551021049</strong></span>
+                    <span id="mensajeTel" class="textoError hidden">El número de teléfono deben ser 10 digitos</span>
+                    <br><small id="sugerenciaTel" class="hidden"><strong>Ejemplo: 7551021049</strong></small>
             </div>
 
             <div class="divSubPadreInput">
