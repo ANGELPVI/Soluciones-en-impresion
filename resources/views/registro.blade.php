@@ -56,8 +56,8 @@
             <div class="divSubPadreInput">
                 <input id="regCP" class="inputsRegistro" type="text" name="cp" placeholder="Codigo Postal"
                     value="{{ old('cp') }}">
-                    <span class="textoError hidden">*El código postal debe tener 5 digitos</span>
-                    <br><span class="hidden"><strong>Ejemplo: 80410</strong></span>
+                    <span id="mensajeCP" class="textoError hidden">*El código postal debe tener 5 digitos</span>
+                    <br><small id="sugerenciaCP" class="hidden"><strong>Ejemplo: 80410</strong></small>
             </div>
 
             <div class="divSubPadreInput">

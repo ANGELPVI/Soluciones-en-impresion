@@ -11,7 +11,9 @@ let mensajesYSugerencias = {
   sugerenciaEmail: document.getElementById('sugerenciaEmail'),
   mensajeErrorPasword: document.getElementById('mensajePass'),
   mensajeErrorTel: document.getElementById('mensajeTel'),
-  sugerenciaTel: document.getElementById('sugerenciaTel')
+  sugerenciaTel: document.getElementById('sugerenciaTel'),
+  mensajeErrorCP: document.getElementById('mensajeCP'),
+  sugerenciaCP: document.getElementById('sugerenciaCP')
 
 
 }
@@ -72,15 +74,14 @@ export function validarInputsDeNuevoRegistro(valor, id) {
     }
 
     if (id=='regTel') {
-      console.log(valor);
-      
-      if (expreciones.telefono.test(valor)==true) {
-        mensajesYSugerencias.mensajeErrorTel.remove('hidden');
-        mensajesYSugerencias.sugerenciaTel.remove('hidden');
+            
+      if (expreciones.telefono.test(valor)!=true) {
+        mensajesYSugerencias.mensajeErrorTel.classList.remove('hidden');
+        mensajesYSugerencias.sugerenciaTel.classList.remove('hidden');
         
       } else {
-        mensajesYSugerencias.mensajeErrorTel.add('hidden');
-        mensajesYSugerencias.sugerenciaTel.add('hidden');
+        mensajesYSugerencias.mensajeErrorTel.classList.add('hidden');
+        mensajesYSugerencias.sugerenciaTel.classList.add('hidden');
         
         
       }
@@ -88,7 +89,18 @@ export function validarInputsDeNuevoRegistro(valor, id) {
     }
 
     if (id=='regCP') {
-      console.log('Se valida el CP');
+
+      if (expreciones.CP.test(valor)!=true) {
+        mensajesYSugerencias.mensajeErrorCP.classList.remove('hidden');
+        mensajesYSugerencias.sugerenciaCP.classList.remove('hidden');
+        
+      } else {
+        mensajesYSugerencias.mensajeErrorCP.classList.add('hidden');
+        mensajesYSugerencias.sugerenciaCP.classList.add('hidden');
+        
+        
+      }
+      
     }
 
     if (id=='regColonia') {
