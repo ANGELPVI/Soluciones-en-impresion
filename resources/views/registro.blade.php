@@ -63,15 +63,15 @@
             <div class="divSubPadreInput">
                 <input id="regColonia" class="inputsRegistro" type="text" name="colonia" placeholder="Colonia"
                     value="{{ old('colonia') }}">
-                    <span class="textoError hidden">*Campo vacío o caracteres no validos</span>
-                    <br><span class="hidden"><strong>Ejemplo: Morelos</strong></span>
+                    <span id="mensajeColonia" class="textoError hidden">*Campo vacío o caracteres no validos</span>
+                    <br><small id="sugerenciaColonia" class="hidden"><strong>Ejemplo: Morelos</strong></small>
             </div>
 
             <div class="divSubPadreInput">
                 <input id="regCalle" class="inputsRegistro" type="text" name="calle" placeholder="Calle"
                     value="{{ old('calle') }}">
-                    <span class="textoError hidden">*Campo vacío o caracteres no validos</span>
-                    <br><span class="hidden"><strong>Ejemplo: Luis Donaldo colocio</strong></span>
+                    <span id="mensajeCalle" class="textoError hidden">*Campo vacío o caracteres no validos</span>
+                    <br><small id="sugerenciaCalle" class="hidden"><strong>Ejemplo: Luis Donaldo colocio</strong></small>
             </div>
 
 

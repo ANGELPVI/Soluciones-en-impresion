@@ -13,7 +13,12 @@ let mensajesYSugerencias = {
   mensajeErrorTel: document.getElementById('mensajeTel'),
   sugerenciaTel: document.getElementById('sugerenciaTel'),
   mensajeErrorCP: document.getElementById('mensajeCP'),
-  sugerenciaCP: document.getElementById('sugerenciaCP')
+  sugerenciaCP: document.getElementById('sugerenciaCP'),
+  mensajeErrorColonia: document.getElementById('mensajeColonia'),
+  sugerenciaColonia: document.getElementById('sugerenciaColonia'),
+  mensajeErrorCalle: document.getElementById('mensajeCalle'),
+  sugerenciaCalle: document.getElementById('sugerenciaCalle')
+
 
 
 }
@@ -102,14 +107,30 @@ export function validarInputsDeNuevoRegistro(valor, id) {
       }
       
     }
-
+// hay que validar que sean mas de 5 carateres en el string de colonia
     if (id=='regColonia') {
-      console.log('Se valida la colonia');
+      if (expreciones.colonia.test(valor)!=true) {
+        mensajesYSugerencias.mensajeErrorColonia.classList.remove('hidden');
+        mensajesYSugerencias.sugerenciaColonia.classList.remove('hidden');
+        
+      } else {
+        mensajesYSugerencias.mensajeErrorColonia.classList.add('hidden');
+        mensajesYSugerencias.sugerenciaColonia.classList.add('hidden');
+        
+        
+      }
       
     }
 
     if (id=='regCalle') {
-      console.log('se valida la calle');
+      if (expreciones.calle.test(valor)!=true){
+        mensajesYSugerencias.mensajeErrorCalle.classList.remove('hidden');
+        mensajesYSugerencias.sugerenciaCalle.classList.remove('hidden');
+      } else {
+        mensajesYSugerencias.mensajeErrorCalle.classList.add('hidden');
+        mensajesYSugerencias.sugerenciaCalle.classList.add('hidden');
+        
+      }
       
       
     }
