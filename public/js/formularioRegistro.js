@@ -11,8 +11,11 @@ let entradaFormReg = {
   tel: document.getElementById('regTel'),
   CP: document.getElementById('regCP'),
   colonia: document.getElementById('regColonia'),
-  calle: document.getElementById('regCalle')
+  calle: document.getElementById('regCalle'),
+  estados: document.getElementById('estados'),
+  municipios: document.getElementById('municipios')
 }
+
 
 
 entradaFormReg.nombre && entradaFormReg.nombre.addEventListener('input', function () {
@@ -34,6 +37,14 @@ entradaFormReg.password && entradaFormReg.password.addEventListener('input', fun
 entradaFormReg.tel && entradaFormReg.tel.addEventListener('input', function () {
   validarInputsDeNuevoRegistro(entradaFormReg.tel.value, entradaFormReg.tel.id);
 });
+
+entradaFormReg.estados && entradaFormReg.estados.addEventListener('change',function(){
+  validarInputsDeNuevoRegistro(entradaFormReg.estados.value,entradaFormReg.estados.id);
+})
+
+entradaFormReg.municipios && entradaFormReg.municipios.addEventListener('change',function(){
+  validarInputsDeNuevoRegistro(entradaFormReg.municipios.value, entradaFormReg.municipios.id);
+})
 
 entradaFormReg.CP && entradaFormReg.CP.addEventListener('input', function () {
   validarInputsDeNuevoRegistro(entradaFormReg.CP.value, entradaFormReg.CP.id);

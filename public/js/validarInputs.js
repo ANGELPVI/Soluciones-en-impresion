@@ -1,5 +1,3 @@
-/*organizar los archivos para que el codigo sea mas lejible*/
-//import { document } from "postcss";
 import { expreciones } from "./regExpresion.js";
 
 let mensajesYSugerencias = {
@@ -28,7 +26,8 @@ let mensajesYSugerencias = {
 export function validarInputsDeNuevoRegistro(valor, id) {
     /*Validar existencia, tipo de dato, longitud y duplicación la duplicacion
       es para el email y telefono*/     
-    
+       
+
     if (id == 'regNombre') {
       if (valor == '' || valor.length > 26 || expreciones.soloString.test(valor) != true) {
         mensajesYSugerencias.mensajeErrorNombre.classList.remove('hidden');
@@ -91,6 +90,28 @@ export function validarInputsDeNuevoRegistro(valor, id) {
         
       }
      
+    }
+
+    if(id=='estados'){
+      if (valor=='Selecciona un Estado'){
+        console.log('Selecciona un estado');
+        
+      } else {
+        console.log(`Seleccionaste el estado ${valor}`);
+      }
+
+    }
+
+    if (id=='municipios') {
+      if (valor=='Seleccione un municipio') {
+        console.log('Selecciona algo');
+        
+      } else {
+        console.log(`Municipio seleccionado ${valor}`);
+        
+        
+      }
+      
     }
 
     if (id=='regCP') {
