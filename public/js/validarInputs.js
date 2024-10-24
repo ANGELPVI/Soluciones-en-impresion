@@ -10,6 +10,10 @@ let mensajesYSugerencias = {
   mensajeErrorPasword: document.getElementById('mensajePass'),
   mensajeErrorTel: document.getElementById('mensajeTel'),
   sugerenciaTel: document.getElementById('sugerenciaTel'),
+  mensajeEstado: document.getElementById('mensajeEstado'),
+  sugerenciaEstado: document.getElementById('sugerenciaEstado'),
+  mensajeMunicipio: document.getElementById('mensajeMunicipio'),
+  sugerenciaMunicipio: document.getElementById('sugerenciaMunicipio'),
   mensajeErrorCP: document.getElementById('mensajeCP'),
   sugerenciaCP: document.getElementById('sugerenciaCP'),
   mensajeErrorColonia: document.getElementById('mensajeColonia'),
@@ -94,20 +98,24 @@ export function validarInputsDeNuevoRegistro(valor, id) {
 
     if(id=='estados'){
       if (valor=='Selecciona un Estado'){
-        console.log('Selecciona un estado');
+        mensajesYSugerencias.mensajeEstado.classList.remove('hidden');
+        mensajesYSugerencias.sugerenciaEstado.classList.remove('hidden');
         
       } else {
-        console.log(`Seleccionaste el estado ${valor}`);
+        mensajesYSugerencias.mensajeEstado.classList.add('hidden');
+        mensajesYSugerencias.sugerenciaEstado.classList.add('hidden');
       }
 
     }
 
     if (id=='municipios') {
       if (valor=='Seleccione un municipio') {
-        console.log('Selecciona algo');
+       mensajesYSugerencias.mensajeMunicipio.classList.remove('hidden');
+        mensajesYSugerencias.sugerenciaMunicipio.classList.remove('hidden');
         
       } else {
-        console.log(`Municipio seleccionado ${valor}`);
+        mensajesYSugerencias.mensajeMunicipio.classList.add('hidden');
+        mensajesYSugerencias.sugerenciaMunicipio.classList.add('hidden');
         
         
       }

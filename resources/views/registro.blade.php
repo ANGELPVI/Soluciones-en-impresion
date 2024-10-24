@@ -16,62 +16,70 @@
             </div>
 
             <div class="divSubPadreInput">
-                <input id="regApellidos" class="inputsRegistro" type="text" name="apellidos" placeholder="Apellidos"   
+                <input id="regApellidos" class="inputsRegistro" type="text" name="apellidos" placeholder="Apellidos"
                     value="{{ old('apellidos') }}">
-                    <span id="mensajeApellidos" class="textoError hidden">Campo vacío o caracteres no validos</span>
-                    <br><small id="sugerenciaApellidos" class="hidden text-gray-400"><strong>Ejemplo: Hernández Sánchez</strong></small>
+                <span id="mensajeApellidos" class="textoError hidden">Campo vacío o caracteres no validos</span>
+                <br><small id="sugerenciaApellidos" class="hidden text-gray-400"><strong>Ejemplo: Hernández
+                        Sánchez</strong></small>
             </div>
-            
+
             <div class="divSubPadreInput">
-                <input id="regEmail" class="inputsRegistro" type="email" name="email" placeholder="Email" value="{{ old('email') }}">
+                <input id="regEmail" class="inputsRegistro" type="email" name="email" placeholder="Email"
+                    value="{{ old('email') }}">
                 <span id="mensajeEmail" class="textoError hidden">Formato de email incorrecto</span>
-                <br><small id="sugerenciaEmail" class="hidden text-gray-400"><strong>Ejemplo: tu.email@gmail.com</strong></small>
+                <br><small id="sugerenciaEmail" class="hidden text-gray-400"><strong>Ejemplo:
+                        tu.email@gmail.com</strong></small>
             </div>
 
             <div class="divSubPadreInput">
                 <input id="regPassword" class="inputsRegistro" type="password" name="password" placeholder="Contraseña"
                     value="{{ old('password') }}">
-                    <span id="mensajePass" class="textoError hidden">*La contraseña debe tener 8 o más caracteres</span>
+                <span id="mensajePass" class="textoError hidden">*La contraseña debe tener 8 o más caracteres</span>
             </div>
 
             <div class="divSubPadreInput">
                 <input id="regTel" class="inputsRegistro" type="text" name="telefono" placeholder="Teléfono"
                     value="{{ old('telefono') }}">
-                    <span id="mensajeTel" class="textoError hidden">El número de teléfono deben ser 10 digitos</span>
-                    <br><small id="sugerenciaTel" class="hidden"><strong>Ejemplo: 7551021049</strong></small>
+                <span id="mensajeTel" class="textoError hidden">El número de teléfono deben ser 10 digitos</span>
+                <br><small id="sugerenciaTel" class="hidden text-gray-400"><strong>Ejemplo: 7551021049</strong></small>
             </div>
 
             <div class="divSubPadreInput">
                 <select class="inputsRegistro" name="estado" id="estados" value="{{ old('estado') }}">
                     <option>Selecciona un Estado</option>
                 </select>
+                <span id="mensajeEstado" class="hidden textoError ">Elija un estado</span>
+                <br><small id="sugerenciaEstado" class="hidden text-gray-400"><strong>Ejemplo: Guerrero</strong></small>
             </div>
 
             <div class="divSubPadreInput">
                 <select class="inputsRegistro" name="ciudad" id="municipios" value="{{ old('ciudad') }}">
                     <option>Seleccione un municipio</option>
                 </select>
+                <span id="mensajeMunicipio" class="hidden textoError">Elija un Municipio</span>
+                <br><small id="sugerenciaMunicipio" class="hidden text-gray-400"><strong>Ejemplo: Acapulco</strong></small>
             </div>
 
             <div class="divSubPadreInput">
                 <input id="regCP" class="inputsRegistro" type="text" name="cp" placeholder="Codigo Postal"
                     value="{{ old('cp') }}">
-                    <span id="mensajeCP" class="textoError hidden">*El código postal debe tener 5 digitos</span>
-                    <br><small id="sugerenciaCP" class="hidden"><strong>Ejemplo: 80410</strong></small>
+                <span id="mensajeCP" class="textoError hidden">El código postal debe tener 5 digitos</span>
+                <br><small id="sugerenciaCP" class="hidden text-gray-400"><strong>Ejemplo: 80410</strong></small>
             </div>
 
             <div class="divSubPadreInput">
                 <input id="regColonia" class="inputsRegistro" type="text" name="colonia" placeholder="Colonia"
                     value="{{ old('colonia') }}">
-                    <span id="mensajeColonia" class="textoError hidden">*Campo vacío o caracteres no validos</span>
-                    <br><small id="sugerenciaColonia" class="hidden"><strong>Ejemplo: Morelos</strong></small>
+                <span id="mensajeColonia" class="textoError hidden">Campo vacío o caracteres no validos</span>
+                <br><small id="sugerenciaColonia" class="hidden text-gray-400"><strong>Ejemplo: Morelos</strong></small>
             </div>
 
             <div class="divSubPadreInput">
                 <input id="regCalle" class="inputsRegistro" type="text" name="calle" placeholder="Calle"
                     value="{{ old('calle') }}">
-                    <span id="mensajeCalle" class="textoError hidden">*Campo vacío o caracteres no validos</span>
-                    <br><small id="sugerenciaCalle" class="hidden"><strong>Ejemplo: Luis Donaldo colocio</strong></small>
+                <span id="mensajeCalle" class="textoError hidden">Campo vacío o caracteres no validos</span>
+                <br><small id="sugerenciaCalle" class="hidden text-gray-400"><strong>Ejemplo: Luis Donaldo
+                        colocio</strong></small>
             </div>
 
 
@@ -90,8 +98,7 @@
             @enderror  --}}
 
 
-            <button id="buttonRegistro" class="buttonRegistro"
-                type="submit" disabled>Registrarme</button>
+            <button id="buttonRegistro" class="buttonRegistro" type="submit" disabled>Registrarme</button>
         </form>
     </div>
 @endsection
