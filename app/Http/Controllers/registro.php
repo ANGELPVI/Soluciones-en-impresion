@@ -57,5 +57,22 @@ class registro extends Controller{
 
     }
 
+    public function revisarEmail(Request $request){       
+
+        // Verificar si el correo ya está registrado
+        $exists = User::where('email', $request->email)->exists();
+
+        // Devolver la respuesta como JSON
+        return response()->json(['datos' => $exists]);
+
+    }
+
+    public function duplicacionDeTel(Request $request){
+
+        $existe= User::where('telefono', $request->telefono)->exists();
+
+        return response()->json(['existe'=>$existe]);
+    }
+
     
 }
