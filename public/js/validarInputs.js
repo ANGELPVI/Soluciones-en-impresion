@@ -7,6 +7,7 @@ let mensajesYSugerencias = {
   sugerenciaApellidos: document.getElementById('sugerenciaApellidos'),
   mensajeErrorEmail: document.getElementById('mensajeEmail'),
   sugerenciaEmail: document.getElementById('sugerenciaEmail'),
+  mensajeEmailExistente:document.getElementById('mensajeEmailExistente'),
   mensajeErrorPasword: document.getElementById('mensajePass'),
   mensajeErrorTel: document.getElementById('mensajeTel'),
   sugerenciaTel: document.getElementById('sugerenciaTel'),
@@ -76,9 +77,9 @@ export function validarInputsDeNuevoRegistro(valor, id) {
     .then(resp=>resp.json())
     .then(data => {
       if (data.datos) {
-          console.log('El email ya está registrado.');
+          mensajesYSugerencias.mensajeEmailExistente.classList.remove('hidden');
       } else {
-          console.log('El email no esta registrado');
+        mensajesYSugerencias.mensajeEmailExistente.classList.add('hidden');
       }
   })
   .catch(error => console.error('Error:', error));
