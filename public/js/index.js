@@ -12,14 +12,14 @@ function estados(){
       let option = document.createElement("option"); 
       option.value =`${key}`;
       option.text =`${key}`;
-      select.appendChild(option);
+      select && select.appendChild(option);
       
    })})
       
 }
 estados();
 // Funcion que busca los municipios al seleccionar un estado
-select.addEventListener('change', function(){
+select && select.addEventListener('change', function(){
   SelectMunicipios.innerHTML=`<option>Seleccione un municipio</option>`
     municipios[select.value].forEach(municipio=>{
        SelectMunicipios.innerHTML+= `<option value="${municipio}">${municipio}</option>`

@@ -109,9 +109,10 @@
     </div>
   </footer>
 
-  <script src="{{asset('js/index.js')}}"></script>
-  <script src="{{asset('js/menuUser.js')}}"></script>
-  <script src="{{asset('js/validaciones.js')}}"></script>
+  <script type="module" src="{{asset('js/index.js')}}"></script>
+  <script type="module" src="{{asset('js/menuUser.js')}}"></script>
+  <script type="module" src="{{asset('js/login.js')}}"></script>
+  <script type="module" src="{{asset('js/formularioRegistro.js')}}"></script>
 </body>
 
 </html>
