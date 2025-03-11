@@ -71,7 +71,7 @@ class registro extends Controller{
 
         $existe= User::where('telefono', $request->telefono)->exists();
 
-        return response()->json(['existe'=>$existe]);
+        return response()->json(['datos'=>$existe]);
     }
 
     

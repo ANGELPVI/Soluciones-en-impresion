@@ -11,6 +11,7 @@ let mensajesYSugerencias = {
   mensajeErrorPasword: document.getElementById('mensajePass'),
   mensajeErrorTel: document.getElementById('mensajeTel'),
   sugerenciaTel: document.getElementById('sugerenciaTel'),
+  mensajeTelExistente: document.getElementById('mensajeTelExistente'),
   mensajeEstado: document.getElementById('mensajeEstado'),
   sugerenciaEstado: document.getElementById('sugerenciaEstado'),
   mensajeMunicipio: document.getElementById('mensajeMunicipio'),
@@ -123,10 +124,11 @@ export function validarInputsDeNuevoRegistro(valor, id) {
     })
     .then(resp=>resp.json())
     .then(data => {
-      if (data.existe) {
-          console.log('El telefono ya está registrado.');
+           
+      if (data.datos) {  
+          mensajesYSugerencias.mensajeTelExistente.classList.remove('hidden');
       } else {
-          console.log('El telefono no esta registrado');
+          mensajesYSugerencias.mensajeTelExistente.classList.add('hidden');
       }
   })
   .catch(error => console.error('Error:', error));
