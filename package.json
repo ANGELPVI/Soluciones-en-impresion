@@ -1,4 +1,7 @@
 {
+    "name": "Soluciones En Impresiones",
+    "version": "1.0.0",
+    "type": "module",
     "private": true,
     "scripts": {
         "start": "npm run development",
@@ -8,10 +11,16 @@
         "hot": "mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production",
-        "postinstall": "npm run production"
+        "postinstall": "npm run production",
+        "test": "jest"
     },
     "devDependencies": {
+        "@babel/core": "^7.26.10",
+        "@babel/preset-env": "^7.26.9",
         "axios": "^0.21",
+        "babel-jest": "^29.7.0",
+        "jest": "^29.7.0",
+        "jest-environment-jsdom": "^29.7.0",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"

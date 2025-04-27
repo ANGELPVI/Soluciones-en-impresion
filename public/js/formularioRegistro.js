@@ -57,3 +57,9 @@ entradaFormReg.colonia && entradaFormReg.colonia.addEventListener('input', funct
 entradaFormReg.calle && entradaFormReg.calle.addEventListener('input', function () {
   validarInputsDeNuevoRegistro(entradaFormReg.calle.value, entradaFormReg.calle.id);
 });
+
+
+export function suma(a,b){
+  return a+b;
+  
+}

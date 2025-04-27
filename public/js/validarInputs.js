@@ -24,6 +24,7 @@ let mensajesYSugerencias = {
   sugerenciaCalle: document.getElementById('sugerenciaCalle')
 
 }
+
 let inputsValidados = [false, false, false, false, false, false, false, false, false, false];
 
 
@@ -224,9 +225,27 @@ export function validarInputsDeNuevoRegistro(valor, id) {
 }
 
 //Activar el boton de registrar nuevo usurio
-//En las validaciones de email y tel duplicado estan cambiando los estado de manera incorrecta. 
+//Probar que el boton si envie los datos para el nuevo registro.
+// Que en el Backend este validado que no se repita email y tel si se saltan la validación de Fronend. 
 function activarBotonReguistro(index, estado) {
+  let botonRegistro=document.getElementById('buttonRegistro');
   inputsValidados[index] = estado;
-  console.log(inputsValidados);
+
+  const todosValidos=inputsValidados.every(valor=> valor===true);
+
+  if (todosValidos) {
+    console.log('activado');
+    botonRegistro.classList.remove("buttonRegistro");
+    botonRegistro.classList.add('buttonRegistroEnable');
+
+    
+  } else {
+    console.log('Desabilhitado');
+    botonRegistro.classList.remove('buttonRegistroEnable');
+    botonRegistro.classList.add('buttonRegistro');
+    
+  }
+
+    
 
 }
