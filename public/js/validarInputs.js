@@ -228,7 +228,7 @@ export function validarInputsDeNuevoRegistro(valor, id) {
 //Probar que el boton si envie los datos para el nuevo registro.
 // Que en el Backend este validado que no se repita email y tel si se saltan la validación de Fronend. 
 function activarBotonReguistro(index, estado) {
-  let botonRegistro=document.getElementById('buttonRegistro');
+  const botonRegistro=document.getElementById('buttonRegistro');
   inputsValidados[index] = estado;
 
   const todosValidos=inputsValidados.every(valor=> valor===true);
