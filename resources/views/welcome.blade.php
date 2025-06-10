@@ -110,10 +110,10 @@
     </div>
   </footer>
 
-  <script type="module" src="{{asset('js/index.js')}}"></script>
-  <script type="module" src="{{asset('js/menuUser.js')}}"></script>
-  <script type="module" src="{{asset('js/login.js')}}"></script>
-  <script type="module" src="{{asset('js/formularioRegistro.js')}}"></script>
+  <script type="module" src="{{asset('js/components/locationSelector.js')}}"></script>
+  <script type="module" src="{{asset('js/components/authUserMenu.js')}}"></script>
+  <script type="module" src="{{asset('js/auth/loginValidator.js')}}"></script>
+  <script type="module" src="{{asset('js/auth/formularioRegistro.js')}}"></script>
 </body>
 
 </html>

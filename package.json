@@ -1,7 +1,6 @@
 {
     "name": "Soluciones En Impresiones",
     "version": "1.0.0",
-    "type": "module",
     "private": true,
     "scripts": {
         "start": "npm run development",
