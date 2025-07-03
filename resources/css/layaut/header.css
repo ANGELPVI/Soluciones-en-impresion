@@ -1,0 +1,150 @@
+/*Layouts generales como header, footer, sidebar*/
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+}
+body {
+    background-color: #F4F6F9;
+        
+}
+
+.img-empresas {
+    height: 150px;
+    image-rendering: auto;
+}
+
+.fondo-header{
+    background-image: url(../../../public/img/fondo-header.jpg);
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    position: relative
+    
+}
+.fondo-header::before{
+    content: '';
+    width: 100%;
+    height: 600px;
+    background-color: #111827;
+    position: absolute;
+    opacity: 0.7;
+}
+
+/* .fondo-uno{
+    background-image: url(../img/Fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+} */
+
+.fondo-azul {
+    background-image: url(../../../public/img/fondo-azul.svg);
+    background-repeat: no-repeat;
+    background-position: 500px -50px;
+}
+
+.fondo-amarillo {
+    background-image: url(../../../public/img/Ellipse\ 3.svg);
+    background-repeat: no-repeat;
+    background-position: 500px px;
+}
+
+.fondo-magenta {
+    background-image: url(../../../public/img/Ellipse\ 4.png);
+    background-repeat: no-repeat;
+    background-position: 900px -20px;
+}
+
+.fondo-impresoras {
+    background: rgb(17, 24, 39);
+    background: linear-gradient(
+        180deg,
+        rgba(17, 24, 39, 1) 30%,
+        rgb(55, 65, 81, 1) 100%
+    );
+}
+
+.letras {
+    background: #ccc;
+    background: linear-gradient(
+        100deg,
+        rgba(9, 240, 255,1) 30%,
+        rgba(210, 9, 242,1) 50%,
+        rgba(250,255,5,1) 100%
+    );
+    /* line-height: 115%; */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+    text-shadow:0px 0px 50px #ffffff;
+}
+
+.titulo-header{
+    background: #ccc;
+    background: linear-gradient(
+        100deg,
+        rgba(0, 198, 255,1) 30%,
+        rgba(0, 114, 255,1) 70%);
+    line-height: 115%;
+    -webkit-text-fill-colo640r: transparent;
+    -webkit-background-clip: text;
+    /* text-shadow:0px 0px 50px #ffffff; */
+}
+
+.botones{
+    box-shadow: 0px 0px 20px 2px #29B980;
+}
+.targetas{
+    background: linear-gradient(90deg, rgba(0, 198, 255, 0.15) 0%, rgba(0, 114, 255, 0.15) 100%);
+box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
+backdrop-filter: blur(10px);
+}
+
+.targetaComentario{
+    background: #FFFFFF;
+    box-shadow: -10px -4px 10px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.25);
+    
+}
+
+.targetaVentaimpresora{
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.25);
+}
+.imgImpresoras{
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.26);
+}
+
+.nav-bar{
+    @apply flex items-center bg-gray-900 p-3 flex-wrap w-full
+}
+
+.nav-imagen{
+    @apply p-2 mr-4 inline-flex items-center
+}
+
+.img-logo{
+    @apply w-20 h-20 
+}
+
+.letras-logo{
+    @apply text-white pl-3 font-titulo xs:hidden sm:text-sm md:text-sm lg:text-sm xl:text-3xl 2xl:text-5xl
+}
+
+.nav-items{
+    @apply  transition duration-500 ease-in-out border-blue-400 hover:border-b-2 hover:text-white transform hover:-translate-y-1 hover:scale-110 font-titulo uppercase m-3 px-2 py-2 text-gray-400 lg:inline-flex lg:w-auto
+}
+.title-header{
+    @apply col-span-12 lg:col-span-12 text-white relative font-titulo md:mt-2 lg:-mt-28 xs:text-sm sm:text-3xl lg:text-5xl xl:text-6xl 2xl:text-6xl 
+}
+.div-header{
+    @apply grid grid-cols-3 justify-items-center content-center w-full
+}
+.parrafo-header{
+    @apply col-span-12 lg:col-span-12  text-white relative xs:p-3 xs:text-sm sm:text-lg xs:text-center sm:text-justify xs:mt-5 sm:mt-11 xs:w-full sm:w-1/2 font-descrip
+}
+.button-header{
+    @apply w-1/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo relative xs:w-1/2 xs:m-10 xs:text-sm sm:text-sm lg:text-2xl
+}
