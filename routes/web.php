@@ -41,6 +41,10 @@ Route::post('/registro',[registro::class,'store'])->name('store');
 Route::post('/revisarEmail',[registro::class,'revisarEmail'])->name('revisarEmail');
 Route::post('/duplicacionDeTel',[registro::class,'duplicacionDeTel'])->name('duplicacionDeTel');
 
+Route::get('/nuestra-historia', function () {
+    return view('nuestra-historia');
+})->name('nuestra-historia');
+
 Route::get('/destroy',[login::class,'destroy'])->name('destroy');
 
 

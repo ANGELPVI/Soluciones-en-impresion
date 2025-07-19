@@ -1,0 +1,45 @@
+/* Estilos para el footer */
+
+.footer {
+  @apply bg-gray-900 text-gray-200 py-12 mt-3;
+}
+
+.footer-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8;
+}
+
+.footer-logo {
+  @apply w-full grid grid-cols-3;
+}
+
+.footer-nombre {
+  @apply w-full col-span-2 justify-items-center content-center;
+}
+
+.footer-description {
+  @apply text-sm col-span-3;
+}
+
+.footer-title {
+  @apply text-lg font-semibold mb-4;
+}
+
+.footer-list {
+  @apply space-y-2;
+}
+
+.footer-link {
+  @apply hover:text-white;
+}
+
+.footer-social-icons {
+  @apply flex space-x-4;
+}
+
+.footer-icon {
+  @apply text-2xl hover:text-white;
+}
+
+.footer-copy {
+  @apply border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-400;
+}
