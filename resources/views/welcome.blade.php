@@ -86,7 +86,7 @@
         <h3 class="footer-title">Sobre Nosotros</h3>
         <ul class="footer-list">
           <li><a href="{{ route('nuestra-historia') }}" class="footer-link">Nuestra Historia</a></li>
-          <li><a href="#" class="footer-link">Valores y Compromiso</a></li>
+          <li><a href="{{ route('mision-vision') }}" class="footer-link">Misión y Visión</a></li>
           <li><a href="#" class="footer-link">Servicios Especializados</a></li>
           <li><a href="#" class="footer-link">Cobertura y Atención</a></li>
         </ul>

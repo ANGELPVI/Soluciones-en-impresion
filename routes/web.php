@@ -45,6 +45,10 @@ Route::get('/nuestra-historia', function () {
     return view('nuestra-historia');
 })->name('nuestra-historia');
 
+Route::get('/mision-vision', function () {
+    return view('mision-vision');
+})->name('mision-vision');
+
 Route::get('/destroy',[login::class,'destroy'])->name('destroy');
 
 

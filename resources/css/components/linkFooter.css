@@ -12,6 +12,14 @@
   @apply mx-auto w-full md:w-1/2 text-base md:text-lg leading-relaxed space-y-4 bg-white bg-opacity-80 rounded-lg p-6 shadow text-gray-800 text-justify;
 }
 
+.titulo-h2{
+  @apply text-2xl font-bold mb-4 text-blue-600 text-center;
+}
+
 .link-footer-parrafo {
   @apply font-descrip;
+}
+
+.link-footer-strong {
+  @apply font-bold;
 }
