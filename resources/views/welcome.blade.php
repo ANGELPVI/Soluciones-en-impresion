@@ -87,8 +87,8 @@
         <ul class="footer-list">
           <li><a href="{{ route('nuestra-historia') }}" class="footer-link">Nuestra Historia</a></li>
           <li><a href="{{ route('mision-vision') }}" class="footer-link">Misión y Visión</a></li>
-          <li><a href="#" class="footer-link">Servicios Especializados</a></li>
-          <li><a href="#" class="footer-link">Cobertura y Atención</a></li>
+         <li><a href="{{ route('servicios-especializados') }}" class="footer-link">Servicios Especializados</a></li>
+        <li><a href="{{ route('cobertura-atencion') }}" class="footer-link">Cobertura y Atención</a></li>
         </ul>
       </div>
 

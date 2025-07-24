@@ -15,7 +15,7 @@
 
         <h2 class="titulo-h2">Valores</h2>
         <ul>
-            <li class="link-footer-parrafo"><strong class=" link-footer-strong">COMPROMISO:</strong> Nos dedicamos a cumplir con las expectativas de nuestros clientes, brindando soluciones efectivas y puntuales.</li>
+            <li class="link-footer-parrafo"><strong class="link-footer-strong">COMPROMISO:</strong> Nos dedicamos a cumplir con las expectativas de nuestros clientes, brindando soluciones efectivas y puntuales.</li>
             <li class="link-footer-parrafo"><br><strong class="link-footer-strong">CALIDAD:</strong> Garantizamos productos y servicios que superan los estándares del mercado.</li>
             <li class="link-footer-parrafo"><br><strong class="link-footer-strong">RESPONSABILIDAD:</strong> Actuamos con ética y profesionalismo en cada uno de nuestros procesos.</li>
             <li class="link-footer-parrafo"><br><strong class="link-footer-strong">INNOVACIÓN:</strong> Buscamos constantemente nuevas formas de mejorar y adaptarnos a los cambios tecnológicos.</li>

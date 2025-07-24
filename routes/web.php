@@ -49,6 +49,14 @@ Route::get('/mision-vision', function () {
     return view('mision-vision');
 })->name('mision-vision');
 
+Route::get('/servicios-especializados', function () {
+    return view('servicios-especializados');
+})->name('servicios-especializados');
+
+Route::get('/cobertura-atencion', function () {
+    return view('cobertura-atencion');
+})->name('cobertura-atencion');
+
 Route::get('/destroy',[login::class,'destroy'])->name('destroy');
 
 

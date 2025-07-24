@@ -1,3 +1,7 @@
+/* Negrita reutilizable para títulos o palabras clave */
+.link-footer-bold {
+    font-weight: bold;
+}
 /* Estilos personalizados para el footer y secciones relacionadas */
 
 .link-footer-container {
