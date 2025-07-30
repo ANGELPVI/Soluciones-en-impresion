@@ -96,7 +96,7 @@
       <div class="footer-ayuda">
         <h3 class="footer-title">Ayuda</h3>
         <ul class="footer-list">
-          <li><a href="#" class="footer-link">Preguntas Frecuentes</a></li>
+          <li><a href="{{ route('preguntas-frecuentes') }}" class="footer-link">Preguntas Frecuentes</a></li>
           <li><a href="#" class="footer-link">Guía de compra</a></li>
           <li><a href="#" class="footer-link">Políticas de garantía</a></li>
         </ul>
@@ -116,11 +116,12 @@
     <div class="footer-copy">&copy; 2025 Soluciones En Impresiones. Todos los derechos reservados.</div>
   </footer>
 
-
+  <script type="module" src="{{asset('js/components/acordion.js') }}"></script>
   <script type="module" src="{{asset('js/components/locationSelector.js')}}"></script>
   <script type="module" src="{{asset('js/components/authUserMenu.js')}}"></script>
   <script type="module" src="{{asset('js/auth/loginValidator.js')}}"></script>
   <script type="module" src="{{asset('js/auth/formularioRegistro.js')}}"></script>
+  
 </body>
 
 </html>

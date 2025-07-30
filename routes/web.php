@@ -57,6 +57,10 @@ Route::get('/cobertura-atencion', function () {
     return view('cobertura-atencion');
 })->name('cobertura-atencion');
 
+Route::get('/preguntas-frecuentes', function () {
+    return view('preguntas-frecuentes');
+})->name('preguntas-frecuentes');
+
 Route::get('/destroy',[login::class,'destroy'])->name('destroy');
 
 

@@ -1,0 +1,73 @@
+/* Estilos para la página de Preguntas Frecuentes usando @apply de Tailwind */
+.preguntas-container {
+    @apply max-w-2xl mx-auto p-8 bg-white rounded-xl shadow-lg;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.pregunta-titulo {
+    @apply text-3xl font-bold text-blue-900 mb-8 text-center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e293b;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.pregunta-item {
+    @apply mb-6;
+}
+.pregunta-label {
+    @apply font-bold text-blue-600 block mb-1;
+}
+.pregunta-respuesta {
+    @apply text-gray-700 text-base leading-relaxed ml-4;
+}
+
+/* FAQ Card Accordion Styles */
+.faq-card {
+    background: #f8fafc;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2563eb;
+    padding: 0;
+}
+.faq-arrow {
+    font-size: 1.5rem;
+    transition: transform 0.4s;
+}
+.faq-card.open .faq-arrow {
+    transform: rotate(180deg);
+}
+.faq-answer {
+    margin-top: 0.5rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 1.2s cubic-bezier(0.4,0,0.2,1), opacity 1.2s cubic-bezier(0.4,0,0.2,1);
+    color: #334155;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-left: 1rem;
+}
+.faq-card.open .faq-answer {
+    max-height: 300px;
+    opacity: 1;
+}
