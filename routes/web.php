@@ -1,5 +1,5 @@
-<?php
 
+<?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\pageController;
 use App\Http\Controllers\registro;
@@ -60,6 +60,10 @@ Route::get('/cobertura-atencion', function () {
 Route::get('/preguntas-frecuentes', function () {
     return view('preguntas-frecuentes');
 })->name('preguntas-frecuentes');
+
+Route::get('/guia-compra', function () {
+    return view('guia-compra');
+})->name('guia-compra');
 
 Route::get('/destroy',[login::class,'destroy'])->name('destroy');
 

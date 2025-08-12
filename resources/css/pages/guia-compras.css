@@ -1,0 +1,33 @@
+/* Contenedor principal de la guía */
+.guia-container {
+    @apply max-w-4xl mx-auto p-8 bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl shadow-2xl mt-10 border border-blue-200;
+}
+.guia-titulo {
+    @apply text-4xl font-extrabold text-blue-900 mb-10 text-center tracking-tight drop-shadow;
+}
+.guia-pasos {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+}
+.guia-paso {
+    @apply flex flex-col items-center text-center bg-white rounded-xl shadow-lg p-7 border border-blue-100 transition-transform hover:scale-105 hover:shadow-2xl duration-200;
+}
+.guia-icono {
+    @apply flex items-center justify-center w-16 h-16 mb-4 bg-gradient-to-br from-blue-200 to-blue-400 rounded-full text-blue-800 text-3xl shadow-lg border-4 border-white;
+}
+.guia-contenido {
+    @apply flex-1 flex flex-col items-center;
+}
+.guia-paso-titulo {
+    @apply font-bold text-xl text-blue-900 mb-2;
+}
+.guia-paso-desc {
+    @apply text-gray-700 text-base leading-relaxed mb-1;
+}
+.guia-paso:hover {
+    @apply bg-blue-50 shadow-xl border-blue-300;
+}
+.guia-pasos {
+    /* Para pantallas grandes, más separación */
+    row-gap: 2.5rem;
+    column-gap: 2.5rem;
+}
