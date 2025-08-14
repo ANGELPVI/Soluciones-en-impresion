@@ -1,0 +1,42 @@
+/* Estilos para la página de Política de Garantía */
+.garantia-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 24px 0 rgba(30,64,175,0.08);
+    padding: 2.5rem 2rem;
+    border: 1px solid #dbeafe;
+}
+.garantia-titulo {
+    color: #1e3a8a;
+    font-size: 2.25rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.garantia-content {
+    color: #334155;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+.garantia-subtitulo {
+    color: #2563eb;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.garantia-parrafo {
+    margin-bottom: 1rem;
+}
+.garantia-lista, .garantia-lista-num {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+.garantia-lista li, .garantia-lista-num li {
+    margin-bottom: 0.5rem;
+}
+.garantia-lista-num {
+    list-style-type: decimal;
+}

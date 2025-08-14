@@ -98,7 +98,7 @@
         <ul class="footer-list">
           <li><a href="{{ route('preguntas-frecuentes') }}" class="footer-link">Preguntas Frecuentes</a></li>
           <li><a href="{{ route('guia-compra') }}" class="footer-link">Guía de compra</a></li>
-          <li><a href="#" class="footer-link">Políticas de garantía</a></li>
+          <li><a href="{{ route('politica-garantia')}}" class="footer-link">Políticas de garantía</a></li>
         </ul>
       </div>
 

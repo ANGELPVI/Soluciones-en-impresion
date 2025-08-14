@@ -65,6 +65,10 @@ Route::get('/guia-compra', function () {
     return view('guia-compra');
 })->name('guia-compra');
 
+Route::get('/politica-garantia', function () {
+    return view('politica-garantia');
+})->name('politica-garantia');
+
 Route::get('/destroy',[login::class,'destroy'])->name('destroy');
 
 
