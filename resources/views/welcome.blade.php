@@ -106,9 +106,9 @@
       <div class="footer-contacto">
         <h3 class="footer-title">Contacto</h3>
         <div class="footer-social-icons">
-          <a href="#" class="footer-icon" title="Facebook"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="footer-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="footer-icon" title="Llamadas"><i class="fas fa-phone"></i></a>
+            <a href="https://www.facebook.com/TU_PAGINA" class="footer-icon" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/527581036078" class="footer-icon" title="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:+527581036078" class="footer-icon" title="Llamadas"><i class="fas fa-phone"></i></a>
         </div>
       </div>
 
