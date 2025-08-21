@@ -20,33 +20,63 @@
 <div class="div-secundario">
   {{-- Targeta de precentacion, primera empresa --}}
   <div class="img-empresa">
-    <div><img src="{{asset('img/oma.png')}}" class="opacity-30 h-32"></div>
+    <div><img src="{{asset('img/logo-oma.svg')}}" class="opacity-30 h-32"></div>
   </div>
 
   {{-- Targeta de precentacion, segunda empresa --}}
   <div class="img-empresa">
-    <div><img src="{{asset('img/tres-guerras.png')}}" class="opacity-30 h-36"></div>
+    <div><img src="{{asset('img/tres-guerras.svg')}}" class="opacity-30 h-36"></div>
   </div>
 
   {{-- Targeta de precentacion, tercera empresa --}}
   <div class="img-empresa">
-    <div class=""><img src="{{asset('img/h-ayunta-zihu 1.png')}}" class="opacity-30 h-32"></div>
+    <div class=""><img src="{{asset('img/zihua.svg')}}" class="opacity-30 h-32"></div>
   </div>
 
   {{-- Targeta de precentacion, cuarta empresa --}}
   <div class="img-empresa">
-    <div class=""><img src="{{asset('img/hospital.png')}}" class="opacity-30 h-32"></div>
+    <div class=""><img src="{{asset('img/royal.svg')}}" class="opacity-18 h-32"></div>
   </div>
 
   {{-- Targeta de{{-- Targeta de precentacion, quinta empresa --}}
   <div class="img-empresa">
-    <div class=""><img src="{{asset('img/cediz.png')}}" class="opacity-30 h-32"></div>
+    <div class=""><img src="{{asset('img/cediz.svg')}}" class="opacity-30 h-32"></div>
   </div>
 
   {{-- Targeta de{{-- Targeta de precentacion, sexta empresa --}}
   <div class="img-empresa">
-    <div class=""><img src="{{asset('img/peta-nuevo.png')}}" class="opacity-30 h-32"></div>
+    <div class=""><img src="{{asset('img/fontan.svg')}}" class="opacity-30 h-32"></div>
   </div>
+
+  <div class="img-empresa">
+    <div class=""><img src="{{asset('img/fibazi.svg')}}" class="opacity-30 h-32"></div>
+  </div>
+
+  {{-- Targeta de precentacion, septima empresa --}}
+  <div class="img-empresa">
+    <div class=""><img src="{{asset('img/logo-cala-mar.svg')}}" class="opacity-80 h-32"></div>
+  </div>
+
+  {{-- Targeta de precentacion, octava empresa --}}
+  <div class="img-empresa">
+    <div class=""><img src="{{asset('img/logo-capaz.svg')}}" class="opacity-30 h-32"></div>
+  </div>
+
+  {{-- Targeta de precentacion, novena empresa --}}
+  <div class="img-empresa">
+    <div class=""><img src="{{asset('img/logo-icep.svg')}}" class="opacity-30 h-32"></div>
+  </div>
+
+  {{-- Targeta de precentacion, decima empresa --}}
+  <div class="img-empresa">
+    <div class=""><img src="{{asset('img/ceusjit.svg')}}" class="opacity-70 h-32"></div>
+  </div>
+
+  {{-- Targeta de precentacion, onceava empresa --}}
+  <div class="img-empresa">
+    <div class=""><img src="{{asset('img/HBS-DELLI.svg')}}" class="opacity-70 h-32"></div>
+  </div>
+  
   
 
 </div>
