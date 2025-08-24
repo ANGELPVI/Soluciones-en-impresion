@@ -13,9 +13,8 @@
 </div>
 
 {{-- Seccion de las empresas --}}
-
-<div class="div-empresas">
 <h1 class="titulo-empresas">Empresas y gobiernos que confian en nosotros</h1>
+<div class="div-empresas">
 {{-- Contenedor padre --}}
 <div class="div-secundario">
   {{-- Targeta de precentacion, primera empresa --}}
@@ -77,8 +76,6 @@
     <div class=""><img src="{{asset('img/HBS-DELLI.svg')}}" class="opacity-70 h-32"></div>
   </div>
   
-  
-
 </div>
 </div>
 

@@ -12,7 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/app.css')}}">
-  <link rel="stylesheet" href="{{asset('css/index.css')}}">
 
   <script src="https://kit.fontawesome.com/315f51bd5c.js" crossorigin="anonymous"></script>
   <!-- Styles -->
@@ -119,6 +118,7 @@
   <script type="module" src="{{asset('js/components/acordion.js') }}"></script>
   <script type="module" src="{{asset('js/components/locationSelector.js')}}"></script>
   <script type="module" src="{{asset('js/components/authUserMenu.js')}}"></script>
+  <script type="module" src="{{asset('js/components/carrucel.js')}}"></script>
   <script type="module" src="{{asset('js/auth/loginValidator.js')}}"></script>
   <script type="module" src="{{asset('js/auth/formularioRegistro.js')}}"></script>
   
