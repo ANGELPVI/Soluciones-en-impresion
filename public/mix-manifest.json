@@ -6,5 +6,6 @@
     "/js/auth/validarInputs.js": "/js/auth/validarInputs.js",
     "/js/components/authUserMenu.js": "/js/components/authUserMenu.js",
     "/js/components/acordion.js": "/js/components/acordion.js",
+    "/js/components/carrucel.js": "/js/components/carrucel.js",
     "/css/app.css": "/css/app.css"
 }
