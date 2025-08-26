@@ -1,14 +1,17 @@
 .div-empresas{
-    @apply w-full h-auto
+    @apply w-full h-auto overflow-hidden whitespace-nowrap;
 } 
- .titulo-empresas{
-    @apply font-titulo mt-20 text-5xl text-center text-titulos xs:text-2xl xs:mt-5
+.titulo-empresas{
+    @apply font-titulo mt-20 text-5xl text-center text-titulos xs:text-2xl xs:mt-5;
 }
 
 .div-secundario{
-    @apply w-full h-auto grid grid-cols-6 justify-items-center content-center mt-20 xs:mt-2
+    @apply h-auto flex gap-4 justify-start items-center mt-10 xs:mt-2 ;
+    min-width: max-content;
+    /* Cambia grid por flex para scroll horizontal */
 }
 
 .img-empresa{
-    @apply w-48 h-auto m-4 text-center xs:col-span-6 sm:col-span-2 lg:col-span-1
+    @apply w-32 h-auto m-4 text-center inline-block;
+    /* Elimina col-span para alineación horizontal */
 }

@@ -1,5 +1,5 @@
-<?php
 
+<?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\pageController;
 use App\Http\Controllers\registro;
@@ -40,6 +40,34 @@ Route::get('/registro',[pageController::class,'registro'])->name('registro')->mi
 Route::post('/registro',[registro::class,'store'])->name('store');
 Route::post('/revisarEmail',[registro::class,'revisarEmail'])->name('revisarEmail');
 Route::post('/duplicacionDeTel',[registro::class,'duplicacionDeTel'])->name('duplicacionDeTel');
+
+Route::get('/nuestra-historia', function () {
+    return view('nuestra-historia');
+})->name('nuestra-historia');
+
+Route::get('/mision-vision', function () {
+    return view('mision-vision');
+})->name('mision-vision');
+
+Route::get('/servicios-especializados', function () {
+    return view('servicios-especializados');
+})->name('servicios-especializados');
+
+Route::get('/cobertura-atencion', function () {
+    return view('cobertura-atencion');
+})->name('cobertura-atencion');
+
+Route::get('/preguntas-frecuentes', function () {
+    return view('preguntas-frecuentes');
+})->name('preguntas-frecuentes');
+
+Route::get('/guia-compra', function () {
+    return view('guia-compra');
+})->name('guia-compra');
+
+Route::get('/politica-garantia', function () {
+    return view('politica-garantia');
+})->name('politica-garantia');
 
 Route::get('/destroy',[login::class,'destroy'])->name('destroy');
 
