@@ -1,0 +1,5 @@
+/*Estilos de componentes reutilizables*/
+
+.boto-responsi{
+    @apply text-white inline-flex p-3 hover:bg-gray-900 rounded ml-auto 
+}

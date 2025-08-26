@@ -1,0 +1,38 @@
+/* Formulario de registro */
+.divpadreRegistro{
+    @apply grid grid-cols-1 justify-items-center w-full h-auto mt-8 mb-96
+}
+.divSubPadre{
+    @apply grid grid-cols-1
+}
+
+.formRegistro{
+    @apply grid grid-cols-4 gap-4 w-1/2 h-auto bg-white p-8 rounded-3xl shadow-2xl
+}
+
+.divSubPadreInput{
+    @apply col-span-2 w-full h-auto 
+}
+
+.inputsRegistro{
+    @apply w-full h-11 p-2 font-descrip border-gray-300 border-2 rounded-xl shadow-lg bg-gray-100
+}
+
+.buttonRegistro{
+    @apply col-span-4 w-full h-10 bg-gray-200 rounded-2xl font-descrip mb-8 pointer-events-none
+}
+.buttonRegistroEnable{
+    @apply col-span-4 mt-4 bg-green-500 w-full h-10 rounded-2xl font-descrip
+}
+
+.tituloFormularioRegistro{
+    @apply md:text-2xl font-titulo -mt-2 opacity-50 xs:text-sm sm:text-sm
+}
+
+.optionUser{
+    @apply bg-white
+}
+
+.optionItemUser{
+    @apply block text-xl mr-2
+}

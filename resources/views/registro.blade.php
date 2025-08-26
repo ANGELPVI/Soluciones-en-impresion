@@ -29,6 +29,8 @@
                 <span id="mensajeEmail" class="textoError hidden">Formato de email incorrecto</span>
                 <br><small id="sugerenciaEmail" class="hidden text-gray-400"><strong>Ejemplo:
                         tu.email@gmail.com</strong></small>
+
+                        <span id="mensajeEmailExistente" class="textoError hidden">El email ya existe. ingrese otro.</span>
             </div>
 
             <div class="divSubPadreInput">
@@ -42,6 +44,7 @@
                     value="{{ old('telefono') }}">
                 <span id="mensajeTel" class="textoError hidden">El número de teléfono deben ser 10 digitos</span>
                 <br><small id="sugerenciaTel" class="hidden text-gray-400"><strong>Ejemplo: 7551021049</strong></small>
+                <span id="mensajeTelExistente" class="textoError hidden">El número telefonico ya existe. Ingesea otro.</span>
             </div>
 
             <div class="divSubPadreInput">

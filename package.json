@@ -1,4 +1,6 @@
 {
+    "name": "Soluciones En Impresiones",
+    "version": "1.0.0",
     "private": true,
     "scripts": {
         "start": "npm run development",
@@ -8,10 +10,11 @@
         "hot": "mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production",
-        "postinstall": "npm run production"
+        "postinstall": "npm run production",
+        "test": "jest"
     },
     "devDependencies": {
-        "axios": "^1.7.2",
+        "axios": "^0.21",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"

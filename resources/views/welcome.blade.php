@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Soluciones En Impresión</title>
@@ -109,10 +110,10 @@
     </div>
   </footer>
 
-  <script type="module" src="{{asset('js/index.js')}}"></script>
-  <script type="module" src="{{asset('js/menuUser.js')}}"></script>
-  <script type="module" src="{{asset('js/login.js')}}"></script>
-  <script type="module" src="{{asset('js/formularioRegistro.js')}}"></script>
+  <script type="module" src="{{asset('js/components/locationSelector.js')}}"></script>
+  <script type="module" src="{{asset('js/components/authUserMenu.js')}}"></script>
+  <script type="module" src="{{asset('js/auth/loginValidator.js')}}"></script>
+  <script type="module" src="{{asset('js/auth/formularioRegistro.js')}}"></script>
 </body>
 
 </html>

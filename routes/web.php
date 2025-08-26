@@ -38,6 +38,8 @@ Route::post('/login', [login::class,'store'])->name('store');
 Route::get('/registro',[pageController::class,'registro'])->name('registro')->middleware('guest');
 
 Route::post('/registro',[registro::class,'store'])->name('store');
+Route::post('/revisarEmail',[registro::class,'revisarEmail'])->name('revisarEmail');
+Route::post('/duplicacionDeTel',[registro::class,'duplicacionDeTel'])->name('duplicacionDeTel');
 
 Route::get('/destroy',[login::class,'destroy'])->name('destroy');
 
