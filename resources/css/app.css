@@ -1,4 +1,3 @@
-@import 'pages/politica-garantia.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,10 +10,12 @@
 @import 'pages/login.css';
 @import 'pages/formularioRegistro.css';
 @import 'pages/impresoras.css';
+@import 'pages/politica-garantia.css';
 @import 'pages/preguntasFrecuentes.css';
 @import 'pages/guia-compras.css';
 @import 'layaut/footer.css';
 @import 'components/linkFooter.css';
+
 
 
 
