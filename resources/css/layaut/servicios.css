@@ -9,14 +9,21 @@
     @apply col-span-12 m-5 ml-20 w-full text-5xl text-white font-titulo xs:text-2xl xs:m-0
 }
 .parrafo-primer-servicio{
-    @apply col-span-12 m-5 ml-20 w-full text-2xl text-white font-descrip xs:text-sm xs:m-0 xs:mt-5
+    @apply col-span-12 m-5 ml-20 w-full text-xl text-white font-descrip xs:text-sm xs:m-0 xs:mt-5
 }
 .boton-servicios{
     @apply xs:w-full xs:text-sm xs:m-8 w-2/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo
 }
-.img-primer-servicio{
-    @apply col-span-1 mt-40 xs:col-span-2 xs:-mt-32 xs:p-10
+.vid-primer-servicio{
+    @apply col-span-1 mt-28 xs:col-span-2 xs:-mt-32 xs:p-10 rounded-lg shadow-2xl;
+    background: rgba(255, 255, 255, 0.35); /* Más blanco y translúcido */
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25); /* Borde más blanco */
 }
+
 .img-segundo-servicio{
     @apply col-span-1 mt-40 xs:col-span-2 xs:-mt-1 xs:p-10
 }
