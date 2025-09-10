@@ -122,6 +122,7 @@
   <script type="module" src="{{asset('js/auth/loginValidator.js')}}"></script>
   <script type="module" src="{{asset('js/auth/formularioRegistro.js')}}"></script>
   
+  
 </body>
 
 </html>

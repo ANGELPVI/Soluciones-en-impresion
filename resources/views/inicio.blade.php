@@ -89,8 +89,8 @@
         <div class="div-secundario-primer-servicio">
 
             <h1 class="titulo-primer-servicio">Lo más nuevo en tecnología de fotocopiado</h1>
-            <p class="parrafo-primer-servicio">Somos líderes en soluciones de impresión y fotocopiado, ofreciendo lo más nuevo en tecnología de fotocopiadoras para empresas y negocios. Contamos con equipos multifuncionales de última generación, que garantizan alta calidad, eficiencia y ahorro en cada impresión. Nuestra gama incluye impresoras láser y de inyección de tinta, ideales para cualquier entorno profesional. Brindamos asesoría personalizada y soporte técnico especializado para que tu empresa siempre cuente con el mejor rendimiento. Si buscas innovación, confiabilidad y servicio en fotocopiadoras, somos tu mejor opción en la región.</p>
-            <button class="botones boton-servicios">Ver mas..</button>
+            <p class="parrafo-primer-servicio">Somos líderes en soluciones de impresión y fotocopiado, ofreciendo lo más nuevo en tecnología de fotocopiadoras para empresas y negocios. Contamos con equipos multifuncionales de última generación, que garantizan alta calidad, eficiencia y ahorro en cada impresión. Nuestra gama incluye impresoras láser y de inyección de tinta, ideales para cualquier entorno profesional. Brindamos asesoría personalizada y soporte técnico especializado para que tu empresa siempre cuente con el mejor rendimiento.</p>
+            
 
         </div>
         <video src="{{ asset('video/konica-serie 8.mp4')}}" class="vid-primer-servicio" autoplay loop muted width="600" height="700">
