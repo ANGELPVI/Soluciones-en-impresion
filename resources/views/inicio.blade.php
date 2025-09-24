@@ -89,11 +89,17 @@
         <div class="div-secundario-primer-servicio">
 
             <h1 class="titulo-primer-servicio">Lo más nuevo en tecnología de fotocopiado</h1>
-            <p class="parrafo-primer-servicio">Somos líderes en soluciones de impresión y fotocopiado, ofreciendo lo más nuevo en tecnología de fotocopiadoras para empresas y negocios. Contamos con equipos multifuncionales de última generación, que garantizan alta calidad, eficiencia y ahorro en cada impresión. Nuestra gama incluye impresoras láser y de inyección de tinta, ideales para cualquier entorno profesional. Brindamos asesoría personalizada y soporte técnico especializado para que tu empresa siempre cuente con el mejor rendimiento.</p>
-            
+            <p class="parrafo-primer-servicio">Somos líderes en soluciones de impresión y fotocopiado, ofreciendo lo más
+                nuevo en tecnología de fotocopiadoras para empresas y negocios. Contamos con equipos multifuncionales de
+                última generación, que garantizan alta calidad, eficiencia y ahorro en cada impresión. Nuestra gama incluye
+                impresoras láser y de inyección de tinta, ideales para cualquier entorno profesional. Brindamos asesoría
+                personalizada y soporte técnico especializado para que tu empresa siempre cuente con el mejor rendimiento.
+            </p>
+
 
         </div>
-        <video src="{{ asset('video/konica-serie 8.mp4')}}" class="vid-primer-servicio" autoplay loop muted width="600" height="700">
+        <video src="{{ asset('video/konica-serie 8.mp4') }}" class="vid-primer-servicio" autoplay loop muted width="600"
+            height="700">
             Tu navegador no soporta el elemento de video.
         </video>
     </div>
@@ -101,14 +107,35 @@
     {{-- Segundo servicio tecnico --}}
     <div class="fondo-amarillo div-principal-servisios">
 
-        <img class="img-segundo-servicio" src="{{ asset('img/brother.svg') }}" alt="" width="500"
-            height="500">
+        <div class="carrusel-imagenes flex justify-center items-center w-full h-auto overflow-hidden">
+            <img src="{{ asset('img/brother.jpg') }}"
+                class="carrusel-img" />
+            <img src="{{ asset('img/konica-minolta.jpg') }}"
+                class="carrusel-img" />
+            <img src="{{ asset('img/epson.jpg') }}"
+                class="carrusel-img" />
+            <img src="{{ asset('img/impresora hp.webp') }}"
+                class="carrusel-img" />
+        </div>
+
+
 
         <div class="div-secundario-segundo-servicio">
             <h1 class="titulo-segundo-servicio">Solo las mejores marcas para ti y tu negocio</h1>
-            <p class="parrafo-segundo-servicio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
-                cumque.</p>
-            <button class="botones boton-segundo-servicio">Ver mas..</button>
+            <p class="parrafo-segundo-servicio">
+                Nuestra empresa se enorgullece en ofrecer las mejores impresoras del mercado,
+                diseñadas para cubrir todas las necesidades de impresión tanto en oficinas como en hogares.
+                Contamos con equipos de última generación que garantizan rapidez, calidad y un rendimiento excepcional en
+                cada impresión.
+                Nuestras impresoras destacan por su eficiencia energética, bajo costo de mantenimiento y la facilidad de uso
+                que simplifica
+                las tareas del día a día. Ofrecemos modelos versátiles, desde impresoras compactas para espacios reducidos
+                hasta equipos multifuncionales
+                que combinan impresión, escaneo y copiado en un solo dispositivo. La tecnología avanzada que incorporamos
+                asegura resultados nítidos y profesionales,
+                adaptándose a diferentes volúmenes de trabajo.
+            </p>
+
 
         </div>
     </div>

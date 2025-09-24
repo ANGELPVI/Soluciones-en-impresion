@@ -28,5 +28,21 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   startCarrusel();
 });
+
+//Carrucel de las impresoras que ofrecemos.
+document.addEventListener('DOMContentLoaded', function () {
+  var images = document.querySelectorAll('.carrusel-img');
+  var current = 0;
+  function showImage(idx) {
+    images.forEach(function (img, i) {
+      img.style.opacity = i === idx ? '1' : '0';
+    });
+  }
+  showImage(current);
+  setInterval(function () {
+    current = (current + 1) % images.length;
+    showImage(current);
+  }, 4000);
+});
 /******/ })()
 ;

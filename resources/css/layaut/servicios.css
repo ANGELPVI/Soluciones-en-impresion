@@ -24,21 +24,29 @@
     border: 1px solid rgba(255, 255, 255, 0.25); /* Borde más blanco */
 }
 
-.img-segundo-servicio{
-    @apply col-span-1 mt-40 xs:col-span-2 xs:-mt-1 xs:p-10
-}
+
 .div-secundario-segundo-servicio{
     @apply w-full m-20 p-5 h-auto grid grid-cols-3 content-center justify-items-center xs:col-span-2 xs:text-center xs:-m-10
 }
 .titulo-segundo-servicio{
-    @apply col-span-12 m-5 w-full text-5xl text-white font-titulo xs:text-2xl
+    @apply col-span-12 m-5 w-full text-4xl text-center text-white font-titulo xs:text-2xl uppercase
 }
 .parrafo-segundo-servicio{
-    @apply col-span-12 m-5 w-full text-2xl text-white font-descrip xs:text-sm
+    @apply col-span-12 m-5 w-full text-base leading-loose text-white font-descrip xs:text-sm
 }
-.boton-segundo-servicio{
-    @apply xs:w-full xs:text-sm xs:m-8 xs:mt-5 w-2/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo relative
+.carrusel-imagenes {
+    @apply relative w-full h-full overflow-hidden mt-20;
 }
+.carrusel-img {
+    @apply absolute object-fill inset-0 w-10/12 h-4/5 rounded-3xl m-10 opacity-0 transition-opacity duration-700;
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(255,255,255,0.45);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 1.5rem;
+    border: 1.5px solid rgba(255,255,255,0.25);
+}
+
 .div-secundario-tercer-servicio{
     @apply w-full p-5 h-auto grid grid-cols-3 content-center justify-items-center xs:col-span-2 xs:text-center xs:mt-5
 }
