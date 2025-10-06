@@ -47,20 +47,32 @@
     border: 1.5px solid rgba(255,255,255,0.25);
 }
 
+/* Clases para el carrucel del tercer servicio*/
 .div-secundario-tercer-servicio{
     @apply w-full p-5 h-auto grid grid-cols-3 content-center justify-items-center xs:col-span-2 xs:text-center xs:mt-5
 }
 .titulo-terser-servicio{
-    @apply col-span-12 m-5 ml-20 w-full text-5xl text-white font-titulo xs:text-2xl xs:m-0
+    @apply col-span-12 m-5 w-full text-4xl text-center text-white font-titulo xs:text-2xl uppercase
 }
 .parrafo-tercer-servicio{
-    @apply col-span-12 m-5 ml-20 w-full text-2xl text-white font-descrip xs:text-sm xs:m-0 xs:mt-5
+    @apply col-span-12 m-5 w-full text-base leading-loose text-white font-descrip xs:text-sm
 }
-.boton-tercer-servicio{
-    @apply xs:w-full xs:text-sm xs:m-8 w-2/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo
+
+.divTercerCarrucel{
+    @apply relative w-full max-w-xl mx-auto my-10
 }
-.img-tercer-servicio{
-    @apply col-span-1 mt-40 xs:col-span-2 xs:-mt-20 xs:p-10
+.divPrincipalCarrucelTercelServicio{
+    @apply overflow-hidden rounded-2xl shadow-xl
+}
+
+.soporte-carrusel-img{
+    @apply w-full h-full object-cover transition-opacity duration-700 opacity-0 absolute top-0 left-0 rounded-2xl;
+}
+.btn-carrusel-mantenimiento{
+    @apply absolute top-1/2 left-2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md;
+}
+.bt-carrucel-mantenimiento-right{
+    @apply absolute top-1/2 right-2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md;
 }
 .wave-servicios{
     @apply col-span-12 w-full xs:col-span-2

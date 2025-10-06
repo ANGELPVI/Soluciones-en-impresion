@@ -108,14 +108,10 @@
     <div class="fondo-amarillo div-principal-servisios">
 
         <div class="carrusel-imagenes flex justify-center items-center w-full h-auto overflow-hidden">
-            <img src="{{ asset('img/brother.jpg') }}"
-                class="carrusel-img" />
-            <img src="{{ asset('img/konica-minolta.jpg') }}"
-                class="carrusel-img" />
-            <img src="{{ asset('img/epson.jpg') }}"
-                class="carrusel-img" />
-            <img src="{{ asset('img/impresora hp.webp') }}"
-                class="carrusel-img" />
+            <img src="{{ asset('img/brother.jpg') }}" class="carrusel-img" />
+            <img src="{{ asset('img/konica-minolta.jpg') }}" class="carrusel-img" />
+            <img src="{{ asset('img/epson.jpg') }}" class="carrusel-img" />
+            <img src="{{ asset('img/impresora hp.webp') }}" class="carrusel-img" />
         </div>
 
 
@@ -145,13 +141,48 @@
     <div class="fondo-magenta div-principal-servisios">
 
         <div class="div-secundario-tercer-servicio">
-            <h1 class="titulo-terser-servicio">Asesoría online</h1>
-            <p class="parrafo-tercer-servicio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, cumque.
+            <h1 class="titulo-terser-servicio">Servicio técnico experto en impresoras láser y de inyección de tinta</h1>
+            <p class="parrafo-tercer-servicio">
+                En Soluciones en Impresión contamos con una amplia experiencia en la reparación de impresoras láser y de
+                inyección de tinta,
+                brindando un servicio técnico profesional y confiable. Nuestro equipo de especialistas está capacitado para
+                diagnosticar
+                y solucionar cualquier falla, asegurando que tus equipos funcionen siempre al máximo rendimiento.
+                Utilizamos refacciones originales y tecnología avanzada para garantizar resultados duraderos y de alta
+                calidad.
+                La satisfacción de nuestros clientes nos respalda como líderes en el mantenimiento y reparación de
+                impresoras en
+                la región. Confía en nosotros para mantener tus impresoras en óptimas condiciones y asegurar la continuidad
+                de tu negocio.
             </p>
-            <button class="botones boton-tercer-servicio">Pedir Asesoría</button>
 
         </div>
-        <img class="img-tercer-servicio" src="{{ asset('img/onliene.svg') }}" alt="" width="500" height="500">
+
+        <div class="divTercerCarrucel">
+            <div class="divPrincipalCarrucelTercelServicio">
+                <img src="{{ asset('img/onliene.svg') }}" class="soporte-carrusel-img" />
+                <img src="{{ asset('img/elevador-bandeja.jpg') }}" class="soporte-carrusel-img" />
+                <img src="{{ asset('img/elevador-roto.jpg') }}" class="soporte-carrusel-img" />
+                <img src="{{ asset('img/unidad-dañada.jpg') }}" class="soporte-carrusel-img" />
+                <img src="{{ asset('img/unidad-imagen-negra.jpg') }}" class="soporte-carrusel-img" />
+            </div>
+            <!-- Botón anterior -->
+            <button id="btn-prev" class="btn-carrusel-mantenimiento">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <!-- Botón siguiente -->
+            <button id="btn-next"
+                class="bt-carrucel-mantenimiento-right">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
         <img class="wave-servicios" src="{{ asset('img/honda.svg') }}" alt="">
     </div>
 
@@ -174,7 +205,8 @@
         {{-- Segunda targeta Android --}}
         <div class="targetas div-targeta">
             <div class="div-secundario-targetas">
-                <p class="col-span-2"><i class="fab fa-android xs:text-8xl text-9xl text-green-400 w-full text-center"></i>
+                <p class="col-span-2"><i
+                        class="fab fa-android xs:text-8xl text-9xl text-green-400 w-full text-center"></i>
                 </p>
                 <div class="div-parrafos">
                     <h1 class="titulo-targeta">Android</h1>
