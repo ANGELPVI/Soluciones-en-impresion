@@ -91,9 +91,7 @@
             <h1 class="titulo-primer-servicio">Lo más nuevo en tecnología de fotocopiado</h1>
             <p class="parrafo-primer-servicio">Somos líderes en soluciones de impresión y fotocopiado, ofreciendo lo más
                 nuevo en tecnología de fotocopiadoras para empresas y negocios. Contamos con equipos multifuncionales de
-                última generación, que garantizan alta calidad, eficiencia y ahorro en cada impresión. Nuestra gama incluye
-                impresoras láser y de inyección de tinta, ideales para cualquier entorno profesional. Brindamos asesoría
-                personalizada y soporte técnico especializado para que tu empresa siempre cuente con el mejor rendimiento.
+                última generación, que garantizan alta calidad, eficiencia y ahorro en cada impresión.
             </p>
 
 
@@ -105,9 +103,9 @@
     </div>
 
     {{-- Segundo servicio tecnico --}}
-    <div class="fondo-amarillo div-principal-servisios">
+    <div class="fondo-amarillo div-principal-servisios pt-40">
 
-        <div class="carrusel-imagenes flex justify-center items-center w-full h-auto overflow-hidden">
+        <div class="carrusel-imagenes">
             <img src="{{ asset('img/brother.jpg') }}" class="carrusel-img" />
             <img src="{{ asset('img/konica-minolta.jpg') }}" class="carrusel-img" />
             <img src="{{ asset('img/epson.jpg') }}" class="carrusel-img" />
@@ -123,13 +121,6 @@
                 diseñadas para cubrir todas las necesidades de impresión tanto en oficinas como en hogares.
                 Contamos con equipos de última generación que garantizan rapidez, calidad y un rendimiento excepcional en
                 cada impresión.
-                Nuestras impresoras destacan por su eficiencia energética, bajo costo de mantenimiento y la facilidad de uso
-                que simplifica
-                las tareas del día a día. Ofrecemos modelos versátiles, desde impresoras compactas para espacios reducidos
-                hasta equipos multifuncionales
-                que combinan impresión, escaneo y copiado en un solo dispositivo. La tecnología avanzada que incorporamos
-                asegura resultados nítidos y profesionales,
-                adaptándose a diferentes volúmenes de trabajo.
             </p>
 
 
@@ -138,33 +129,60 @@
 
 
     {{-- Tercer servicio tecnico --}}
-    <div class="fondo-magenta div-principal-servisios">
+    <div class="fondo-magenta div-principal-servisios pt-60">
+
+        {{-- Contenedor del carrucel y el texto --}}
 
         <div class="div-secundario-tercer-servicio">
             <h1 class="titulo-terser-servicio">Servicio técnico experto en impresoras láser y de inyección de tinta</h1>
-            <p class="parrafo-tercer-servicio">
-                En Soluciones en Impresión contamos con una amplia experiencia en la reparación de impresoras láser y de
-                inyección de tinta,
-                brindando un servicio técnico profesional y confiable. Nuestro equipo de especialistas está capacitado para
-                diagnosticar
-                y solucionar cualquier falla, asegurando que tus equipos funcionen siempre al máximo rendimiento.
-                Utilizamos refacciones originales y tecnología avanzada para garantizar resultados duraderos y de alta
-                calidad.
-                La satisfacción de nuestros clientes nos respalda como líderes en el mantenimiento y reparación de
-                impresoras en
-                la región. Confía en nosotros para mantener tus impresoras en óptimas condiciones y asegurar la continuidad
-                de tu negocio.
-            </p>
+
+            <ul class="lista-iconos-tecer-servicio">   
+                <li class="item-tercer-servicio">
+                    <!-- Icono desarmador y llave inglesa (herramientas) -->
+                    <i class="fas fa-wrench icono-tecer-servicio"></i>
+                    <p class="parrafos-tercer-servicio">    
+                        Soporte técnico especializado y rápido para mantener tus impresoras en óptimas condiciones.
+                    </p>
+                </li>
+                <li class="item-tercer-servicio">
+                    <!-- Icono bote de tóner -->
+                    <i class="fas fa-fill-drip icono2-tecer-servicio"></i>
+                    <p class="parrafos-tercer-servicio">
+                        Refacciones y consumibles originales y la mejor calidad OEM.
+                    </p>
+                </li>
+                <li class="item-tercer-servicio">
+                    <!-- Icono usuario con casco (experiencia) -->
+                    <i class="fas fa-users-cog icono3-tecer-servicio"></i>
+                    <p class="parrafos-tercer-servicio">
+                        Años de experiencia en el sector en tecnología de impresión.
+                    </p>
+                </li>
+            </ul>
+
 
         </div>
 
         <div class="divTercerCarrucel">
             <div class="divPrincipalCarrucelTercelServicio">
-                <img src="{{ asset('img/onliene.svg') }}" class="soporte-carrusel-img" />
-                <img src="{{ asset('img/elevador-bandeja.jpg') }}" class="soporte-carrusel-img" />
-                <img src="{{ asset('img/elevador-roto.jpg') }}" class="soporte-carrusel-img" />
-                <img src="{{ asset('img/unidad-dañada.jpg') }}" class="soporte-carrusel-img" />
-                <img src="{{ asset('img/unidad-imagen-negra.jpg') }}" class="soporte-carrusel-img" />
+                
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044853/13_n7yu6j.jpg" class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044852/2_cm2jak.jpg" class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044851/6_qzjigt.jpg" class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044846/5_g69cja.jpg" class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044847/3_ppqier.jpg" class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044844/15_etk0kv.jpg" class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044829/8_swexmo.jpg" class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044832/11_zdhpap.jpg" class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044827/7_hsxk0v.jpg" class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044826/12_gwbzxr.jpg" class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044821/10_nemtxw.jpg" class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044818/16_daysrx.jpg" class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044815/9_s5n8ul.jpg" class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044811/1_lxi637.jpg" class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044808/20_ewnoji.jpg" class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044801/18_esxz7e.jpg" class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044801/17_if7od1.jpg" class="soporte-carrusel-img" />
             </div>
             <!-- Botón anterior -->
             <button id="btn-prev" class="btn-carrusel-mantenimiento">
@@ -174,8 +192,7 @@
                 </svg>
             </button>
             <!-- Botón siguiente -->
-            <button id="btn-next"
-                class="bt-carrucel-mantenimiento-right">
+            <button id="btn-next" class="bt-carrucel-mantenimiento-right">
                 <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
                     viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -263,7 +280,7 @@
             </div>
 
         </div>
-        {{-- Segunda taregta de plan de renta --}}
+        {{-- Segunda tarjeta de plan de renta --}}
         <div class="targeta-renta">
             <div class="div-contenido-targeta">
 
@@ -357,7 +374,7 @@
             <div class="div-img-parrafos">
 
                 <img class="img-usuario-comentarios"
-                    src="https://www.hola.com/imagenes/estar-bien/20210706192625/personalidad-adultos-altas-capacidades-psicologia/0-974-472/altas-capacidades-m.jpg?filter=w500"
+                    src=""
                     alt="">
                 <div class="div-parrafos-comentarios">
                     <h1 class="titulo-usuario-cometario">Sofía Torres</h1>

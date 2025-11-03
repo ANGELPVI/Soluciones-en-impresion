@@ -35,7 +35,7 @@
     @apply col-span-12 m-5 w-full text-base leading-loose text-white font-descrip xs:text-sm
 }
 .carrusel-imagenes {
-    @apply relative w-full h-full overflow-hidden mt-20;
+    @apply flex justify-center items-center relative w-full h-full overflow-hidden mt-20;
 }
 .carrusel-img {
     @apply absolute object-fill inset-0 w-10/12 h-4/5 rounded-3xl m-10 opacity-0 transition-opacity duration-700;
@@ -64,9 +64,27 @@
 .divPrincipalCarrucelTercelServicio{
     @apply overflow-hidden rounded-2xl shadow-xl
 }
+.lista-iconos-tecer-servicio{
+    @apply col-span-12 w-full mt-10 p-5
+}
+.item-tercer-servicio{
+    @apply flex items-start gap-4 mb-10
+}
+.icono-tecer-servicio{
+    @apply text-gray-500 text-3xl;
+}
+.icono2-tecer-servicio {
+    @apply  text-yellow-500 text-3xl;
+}
+.icono3-tecer-servicio {
+    @apply text-blue-500 text-3xl;
+}
+.parrafos-tercer-servicio{
+    @apply text-white font-descrip text-base
+}
 
 .soporte-carrusel-img{
-    @apply w-full h-full object-cover transition-opacity duration-700 opacity-0 absolute top-0 left-0 rounded-2xl;
+    @apply bg-red-600 w-full h-full object-cover transition-opacity duration-700 opacity-0 absolute top-0 left-0 rounded-2xl;
 }
 .btn-carrusel-mantenimiento{
     @apply absolute top-1/2 left-2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md;
