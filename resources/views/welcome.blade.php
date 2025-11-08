@@ -26,7 +26,7 @@
 
     <div class="nav-imagen">
       <img class="img-logo" src="{{asset('img/logo-bien.png')}}">
-      <span class="letras-logo letras"> Soluciones En Impresión</span>
+      <a href="{{route('inicio')}}"><span class="letras-logo letras"> Soluciones En Impresiones</span></a>
     </div>
 
     <button class="boto-responsi lg:hidden nav-toggler" data-targets="#navegation" id="navegation"><i class="fas fa-align-justify"></i></button>
@@ -37,7 +37,7 @@
         <a href="{{route('inicio')}}" class="nav-items"><i class="fas fa-home text-xl mr-2"></i>Inicio</a>
         <a href="{{route('impresoras')}}" class="nav-items"><i class="fas fa-print text-xl mr-2"></i>Impresoras</a>
         <a href="{{route('consumibles')}}" class="nav-items"><i class="fas fa-store text-xl mr-2"></i>Consumibles</a>
-        <a href="{{route('soporte')}}" class="nav-items"><i class="fas fa-wrench text-xl mr-2"></i>Soporte</a>
+        <a href="{{route('soporte')}}" class="nav-items"><i class="fas fa-pen text-xl mr-2"></i>oficina</a>
         <a href="{{route('soporte')}}" class="nav-items"><i class="fa-solid fa-cart-shopping text-xl mr-2"></i></i>Carrito</a>
 
         @if (auth()->check())
