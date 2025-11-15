@@ -29,11 +29,11 @@
       <a href="{{route('inicio')}}"><span class="letras-logo letras"> Soluciones En Impresiones</span></a>
     </div>
 
-    <button class="boto-responsi lg:hidden nav-toggler" data-targets="#navegation" id="navegation"><i class="fas fa-align-justify"></i></button>
+    <button class="boto-responsi xl:hidden nav-toggler" data-targets="#navegation" id="navegation"><i class="fas fa-align-justify"></i></button>
 
-    <div id="menu" class="hidden top-nav w-full lg:inline-flex lg:flex-grow lg:w-auto">
+    <div id="menu" class="hidden top-nav w-full xl:inline-flex xl:flex-grow xl:w-auto">
 
-      <div class="lg:inline-flex lg:flex-row lg:ml-auto flex flex-col">
+      <div class="lg:inline-flex xl:flex-row xl:ml-auto flex flex-col">
         <a href="{{route('inicio')}}" class="nav-items"><i class="fas fa-home text-xl mr-2"></i>Inicio</a>
         <a href="{{route('impresoras')}}" class="nav-items"><i class="fas fa-print text-xl mr-2"></i>Impresoras</a>
         <a href="{{route('consumibles')}}" class="nav-items"><i class="fas fa-store text-xl mr-2"></i>Consumibles</a>

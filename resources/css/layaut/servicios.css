@@ -1,5 +1,5 @@
  .div-principal-servisios{
-    @apply grid grid-cols-2 w-full h-auto bg-gray-900 justify-items-center content-center
+    @apply grid grid-cols-2 w-full h-auto bg-gray-900 justify-items-center content-center xs:grid-cols-1
 } 
 
 .div-secundario-primer-servicio{
@@ -15,7 +15,7 @@
     @apply xs:w-full xs:text-sm xs:m-8 w-2/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo
 }
 .vid-primer-servicio{
-    @apply col-span-1 mt-28 xs:col-span-2 xs:-mt-32 xs:p-10 rounded-lg shadow-2xl;
+    @apply col-span-1 mt-28 shadow-2xl rounded-lg xs:col-span-2 xs:p-10 xs:-mt-10;
     background: rgba(255, 255, 255, 0.35); /* Más blanco y translúcido */
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
     backdrop-filter: blur(12px);
@@ -35,7 +35,7 @@
     @apply col-span-12 m-5 w-full text-base leading-loose text-white font-descrip xs:text-sm
 }
 .carrusel-imagenes {
-    @apply flex justify-center items-center relative w-full h-full overflow-hidden mt-20;
+    @apply flex justify-center items-center relative w-full h-full overflow-hidden mt-20 xs:h-96;
 }
 .carrusel-img {
     @apply absolute object-fill inset-0 w-10/12 h-4/5 rounded-3xl m-10 opacity-0 transition-opacity duration-700;
@@ -49,7 +49,7 @@
 
 /* Clases para el carrucel del tercer servicio*/
 .div-secundario-tercer-servicio{
-    @apply w-full p-5 h-auto grid grid-cols-3 content-center justify-items-center xs:col-span-2 xs:text-center xs:mt-5
+    @apply w-full p-5 h-auto grid grid-cols-3 content-center justify-items-center xs:col-span-2 xs:text-center xs:-mt-24
 }
 .titulo-terser-servicio{
     @apply col-span-12 m-5 w-full text-4xl text-center text-white font-titulo xs:text-2xl uppercase
