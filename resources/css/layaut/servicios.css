@@ -1,21 +1,29 @@
  .div-principal-servisios{
-    @apply grid grid-cols-2 w-full h-auto bg-gray-900 justify-items-center content-center xs:grid-cols-1
+    @apply grid grid-cols-1 w-full h-auto bg-gray-900 justify-items-center content-center 
+    lg:grid-cols-2
+    xl:grid-cols-2
+    2xl:grid-cols-2
 } 
 
 .div-secundario-primer-servicio{
     @apply w-full m-20 p-5 h-auto grid grid-cols-3 content-center justify-items-center xs:col-span-2 xs:text-center xs:mt-3
+
 }
 .titulo-primer-servicio{
-    @apply col-span-12 m-5 ml-20 w-full text-4xl text-center text-white font-titulo xs:text-2xl xs:m-0 uppercase
+    @apply col-span-3 m-2 w-full text-2xl text-center text-white font-titulo uppercase
+    lg:text-2xl
+    xl:text-4xl
 }
 .parrafo-primer-servicio{
-    @apply col-span-12 m-5 ml-20 w-full text-base text-white font-descrip xs:text-sm xs:m-0 xs:mt-5 leading-loose
+    @apply col-span-3 m-5 w-full text-white font-descrip leading-loose text-lg text-center
+    lg:text-center lg:m-auto
 }
-.boton-servicios{
-    @apply xs:w-full xs:text-sm xs:m-8 w-2/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo
-}
+
 .vid-primer-servicio{
-    @apply col-span-1 mt-28 shadow-2xl rounded-lg xs:col-span-2 xs:p-10 xs:-mt-10;
+    @apply shadow-md rounded-lg -mt-5
+    lg:w-4/5 lg:m-auto
+    xl:w-4/5 xl:m-auto
+    2xl:w-4/5 2xl:m-auto;
     background: rgba(255, 255, 255, 0.35); /* Más blanco y translúcido */
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
     backdrop-filter: blur(12px);
