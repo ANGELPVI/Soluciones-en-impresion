@@ -18,6 +18,10 @@ module.exports = {
         'descrip': ['"Open Sans"', 'sans-seri'],
 
       },
+      height:{
+        '100': '500px',
+        '150': '800px',
+      },
       backgroundImage: theme => ({
         'fondo': "url('/img/amarillo.svg')",
       })

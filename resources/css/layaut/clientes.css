@@ -1,9 +1,7 @@
 .div-empresas{
     @apply w-full h-auto overflow-hidden whitespace-nowrap;
 } 
-.titulo-empresas{
-    @apply font-titulo mt-20 text-5xl text-center text-titulos xs:text-2xl xs:mt-5;
-}
+
 
 .div-secundario{
     @apply h-auto flex gap-4 justify-start items-center mt-10 xs:mt-2 ;

@@ -136,9 +136,7 @@ backdrop-filter: blur(10px);
 .nav-items{
     @apply  transition duration-500 ease-in-out border-blue-400 hover:border-b-2 hover:text-white transform hover:-translate-y-1 hover:scale-110 font-titulo uppercase m-3 px-2 py-2 text-gray-400 lg:inline-flex lg:w-auto
 }
-.title-header{
-    @apply col-span-12 lg:col-span-12 text-white relative font-titulo md:mt-2 lg:-mt-28 xs:text-sm sm:text-3xl lg:text-5xl xl:text-6xl 2xl:text-6xl 
-}
+
 .div-header{
     @apply grid grid-cols-3 justify-items-center content-center w-full
 }
