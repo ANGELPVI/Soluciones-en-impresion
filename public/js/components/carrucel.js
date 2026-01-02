@@ -28,8 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   startCarrusel();
 });
-<<<<<<< HEAD
-=======
 
 //Carrucel de las impresoras que ofrecemos.
 document.addEventListener('DOMContentLoaded', function () {
@@ -67,6 +65,5 @@ document.addEventListener('DOMContentLoaded', function () {
     showImage(current);
   };
 });
->>>>>>> 2405882f543e7e61ed772e86da8f947978115a98
-/******/ })()
-;
+
+ })();
