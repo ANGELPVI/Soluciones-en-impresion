@@ -1,1 +1,41 @@
 /*Estilos base personalizados*/
+.title-header{
+    @apply col-span-12 lg:col-span-12 text-2xl text-center text-white relative font-titulo md:mt-2 lg:-mt-28 lg:text-5xl xl:text-6xl 2xl:text-6xl 
+}
+
+.titulo-empresas{
+    @apply font-titulo text-2xl text-center text-titulos mt-5
+    lg:mt-20;
+}
+
+.titulo-primer-servicio{
+    @apply col-span-12 m-2 w-full text-2xl text-center text-white font-titulo uppercase
+    lg:text-2xl lg:mt-20
+    xl:text-4xl
+}
+
+.parrafo-primer-servicio{
+    @apply col-span-3 m-5 w-full text-white font-descrip leading-loose text-lg text-center
+    lg:text-center lg:m-auto
+}
+
+
+.titulo-segundo-servicio{
+    @apply col-span-12 w-full text-2xl text-center text-white font-titulo uppercase hidden
+    lg:block lg:text-2xl lg:mt-40
+    xl:block xl:text-4xl xl:mt-20
+    2xl:block 2xl:text-4xl
+}
+.parrafo-segundo-servicio{
+    @apply col-span-12 -m-16 z-30 w-full text-lg leading-loose text-white font-descrip
+    lg:m-auto
+}
+
+.titulo-terser-servicio{
+    @apply col-span-12 m-5 w-full text-2xl text-center text-white font-titulo xs:text-2xl uppercase
+}
+
+.titulo-movil{
+    @apply w-full absolute -mt-24 ml-5 mr-5 z-20 text-white text-2xl font-titulo uppercase text-center lg:hidden ;
+}
+

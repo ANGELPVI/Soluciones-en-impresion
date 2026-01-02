@@ -101,11 +101,13 @@
             Tu navegador no soporta el elemento de video.
         </video>
     </div>
+   
 
     {{-- Segundo servicio tecnico --}}
-    <div class="fondo-amarillo div-principal-servisios pt-40">
-
+    <div class="fondo-amarillo div-principal-servisios">
+      
         <div class="carrusel-imagenes">
+             <h1 class="titulo-movil">Solo las mejores marcas para ti y tu negocio</h1>
             <img src="{{ asset('img/brother.jpg') }}" class="carrusel-img" />
             <img src="{{ asset('img/konica-minolta.jpg') }}" class="carrusel-img" />
             <img src="{{ asset('img/epson.jpg') }}" class="carrusel-img" />
