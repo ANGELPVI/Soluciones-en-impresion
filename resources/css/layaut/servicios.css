@@ -46,7 +46,7 @@
 
 /* Clases para el carrucel del tercer servicio*/
 .div-secundario-tercer-servicio{
-    @apply w-full p-5 h-auto grid grid-cols-3 content-center justify-items-center xs:col-span-2 xs:text-center xs:-mt-24
+    @apply w-full p-5 h-auto grid grid-cols-3 content-center justify-items-center xs:col-span-2 xs:text-center xs:-mt-24 bg-red-500
 }
 
 .parrafo-tercer-servicio{
