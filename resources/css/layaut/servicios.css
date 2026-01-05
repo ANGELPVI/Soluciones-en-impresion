@@ -45,8 +45,14 @@
 }
 
 /* Clases para el carrucel del tercer servicio*/
+
+/*AQUI ESTA EL PROBLEMA AL CAMBIAR LA PROPIEDAD SM:COL-SPAN-2 SE HACE EL DESPAPALLO*/
 .div-secundario-tercer-servicio{
+<<<<<<< HEAD
     @apply w-full p-5 h-auto grid grid-cols-3 content-center justify-items-center xs:col-span-2 xs:text-center xs:-mt-24 bg-red-500
+=======
+    @apply w-full p-5 h-auto grid grid-cols-3 bg-red-500 content-center justify-items-center sm:col-span-2 xs:text-center xs:-mt-24
+>>>>>>> b1559d1da510a8c4df17258ae288a338b9f0aeac
 }
 
 .parrafo-tercer-servicio{
