@@ -1,6 +1,6 @@
 module.exports = {
   // 1. Activamos el modo Just-in-Time para que sea ultra rápido
-  mode: 'jit', 
+  mode: 'jit',
 
   // 2. Especificamos qué archivos debe vigilar para extraer las clases
   purge: [
@@ -9,11 +9,15 @@ module.exports = {
     './resources/**/*.css',
   ],
 
-  darkMode: false, 
+  darkMode: false,
   theme: {
     extend: {
       screens: {
-        'xs': { 'min': '280px', 'max': '640px' },
+        'xs': '280px', // Quitamos el 'max'. Ahora aplica desde 280px en adelante.
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
       },
       textColor: {
         'titulos': '#505556',
