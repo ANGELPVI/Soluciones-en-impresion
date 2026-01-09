@@ -5,6 +5,7 @@ module.exports = {
 
     extend: {
       // fontSize:{'xs': '.7rem'},
+      //min=DESDE maz=HASTA
       screens: {
         'xs': { 'min': '280px', 'max': '640px' },
       },

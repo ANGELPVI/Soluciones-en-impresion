@@ -52,14 +52,16 @@
 
 }
 
+.divTercerCarrucel{
+    @apply relative max-w-full mx-auto
+    lg:max-w-xl lg:mx-auto lg:my-10
+}
+
 .parrafo-tercer-servicio{
     @apply col-span-12 m-5 w-full text-base leading-loose text-white font-descrip xs:text-sm
 }
 
-.divTercerCarrucel{
-    @apply relative ml-60 max-w-xl mx-auto
-    lg:max-w-xl lg:mx-auto lg:my-10
-}
+
 .divPrincipalCarrucelTercelServicio{
     @apply overflow-hidden rounded-2xl shadow-xl
 }
