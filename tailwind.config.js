@@ -1,11 +1,17 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
+  // 1. Activamos el modo Just-in-Time para que sea ultra rápido
+  mode: 'jit', 
 
+  // 2. Especificamos qué archivos debe vigilar para extraer las clases
+  purge: [
+    './resources/**/*.blade.php',
+    './resources/**/*.js',
+    './resources/**/*.css',
+  ],
+
+  darkMode: false, 
+  theme: {
     extend: {
-      // fontSize:{'xs': '.7rem'},
-      //min=DESDE maz=HASTA
       screens: {
         'xs': { 'min': '280px', 'max': '640px' },
       },
@@ -13,20 +19,17 @@ module.exports = {
         'titulos': '#505556',
         'comentario': '#656363'
       },
-
       fontFamily: {
         'titulo': ['"Calistoga"', 'cursive'],
-        'descrip': ['"Open Sans"', 'sans-seri'],
-
+        'descrip': ['"Open Sans"', 'sans-serif'], // Corregido: sans-serif
       },
-      height:{
+      height: {
         '100': '500px',
         '150': '800px',
       },
       backgroundImage: theme => ({
         'fondo': "url('/img/amarillo.svg')",
       })
-
     },
   },
   variants: {
