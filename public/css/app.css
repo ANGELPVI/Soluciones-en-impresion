@@ -576,29 +576,22 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
 
 
 .div-secundario-tercer-servicio{
-    grid-column: span 12 / span 12;
     display: grid;
-    height: auto;
     width: 100%;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-content: center;
     justify-items: center;
     --tw-bg-opacity: 1;
-    background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+    background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
     padding: 1.25rem;
-}
-
-
-@media (min-width: 1024px){ .div-secundario-tercer-servicio{
-        grid-column: span 3 / span 3;
-    }
 }
 
 .divTercerCarrucel{
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    max-width: 100%;
+    max-width: -moz-min-content;
+    max-width: min-content;
 }
 
 @media (min-width: 1024px){ .divTercerCarrucel{
@@ -3118,6 +3111,12 @@ video {
 .-mt-8 {
 	margin-top: -2rem;
 }
+.mt-60 {
+	margin-top: 15rem;
+}
+.mt-96 {
+	margin-top: 24rem;
+}
 .block {
 	display: block;
 }
@@ -3163,9 +3162,6 @@ video {
 .h-1\/2 {
 	height: 50%;
 }
-.h-56 {
-	height: 14rem;
-}
 .h-full {
 	height: 100%;
 }
@@ -3177,6 +3173,9 @@ video {
 }
 .h-9 {
 	height: 2.25rem;
+}
+.h-60 {
+	height: 15rem;
 }
 .w-8 {
 	width: 2rem;
@@ -3240,6 +3239,10 @@ video {
 }
 .max-w-2xl {
 	max-width: 42rem;
+}
+.max-w-min {
+	max-width: -moz-min-content;
+	max-width: min-content;
 }
 .flex-1 {
 	flex: 1 1 0%;

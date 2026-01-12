@@ -46,14 +46,12 @@
 
 
 .div-secundario-tercer-servicio{
-    @apply w-full p-5 h-auto grid grid-cols-3 col-span-12 bg-blue-500 content-center justify-items-center
-    lg:col-span-3
-    
+    @apply w-full grid grid-cols-3 p-5 bg-red-500 content-center justify-items-center
 
 }
 
 .divTercerCarrucel{
-    @apply relative max-w-full mx-auto
+    @apply relative max-w-min mx-auto
     lg:max-w-xl lg:mx-auto lg:my-10
 }
 
