@@ -1,5 +1,5 @@
  .div-principal-servisios{
-    @apply grid grid-cols-1 w-full h-auto bg-gray-900 justify-items-center content-center;
+    @apply grid grid-cols-1 w-full h-auto bg-gray-900 content-center;
     @apply lg:grid-cols-2;
 } 
 
@@ -46,13 +46,14 @@
 
 
 .div-secundario-tercer-servicio{
-    @apply w-full grid grid-cols-3 p-5 bg-red-500 content-center justify-items-center
+    @apply w-full p-5 content-center justify-items-center
 
 }
 
 .divTercerCarrucel{
-    @apply relative max-w-min mx-auto
-    lg:max-w-xl lg:mx-auto lg:my-10
+    @apply relative w-full px-4
+    md:px-4
+    lg:px-4 lg:my-10
 }
 
 .divPrincipalCarrucelTercelServicio{
