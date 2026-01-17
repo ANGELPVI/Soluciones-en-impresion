@@ -1,98 +1,136 @@
- .div-principal-servisios{
-    @apply grid grid-cols-1 w-full h-auto bg-gray-900 content-center;
-    @apply lg:grid-cols-2;
-} 
-
-.div-secundario-primer-servicio{
-    @apply w-full m-20 p-5 h-auto grid grid-cols-3 content-center justify-items-center xs:text-center xs:mt-3;
-
+ .div-principal-servisios {
+    @apply grid grid-cols-1 w-full gap-8 p-8 bg-gray-900;
+    @apply lg:grid-cols-2 lg:gap-12 lg:p-12 lg:items-center;
 }
 
-.vid-primer-servicio{
-    @apply shadow-md rounded-lg -mt-5
-    lg:w-4/5 lg:m-auto
-    xl:w-4/5 xl:m-auto
-    2xl:w-4/5 2xl:m-auto;
-    background: rgba(255, 255, 255, 0.35); /* Más blanco y translúcido */
+/* ==================== PRIMER SERVICIO ==================== */
+
+.div-secundario-primer-servicio {
+    @apply flex flex-col justify-center items-center text-center;
+    @apply lg:items-start lg:text-left;
+}
+
+.titulo-primer-servicio {
+    @apply text-2xl font-bold text-white mb-4;
+    @apply md:text-3xl lg:text-4xl;
+}
+
+.parrafo-primer-servicio {
+    @apply text-base text-gray-300 leading-relaxed;
+    @apply md:text-lg;
+}
+
+.div-contenedor-media-primer-servicio {
+    @apply w-full h-80 flex items-center justify-center;
+    @apply md:h-96 lg:h-full;
+}
+
+.vid-primer-servicio {
+    @apply w-full h-full object-cover rounded-lg shadow-md;
+    background: rgba(255, 255, 255, 0.35);
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.25); /* Borde más blanco */
+    border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
+/* ==================== SEGUNDO SERVICIO ==================== */
 
-.div-secundario-segundo-servicio{
-    @apply w-full p-5 h-auto grid grid-cols-3 content-center justify-items-center text-center;
+.div-secundario-segundo-servicio {
+    @apply flex flex-col justify-center items-center text-center;
+    @apply lg:items-start lg:text-left;
+}
+
+.titulo-segundo-servicio {
+    @apply text-2xl font-bold text-white mb-4;
+    @apply md:text-3xl lg:text-4xl;
+}
+
+.parrafo-segundo-servicio {
+    @apply text-base text-gray-300 leading-relaxed;
+    @apply md:text-lg;
+}
+
+.div-contenedor-media-segundo-servicio {
+    @apply w-full h-80 flex items-center justify-center;
+    @apply md:h-96 lg:h-full;
 }
 
 .carrusel-imagenes {
-    @apply flex content-center relative w-11/12 h-96 overflow-hidden mt-44 p-24 justify-center; 
+    @apply relative w-full h-full overflow-hidden rounded-lg shadow-md;
 }
+
 .carrusel-img {
-    @apply absolute object-fill inset-0 w-full h-1/2 rounded-3xl m-auto opacity-0 transition-opacity duration-700
-    lg:h-full
-    xl:h-full
-    2xl:h-full;
+    @apply absolute w-full h-full object-cover opacity-0 transition-opacity duration-700 rounded-lg;
     background: rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(255,255,255,0.45);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.45);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-radius: 1.5rem;
-    border: 1.5px solid rgba(255,255,255,0.25);
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
 }
 
-/* Clases para el carrucel del tercer servicio*/
+/* ==================== TERCER SERVICIO ==================== */
 
-
-.div-secundario-tercer-servicio{
-    @apply w-full p-5 content-center justify-items-center
-
+.div-secundario-tercer-servicio {
+    @apply flex flex-col justify-center items-center text-center;
+    @apply lg:items-start lg:text-left;
 }
 
-.divTercerCarrucel{
-    @apply relative w-full px-4
-    md:px-4
-    lg:px-4 lg:my-10
+.titulo-terser-servicio {
+    @apply text-2xl font-bold text-white mb-6;
+    @apply md:text-3xl lg:text-4xl;
 }
 
-.divPrincipalCarrucelTercelServicio{
-    @apply w-full overflow-hidden rounded-2xl shadow-xl 
+.lista-iconos-tecer-servicio {
+    @apply w-full list-none p-0 m-0;
 }
 
-.parrafo-tercer-servicio{
-    @apply col-span-12 m-5 w-full text-base leading-loose text-white font-descrip xs:text-sm
+.item-tercer-servicio {
+    @apply flex items-start gap-4 mb-6 justify-center;
+    @apply lg:justify-start;
 }
 
+.icono-tecer-servicio {
+    @apply text-gray-400 text-3xl flex-shrink-0;
+}
 
-.lista-iconos-tecer-servicio{
-    @apply col-span-12 w-full mt-10 p-5
-}
-.item-tercer-servicio{
-    @apply flex items-start gap-4 mb-10
-}
-.icono-tecer-servicio{
-    @apply text-gray-500 text-3xl;
-}
 .icono2-tecer-servicio {
-    @apply  text-yellow-500 text-3xl;
-}
-.icono3-tecer-servicio {
-    @apply text-blue-500 text-3xl;
-}
-.parrafos-tercer-servicio{
-    @apply text-white font-descrip text-base
+    @apply text-yellow-500 text-3xl flex-shrink-0;
 }
 
-.soporte-carrusel-img{
-    @apply bg-red-600 w-full h-full object-cover transition-opacity duration-700 opacity-0 absolute top-0 left-0 rounded-2xl;
+.icono3-tecer-servicio {
+    @apply text-blue-500 text-3xl flex-shrink-0;
 }
-.btn-carrusel-mantenimiento{
-    @apply absolute top-1/2 left-2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md;
+
+.parrafos-tercer-servicio {
+    @apply text-white text-base leading-relaxed;
 }
-.bt-carrucel-mantenimiento-right{
-    @apply absolute top-1/2 right-2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md;
+
+.div-contenedor-media-tercer-servicio {
+    @apply w-full h-80 flex items-center justify-center;
+    @apply md:h-96 lg:h-full;
 }
-.wave-servicios{
-    @apply col-span-12 w-full xs:col-span-2
+
+.divTercerCarrucel {
+    @apply relative w-full h-full overflow-hidden rounded-lg shadow-md;
+}
+
+.divPrincipalCarrucelTercelServicio {
+    @apply relative w-full h-full overflow-hidden rounded-lg;
+}
+
+.soporte-carrusel-img {
+    @apply absolute w-full h-full object-cover opacity-0 transition-opacity duration-700 rounded-lg;
+}
+
+.btn-carrusel-mantenimiento {
+    @apply absolute top-1/2 left-2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md z-10 transition-all;
+}
+
+.bt-carrucel-mantenimiento-right {
+    @apply absolute top-1/2 right-2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md z-10 transition-all;
+}
+
+.wave-servicios {
+    @apply w-full;
 }

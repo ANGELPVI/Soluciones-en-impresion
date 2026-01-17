@@ -87,34 +87,32 @@
     <div class="fondo-azul div-principal-servisios">
 
         <div class="div-secundario-primer-servicio">
-
             <h1 class="titulo-primer-servicio">Lo más nuevo en tecnología de fotocopiado</h1>
             <p class="parrafo-primer-servicio">Somos líderes en soluciones de impresión y fotocopiado, ofreciendo lo más
                 nuevo en tecnología de fotocopiadoras para empresas y negocios. Contamos con equipos multifuncionales de
                 última generación, que garantizan alta calidad, eficiencia y ahorro en cada impresión.
             </p>
-
-
         </div>
-        <video src="{{ asset('video/konica-serie 8.mp4') }}" class="vid-primer-servicio" autoplay loop muted width="600"
-            height="700">
-            Tu navegador no soporta el elemento de video.
-        </video>
+
+        <div class="div-contenedor-media-primer-servicio">
+            <video src="{{ asset('video/konica-serie 8.mp4') }}" class="vid-primer-servicio" autoplay loop muted>
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
     </div>
    
 
     {{-- Segundo servicio tecnico --}}
     <div class="fondo-amarillo div-principal-servisios">
-      
-        <div class="carrusel-imagenes">
-             <h1 class="titulo-movil">Solo las mejores marcas para ti y tu negocio</h1>
-            <img src="{{ asset('img/brother.jpg') }}" class="carrusel-img" />
-            <img src="{{ asset('img/konica-minolta.jpg') }}" class="carrusel-img" />
-            <img src="{{ asset('img/epson.jpg') }}" class="carrusel-img" />
-            <img src="{{ asset('img/impresora hp.webp') }}" class="carrusel-img" />
+
+         <div class="div-contenedor-media-segundo-servicio">
+            <div class="carrusel-imagenes">
+                <img src="{{ asset('img/brother.jpg') }}" class="carrusel-img" />
+                <img src="{{ asset('img/konica-minolta.jpg') }}" class="carrusel-img" />
+                <img src="{{ asset('img/epson.jpg') }}" class="carrusel-img" />
+                <img src="{{ asset('img/impresora hp.webp') }}" class="carrusel-img" />
+            </div>
         </div>
-
-
 
         <div class="div-secundario-segundo-servicio">
             <h1 class="titulo-segundo-servicio">Solo las mejores marcas para ti y tu negocio</h1>
@@ -124,85 +122,75 @@
                 Contamos con equipos de última generación que garantizan rapidez, calidad y un rendimiento excepcional en
                 cada impresión.
             </p>
-
-
         </div>
+
+       
     </div>
 
 
     {{-- Tercer servicio tecnico --}}
-    <div class="fondo-magenta div-principal-servisios pt-60">
-
-        {{-- Contenedor del carrucel y el texto --}}
+    <div class="fondo-magenta div-principal-servisios">
 
         <div class="div-secundario-tercer-servicio">
             <h1 class="titulo-terser-servicio">Servicio técnico experto en impresoras láser y de inyección de tinta</h1>
 
             <ul class="lista-iconos-tecer-servicio">   
                 <li class="item-tercer-servicio">
-                    <!-- Icono desarmador y llave inglesa (herramientas) -->
                     <i class="fas fa-wrench icono-tecer-servicio"></i>
                     <p class="parrafos-tercer-servicio">    
                         Soporte técnico especializado y rápido para mantener tus impresoras en óptimas condiciones.
                     </p>
                 </li>
                 <li class="item-tercer-servicio">
-                    <!-- Icono bote de tóner -->
                     <i class="fas fa-fill-drip icono2-tecer-servicio"></i>
                     <p class="parrafos-tercer-servicio">
                         Refacciones y consumibles originales y la mejor calidad OEM.
                     </p>
                 </li>
                 <li class="item-tercer-servicio">
-                    <!-- Icono usuario con casco (experiencia) -->
                     <i class="fas fa-users-cog icono3-tecer-servicio"></i>
                     <p class="parrafos-tercer-servicio">
                         Años de experiencia en el sector en tecnología de impresión.
                     </p>
                 </li>
             </ul>
-
-
         </div>
 
-        <div class="divTercerCarrucel">
-            <div class="divPrincipalCarrucelTercelServicio">
-                
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044853/13_n7yu6j.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044852/2_cm2jak.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044851/6_qzjigt.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044846/5_g69cja.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044847/3_ppqier.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044844/15_etk0kv.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044829/8_swexmo.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044832/11_zdhpap.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044827/7_hsxk0v.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044826/12_gwbzxr.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044821/10_nemtxw.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044818/16_daysrx.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044815/9_s5n8ul.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044811/1_lxi637.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044808/20_ewnoji.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044801/18_esxz7e.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044801/17_if7od1.jpg" class="soporte-carrusel-img" />
+        <div class="div-contenedor-media-tercer-servicio">
+            <div class="divTercerCarrucel">
+                <div class="divPrincipalCarrucelTercelServicio">
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044853/13_n7yu6j.jpg" class="soporte-carrusel-img" />
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044852/2_cm2jak.jpg" class="soporte-carrusel-img" />
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044851/6_qzjigt.jpg" class="soporte-carrusel-img" />
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044846/5_g69cja.jpg" class="soporte-carrusel-img" />
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044847/3_ppqier.jpg" class="soporte-carrusel-img" />
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044844/15_etk0kv.jpg" class="soporte-carrusel-img" />
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044829/8_swexmo.jpg" class="soporte-carrusel-img" />
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044832/11_zdhpap.jpg" class="soporte-carrusel-img" />
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044827/7_hsxk0v.jpg" class="soporte-carrusel-img" />
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044826/12_gwbzxr.jpg" class="soporte-carrusel-img" />
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044821/10_nemtxw.jpg" class="soporte-carrusel-img" />
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044818/16_daysrx.jpg" class="soporte-carrusel-img" />
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044815/9_s5n8ul.jpg" class="soporte-carrusel-img" />
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044811/1_lxi637.jpg" class="soporte-carrusel-img" />
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044808/20_ewnoji.jpg" class="soporte-carrusel-img" />
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044801/18_esxz7e.jpg" class="soporte-carrusel-img" />
+                    <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044801/17_if7od1.jpg" class="soporte-carrusel-img" />
+                </div>
+                <button id="btn-prev" class="btn-carrusel-mantenimiento">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="btn-next" class="bt-carrucel-mantenimiento-right">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
             </div>
-            <!-- Botón anterior -->
-            <button id="btn-prev" class="btn-carrusel-mantenimiento">
-                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
-            <!-- Botón siguiente -->
-            <button id="btn-next" class="bt-carrucel-mantenimiento-right">
-                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
         </div>
 
-        <img class="wave-servicios" src="{{ asset('img/honda.svg') }}" alt="">
+        <img class="wave-servicios" src="{{ asset('img/honda.svg') }}" alt="">        
     </div>
 
 
