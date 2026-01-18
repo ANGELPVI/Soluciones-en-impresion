@@ -47,23 +47,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //Carucel de botones del tercer servicio tecnico
 document.addEventListener('DOMContentLoaded', function () {
+  var container = document.querySelector('.divPrincipalCarrucelTercelServicio');
+  if (!container) return;
   var images = document.querySelectorAll('.soporte-carrusel-img');
+  if (images.length === 0) return;
   var current = 0;
   function showImage(idx) {
     images.forEach(function (img, i) {
       img.style.opacity = i === idx ? '1' : '0';
-      img.style.position = i === 0 ? 'relative' : 'absolute';
     });
   }
+
+  // Mostrar la primera imagen al cargar
   showImage(current);
-  document.getElementById('btn-next').onclick = function () {
-    current = (current + 1) % images.length;
-    showImage(current);
-  };
-  document.getElementById('btn-prev').onclick = function () {
-    current = (current - 1 + images.length) % images.length;
-    showImage(current);
-  };
+
+  // Botón siguiente
+  var btnNext = document.getElementById('btn-next');
+  if (btnNext) {
+    btnNext.addEventListener('click', function () {
+      current = (current + 1) % images.length;
+      showImage(current);
+    });
+  }
+
+  // Botón anterior
+  var btnPrev = document.getElementById('btn-prev');
+  if (btnPrev) {
+    btnPrev.addEventListener('click', function () {
+      current = (current - 1 + images.length) % images.length;
+      showImage(current);
+    });
+  }
 });
 /******/ })()
 ;

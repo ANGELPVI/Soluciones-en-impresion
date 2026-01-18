@@ -130,7 +130,7 @@
 
     {{-- Tercer servicio tecnico --}}
     <div class="fondo-magenta div-principal-servisios">
-
+     
         <div class="div-secundario-tercer-servicio">
             <h1 class="titulo-terser-servicio">Servicio técnico experto en impresoras láser y de inyección de tinta</h1>
 
@@ -189,11 +189,7 @@
                 </button>
             </div>
         </div>
-
-        <img class="wave-servicios" src="{{ asset('img/honda.svg') }}" alt="">        
     </div>
-
-
 
     {{-- Sesión de las plataformas conpatibles --}}
     <div class="div-principal">
