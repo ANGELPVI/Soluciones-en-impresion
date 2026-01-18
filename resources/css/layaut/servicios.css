@@ -1,28 +1,23 @@
- .div-principal-servisios {
-    @apply grid grid-cols-1 w-full gap-8 p-8 bg-gray-900;
-    @apply lg:grid-cols-2 lg:gap-12 lg:p-12 lg:items-center;
+.div-principal-servisios {
+    @apply grid grid-cols-1 w-full gap-8 p-8 bg-gray-900 lg:grid-cols-2 lg:gap-12 lg:p-16 lg:items-center relative;
 }
 
 /* ==================== PRIMER SERVICIO ==================== */
 
 .div-secundario-primer-servicio {
-    @apply flex flex-col justify-center items-center text-center;
-    @apply lg:items-start lg:text-left;
+    @apply flex flex-col justify-center items-center text-center lg:items-start lg:text-left relative z-10;
 }
 
 .titulo-primer-servicio {
-    @apply text-2xl font-bold text-white mb-4;
-    @apply md:text-3xl lg:text-4xl;
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6 lg:mb-8;
 }
 
 .parrafo-primer-servicio {
-    @apply text-base text-gray-300 leading-relaxed;
-    @apply md:text-lg;
+    @apply text-base md:text-lg text-gray-300 leading-relaxed mb-4 md:mb-6 lg:mb-8;
 }
 
 .div-contenedor-media-primer-servicio {
-    @apply w-full h-80 flex items-center justify-center;
-    @apply md:h-96 lg:h-full;
+    @apply w-full h-80 md:h-96 lg:h-[500px] flex items-center justify-center relative z-10;
 }
 
 .vid-primer-servicio {
@@ -37,48 +32,43 @@
 /* ==================== SEGUNDO SERVICIO ==================== */
 
 .div-secundario-segundo-servicio {
-    @apply flex flex-col justify-center items-center text-center;
-    @apply lg:items-start lg:text-left;
+    @apply flex flex-col justify-center items-center text-center lg:items-start lg:text-left relative z-10;
 }
 
 .titulo-segundo-servicio {
-    @apply text-2xl font-bold text-white mb-4;
-    @apply md:text-3xl lg:text-4xl;
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6 lg:mb-8;
 }
 
 .parrafo-segundo-servicio {
-    @apply text-base text-gray-300 leading-relaxed;
-    @apply md:text-lg;
+    @apply text-base md:text-lg text-gray-300 leading-relaxed mb-4 md:mb-6 lg:mb-8;
 }
 
 .div-contenedor-media-segundo-servicio {
-    @apply w-full h-80 flex items-center justify-center;
-    @apply md:h-96 lg:h-full;
+    @apply w-full h-80 md:h-96 lg:h-[500px] flex items-center justify-center relative z-10;
 }
 
 .carrusel-imagenes {
-    @apply relative w-full h-full overflow-hidden rounded-lg shadow-md;
+    @apply relative w-full h-full overflow-hidden rounded-lg shadow-md z-10;
 }
 
 .carrusel-img {
-    @apply absolute w-full h-full object-cover opacity-0 transition-opacity duration-700 rounded-lg;
+    @apply absolute w-full h-full object-cover opacity-0 transition-opacity duration-700 rounded-lg top-0 left-0;
     background: rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.45);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1.5px solid rgba(255, 255, 255, 0.25);
+    z-index: 10;
 }
 
 /* ==================== TERCER SERVICIO ==================== */
 
 .div-secundario-tercer-servicio {
-    @apply flex flex-col justify-center items-center text-center;
-    @apply lg:items-start lg:text-left;
+    @apply flex flex-col justify-center items-center text-center lg:items-start lg:text-left relative z-10;
 }
 
 .titulo-terser-servicio {
-    @apply text-2xl font-bold text-white mb-6;
-    @apply md:text-3xl lg:text-4xl;
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 md:mb-8 lg:mb-10;
 }
 
 .lista-iconos-tecer-servicio {
@@ -86,8 +76,7 @@
 }
 
 .item-tercer-servicio {
-    @apply flex items-start gap-4 mb-6 justify-center;
-    @apply lg:justify-start;
+    @apply flex items-start gap-4 mb-6 md:mb-8 lg:mb-10 justify-center lg:justify-start;
 }
 
 .icono-tecer-servicio {
@@ -107,58 +96,45 @@
 }
 
 .div-contenedor-media-tercer-servicio {
-    @apply w-full h-80 flex items-center justify-center;
-    @apply md:h-96 lg:h-full;
+    @apply w-full h-80 md:h-96 lg:h-[500px] flex items-center justify-center relative z-10;
 }
 
 .divTercerCarrucel {
-    @apply relative w-full h-full overflow-hidden rounded-lg shadow-md;
+    @apply relative w-full h-full overflow-hidden rounded-lg shadow-md z-10;
 }
 
 .divPrincipalCarrucelTercelServicio {
-    @apply relative w-full h-full overflow-hidden rounded-lg;
+    @apply relative w-full h-full overflow-hidden rounded-lg z-10;
 }
 
 .soporte-carrusel-img {
-    @apply absolute w-full h-full object-cover transition-opacity duration-700 rounded-lg;
-    top: 0;
-    left: 0;
-    opacity: 0;
+    @apply absolute w-full h-full object-cover transition-opacity duration-700 rounded-lg top-0 left-0 opacity-0 z-10;
 }
 
 .btn-carrusel-mantenimiento {
-    @apply absolute top-1/2 left-2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md z-10 transition-all;
+    @apply absolute top-1/2 left-2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md z-20 transition-all;
 }
 
 .bt-carrucel-mantenimiento-right {
-    @apply absolute top-1/2 right-2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md z-10 transition-all;
-}
-
-.bt-carrucel-mantenimiento-right {
-    @apply absolute top-1/2 right-2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md z-10 transition-all;
+    @apply absolute top-1/2 right-2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md z-20 transition-all;
 }
 
 /* ==================== ONDA DE FONDO ==================== */
 
 .wave-background-svg {
-    @apply absolute inset-0 w-full h-full;
-    position: absolute;
-    top: 0;
+    @apply absolute w-full h-full z-0;
+    top: 250px;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+}
+
+.fondo-azul.div-principal-servisios {
+    @apply relative min-h-[600px] lg:min-h-[700px];
+}
+
+.fondo-amarillo.div-principal-servisios {
+    @apply relative min-h-[600px] lg:min-h-[700px];
 }
 
 .fondo-magenta.div-principal-servisios {
-    @apply relative;
-    position: relative;
+    @apply relative min-h-[700px] lg:min-h-[800px];
 }
-
-.fondo-magenta.div-principal-servisios > div {
-    @apply relative;
-    position: relative;
-    z-index: 1;
-}
-
-

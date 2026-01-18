@@ -189,6 +189,8 @@
                 </button>
             </div>
         </div>
+
+        <img src="{{ asset('img/wave.svg') }}" alt="" class="wave-background-svg">
     </div>
 
     {{-- Sesión de las plataformas conpatibles --}}
