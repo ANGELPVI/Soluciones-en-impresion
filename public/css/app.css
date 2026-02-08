@@ -196,7 +196,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     
 }
 
-@media (min-width: 280px){
+@media (min-width: 280px) and (max-width: 640px){
     .letras-logo{
         display: none;
     
@@ -294,7 +294,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     }
     
 }
-@media (min-width: 280px){
+@media (min-width: 280px) and (max-width: 640px){
     .parrafo-header{
         margin-top: 1.25rem;
     
@@ -359,7 +359,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     }
     
 }
-@media (min-width: 280px){
+@media (min-width: 280px) and (max-width: 640px){
     .button-header{
         margin: 2.5rem;
     
@@ -417,7 +417,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
 } 
 
 
-@media (min-width: 280px){ 
+@media (min-width: 280px) and (max-width: 640px){ 
 
 
     .div-secundario{
@@ -484,7 +484,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     padding: 1.25rem;
 } 
 
-@media (min-width: 280px){ 
+@media (min-width: 280px) and (max-width: 640px){ 
 
     .div-secundario-primer-servicio{
         grid-column: span 2 / span 2;
@@ -626,7 +626,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     justify-items: center;
     padding: 1.25rem;
 }
-@media (min-width: 280px){ 
+@media (min-width: 280px) and (max-width: 640px){ 
 
     .div-secundario-tercer-servicio{
         grid-column: span 2 / span 2;
@@ -653,7 +653,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
-@media (min-width: 280px){ 
+@media (min-width: 280px) and (max-width: 640px){ 
 
     .parrafo-tercer-servicio{
         font-size: 0.875rem;
@@ -771,7 +771,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     grid-column: span 12 / span 12;
     width: 100%;
 }
-@media (min-width: 280px){ 
+@media (min-width: 280px) and (max-width: 640px){ 
 
     .wave-servicios{
         grid-column: span 2 / span 2;
@@ -796,7 +796,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     --tw-text-opacity: 1;
     color: rgba(80, 85, 86, var(--tw-text-opacity))
 }
-@media (min-width: 280px) {
+@media (min-width: 280px) and (max-width: 640px) {
     .titulo-plataforma {
         margin: 1rem
     }
@@ -838,7 +838,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
         grid-column: span 4 / span 4
     }
 }
-@media (min-width: 280px) {
+@media (min-width: 280px) and (max-width: 640px) {
     .div-targeta {
         grid-column: span 8 / span 8
     }
@@ -878,7 +878,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     --tw-text-opacity: 1;
     color: rgba(80, 85, 86, var(--tw-text-opacity))
 }
-@media (min-width: 280px) {
+@media (min-width: 280px) and (max-width: 640px) {
     .titulo-planes-renta {
         font-size: 1.5rem;
         line-height: 2rem
@@ -925,7 +925,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
         grid-column: span 4 / span 4
     }
 }
-@media (min-width: 280px) {
+@media (min-width: 280px) and (max-width: 640px) {
     .targeta-renta {
         grid-column: span 12 / span 12
     }
@@ -980,7 +980,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     font-size: 0.875rem;
     line-height: 1.25rem
 }
-@media (min-width: 280px) {
+@media (min-width: 280px) and (max-width: 640px) {
     .targeta-lista-carateristicas {
         margin: 1rem
     }
@@ -1093,7 +1093,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     --tw-text-opacity: 1;
     color: rgba(80, 85, 86, var(--tw-text-opacity))
 }
-@media (min-width: 280px) {
+@media (min-width: 280px) and (max-width: 640px) {
     .title-comentarios {
         text-align: center
     }
@@ -1111,7 +1111,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     --tw-bg-opacity: 1;
     background-color: rgba(255, 255, 255, var(--tw-bg-opacity))
 }
-@media (min-width: 280px) {
+@media (min-width: 280px) and (max-width: 640px) {
     .tergeta-comentarios {
         width: 75%
     }
@@ -1133,7 +1133,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     border-radius: 9999px;
     padding: 0.5rem
 }
-@media (min-width: 280px) {
+@media (min-width: 280px) and (max-width: 640px) {
     .img-usuario-comentarios {
         grid-column: span 12 / span 12
     }
@@ -1145,7 +1145,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     width: 100%;
     padding: 0.5rem
 }
-@media (min-width: 280px) {
+@media (min-width: 280px) and (max-width: 640px) {
     .div-parrafos-comentarios {
         grid-column: span 12 / span 12
     }
@@ -1246,7 +1246,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     }
 }
 
-@media (min-width: 280px) {
+@media (min-width: 280px) and (max-width: 640px) {
 
     .fomularioLogin {
 
@@ -1279,7 +1279,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
         line-height: 2rem
     }
 }
-@media (min-width: 280px) {
+@media (min-width: 280px) and (max-width: 640px) {
 
     .tituloFormulario {
 
@@ -1494,7 +1494,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     }
 }
 
-@media (min-width: 280px) {
+@media (min-width: 280px) and (max-width: 640px) {
     .tituloFormularioRegistro {
         font-size: 0.875rem;
         line-height: 1.25rem
@@ -2317,7 +2317,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
-@media (min-width: 280px) {
+@media (min-width: 280px) and (max-width: 640px) {
     .titulo-terser-servicio {
         font-size: 1.5rem;
         line-height: 2rem
@@ -4094,7 +4094,7 @@ video {
 		line-height: 2.25rem;
 	}
 }
-@media (min-width: 280px) {
+@media (min-width: 280px) and (max-width: 640px) {
 
 	.xs\:col-span-8 {
 		grid-column: span 8 / span 8;

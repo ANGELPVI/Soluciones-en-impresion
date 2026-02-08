@@ -13,7 +13,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'xs': '280px', // Quitamos el 'max'. Ahora aplica desde 280px en adelante.
+        'xs': { 'min': '280px', 'max': '640px' },
         'sm': '640px',
         'md': '768px',
         'lg': '1024px',
