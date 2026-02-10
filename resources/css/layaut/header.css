@@ -130,7 +130,7 @@ backdrop-filter: blur(10px);
 }
 
 .letras-logo{
-    @apply text-white pl-3 font-titulo xs:hidden sm:text-sm md:text-sm lg:text-sm xl:text-2xl 2xl:text-3xl
+    @apply text-white pl-3 font-titulo sm:text-sm md:text-sm lg:text-sm xl:text-2xl 2xl:text-3xl
 }
 
 .nav-items{
@@ -141,8 +141,8 @@ backdrop-filter: blur(10px);
     @apply grid grid-cols-3 justify-items-center content-center w-full
 }
 .parrafo-header{
-    @apply col-span-12 lg:col-span-12  text-white relative xs:p-3 xs:text-sm sm:text-lg xs:text-center sm:text-justify xs:mt-5 sm:mt-11 xs:w-full sm:w-1/2 font-descrip
+    @apply col-span-12 lg:col-span-12  text-white relative sm:text-lg  sm:text-justify sm:mt-11 sm:w-1/2 font-descrip
 }
 .button-header{
-    @apply w-1/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo relative xs:w-1/2 xs:m-10 xs:text-sm sm:text-sm lg:text-2xl
+    @apply w-1/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo relative sm:text-sm lg:text-2xl
 }

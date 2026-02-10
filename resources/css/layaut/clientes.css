@@ -4,7 +4,7 @@
 
 
 .div-secundario{
-    @apply h-auto flex gap-4 justify-start items-center mt-10 xs:mt-2 ;
+    @apply h-auto flex gap-4 justify-start items-center mt-10;
     min-width: max-content;
     /* Cambia grid por flex para scroll horizontal */
 }
