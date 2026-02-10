@@ -54,7 +54,7 @@
 }
 
 .divTercerCarrucel{
-    @apply relative w-full max-w-xl mx-auto my-10
+    @apply relative w-full max-w-xl mx-auto my-10 hidden lg:block
 }
 .divPrincipalCarrucelTercelServicio{
     @apply overflow-hidden rounded-2xl shadow-xl

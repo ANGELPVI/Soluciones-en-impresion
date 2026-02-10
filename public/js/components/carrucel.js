@@ -65,5 +65,5 @@ document.addEventListener('DOMContentLoaded', function () {
     showImage(current);
   };
 });
-
- })();
+/******/ })()
+;
