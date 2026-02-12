@@ -144,5 +144,5 @@ backdrop-filter: blur(10px);
     @apply col-span-12 lg:col-span-12  text-white relative sm:text-lg  sm:text-justify sm:mt-11 sm:w-1/2 font-descrip
 }
 .button-header{
-    @apply w-1/4 col-span-12 text-black text-2xl hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo relative sm:text-sm lg:text-2xl
+    @apply w-full col-span-1 col-start-2 text-black text-sm hover:bg-green-400 rounded-full py-3 px-6 bg-green-500 mb-3 mt-20 font-titulo relative sm:text-sm lg:text-2xl
 }
