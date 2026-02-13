@@ -254,6 +254,8 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
 .parrafo-header{
     position: relative;
     grid-column: span 12 / span 12;
+    margin-top: 2.75rem;
+    text-align: center;
     font-family: "Open Sans", sans-serif;
     --tw-text-opacity: 1;
     color: rgba(255, 255, 255, var(--tw-text-opacity));
@@ -288,8 +290,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
 }
 .button-header{
     position: relative;
-    grid-column: span 1 / span 1;
-    grid-column-start: 2;
+    grid-column: span 3 / span 3;
     margin-bottom: 0.75rem;
     margin-top: 5rem;
     width: 100%;
@@ -313,6 +314,18 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     
 }
 @media (min-width: 640px){
+    .button-header{
+        grid-column: span 1 / span 1;
+    
+    }
+    .button-header{
+        grid-column-start: 2;
+    
+    }
+    .button-header{
+        width: 100%;
+    
+    }
     .button-header{
         font-size: 0.875rem;
         line-height: 1.25rem;
@@ -2835,14 +2848,14 @@ video {
 .col-span-3 {
 	grid-column: span 3 / span 3;
 }
+.col-span-1 {
+	grid-column: span 1 / span 1;
+}
 .col-span-8 {
 	grid-column: span 8 / span 8;
 }
 .col-span-10 {
 	grid-column: span 10 / span 10;
-}
-.col-span-1 {
-	grid-column: span 1 / span 1;
 }
 .col-start-2 {
 	grid-column-start: 2;
@@ -2956,6 +2969,9 @@ video {
 }
 .-mt-8 {
 	margin-top: -2rem;
+}
+.mt-11 {
+	margin-top: 2.75rem;
 }
 .block {
 	display: block;
@@ -3300,6 +3316,9 @@ video {
 .p-7 {
 	padding: 1.75rem;
 }
+.p-10 {
+	padding: 2.5rem;
+}
 .px-4 {
 	padding-left: 1rem;
 	padding-right: 1rem;
@@ -3361,6 +3380,9 @@ video {
 }
 .text-center {
 	text-align: center;
+}
+.text-justify {
+	text-align: justify;
 }
 .font-titulo {
 	font-family: "Calistoga", cursive;
@@ -3632,6 +3654,14 @@ video {
 		grid-column: span 12 / span 12;
 	}
 
+	.sm\:col-span-1 {
+		grid-column: span 1 / span 1;
+	}
+
+	.sm\:col-start-2 {
+		grid-column-start: 2;
+	}
+
 	.sm\:mt-11 {
 		margin-top: 2.75rem;
 	}
@@ -3642,6 +3672,10 @@ video {
 
 	.sm\:w-11\/12 {
 		width: 91.666667%;
+	}
+
+	.sm\:w-full {
+		width: 100%;
 	}
 
 	.sm\:px-6 {
@@ -3710,6 +3744,14 @@ video {
 		grid-column: span 4 / span 4;
 	}
 
+	.lg\:col-span-1 {
+		grid-column: span 1 / span 1;
+	}
+
+	.lg\:col-start-2 {
+		grid-column-start: 2;
+	}
+
 	.lg\:m-auto {
 		margin: auto;
 	}
@@ -3752,6 +3794,10 @@ video {
 
 	.lg\:w-1\/3 {
 		width: 33.333333%;
+	}
+
+	.lg\:w-1\/2 {
+		width: 50%;
 	}
 
 	.lg\:grid-cols-2 {
