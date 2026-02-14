@@ -785,11 +785,17 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     display: grid;
     height: auto;
     width: 100%;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 0.75rem;
     padding: 1.25rem
 }
+@media (min-width: 1024px) {
+    .div-principal-renta {
+        grid-template-columns: repeat(12, minmax(0, 1fr))
+    }
+}
 .targeta-renta {
+    grid-column: span 1 / span 1;
     margin-top: 0.5rem;
     margin-right: 1rem;
     height: auto;
@@ -811,11 +817,6 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
 .targeta-renta:hover {
     --tw-translate-y: -1.5rem;
     transform: var(--tw-transform)
-}
-@media (min-width: 640px) {
-    .targeta-renta {
-        grid-column: span 12 / span 12
-    }
 }
 @media (min-width: 1024px) {
     .targeta-renta {
@@ -3801,6 +3802,10 @@ video {
 
 	.lg\:grid-cols-8 {
 		grid-template-columns: repeat(8, minmax(0, 1fr));
+	}
+
+	.lg\:grid-cols-12 {
+		grid-template-columns: repeat(12, minmax(0, 1fr));
 	}
 
 	.lg\:px-8 {
