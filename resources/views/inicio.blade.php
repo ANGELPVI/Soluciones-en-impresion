@@ -345,6 +345,29 @@
                 <img class="img-usuario-comentarios"
                     src="https://static1.abc.es/media/bienestar/2021/09/09/personas-magneticas-1-kdVD--620x349@abc.jpg"
                     alt="">
+                    <div class="inline-flex space-x-1" aria-label="Calificación de 4 sobre 5 estrellas">
+  
+  <svg viewBox="0 0 10 10" class="w-1 h-1 fill-current text-yellow-400">
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+  </svg>
+  
+  <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current text-yellow-400">
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+  </svg>
+  
+  <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current text-yellow-400">
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+  </svg>
+  
+  <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current text-yellow-400">
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+  </svg>
+  
+  <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current text-gray-300">
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+  </svg>
+  
+</div>
                 <div class="div-parrafos-comentarios">
                     <h1 class="titulo-usuario-cometario">Sergio García</h1>
                     <span class="parrafo-comentario">
@@ -366,6 +389,7 @@
                     <h1 class="titulo-usuario-cometario">Reyna Nava</h1>
                     <span class="parrafo-comentario">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo omnis doloribus eos.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia id doloribus reiciendis nostrum? Voluptate ab maiores sed eos, mollitia, alias aspernatur officiis veniam iste optio dolorem nihil sit ipsum? Officia.
                     </span>
                 </div>
 
