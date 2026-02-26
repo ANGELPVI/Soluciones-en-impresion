@@ -90,3 +90,10 @@
 .parrafo-comentario{
     @apply text-comentario font-descrip text-sm;
 }
+
+.div-estrellas-comentarios{
+    @apply inline-flex space-x-1 justify-center ;
+}
+.estrellas-comentarios{
+    @apply w-12 h-12 fill-current text-yellow-400;
+}

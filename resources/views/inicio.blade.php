@@ -101,13 +101,13 @@
             Tu navegador no soporta el elemento de video.
         </video>
     </div>
-   
+
 
     {{-- Segundo servicio tecnico --}}
     <div class="fondo-amarillo div-principal-servisios">
-      
+
         <div class="carrusel-imagenes">
-             <h1 class="titulo-movil">Solo las mejores marcas para ti y tu negocio</h1>
+            <h1 class="titulo-movil">Solo las mejores marcas para ti y tu negocio</h1>
             <img src="{{ asset('img/brother.jpg') }}" class="carrusel-img" />
             <img src="{{ asset('img/konica-minolta.jpg') }}" class="carrusel-img" />
             <img src="{{ asset('img/epson.jpg') }}" class="carrusel-img" />
@@ -138,11 +138,11 @@
         <div class="div-secundario-tercer-servicio">
             <h1 class="titulo-terser-servicio">Servicio técnico experto en impresoras láser y de inyección de tinta</h1>
 
-            <ul class="lista-iconos-tecer-servicio">   
+            <ul class="lista-iconos-tecer-servicio">
                 <li class="item-tercer-servicio">
                     <!-- Icono desarmador y llave inglesa (herramientas) -->
                     <i class="fas fa-wrench icono-tecer-servicio"></i>
-                    <p class="parrafos-tercer-servicio">    
+                    <p class="parrafos-tercer-servicio">
                         Soporte técnico especializado y rápido para mantener tus impresoras en óptimas condiciones.
                     </p>
                 </li>
@@ -167,24 +167,41 @@
 
         <div class="divTercerCarrucel">
             <div class="divPrincipalCarrucelTercelServicio">
-                
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044853/13_n7yu6j.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044852/2_cm2jak.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044851/6_qzjigt.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044846/5_g69cja.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044847/3_ppqier.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044844/15_etk0kv.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044829/8_swexmo.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044832/11_zdhpap.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044827/7_hsxk0v.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044826/12_gwbzxr.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044821/10_nemtxw.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044818/16_daysrx.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044815/9_s5n8ul.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044811/1_lxi637.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044808/20_ewnoji.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044801/18_esxz7e.jpg" class="soporte-carrusel-img" />
-                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044801/17_if7od1.jpg" class="soporte-carrusel-img" />
+
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044853/13_n7yu6j.jpg"
+                    class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044852/2_cm2jak.jpg"
+                    class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044851/6_qzjigt.jpg"
+                    class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044846/5_g69cja.jpg"
+                    class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044847/3_ppqier.jpg"
+                    class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044844/15_etk0kv.jpg"
+                    class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044829/8_swexmo.jpg"
+                    class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044832/11_zdhpap.jpg"
+                    class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044827/7_hsxk0v.jpg"
+                    class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044826/12_gwbzxr.jpg"
+                    class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044821/10_nemtxw.jpg"
+                    class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044818/16_daysrx.jpg"
+                    class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044815/9_s5n8ul.jpg"
+                    class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044811/1_lxi637.jpg"
+                    class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044808/20_ewnoji.jpg"
+                    class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044801/18_esxz7e.jpg"
+                    class="soporte-carrusel-img" />
+                <img src="https://res.cloudinary.com/dfd7blslx/image/upload/v1762044801/17_if7od1.jpg"
+                    class="soporte-carrusel-img" />
             </div>
             <!-- Botón anterior -->
             <button id="btn-prev" class="btn-carrusel-mantenimiento">
@@ -340,34 +357,45 @@
         <h1 class="title-comentarios">Los más importante para nosotros</h1>
         {{-- Primer comentarios --}}
         <div class="tergeta-comentarios targetaComentario">
+            <div class="div-estrellas-comentarios" aria-label="Calificación de 5 sobre 5 estrellas">
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                </div>
             <div class="div-img-parrafos">
 
                 <img class="img-usuario-comentarios"
                     src="https://static1.abc.es/media/bienestar/2021/09/09/personas-magneticas-1-kdVD--620x349@abc.jpg"
                     alt="">
-                    <div class="inline-flex space-x-1" aria-label="Calificación de 4 sobre 5 estrellas">
-  
-  <svg viewBox="0 0 10 10" class="w-1 h-1 fill-current text-yellow-400">
-    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-  </svg>
-  
-  <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current text-yellow-400">
-    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-  </svg>
-  
-  <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current text-yellow-400">
-    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-  </svg>
-  
-  <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current text-yellow-400">
-    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-  </svg>
-  
-  <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current text-gray-300">
-    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-  </svg>
-  
-</div>
+
                 <div class="div-parrafos-comentarios">
                     <h1 class="titulo-usuario-cometario">Sergio García</h1>
                     <span class="parrafo-comentario">
@@ -389,7 +417,9 @@
                     <h1 class="titulo-usuario-cometario">Reyna Nava</h1>
                     <span class="parrafo-comentario">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo omnis doloribus eos.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia id doloribus reiciendis nostrum? Voluptate ab maiores sed eos, mollitia, alias aspernatur officiis veniam iste optio dolorem nihil sit ipsum? Officia.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia id doloribus reiciendis nostrum?
+                        Voluptate ab maiores sed eos, mollitia, alias aspernatur officiis veniam iste optio dolorem nihil
+                        sit ipsum? Officia.
                     </span>
                 </div>
 
@@ -399,9 +429,7 @@
         <div class="tergeta-comentarios targetaComentario">
             <div class="div-img-parrafos">
 
-                <img class="img-usuario-comentarios"
-                    src=""
-                    alt="">
+                <img class="img-usuario-comentarios" src="" alt="">
                 <div class="div-parrafos-comentarios">
                     <h1 class="titulo-usuario-cometario">Sofía Torres</h1>
                     <span class="parrafo-comentario">
