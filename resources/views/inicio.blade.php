@@ -408,6 +408,39 @@
 
         {{-- Segundo comentario --}}
         <div class="tergeta-comentarios targetaComentario">
+            <div class="div-estrellas-comentarios" aria-label="Calificación de 5 sobre 5 estrellas">
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                </div>
             <div class="div-img-parrafos">
 
                 <img class="img-usuario-comentarios"
@@ -427,9 +460,42 @@
         </div>
         {{-- tercer comentario --}}
         <div class="tergeta-comentarios targetaComentario">
+            <div class="div-estrellas-comentarios" aria-label="Calificación de 5 sobre 5 estrellas">
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                </div>
             <div class="div-img-parrafos">
 
-                <img class="img-usuario-comentarios" src="" alt="">
+                <img class="img-usuario-comentarios" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp68faZH32vhXRXIhKrdF5m_gQrbcjetcvNQ&s" alt="">
                 <div class="div-parrafos-comentarios">
                     <h1 class="titulo-usuario-cometario">Sofía Torres</h1>
                     <span class="parrafo-comentario">
@@ -441,6 +507,39 @@
         </div>
         {{-- cuarto comentario --}}
         <div class="tergeta-comentarios targetaComentario">
+            <div class="div-estrellas-comentarios" aria-label="Calificación de 5 sobre 5 estrellas">
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+
+                </div>
             <div class="div-img-parrafos">
 
                 <img class="img-usuario-comentarios"
