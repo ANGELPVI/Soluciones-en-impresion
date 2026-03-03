@@ -73,7 +73,8 @@
     @apply col-span-12 text-center text-titulos text-4xl font-titulo p-10;
 }
 .tergeta-comentarios{
-    @apply col-span-3 w-full h-auto bg-white rounded-lg text-center;
+    @apply col-span-12 w-full h-auto bg-white rounded-lg text-center
+            lg:col-span-3;
 }
 .div-img-parrafos{
     @apply grid grid-cols-12 w-full justify-items-center content-center;
@@ -92,7 +93,7 @@
 }
 
 .div-estrellas-comentarios{
-    @apply inline-flex space-x-1 justify-center p-5 ;
+    @apply w-full inline-flex space-x-1 justify-center p-5 ;
 }
 .estrellas-comentarios{
     @apply w-12 h-12 fill-current text-yellow-400;
