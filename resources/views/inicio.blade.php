@@ -350,10 +350,159 @@
     </div>
 
 
+    {{-- Sección de comentarios --}}
+<div class="div-principal-comentarios">
+    <h1 class="title-comentarios">Lo más importante para nosotros</h1>
+
+    {{-- Contenedor que oculta el desborde --}}
+    <div class="viewport-comentarios overflow-hidden w-full">
+        
+        {{-- EL SLIDER: Este es el que se mueve con JS --}}
+        <div id="review-slider" class="contenedor-slider-grupos">
+            
+            {{-- Tarjeta 1 --}}
+            <div class="tergeta-comentarios">
+                <div class="div-estrellas-comentarios">
+                    @for($i=0; $i<5; $i++)
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                    @endfor
+                </div>
+                <div class="div-img-parrafos">
+                    <img class="img-usuario-comentarios" src="https://static1.abc.es/media/bienestar/2021/09/09/personas-magneticas-1-kdVD--620x349@abc.jpg">
+                    <div class="div-parrafos-comentarios">
+                        <h1 class="titulo-usuario-cometario">Sergio García</h1>
+                        <span class="parrafo-comentario">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Tarjeta 2 --}}
+            <div class="tergeta-comentarios">
+                <div class="div-estrellas-comentarios">
+                    @for($i=0; $i<5; $i++)
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                    @endfor
+                </div>
+                <div class="div-img-parrafos">
+                    <img class="img-usuario-comentarios" src="https://estudiantes.ucontinental.edu.pe/wp-content/uploads/2020/09/Madurez-emocional-7.jpg">
+                    <div class="div-parrafos-comentarios">
+                        <h1 class="titulo-usuario-cometario">Reyna Nava</h1>
+                        <span class="parrafo-comentario">Consequatur quo omnis doloribus eos. Voluptate ab maiores sed eos.</span>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Tarjeta 3 --}}
+            <div class="tergeta-comentarios">
+                <div class="div-estrellas-comentarios">
+                    @for($i=0; $i<5; $i++)
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                    @endfor
+                </div>
+                <div class="div-img-parrafos">
+                    <img class="img-usuario-comentarios" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp68faZH32vhXRXIhKrdF5m_gQrbcjetcvNQ&s">
+                    <div class="div-parrafos-comentarios">
+                        <h1 class="titulo-usuario-cometario">Sofía Torres</h1>
+                        <span class="parrafo-comentario">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Tarjeta 4 --}}
+            <div class="tergeta-comentarios">
+                <div class="div-estrellas-comentarios">
+                    @for($i=0; $i<5; $i++)
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                    @endfor
+                </div>
+                <div class="div-img-parrafos">
+                    <img class="img-usuario-comentarios" src="https://cdn.pixabay.com/photo/2018/05/01/16/19/young-man-3366016_960_720.jpg">
+                    <div class="div-parrafos-comentarios">
+                        <h1 class="titulo-usuario-cometario">Carlos Sánchez</h1>
+                        <span class="parrafo-comentario">Consequatur quo omnis doloribus eos. Excelente calidad.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tergeta-comentarios">
+                <div class="div-estrellas-comentarios">
+                    @for($i=0; $i<5; $i++)
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                    @endfor
+                </div>
+                <div class="div-img-parrafos">
+                    <img class="img-usuario-comentarios" src="https://cdn.pixabay.com/photo/2018/05/01/16/19/young-man-3366016_960_720.jpg">
+                    <div class="div-parrafos-comentarios">
+                        <h1 class="titulo-usuario-cometario">Carlos Sánchez</h1>
+                        <span class="parrafo-comentario">Consequatur quo omnis doloribus eos. Excelente calidad.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tergeta-comentarios">
+                <div class="div-estrellas-comentarios">
+                    @for($i=0; $i<5; $i++)
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                    @endfor
+                </div>
+                <div class="div-img-parrafos">
+                    <img class="img-usuario-comentarios" src="https://cdn.pixabay.com/photo/2018/05/01/16/19/young-man-3366016_960_720.jpg">
+                    <div class="div-parrafos-comentarios">
+                        <h1 class="titulo-usuario-cometario">Carlos Sánchez</h1>
+                        <span class="parrafo-comentario">Consequatur quo omnis doloribus eos. Excelente calidad.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tergeta-comentarios">
+                <div class="div-estrellas-comentarios">
+                    @for($i=0; $i<5; $i++)
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                    @endfor
+                </div>
+                <div class="div-img-parrafos">
+                    <img class="img-usuario-comentarios" src="https://cdn.pixabay.com/photo/2018/05/01/16/19/young-man-3366016_960_720.jpg">
+                    <div class="div-parrafos-comentarios">
+                        <h1 class="titulo-usuario-cometario">Carlos Sánchez</h1>
+                        <span class="parrafo-comentario">Consequatur quo omnis doloribus eos. Excelente calidad.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    {{-- Botones --}}
+    <div class="flex justify-center gap-5 mt-10">
+        <button id="prev" class="px-6 py-2 bg-yellow-500 text-white rounded-full font-bold shadow-md hover:bg-yellow-600 transition">Anterior</button>
+        <button id="next" class="px-6 py-2 bg-yellow-500 text-white rounded-full font-bold shadow-md hover:bg-yellow-600 transition">Siguiente</button>
+    </div>
+</div>
+
+
+<script>
+    const slider = document.getElementById('review-slider');
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
+
+let index = 0;
+const totalGroups = 3; // Cambia esto según cuántos grupos de 4 tengas
+
+next.addEventListener('click', () => {
+    index = (index + 1) % totalGroups;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+});
+
+prev.addEventListener('click', () => {
+    index = (index - 1 + totalGroups) % totalGroups;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+});
+</script>
+
 
 
     {{-- Sesion de comentarios --}}
-    <div class="div-principal-comentarios">
+   <!-- <div class="div-principal-comentarios">
         <h1 class="title-comentarios">Los más importante para nosotros</h1>
         {{-- Primer comentarios --}}
         <div class="tergeta-comentarios targetaComentario">
@@ -553,5 +702,9 @@
 
             </div>
         </div>
-    </div>
+    </div>-->
+
+
+
+    
 @endsection
