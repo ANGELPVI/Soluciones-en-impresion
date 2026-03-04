@@ -361,17 +361,22 @@
         <div id="review-slider" class="contenedor-slider-grupos">
             
             {{-- Tarjeta 1 --}}
-            <div class="tergeta-comentarios">
-                <div class="div-estrellas-comentarios">
+            {{-- Metadata invisible para Google (Nombre de tu negocio) --}}
+            <div class="tergeta-comentarios" itemscope itemtype="https://schema.org/Review">
+                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/LocalBusiness">
+                    <meta itemprop="name" content="Soluciones en Impresión Zihuatanejo y Petatlán">
+                </div>
+                <div class="div-estrellas-comentarios" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="5">
                     @for($i=0; $i<5; $i++)
                     <svg viewBox="0 0 24 24" class="estrellas-comentarios"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
                     @endfor
                 </div>
                 <div class="div-img-parrafos">
-                    <img class="img-usuario-comentarios" src="https://static1.abc.es/media/bienestar/2021/09/09/personas-magneticas-1-kdVD--620x349@abc.jpg">
-                    <div class="div-parrafos-comentarios">
-                        <h1 class="titulo-usuario-cometario">Sergio García</h1>
-                        <span class="parrafo-comentario">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <img itemprop="image" class="img-usuario-comentarios" src="https://static1.abc.es/media/bienestar/2021/09/09/personas-magneticas-1-kdVD--620x349@abc.jpg">
+                    <div class="div-parrafos-comentarios" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <h1 class="titulo-usuario-cometario" itemprop="name">Sergio García</h1>
+                        <span class="parrafo-comentario" itemprop="reviewBody">Tenía un error de código en mi <strong>Konica Minolta Laser</strong> que nadie podía quitar. Me atendieron súper rápido y la dejaron como nueva. Se nota que son expertos en la marca. ¡Muy recomendados!</span>
                     </div>
                 </div>
             </div>
@@ -387,7 +392,7 @@
                     <img class="img-usuario-comentarios" src="https://estudiantes.ucontinental.edu.pe/wp-content/uploads/2020/09/Madurez-emocional-7.jpg">
                     <div class="div-parrafos-comentarios">
                         <h1 class="titulo-usuario-cometario">Reyna Nava</h1>
-                        <span class="parrafo-comentario">Consequatur quo omnis doloribus eos. Voluptate ab maiores sed eos.</span>
+                        <span class="parrafo-comentario">Excelente servicio para mi impresora <strong>Brother</strong>. Estaba manchando las hojas y me urgía para la oficina. Vinieron hasta <strong>Petatlán</strong> el mismo día y el costo de la reparación fue muy justo. La mejor opción en la zona.</span>
                     </div>
                 </div>
             </div>
@@ -403,7 +408,7 @@
                     <img class="img-usuario-comentarios" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp68faZH32vhXRXIhKrdF5m_gQrbcjetcvNQ&s">
                     <div class="div-parrafos-comentarios">
                         <h1 class="titulo-usuario-cometario">Sofía Torres</h1>
-                        <span class="parrafo-comentario">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        <span class="parrafo-comentario">Compré consumibles y tóner para mi negocio y el precio es inbatible, mucho más barato que en otros lados. Además, me dieron garantía por escrito en el material. Servicio de confianza.</span>
                     </div>
                 </div>
             </div>
@@ -419,7 +424,7 @@
                     <img class="img-usuario-comentarios" src="https://cdn.pixabay.com/photo/2018/05/01/16/19/young-man-3366016_960_720.jpg">
                     <div class="div-parrafos-comentarios">
                         <h1 class="titulo-usuario-cometario">Carlos Sánchez</h1>
-                        <span class="parrafo-comentario">Consequatur quo omnis doloribus eos. Excelente calidad.</span>
+                        <span class="parrafo-comentario">Mi computadora de escritorio estaba lentísima y no encendía. La llevaron a revisión y en menos de 24 horas ya estaba lista. Me explicaron todo el proceso y la atención fue muy amable. ¡Gracias por la rapidez!</span>
                     </div>
                 </div>
             </div>
@@ -431,10 +436,10 @@
                     @endfor
                 </div>
                 <div class="div-img-parrafos">
-                    <img class="img-usuario-comentarios" src="https://cdn.pixabay.com/photo/2018/05/01/16/19/young-man-3366016_960_720.jpg">
+                    <img class="img-usuario-comentarios" src="https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg">
                     <div class="div-parrafos-comentarios">
-                        <h1 class="titulo-usuario-cometario">Carlos Sánchez</h1>
-                        <span class="parrafo-comentario">Consequatur quo omnis doloribus eos. Excelente calidad.</span>
+                        <h1 class="titulo-usuario-cometario">Alejandro Vargas</h1>
+                        <span class="parrafo-comentario">Si buscan reparación de impresoras de inyección de tinta, este es el lugar. Resolvieron un problema de cabezales tapados que pensé que no tenía solución. El servicio a domicilio hasta <strong>Petatlán</strong> funciona de maravilla.</span>
                     </div>
                 </div>
             </div>
@@ -446,10 +451,10 @@
                     @endfor
                 </div>
                 <div class="div-img-parrafos">
-                    <img class="img-usuario-comentarios" src="https://cdn.pixabay.com/photo/2018/05/01/16/19/young-man-3366016_960_720.jpg">
+                    <img class="img-usuario-comentarios" src="https://images.pexels.com/photos/106567/pexels-photo-106567.jpeg">
                     <div class="div-parrafos-comentarios">
-                        <h1 class="titulo-usuario-cometario">Carlos Sánchez</h1>
-                        <span class="parrafo-comentario">Consequatur quo omnis doloribus eos. Excelente calidad.</span>
+                        <h1 class="titulo-usuario-cometario">Mariana Castro</h1>
+                        <span class="parrafo-comentario">Lo que más me gusta es la garantía que nos avala. Tuve un detalle con un equipo de cómputo después de la entrega y lo solucionaron de inmediato sin costo extra. Son profesionales y muy honestos.</span>
                     </div>
                 </div>
             </div>
@@ -461,10 +466,55 @@
                     @endfor
                 </div>
                 <div class="div-img-parrafos">
-                    <img class="img-usuario-comentarios" src="https://cdn.pixabay.com/photo/2018/05/01/16/19/young-man-3366016_960_720.jpg">
+                    <img class="img-usuario-comentarios" src="https://images.pexels.com/photos/1181605/pexels-photo-1181605.jpeg">
                     <div class="div-parrafos-comentarios">
-                        <h1 class="titulo-usuario-cometario">Carlos Sánchez</h1>
-                        <span class="parrafo-comentario">Consequatur quo omnis doloribus eos. Excelente calidad.</span>
+                        <h1 class="titulo-usuario-cometario">Camila Ortiz</h1>
+                        <span class="parrafo-comentario">Llevo tiempo comprando mis tintas y materiales aquí. Siempre tienen stock de lo que necesito y la atención es personalizada. Se nota que conocen bien los equipos <strong>Konica Minolta</strong> y <strong>Brother</strong>.</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="tergeta-comentarios">
+                <div class="div-estrellas-comentarios">
+                    @for($i=0; $i<5; $i++)
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                    @endfor
+                </div>
+                <div class="div-img-parrafos">
+                    <img class="img-usuario-comentarios" src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg">
+                    <div class="div-parrafos-comentarios">
+                        <h1 class="titulo-usuario-cometario">Javier Mendoza</h1>
+                        <span class="parrafo-comentario">Súper recomendados para el mantenimiento de impresoras de inyección de tinta y <strong>Brother</strong>. Vinieron hasta <strong>Petatlán</strong> a revisar mis equipos de cómputo y me ahorré una fortuna en consumibles gracias a sus precios de mayoreo. La atención es inmediata y muy profesional.</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="tergeta-comentarios">
+                <div class="div-estrellas-comentarios">
+                    @for($i=0; $i<5; $i++)
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                    @endfor
+                </div>
+                <div class="div-img-parrafos">
+                    <img class="img-usuario-comentarios" src="https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg">
+                    <div class="div-parrafos-comentarios">
+                        <h1 class="titulo-usuario-cometario">Sofía Herrera</h1>
+                        <span class="parrafo-comentario">Súper eficientes con el mantenimiento preventivo de laptops. Mis equipos de cómputo ahora vuelan. Me ahorré mucho dinero comparado con comprar equipos nuevos. ¡Atención de primera en <strong>Zihuatanejo</strong> y <strong>Petatlán</strong>!</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="tergeta-comentarios">
+                <div class="div-estrellas-comentarios">
+                    @for($i=0; $i<5; $i++)
+                    <svg viewBox="0 0 24 24" class="estrellas-comentarios"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                    @endfor
+                </div>
+                <div class="div-img-parrafos">
+                    <img class="img-usuario-comentarios" src="https://images.pexels.com/photos/7677827/pexels-photo-7677827.jpeg">
+                    <div class="div-parrafos-comentarios">
+                        <h1 class="titulo-usuario-cometario">Matilde Epinoza</h1>
+                        <span class="parrafo-comentario">Increíble el soporte técnico para mi <strong>Konica Minolta</strong>. En otros lados me decían que ya no tenía arreglo, pero aquí la repararon súper rápido y con refacciones originales. El precio del servicio fue muy honesto y me dieron una garantía que me dejó muy tranquila. ¡Los mejores en <strong>Zihuatanejo</strong>!</span>
                     </div>
                 </div>
             </div>
@@ -479,231 +529,7 @@
     </div>
 </div>
 
-
-<script>
-    const slider = document.getElementById('review-slider');
-const prev = document.getElementById('prev');
-const next = document.getElementById('next');
-
-let index = 0;
-const totalGroups = 3; // Cambia esto según cuántos grupos de 4 tengas
-
-next.addEventListener('click', () => {
-    index = (index + 1) % totalGroups;
-    slider.style.transform = `translateX(-${index * 100}%)`;
-});
-
-prev.addEventListener('click', () => {
-    index = (index - 1 + totalGroups) % totalGroups;
-    slider.style.transform = `translateX(-${index * 100}%)`;
-});
-</script>
-
-
-
-    {{-- Sesion de comentarios --}}
-   <!-- <div class="div-principal-comentarios">
-        <h1 class="title-comentarios">Los más importante para nosotros</h1>
-        {{-- Primer comentarios --}}
-        <div class="tergeta-comentarios targetaComentario">
-            <div class="div-estrellas-comentarios" aria-label="Calificación de 5 sobre 5 estrellas">
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                </div>
-            <div class="div-img-parrafos">
-
-                <img class="img-usuario-comentarios"
-                    src="https://static1.abc.es/media/bienestar/2021/09/09/personas-magneticas-1-kdVD--620x349@abc.jpg"
-                    alt="">
-
-                <div class="div-parrafos-comentarios">
-                    <h1 class="titulo-usuario-cometario">Sergio García</h1>
-                    <span class="parrafo-comentario">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo omnis doloribus eos.
-                    </span>
-                </div>
-
-            </div>
-        </div>
-
-        {{-- Segundo comentario --}}
-        <div class="tergeta-comentarios targetaComentario">
-            <div class="div-estrellas-comentarios" aria-label="Calificación de 5 sobre 5 estrellas">
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                </div>
-            <div class="div-img-parrafos">
-
-                <img class="img-usuario-comentarios"
-                    src="https://estudiantes.ucontinental.edu.pe/wp-content/uploads/2020/09/Madurez-emocional-7.jpg"
-                    alt="">
-                <div class="div-parrafos-comentarios">
-                    <h1 class="titulo-usuario-cometario">Reyna Nava</h1>
-                    <span class="parrafo-comentario">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo omnis doloribus eos.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia id doloribus reiciendis nostrum?
-                        Voluptate ab maiores sed eos, mollitia, alias aspernatur officiis veniam iste optio dolorem nihil
-                        sit ipsum? Officia.
-                    </span>
-                </div>
-
-            </div>
-        </div>
-        {{-- tercer comentario --}}
-        <div class="tergeta-comentarios targetaComentario">
-            <div class="div-estrellas-comentarios" aria-label="Calificación de 5 sobre 5 estrellas">
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                </div>
-            <div class="div-img-parrafos">
-
-                <img class="img-usuario-comentarios" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp68faZH32vhXRXIhKrdF5m_gQrbcjetcvNQ&s" alt="">
-                <div class="div-parrafos-comentarios">
-                    <h1 class="titulo-usuario-cometario">Sofía Torres</h1>
-                    <span class="parrafo-comentario">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo omnis doloribus eos.
-                    </span>
-                </div>
-
-            </div>
-        </div>
-        {{-- cuarto comentario --}}
-        <div class="tergeta-comentarios targetaComentario">
-            <div class="div-estrellas-comentarios" aria-label="Calificación de 5 sobre 5 estrellas">
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                    <svg viewBox="0 0 24 24" class="estrellas-comentarios">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-
-                </div>
-            <div class="div-img-parrafos">
-
-                <img class="img-usuario-comentarios"
-                    src="https://cdn.pixabay.com/photo/2018/05/01/16/19/young-man-3366016_960_720.jpg" alt="">
-                <div class="div-parrafos-comentarios">
-                    <h1 class="titulo-usuario-cometario">Carlos Sánchez</h1>
-                    <span class="parrafo-comentario">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo omnis doloribus eos.
-                    </span>
-                </div>
-
-            </div>
-        </div>
-    </div>-->
-
+   
 
 
     
