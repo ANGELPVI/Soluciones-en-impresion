@@ -442,7 +442,7 @@
                 'nombre' => 'Sofía Herrera',
                 'img' => 'https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg',
                 'texto' =>
-                    'parrafo-comentario">Súper eficientes con el mantenimiento preventivo de laptops. Mis equipos de cómputo ahora vuelan. Me ahorré mucho dinero comparado con comprar equipos nuevos. ¡Atención de primera en <strong>Zihuatanejo</strong> y <strong>Petatlán</strong>!</span>',
+                    'Súper eficientes con el mantenimiento preventivo de laptops. Mis equipos de cómputo ahora vuelan. Me ahorré mucho dinero comparado con comprar equipos nuevos. ¡Atención de primera en <strong>Zihuatanejo</strong> y <strong>Petatlán</strong>!</span>',
             ],
             
              [
