@@ -65,5 +65,21 @@ document.addEventListener('DOMContentLoaded', function () {
     showImage(current);
   };
 });
+
+//Carucel de botones de la seccion de comentarios
+var slider = document.getElementById('review-slider');
+var prev = document.getElementById('prev');
+var next = document.getElementById('next');
+var index = 0;
+var totalGroups = 3; // Cambia esto según cuántos grupos de 4 tengas
+
+next.addEventListener('click', function () {
+  index = (index + 1) % totalGroups;
+  slider.style.transform = "translateX(-".concat(index * 100, "%)");
+});
+prev.addEventListener('click', function () {
+  index = (index - 1 + totalGroups) % totalGroups;
+  slider.style.transform = "translateX(-".concat(index * 100, "%)");
+});
 /******/ })()
 ;

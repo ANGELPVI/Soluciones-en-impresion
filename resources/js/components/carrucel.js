@@ -67,3 +67,21 @@ document.addEventListener('DOMContentLoaded', () => {
         showImage(current);
     };
 });
+
+//Carucel de botones de la seccion de comentarios
+   const slider = document.getElementById('review-slider');
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
+
+let index = 0;
+const totalGroups = 3; // Cambia esto según cuántos grupos de 4 tengas
+
+next.addEventListener('click', () => {
+    index = (index + 1) % totalGroups;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+});
+
+prev.addEventListener('click', () => {
+    index = (index - 1 + totalGroups) % totalGroups;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+});
