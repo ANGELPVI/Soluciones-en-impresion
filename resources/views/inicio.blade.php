@@ -280,13 +280,13 @@
 
             <div class="div-contenido-targeta">
 
-                <h4 class="header-targeta">PLAN OFICINA</h4>
-                <small class="col-span-6 text-ms text-gray-500 mt-3">Se recomienda para oficinas de 5 a 10</small>
+                <h4 class="header-targeta">PLAN EMPRENDE</h4>
+                <small class="col-span-6 text-ms text-gray-500 mt-3">Este plan está diseñado para quienes necesitan una herramienta confiable que no ocupe mucho espacio pero que sea guerrera para el día a día.</small>
                 <h3 class="titulo-precio-targeta">$1,800 MX</h3>
                 <span class="targera-timpo-renta">Al mes</span>
                 <ul class="targeta-lista-carateristicas">
-                    <li class="pt-2">Impresora Konica minolta</li>
-                    <li class="pt-2">300 copias-impresiones color</li>
+                    <li class="pt-2"><strong>Perfil:</strong> Papelerías locales, consultorios o despachos con 1 a 3 usuarios.</li>
+                    <li class="pt-2"><strong>Equipo sugerido:</strong> Multifuncionales Brother de alta eficiencia.</li>
                     <li class="pt-2">8,000 copias-impresione blanco y negro</li>
                     <li class="pt-2">Escanner gratis</li>
                     <li class="pt-2">Refacciones por averio gratis</li>
@@ -303,7 +303,7 @@
         <div class="targeta-renta">
             <div class="div-contenido-targeta">
 
-                <h4 class="header-targeta-segundo-plan">PLAN OFICINA</h4>
+                <h4 class="header-targeta-segundo-plan">PLAN CORPORATIVO</h4>
                 <small class="col-span-6 text-ms text-gray-500 mt-3">Se recomienda para oficinas de 5 a 10</small>
                 <h3 class="titulo-precio-targeta">$1,800 MX</h3>
                 <span class="targera-timpo-renta">Al mes</span>
@@ -328,7 +328,7 @@
         <div class="targeta-renta">
             <div class="div-contenido-targeta">
 
-                <h4 class="heder-tercera-renta">PLAN OFICINA</h4>
+                <h4 class="heder-tercera-renta">PLAN PRO-PRINT</h4>
                 <small class="col-span-6 text-ms text-gray-500 mt-3">Se recomienda para oficinas de 5 a 10</small>
                 <h3 class="titulo-precio-targeta">$1,800 MX</h3>
                 <span class="targera-timpo-renta">Al mes</span>
@@ -348,43 +348,6 @@
         </div>
 
     </div>
-
-
-    {{-- Sección de comentarios --}}
-    <!--!<div class="div-principal-comentarios">
-            <h1 class="title-comentarios">Lo más importante para nosotros</h1>
-
-            {{-- Contenedor que oculta el desborde --}}
-            <div class="viewport-comentarios overflow-hidden w-full">
-                
-                {{-- EL SLIDER: Este es el que se mueve con JS --}}
-                <div id="review-slider" class="contenedor-slider-grupos">
-
-
-                     <div class="tergeta-comentarios">
-                        <div class="div-estrellas-comentarios">
-                            @for ($i = 0; $i < 5; $i++)
-    <svg viewBox="0 0 24 24" class="estrellas-comentarios"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
-    @endfor
-                        </div>
-                        <div class="div-img-parrafos">
-                            <img class="img-usuario-comentarios" src="https://images.pexels.com/photos/7677827/pexels-photo-7677827.jpeg">
-                            <div class="div-parrafos-comentarios">
-                                <h1 class="titulo-usuario-cometario">Matilde Epinoza</h1>
-                                <span class="parrafo-comentario">Increíble el soporte técnico para mi <strong>Konica Minolta</strong>. En otros lados me decían que ya no tenía arreglo, pero aquí la repararon súper rápido y con refacciones originales. El precio del servicio fue muy honesto y me dieron una garantía que me dejó muy tranquila. ¡Los mejores en <strong>Zihuatanejo</strong>!</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            {{-- Botones --}}
-            <div class="flex justify-center gap-5 mt-10">
-                <button id="prev" class="px-6 py-2 bg-yellow-500 text-white rounded-full font-bold shadow-md hover:bg-yellow-600 transition">Anterior</button>
-                <button id="next" class="px-6 py-2 bg-yellow-500 text-white rounded-full font-bold shadow-md hover:bg-yellow-600 transition">Siguiente</button>
-            </div>
-        </div>-->
 
 
     @php
