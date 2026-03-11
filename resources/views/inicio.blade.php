@@ -285,9 +285,9 @@
                 <h3 class="titulo-precio-targeta">$1,800 MX</h3>
                 <span class="targera-timpo-renta">Al mes</span>
                 <ul class="targeta-lista-carateristicas">
-                    <li class="pt-2"><strong>Perfil:</strong> Papelerías locales, consultorios o despachos con 1 a 3 usuarios.</li>
-                    <li class="pt-2"><strong>Equipo sugerido:</strong> Multifuncionales Brother de alta eficiencia.</li>
-                    <li class="pt-2">8,000 copias-impresione blanco y negro</li>
+                    <li class="pt-2">Papelerías locales, consultorios o despachos con 1 a 3 usuarios.</li>
+                    <li class="pt-2">Multifuncionales Brother de alta eficiencia.</li>
+                    <li class="pt-2">Renta mensual fija con un paquete básico de copias/impresiones.</li>
                     <li class="pt-2">Escanner gratis</li>
                     <li class="pt-2">Refacciones por averio gratis</li>
                     <li class="pt-2">consumibles gratis</li>
@@ -304,14 +304,14 @@
             <div class="div-contenido-targeta">
 
                 <h4 class="header-targeta-segundo-plan">PLAN CORPORATIVO</h4>
-                <small class="col-span-6 text-ms text-gray-500 mt-3">Se recomienda para oficinas de 5 a 10</small>
+                <small class="col-span-6 text-ms text-gray-500 mt-3">Enfocado en la productividad y la gestión de documentos de manera profesional y rápida.</small>
                 <h3 class="titulo-precio-targeta">$1,800 MX</h3>
                 <span class="targera-timpo-renta">Al mes</span>
                 <div class="col-span-6 w-3/4 text-center bg-red-500 rounded-lg text-md text-white font-titulo">Más Vendido
                 </div>
                 <ul class="targeta-lista-carateristicas">
-                    <li class="pt-2">Impresora Konica minolta</li>
-                    <li class="pt-2">300 copias-impresiones color</li>
+                    <li class="pt-2">Oficinas administrativas, agencias de seguros o constructoras con flujo constante.</li>
+                    <li class="pt-2">Konica Minolta de gama media</li>
                     <li class="pt-2">8,000 copias-impresione blanco y negro</li>
                     <li class="pt-2">Escanner gratis</li>
                     <li class="pt-2">Refacciones por averio gratis</li>
