@@ -46,8 +46,11 @@
 .targera-timpo-renta{
     @apply col-span-6 text-sm text-gray-500;
 }
+.encabezado-descripcion-renta{
+    @apply col-span-6 text-sm text-gray-500 mt-3 text-center p-5;
+}
 .targeta-lista-carateristicas{
-    @apply col-span-6 font-descrip flex flex-col ml-12 mt-2 text-sm; 
+    @apply col-span-6 font-descrip flex flex-col ml-12 mt-2 text-sm p-2; 
 }
 .button-primera-renta{
     @apply col-span-6 hover:bg-green-400 w-3/4 rounded-full  py-1 px-6 bg-green-500 mb-3 mt-5 font-titulo text-sm;

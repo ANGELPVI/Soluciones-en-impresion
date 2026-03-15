@@ -281,7 +281,7 @@
             <div class="div-contenido-targeta">
 
                 <h4 class="header-targeta">PLAN EMPRENDE</h4>
-                <small class="col-span-6 text-ms text-gray-500 mt-3 text-center p-2">Este plan está diseñado para quienes necesitan una herramienta confiable que no ocupe mucho espacio pero que sea guerrera para el día a día.</small>
+                <small class="encabezado-descripcion-renta">Este plan está diseñado para quienes necesitan una herramienta confiable que no ocupe mucho espacio pero que sea guerrera para el día a día.</small>
                 <h3 class="titulo-precio-targeta">$1,250 MX</h3>
                 <span class="targera-timpo-renta">Al mes</span>
                 <ul class="targeta-lista-carateristicas">
@@ -304,7 +304,7 @@
             <div class="div-contenido-targeta">
 
                 <h4 class="header-targeta-segundo-plan">PLAN CORPORATIVO</h4>
-                <small class="col-span-6 text-ms text-gray-500 mt-3 text-center p-2">Enfocado en la productividad y la gestión de documentos de manera profesional y rápida.</small>
+                <small class="encabezado-descripcion-renta">Enfocado en la productividad y la gestión de documentos de manera profesional y rápida.</small>
                 <h3 class="titulo-precio-targeta">$1,800 MX</h3>
                 <span class="targera-timpo-renta">Al mes</span>
                 <div class="col-span-6 w-3/4 text-center bg-red-500 rounded-lg text-md text-white font-titulo">Más Vendido
@@ -329,10 +329,10 @@
             <div class="div-contenido-targeta">
 
                 <h4 class="heder-tercera-renta">PLAN PRO-PRINT</h4>
-                <small class="col-span-6 text-ms text-gray-500 mt-3 text-center p-2">Pensado para el alto rendimiento, donde la calidad del color y la velocidad de salida son críticas.</small>
+                <small class="encabezado-descripcion-renta">Pensado para el alto rendimiento, donde la calidad del color y la velocidad de salida son críticas.</small>
                 <h3 class="titulo-precio-targeta">$4,200 MX</h3>
                 <span class="targera-timpo-renta">Al mes</span>
-                <ul class="targeta-lista-carateristicas text-center p-2">
+                <ul class="targeta-lista-carateristicas">
                     <li class="pt-2">Imprentas digitales, despachos de diseño, notarías o centros de copiado masivo.</li>
                     <li class="pt-2">Equipos Konica Minolta Bizhub de alto volumen.</li>
                     <li class="pt-2">Renta mensual fija con un paquete avanzado de copias/impresiones.</li>
