@@ -224,7 +224,7 @@
 
 
 
-    {{-- Sesión de las plataformas conpatibles --}}
+    {{-- Sesión de las plataformas compatibles --}}
     <div class="div-principal">
         {{-- Titulo de la sesion --}}
         <h1 class="titulo-plataforma">Compatible con todas tus plataformas</h1>
@@ -234,7 +234,7 @@
                 <p class="col-span-2"><i class="fab fa-windows text-9xl text-blue-500 w-full text-center"></i></p>
                 <div class="div-parrafos">
                     <h1 class="titulo-targeta">Windows</h1>
-                    <p class="parrafo-targeta">Lorem ipsum dolor, sit amet consectetur.</p>
+                    <p class="parrafo-targeta">Drivers nativos y software de gestión avanzado. Compatible con todos los sistemas Windows empresariales y herramientas de ofimática.</p>
                 </div>
             </div>
         </div>
@@ -246,7 +246,7 @@
                 </p>
                 <div class="div-parrafos">
                     <h1 class="titulo-targeta">Android</h1>
-                    <p class="parrafo-targeta">Lorem ipsum dolor, sit amet consectetur.</p>
+                    <p class="parrafo-targeta">Imprime desde tu teléfono o tablet con nuestra aplicación móvil. Escanea documentos y envíalos directamente a tu dispositivo.</p>
                 </div>
             </div>
         </div>
@@ -256,7 +256,7 @@
                 <p class="col-span-2"><i class="fab fa-linux text-9xl text-gray-500 w-full text-center"></i></p>
                 <div class="div-parrafos">
                     <h1 class="titulo-targeta">Linux</h1>
-                    <p class="parrafo-targeta">Lorem ipsum dolor, sit amet consectetur.</p>
+                    <p class="parrafo-targeta">Soporte completo en servidores Linux. Integración perfecta en entornos empresariales de red con gestión centralizada de impresoras.</p>
                 </div>
             </div>
         </div>
@@ -266,7 +266,7 @@
                 <p class="col-span-2"><i class="fab fa-apple text-9xl text-gray-600 w-full text-center"></i></p>
                 <div class="div-parrafos">
                     <h1 class="titulo-targeta">Apple</h1>
-                    <p class="parrafo-targeta">Lorem ipsum dolor, sit amet consectetur.</p>
+                    <p class="parrafo-targeta">Compatible con AirPrint. Imprime desde Mac, iPad e iPhone sin necesidad de configuración adicional. Sincronización perfecta con tu ecosistema Apple.</p>
                 </div>
             </div>
         </div>

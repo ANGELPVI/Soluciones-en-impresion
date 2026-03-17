@@ -1,14 +1,14 @@
 /* sesion de las plataformas compartidas */
 .div-principal{
-    @apply grid grid-cols-1 gap-2 w-full h-auto justify-items-center content-center
-    lg:grid-cols-2
+    @apply grid grid-cols-1 gap-4 w-full h-auto justify-items-center content-center max-w-6xl mx-auto px-4
+    lg:grid-cols-2 lg:gap-20
 }
 .titulo-plataforma{
     @apply col-span-1 text-center text-titulos text-4xl font-titulo
     lg:col-span-2
 }
 .div-targeta{
-    @apply   lg:col-span-1 w-96 h-auto text-black rounded-lg mt-10 transition duration-700 ease-in-out transform hover:-translate-y-6
+    @apply lg:col-span-1 w-full h-auto text-black rounded-lg mt-10 transition duration-700 ease-in-out transform hover:-translate-y-6
 }
 .div-secundario-targetas{
     @apply grid grid-cols-4 p-4
