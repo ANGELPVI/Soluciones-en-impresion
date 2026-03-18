@@ -697,17 +697,25 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
 }
 /* sesion de las plataformas compartidas */
 .div-principal {
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     height: auto;
     width: 100%;
+    max-width: 72rem;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     align-content: center;
     justify-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 @media (min-width: 1024px) {
     .div-principal {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .div-principal {
+        gap: 5rem;
     }
 }
 .titulo-plataforma {
@@ -727,7 +735,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
 .div-targeta {
     margin-top: 2.5rem;
     height: auto;
-    width: 24rem;
+    width: 100%;
     transform: var(--tw-transform);
     border-radius: 0.5rem;
     --tw-text-opacity: 1;
@@ -2955,6 +2963,9 @@ video {
 .m-auto {
 	margin: auto;
 }
+.m-32 {
+	margin: 8rem;
+}
 .mx-auto {
 	margin-left: auto;
 	margin-right: auto;
@@ -2965,9 +2976,6 @@ video {
 }
 .mt-8 {
 	margin-top: 2rem;
-}
-.mt-3 {
-	margin-top: 0.75rem;
 }
 .mt-10 {
 	margin-top: 2.5rem;
@@ -2980,6 +2988,9 @@ video {
 }
 .-ml-36 {
 	margin-left: -9rem;
+}
+.mt-3 {
+	margin-top: 0.75rem;
 }
 .mt-2 {
 	margin-top: 0.5rem;
@@ -3164,6 +3175,15 @@ video {
 .max-w-2xl {
 	max-width: 42rem;
 }
+.max-w-6xl {
+	max-width: 72rem;
+}
+.max-w-xs {
+	max-width: 20rem;
+}
+.max-w-full {
+	max-width: 100%;
+}
 .flex-1 {
 	flex: 1 1 0%;
 }
@@ -3236,6 +3256,9 @@ video {
 }
 .gap-7 {
 	gap: 1.75rem;
+}
+.gap-20 {
+	gap: 5rem;
 }
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
 	--tw-space-y-reverse: 0;
@@ -3388,9 +3411,6 @@ video {
 .p-2 {
 	padding: 0.5rem;
 }
-.p-5 {
-	padding: 1.25rem;
-}
 .p-3 {
 	padding: 0.75rem;
 }
@@ -3399,6 +3419,9 @@ video {
 }
 .p-4 {
 	padding: 1rem;
+}
+.p-5 {
+	padding: 1.25rem;
 }
 .p-10 {
 	padding: 2.5rem;
@@ -3414,6 +3437,9 @@ video {
 }
 .p-7 {
 	padding: 1.75rem;
+}
+.p-32 {
+	padding: 8rem;
 }
 .px-6 {
 	padding-left: 1.5rem;
@@ -3895,6 +3921,14 @@ video {
 
 	.lg\:grid-cols-12 {
 		grid-template-columns: repeat(12, minmax(0, 1fr));
+	}
+
+	.lg\:gap-4 {
+		gap: 1rem;
+	}
+
+	.lg\:gap-20 {
+		gap: 5rem;
 	}
 
 	.lg\:px-8 {
