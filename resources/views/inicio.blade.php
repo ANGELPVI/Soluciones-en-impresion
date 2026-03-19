@@ -11,7 +11,8 @@
             calidad para tu empresa o negocio.
         </p>
 
-        <button class="button-header botones ">Cotizar Ahora</button>
+       <a href="https://wa.me/527555582732" title="WhatsApp" target="_blank" rel="noopener"><button class="button-header botones ">Cotizar Ahora</button></a>
+
     </div>
 
     {{-- Seccion de las empresas --}}
