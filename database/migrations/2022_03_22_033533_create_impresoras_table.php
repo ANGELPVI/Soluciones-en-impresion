@@ -31,8 +31,8 @@ class CreateImpresorasTable extends Migration
             $table->string('marca',50);
             $table->string('img',255);
             $table->string('descripcion');
-            $table->double('presio',$precision = 9, $scale = 2);
-            $table->string('stock');
+            $table->double('precio',$precision = 9, $scale = 2);
+            $table->integer('stock');
             $table->unsignedBigInteger('impresoraId');
             $table->foreign('impresoraId')->references('id')->on('impresoras');
             $table->timestamps();
