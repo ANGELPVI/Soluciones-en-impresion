@@ -114,9 +114,6 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
 .targetaVentaimpresora{
     box-shadow: 10px 10px 10px rgba(0,0,0,0.25);
 }
-.imgImpresoras{
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.26);
-}
 
 .nav-bar{
     display: flex;
@@ -1427,7 +1424,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
 }
 /*TARJETA DE PRECENTACION DE LAS IMPRESORAS*/
 /*Contenedor padre de la targeta de las impresoras*/
-.cotenedorPadre {
+.cotenedorPadre{
     margin: auto;
     margin-top: 2.5rem;
     display: grid;
@@ -1436,46 +1433,49 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-items: center;
     gap: 1rem;
-    padding: 1rem
+    padding: 1rem;
 }
 /*Contenedor de la imagen de la impresora*/
-.contenedorImagen {
+.contenedorImagen{
     grid-column: span 1 / span 1;
     margin-top: 1.25rem;
-    height: auto;
     width: 100%;
     border-radius: 0.5rem;
     --tw-bg-opacity: 1;
-    background-color: rgba(255, 255, 255, var(--tw-bg-opacity))
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
 }
+.imgImpresoras{
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.26); width: 400px; height: 400px; -o-object-fit: cover; object-fit: cover; border-radius: 0.5rem;
+}
+
 /*Contenedor del precio*/
-.contenedorPrecio {
+.contenedorPrecio{
     margin-top: 1.5rem;
-    text-align: center
+    text-align: center;
 }
 /*Texto de el precio*/
-.textoPrecio {
+.textoPrecio{
     font-family: "Calistoga", cursive;
     font-size: 1.875rem;
-    line-height: 2.25rem
+    line-height: 2.25rem;
 }
 /*Texto del modelo de la impresora*/
-.textoModelo {
+.textoModelo{
     font-family: "Calistoga", cursive;
     font-size: 1.25rem;
     line-height: 1.75rem;
     font-size: 1.125rem;
-    line-height: 1.75rem
+    line-height: 1.75rem;
 }
 /*Texto de la descripsion*/
-.textoDescripcion {
+.textoDescripcion{
     padding: 0.75rem;
     text-align: left;
     font-family: "Open Sans", sans-serif;
     font-size: 0.875rem;
     line-height: 1.25rem;
     --tw-text-opacity: 1;
-    color: rgba(101, 99, 99, var(--tw-text-opacity))
+    color: rgba(101, 99, 99, var(--tw-text-opacity));
 }
 /* Estilos para la página de Política de Garantía */
 .garantia-container {
@@ -3355,6 +3355,10 @@ video {
 .bg-green-400 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(52, 211, 153, var(--tw-bg-opacity));
+}
+.bg-red-800 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(153, 27, 27, var(--tw-bg-opacity));
 }
 .bg-opacity-80 {
 	--tw-bg-opacity: 0.8;
