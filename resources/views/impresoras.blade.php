@@ -1,24 +1,21 @@
 @extends('welcome')
 
-@section('sesion')    
+@section('sesion')
     <div class="cotenedorPadre">
         @foreach ($impresoras as $item)
-
             <div class="contenedorImagen targetaVentaimpresora">
-                <img class="imgImpresoras" src="{{$item->img}}" 
-                alt="" >
+                <img class="imgImpresoras" src="{{ $item->img }}" alt="">
                 <div class="contenedorPrecio">
-                    <h3 class="textoPrecio">${{$item->precio}}</h3>
-                    <h5 class="textoModelo"><span>{{$item->marca}} </span>{{$item->modelo}}</h5>
+                    <h3 class="textoPrecio">${{ number_format($item->precio, 2, '.', ',') }}</h3>
+                    <h5 class="textoModelo"><span>{{ $item->marca }} </span>{{ $item->modelo }}</h5>
                 </div>
 
                 <div class="textoDescripcion">
-                    <p>{{$item->Descripcion}}</p>
+                    <p>{{ $item->Descripcion }}</p>
                 </div>
-                   
-                
+
+
             </div>
-    
         @endforeach
     </div>
 @endsection
