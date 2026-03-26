@@ -24,12 +24,12 @@
 
 /*Texto de el precio*/
 .textoPrecio {
-    @apply text-3xl font-bold text-blue-600 p-5 font-sans
+    @apply text-3xl font-bold text-blue-600 pl-5 font-sans
 }
 
 /*Texto del modelo de la impresora*/
 .textoModelo {
-    @apply text-xl font-titulo text-lg
+    @apply text-2xl font-semibold font-titulo pl-5
 }
 
 /*Texto de la descripsion*/
