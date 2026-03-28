@@ -34,7 +34,7 @@
 
 /*Texto de la descripsion*/
 .textoDescripcion {
-    @apply text-left text-sm text-comentario font-descrip p-3
+    @apply text-left text-sm text-comentario font-descrip pl-5 pr-5 pt-2
 }
 
 .btnAñadirCarrito {
