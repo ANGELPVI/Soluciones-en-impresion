@@ -114,9 +114,6 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
 .targetaVentaimpresora{
     box-shadow: 10px 10px 10px rgba(0,0,0,0.25);
 }
-.imgImpresoras{
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.26);
-}
 
 .nav-bar{
     display: flex;
@@ -1436,46 +1433,90 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-items: center;
     gap: 1rem;
-    padding: 1rem
+    padding: 1rem;
 }
+
 /*Contenedor de la imagen de la impresora*/
 .contenedorImagen {
     grid-column: span 1 / span 1;
     margin-top: 1.25rem;
-    height: auto;
     width: 100%;
     border-radius: 0.5rem;
     --tw-bg-opacity: 1;
-    background-color: rgba(255, 255, 255, var(--tw-bg-opacity))
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
 }
+
+.imgImpresoras {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.26);
+    width: 400px;
+    height: 400px;
+    border-radius: 0.5rem;
+}
+
 /*Contenedor del precio*/
 .contenedorPrecio {
     margin-top: 1.5rem;
-    text-align: center
 }
+
 /*Texto de el precio*/
 .textoPrecio {
-    font-family: "Calistoga", cursive;
+    padding-left: 1.25rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 1.875rem;
-    line-height: 2.25rem
+    line-height: 2.25rem;
+    font-weight: 700;
+    --tw-text-opacity: 1;
+    color: rgba(37, 99, 235, var(--tw-text-opacity));
 }
+
 /*Texto del modelo de la impresora*/
 .textoModelo {
+    padding-left: 1.25rem;
+    padding-top: 0.5rem;
     font-family: "Calistoga", cursive;
     font-size: 1.25rem;
     line-height: 1.75rem;
-    font-size: 1.125rem;
-    line-height: 1.75rem
 }
+
 /*Texto de la descripsion*/
 .textoDescripcion {
-    padding: 0.75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.5rem;
     text-align: left;
     font-family: "Open Sans", sans-serif;
     font-size: 0.875rem;
     line-height: 1.25rem;
     --tw-text-opacity: 1;
-    color: rgba(101, 99, 99, var(--tw-text-opacity))
+    color: rgba(101, 99, 99, var(--tw-text-opacity));
+}
+
+.btnAñadirCarrito {
+    margin: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
+    width: 91.666667%;
+    border-radius: 0.25rem;
+    --tw-bg-opacity: 1;
+    background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 700;
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    transition-duration: 300ms;
+}
+
+.btnAñadirCarrito:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgba(29, 78, 216, var(--tw-bg-opacity));
 }
 /* Estilos para la página de Política de Garantía */
 .garantia-container {
@@ -3049,6 +3090,9 @@ video {
 .mt-6 {
 	margin-top: 1.5rem;
 }
+.mb-5 {
+	margin-bottom: 1.25rem;
+}
 .mb-96 {
 	margin-bottom: 24rem;
 }
@@ -3348,6 +3392,10 @@ video {
 	--tw-bg-opacity: 1;
 	background-color: rgba(239, 246, 255, var(--tw-bg-opacity));
 }
+.bg-blue-600 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+}
 .bg-gray-100 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
@@ -3476,6 +3524,12 @@ video {
 .pt-32 {
 	padding-top: 8rem;
 }
+.pl-5 {
+	padding-left: 1.25rem;
+}
+.pr-5 {
+	padding-right: 1.25rem;
+}
 .text-left {
 	text-align: left;
 }
@@ -3487,6 +3541,9 @@ video {
 }
 .font-descrip {
 	font-family: "Open Sans", sans-serif;
+}
+.font-sans {
+	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .text-9xl {
 	font-size: 8rem;
@@ -3730,6 +3787,10 @@ video {
 .hover\:bg-purple-400:hover {
 	--tw-bg-opacity: 1;
 	background-color: rgba(167, 139, 250, var(--tw-bg-opacity));
+}
+.hover\:bg-blue-700:hover {
+	--tw-bg-opacity: 1;
+	background-color: rgba(29, 78, 216, var(--tw-bg-opacity));
 }
 .hover\:bg-green-300:hover {
 	--tw-bg-opacity: 1;

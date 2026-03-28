@@ -1,25 +1,42 @@
 /*TARJETA DE PRECENTACION DE LAS IMPRESORAS*/
 /*Contenedor padre de la targeta de las impresoras*/
-.cotenedorPadre{
+.cotenedorPadre {
     @apply grid grid-cols-3 p-4 m-auto mt-10 justify-items-center w-5/6 gap-4 h-auto
 }
+
 /*Contenedor de la imagen de la impresora*/
-.contenedorImagen{
-    @apply bg-white col-span-1 w-full mt-5 h-auto rounded-lg
+.contenedorImagen {
+    @apply bg-white col-span-1 w-full mt-5 rounded-lg;
+
 }
+
+.imgImpresoras {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.26);
+    width: 400px;
+    height: 400px;
+    border-radius: 0.5rem;
+}
+
 /*Contenedor del precio*/
-.contenedorPrecio{
-    @apply text-center mt-6
+.contenedorPrecio {
+    @apply mt-6
 }
+
 /*Texto de el precio*/
-.textoPrecio{
-    @apply text-3xl font-titulo
+.textoPrecio {
+    @apply text-3xl font-bold text-blue-600 pl-5 font-sans
 }
+
 /*Texto del modelo de la impresora*/
-.textoModelo{
-    @apply text-xl font-titulo text-lg
+.textoModelo {
+    @apply text-xl font-titulo pl-5 pt-2
 }
+
 /*Texto de la descripsion*/
-.textoDescripcion{
-    @apply text-left text-sm text-comentario font-descrip p-3
+.textoDescripcion {
+    @apply text-left text-sm text-comentario font-descrip pl-5 pr-5 pt-2
+}
+
+.btnAñadirCarrito {
+    @apply w-11/12 m-3 bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4 mb-5 hover:bg-blue-700 transition duration-300;
 }
