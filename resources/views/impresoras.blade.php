@@ -14,6 +14,7 @@
                     <p>{{ $item->Descripcion }}</p>
                 </div>
 
+                <button class="btnAñadirCarrito">Añadir al Carrito</button>
 
             </div>
         @endforeach
