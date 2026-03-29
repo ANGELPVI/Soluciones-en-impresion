@@ -1,7 +1,10 @@
 /*TARJETA DE PRECENTACION DE LAS IMPRESORAS*/
 /*Contenedor padre de la targeta de las impresoras*/
 .cotenedorPadre {
-    @apply grid grid-cols-3 p-4 m-auto mt-10 justify-items-center w-5/6 gap-4 h-auto
+    @apply grid grid-cols-1 p-4 m-auto mt-10 justify-items-center w-5/6 gap-4 h-auto
+        md:grid-cols-2
+        lg:grid-cols-3
+        2xl:grid-cols-4;
 }
 
 /*Contenedor de la imagen de la impresora*/
@@ -11,10 +14,8 @@
 }
 
 .imgImpresoras {
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.26);
-    width: 400px;
+    @apply  w-full;
     height: 400px;
-    border-radius: 0.5rem;
 }
 
 /*Contenedor del precio*/
