@@ -109,25 +109,105 @@ class ProductoSeeder extends Seeder
         }
 
         // 2. Datos de 10 Consumibles (Relacionados con las impresoras anteriores)
-        $datosConsumibles = [
-            ['modelo' => 'Tóner 58A Negro', 'marca' => 'HP', 'img' => 'toner_58a.jpg', 'precio' => 1150.00, 'stock' => 50, 'impIdx' => 0],
-            ['modelo' => 'Botella Tinta 544 Negra', 'marca' => 'Epson', 'img' => 'tinta_544.jpg', 'precio' => 220.00, 'stock' => 100, 'impIdx' => 1],
-            ['modelo' => 'Botella Tinta GI-190', 'marca' => 'Canon', 'img' => 'tinta_gi190.jpg', 'precio' => 240.00, 'stock' => 80, 'impIdx' => 2],
-            ['modelo' => 'Tóner TN730', 'marca' => 'Brother', 'img' => 'toner_tn730.jpg', 'precio' => 980.00, 'stock' => 30, 'impIdx' => 3],
-            ['modelo' => 'Cartucho 212 Negro', 'marca' => 'Epson', 'img' => 'cartucho_212.jpg', 'precio' => 450.00, 'stock' => 40, 'impIdx' => 4],
-            ['modelo' => 'Tóner 206A Magenta', 'marca' => 'HP', 'img' => 'toner_206a.jpg', 'precio' => 1850.00, 'stock' => 15, 'impIdx' => 5],
-            ['modelo' => 'Botella Tinta 664 Cian', 'marca' => 'Epson', 'img' => 'tinta_664.jpg', 'precio' => 210.00, 'stock' => 120, 'impIdx' => 6],
-            ['modelo' => 'Botella Tinta GT53XL', 'marca' => 'HP', 'img' => 'tinta_gt53.jpg', 'precio' => 280.00, 'stock' => 90, 'impIdx' => 7],
-            ['modelo' => 'Cartucho 125 Negro', 'marca' => 'Canon', 'img' => 'cartucho_125.jpg', 'precio' => 1100.00, 'stock' => 25, 'impIdx' => 8],
-            ['modelo' => 'Tóner 106R02773', 'marca' => 'Xerox', 'img' => 'toner_xerox.jpg', 'precio' => 1350.00, 'stock' => 12, 'impIdx' => 9],
-        ];
+      $datosConsumibles = [
+    [
+        'modelo' => 'Tóner 58A Negro', 
+        'marca' => 'HP', 
+        'img' => 'https://shop.dupapier.com.mx/cdn/shop/files/TONER-58A-CF258A-NEGRO-3000-PAGINAS_C067-517-_1.jpg?v=1761232770', 
+        'precio' => 1150.00, 
+        'stock' => 50, 
+        'impIdx' => 0,
+        'desc' => 'Tóner Láser | Color: Negro | Rendimiento: 3,000 págs | Alta Definición'
+    ],
+    [
+        'modelo' => 'Botella Tinta 544 Negra', 
+        'marca' => 'Epson', 
+        'img' => 'https://shop.dupapier.com.mx/cdn/shop/files/TONER-58A-CF258A-NEGRO-3000-PAGINAS_C067-517-_1.jpg?v=1761232770', 
+        'precio' => 220.00, 
+        'stock' => 100, 
+        'impIdx' => 1,
+        'desc' => 'Botella de Tinta | Color: Negro | Rendimiento: 4,500 págs | Secado Rápido'
+    ],
+    [
+        'modelo' => 'Botella Tinta GI-190', 
+        'marca' => 'Canon', 
+        'img' => 'https://shop.dupapier.com.mx/cdn/shop/files/TONER-58A-CF258A-NEGRO-3000-PAGINAS_C067-517-_1.jpg?v=1761232770', 
+        'precio' => 240.00, 
+        'stock' => 80, 
+        'impIdx' => 2,
+        'desc' => 'Botella de Tinta | Color: Negro | Rendimiento: 6,000 págs | Calidad Fotográfica'
+    ],
+    [
+        'modelo' => 'Tóner TN730', 
+        'marca' => 'Brother', 
+        'img' => 'https://shop.dupapier.com.mx/cdn/shop/files/TONER-58A-CF258A-NEGRO-3000-PAGINAS_C067-517-_1.jpg?v=1761232770', 
+        'precio' => 980.00, 
+        'stock' => 30, 
+        'impIdx' => 3,
+        'desc' => 'Tóner Láser | Color: Negro | Rendimiento: 1,200 págs | Fácil Instalación'
+    ],
+    [
+        'modelo' => 'Cartucho 212 Negro', 
+        'marca' => 'Epson', 
+        'img' => 'https://shop.dupapier.com.mx/cdn/shop/files/TONER-58A-CF258A-NEGRO-3000-PAGINAS_C067-517-_1.jpg?v=1761232770', 
+        'precio' => 450.00, 
+        'stock' => 40, 
+        'impIdx' => 4,
+        'desc' => 'Cartucho de Tinta | Color: Negro | Rendimiento: 150 págs | Tinta Pigmentada'
+    ],
+    [
+        'modelo' => 'Tóner 206A Magenta', 
+        'marca' => 'HP', 
+        'img' => 'https://shop.dupapier.com.mx/cdn/shop/files/TONER-58A-CF258A-NEGRO-3000-PAGINAS_C067-517-_1.jpg?v=1761232770', 
+        'precio' => 1850.00, 
+        'stock' => 15, 
+        'impIdx' => 5,
+        'desc' => 'Tóner Láser | Color: Magenta | Rendimiento: 1,250 págs | Colores Vibrantes'
+    ],
+    [
+        'modelo' => 'Botella Tinta 664 Cian', 
+        'marca' => 'Epson', 
+        'img' => 'https://shop.dupapier.com.mx/cdn/shop/files/TINTA-664-T664120AL-NEGRO-4000-PAGINAS_C072-278-_1.jpg?v=1761233680', 
+        'precio' => 210.00, 
+        'stock' => 120, 
+        'impIdx' => 6,
+        'desc' => 'Botella de Tinta | Color: Cian | Rendimiento: 7,500 págs | Tecnología EcoTank'
+    ],
+    [
+        'modelo' => 'Botella Tinta GT53XL', 
+        'marca' => 'HP', 
+        'img' => 'https://shop.dupapier.com.mx/cdn/shop/files/TINTA-664-T664120AL-NEGRO-4000-PAGINAS_C072-278-_1.jpg?v=1761233680', 
+        'precio' => 280.00, 
+        'stock' => 90, 
+        'impIdx' => 7,
+        'desc' => 'Botella de Tinta | Color: Negro | Rendimiento: 6,000 págs | Extra Capacidad (135ml)'
+    ],
+    [
+        'modelo' => 'Cartucho 125 Negro', 
+        'marca' => 'Canon', 
+        'img' => 'https://shop.dupapier.com.mx/cdn/shop/files/TINTA-664-T664120AL-NEGRO-4000-PAGINAS_C072-278-_1.jpg?v=1761233680', 
+        'precio' => 1100.00, 
+        'stock' => 25, 
+        'impIdx' => 8,
+        'desc' => 'Cartucho Láser | Color: Negro | Rendimiento: 1,600 págs | Texto Nítido'
+    ],
+    [
+        'modelo' => 'Tóner 106R02773', 
+        'marca' => 'Xerox', 
+        'img' => 'https://shop.dupapier.com.mx/cdn/shop/files/TINTA-664-T664120AL-NEGRO-4000-PAGINAS_C072-278-_1.jpg?v=1761233680', 
+        'precio' => 1350.00, 
+        'stock' => 12, 
+        'impIdx' => 9,
+        'desc' => 'Tóner Láser | Color: Negro | Rendimiento: 1,500 págs | Alta Fiabilidad'
+    ],
+];
 
         foreach ($datosConsumibles as $con) {
             DB::table('consumibles')->insert([
                 'modelo' => $con['modelo'],
                 'marca' => $con['marca'],
                 'img' => $con['img'],
-                'descripcion' => 'Insumo original garantizado para alto rendimiento.',
+                'descripcion' => $con['desc'],
                 'precio' => $con['precio'], // He mantenido 'precio' por tu migración actual
                 'stock' => $con['stock'],
                 'impresoraId' => $idsImpresoras[$con['impIdx']], // Vincula con el ID real
