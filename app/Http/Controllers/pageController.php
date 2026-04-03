@@ -19,7 +19,7 @@ class pageController extends Controller
     public function equipoSoporte(Request $request){
         $name = $request->input('equipo');
         //$equipo = Flight::where('modelo', $name);
-        return view('soporte');
+        return view('oficina');
         
     }
 
@@ -27,8 +27,8 @@ class pageController extends Controller
         $consumibles=App\Models\Consumibles::all();
         return view('consumibles',compact('consumibles'));
     }
-    public function soporte(){
-        return view('soporte');
+    public function oficina(){
+        return view('oficina');
     }
 
     public function login(){

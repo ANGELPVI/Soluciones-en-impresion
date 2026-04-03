@@ -5,5 +5,5 @@
     @csrf
     <input class="" type="text" name="equipo" placeholder="Ejm: konica c458"> 
 </form>
-{{$equipo}}
+{{-- {{$equipo}} --}}
 @endsection
