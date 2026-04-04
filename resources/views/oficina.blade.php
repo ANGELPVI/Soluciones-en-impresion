@@ -1,9 +1,13 @@
 @extends('welcome')
 
 @section('sesion')
-<form action="soporte" method="get" class="">
-    @csrf
-    <input class="" type="text" name="equipo" placeholder="Ejm: konica c458"> 
-</form>
-{{-- {{$equipo}} --}}
+
+ @foreach ($productosOficina as $item)
+   {{ $item->nombre }} <br>
+   {{ $item->descripcion }} <br>
+    {{ $item->precio }} <br>
+    {{ $item->stock }} <br>
+    {{ $item->sku }} <br>
+ @endforeach
+
 @endsection
