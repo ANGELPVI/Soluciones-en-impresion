@@ -37,8 +37,8 @@
         <a href="{{route('inicio')}}" class="nav-items"><i class="fas fa-home text-xl mr-2"></i>Inicio</a>
         <a href="{{route('impresoras')}}" class="nav-items"><i class="fas fa-print text-xl mr-2"></i>Impresoras</a>
         <a href="{{route('consumibles')}}" class="nav-items"><i class="fas fa-store text-xl mr-2"></i>Consumibles</a>
-        <a href="{{route('soporte')}}" class="nav-items"><i class="fas fa-pen text-xl mr-2"></i>oficina</a>
-        <a href="{{route('soporte')}}" class="nav-items"><i class="fa-solid fa-cart-shopping text-xl mr-2"></i></i>Carrito</a>
+        <a href="{{route('oficina')}}" class="nav-items"><i class="fas fa-pen text-xl mr-2"></i>oficina</a>
+        <a href="{{route('oficina')}}" class="nav-items"><i class="fa-solid fa-cart-shopping text-xl mr-2"></i></i>Carrito</a>
 
         @if (auth()->check())
             <button id="userMenu" class="relative m-3 w-full h-10 grid grid-cols-1 shadow  text-gray-200">
