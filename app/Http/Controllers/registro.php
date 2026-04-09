@@ -8,8 +8,8 @@ use App\Models\User;
 class registro extends Controller{
 
     // Funcion que registra a los usuario 
-    public function store(Request $request){     
-        
+    public function store(Request $request){    
+       
          try {
           // Validación de los datos del formulario
           $this->validate($request,[

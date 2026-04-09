@@ -283,10 +283,12 @@ function activarBotonReguistro(index, estado) {
   });
   if (todosValidos) {
     console.log('activado');
+    botonRegistro.removeAttribute('disabled');
     botonRegistro.classList.remove("buttonRegistro");
     botonRegistro.classList.add('buttonRegistroEnable');
   } else {
     console.log('Desabilhitado');
+    botonRegistro.setAttribute('disabled', 'disabled');
     botonRegistro.classList.remove('buttonRegistroEnable');
     botonRegistro.classList.add('buttonRegistro');
   }
