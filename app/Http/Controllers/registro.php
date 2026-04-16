@@ -15,15 +15,20 @@ class registro extends Controller{
           $this->validate($request,[
             'nombre' => 'required|string|min:3|max:50',
             'apellidos' => 'required|string|min:3|max:50',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:8',
-            'telefono' => ['required','regex:/^\d{10}$/'], ['telefono.required' => 'El campo teléfono es obligatorio.','telefono.regex' => 'El formato del teléfono es inválido.'],
+            'telefono' => 'required|regex:/^\d{10}$/|unique:users,telefono',
             'estado' => 'required|string|max:100',
             'ciudad' => 'required|string|max:100',
             'cp' => ['required','regex:/^\d{5}$/'], ['cp.required' => 'El campo CP es obligatorio.','cp.regex' => 'El formato del CP es incorrecto.'],
             'colonia' => 'required|string|min:3|max:100',
             'calle' => 'required|string|min:3|max:100',
-
+        ],
+        [
+           'email.unique' => 'Este email ya está registrado.',
+            'telefono.unique' => 'Este teléfono ya está registrado.',
+            'telefono.regex' => 'El teléfono debe tener 10 dígitos.',
+            'password.confirmed' => 'Las contraseñas no coinciden.', 
         ]);
         
         //Insertar al nuevo usuario
