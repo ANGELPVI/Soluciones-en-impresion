@@ -1329,10 +1329,6 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     grid-template-columns: repeat(1, minmax(0, 1fr));
     justify-items: center
 }
-.divSubPadre {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr))
-}
 
 .formRegistro {
     display: grid;
@@ -1349,9 +1345,15 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
 }
 
 .divSubPadreInput {
-    grid-column: span 2 / span 2;
+    grid-column: span 4 / span 4;
     height: auto;
     width: 100%
+}
+
+@media (min-width: 1024px) {
+    .divSubPadreInput {
+        grid-column: span 2 / span 2
+    }
 }
 
 .inputsRegistro {
@@ -1380,6 +1382,7 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
     font-family: "Open Sans", sans-serif
 }
+
 .buttonRegistroEnable {
     grid-column: span 4 / span 4;
     margin-top: 1rem;
@@ -3848,6 +3851,10 @@ video {
 
 	.sm\:w-11\/12 {
 		width: 91.666667%;
+	}
+
+	.sm\:grid-cols-1 {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
 	}
 
 	.sm\:px-6 {
