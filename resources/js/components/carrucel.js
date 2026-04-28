@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //Carucel de botones del tercer servicio tecnico
 document.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll('.soporte-carrusel-img');
+    if (images.length === 0) return;
     let current = 0;
 
     function showImage(idx) {
@@ -69,19 +70,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //Carucel de botones de la seccion de comentarios
-   const slider = document.getElementById('review-slider');
+const slider = document.getElementById('review-slider');
 const prev = document.getElementById('prev');
 const next = document.getElementById('next');
 
 let index = 0;
 const totalGroups = 3; // Cambia esto según cuántos grupos de 4 tengas
 
-next.addEventListener('click', () => {
+next && next.addEventListener('click', () => {
     index = (index + 1) % totalGroups;
     slider.style.transform = `translateX(-${index * 100}%)`;
 });
 
-prev.addEventListener('click', () => {
+prev && prev.addEventListener('click', () => {
     index = (index - 1 + totalGroups) % totalGroups;
     slider.style.transform = `translateX(-${index * 100}%)`;
 });

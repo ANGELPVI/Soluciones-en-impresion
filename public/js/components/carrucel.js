@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //Carucel de botones del tercer servicio tecnico
 document.addEventListener('DOMContentLoaded', function () {
   var images = document.querySelectorAll('.soporte-carrusel-img');
+  if (images.length === 0) return;
   var current = 0;
   function showImage(idx) {
     images.forEach(function (img, i) {
@@ -73,11 +74,11 @@ var next = document.getElementById('next');
 var index = 0;
 var totalGroups = 3; // Cambia esto según cuántos grupos de 4 tengas
 
-next.addEventListener('click', function () {
+next && next.addEventListener('click', function () {
   index = (index + 1) % totalGroups;
   slider.style.transform = "translateX(-".concat(index * 100, "%)");
 });
-prev.addEventListener('click', function () {
+prev && prev.addEventListener('click', function () {
   index = (index - 1 + totalGroups) % totalGroups;
   slider.style.transform = "translateX(-".concat(index * 100, "%)");
 });
