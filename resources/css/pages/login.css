@@ -5,20 +5,20 @@
 }
 
 .fomularioLogin{
-    @apply grid grid-cols-1 gap-7 justify-items-center h-auto bg-white rounded-3xl shadow-2xl mt-8 sm:w-11/12 md:w-2/3 lg:w-1/3 xl:w-1/3 2xl:w-1/3 
+    @apply grid grid-cols-1 gap-7 justify-items-center h-auto bg-white rounded-3xl shadow-2xl mt-8 p-5 
 }
 .tituloFormulario{
     @apply md:text-2xl font-titulo -mt-8 opacity-50 sm:text-sm
 }
 .inputs{
-    @apply w-3/4 h-9 p-3 font-descrip border-gray-300 border-2 rounded-xl shadow-lg bg-gray-100
+    @apply w-full h-9 p-3 font-descrip border-gray-300 border-2 rounded-xl shadow-lg bg-gray-100
 }
 
 .textoError{
     @apply w-3/5 h-10 font-titulo text-sm text-center text-red-500
 }
 .registroPassword{
-    @apply grid grid-cols-2 w-full h-auto text-center justify-items-center items-center
+    @apply grid grid-cols-1 w-full h-auto text-center justify-items-center items-center
 }
 
 .textosRegistroPasw{
