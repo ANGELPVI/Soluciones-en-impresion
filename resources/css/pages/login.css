@@ -1,17 +1,21 @@
 /*Estilos específicos por página (opcional)*/
 
 .divPrincipal{
-    @apply grid grid-cols-1 justify-items-center w-full h-auto mt-8 mb-96
+    @apply grid grid-cols-1 justify-items-center w-full h-auto mt-8 mb-96 p-8
 }
 
 .fomularioLogin{
-    @apply grid grid-cols-1 gap-7 justify-items-center h-auto bg-white rounded-3xl shadow-2xl mt-8 p-5 
+    @apply grid grid-cols-1 gap-7 w-full justify-items-center h-auto bg-white rounded-3xl shadow-2xl mt-8 p-5
+            md:w-4/5
+            lg:w-2/5
+             
 }
 .tituloFormulario{
     @apply md:text-2xl font-titulo -mt-8 opacity-50 sm:text-sm
 }
 .inputs{
     @apply w-full h-9 p-3 font-descrip border-gray-300 border-2 rounded-xl shadow-lg bg-gray-100
+            md:w-4/5
 }
 
 .textoError{
@@ -19,6 +23,7 @@
 }
 .registroPassword{
     @apply grid grid-cols-1 w-full h-auto text-center justify-items-center items-center
+            sm:grid-cols-2
 }
 
 .textosRegistroPasw{
