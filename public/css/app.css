@@ -1265,6 +1265,8 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
 
 .textosRegistroPasw {
 
+    cursor: pointer;
+
     font-family: "Open Sans", sans-serif;
 
     font-size: 0.875rem;
@@ -1274,6 +1276,13 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     --tw-text-opacity: 1;
 
     color: rgba(156, 163, 175, var(--tw-text-opacity))
+}
+
+.textosRegistroPasw:hover {
+
+    --tw-text-opacity: 1;
+
+    color: rgba(75, 85, 99, var(--tw-text-opacity))
 }
 .buttonLogin {
 
@@ -3238,6 +3247,9 @@ video {
 .transform {
 	transform: var(--tw-transform);
 }
+.cursor-pointer {
+	cursor: pointer;
+}
 .auto-cols-\[calc\(100\%\/12\)\] {
 	grid-auto-columns: calc(100% / 12);
 }
@@ -3812,6 +3824,14 @@ video {
 	--tw-text-opacity: 1;
 	color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
+.hover\:text-red-600:hover {
+	--tw-text-opacity: 1;
+	color: rgba(220, 38, 38, var(--tw-text-opacity));
+}
+.hover\:text-gray-600:hover {
+	--tw-text-opacity: 1;
+	color: rgba(75, 85, 99, var(--tw-text-opacity));
+}
 .hover\:shadow-2xl:hover {
 	--tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -3958,14 +3978,6 @@ video {
 
 	.lg\:w-4\/5 {
 		width: 80%;
-	}
-
-	.lg\:w-1\/2 {
-		width: 50%;
-	}
-
-	.lg\:w-1\/5 {
-		width: 20%;
 	}
 
 	.lg\:w-2\/5 {

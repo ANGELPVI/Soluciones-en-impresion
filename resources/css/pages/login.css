@@ -27,7 +27,7 @@
 }
 
 .textosRegistroPasw{
-    @apply font-descrip text-sm text-gray-400
+    @apply font-descrip text-sm text-gray-400 hover:text-gray-600 cursor-pointer
 }
 .buttonLogin{
     @apply w-1/2 h-10 bg-gray-200 rounded-2xl font-descrip mb-8 pointer-events-none
