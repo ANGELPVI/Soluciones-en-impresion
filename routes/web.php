@@ -5,6 +5,7 @@ use App\Http\Controllers\pageController;
 use App\Http\Controllers\registro;
 use App\Http\Controllers\login;
 use GuzzleHttp\Middleware;
+use App\Http\Controllers\PasswordResetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +65,10 @@ Route::get('/guia-compra', function () {
 Route::get('/politica-garantia', function () {
     return view('politica-garantia');
 })->name('politica-garantia');
+
+// Formulario para solicitar reset
+<?php
+Route::get('/password/reset', [PasswordResetController::class, 'showResetForm'])->name('password.request');
 
 Route::get('/destroy',[login::class,'destroy'])->name('destroy');
 
