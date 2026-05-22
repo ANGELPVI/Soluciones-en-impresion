@@ -14,7 +14,7 @@
         <form action="{{ route('password.email') }}" method="POST">
             @csrf
             <div class="mb-4">
-                <label class="block text-gray-700 mb-2">Email</label>
+                <label class="block text-gray-800 mb-2">Email</label>
                 <input type="email" name="email" class="w-full p-2 border rounded" required>
             </div>
             <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">
