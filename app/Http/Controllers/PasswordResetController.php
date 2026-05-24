@@ -10,9 +10,15 @@ use Illuminate\Support\Facades\Hash;
 class PasswordResetController extends Controller
 {
     // Mostrar formulario de solicitud de reset
-    public function showResetForm(Request $request, $token = null)
+    public function showRequestForm(Request $request, $token = null)
     {
-        return view('password-reset', ['token' => $token]);
+        return view('password-reset');
+    }
+
+    // Mostrar formulario para RESTABLECER contraseña (con token)
+    public function showResetForm($token)
+    {
+        return view('reset-password', ['token' => $token]);
     }
 
     // Enviar link de reset por email

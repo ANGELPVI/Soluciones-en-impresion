@@ -68,7 +68,7 @@ Route::get('/politica-garantia', function () {
 
 // Formulario para solicitar reset
 
-Route::get('/password/reset', [PasswordResetController::class, 'showResetForm'])->name('password.request');
+Route::get('/password/reset', [PasswordResetController::class, 'showRequestForm'])->name('password.request');
 // Enviar link de reset por email
 Route::post('/password/email', [PasswordResetController::class, 'sendResetLink'])->name('password.email');
 Route::get('/password/reset/{token}', [PasswordResetController::class, 'showResetForm'])->name('password.reset');
