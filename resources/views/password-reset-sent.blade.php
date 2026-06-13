@@ -14,7 +14,7 @@
 
             <p class="success-message">
                 Si hemos encontrado una cuenta asociada a ese correo electrónico, te hemos enviado las instrucciones para
-                restablecer tu contraseña.
+                restablecer tu contraseña a: <strong>{{ session('email') }}</strong>
             </p>
 
             <p class="success-hint">
