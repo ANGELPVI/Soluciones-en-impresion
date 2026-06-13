@@ -1,0 +1,32 @@
+/* Contenedor principal para centrar la tarjeta */
+.reset-success-wrapper {
+    @apply min-h-screen flex items-center justify-center bg-gray-50 px-4;
+}
+
+/* Tarjeta de confirmación */
+.reset-success-card {
+    @apply max-w-md w-full bg-white p-8 rounded-xl shadow-lg text-center;
+}
+
+/* Ícono de correo */
+.success-icon {
+    @apply w-16 h-16 mx-auto text-blue-500 mb-6;
+}
+
+/* Tipografía */
+.success-title {
+    @apply text-2xl font-bold text-gray-800 mb-4;
+}
+
+.success-message {
+    @apply text-gray-600 mb-4 leading-relaxed;
+}
+
+.success-hint {
+    @apply text-sm text-gray-400 mb-8;
+}
+
+/* Botón de acción */
+.btn-return-login {
+    @apply inline-block w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
