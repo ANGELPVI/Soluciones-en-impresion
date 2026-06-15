@@ -2,6 +2,7 @@
     "/js/app.js": "/js/app.js",
     "/js/components/locationSelector.js": "/js/components/locationSelector.js",
     "/js/auth/loginValidator.js": "/js/auth/loginValidator.js",
+    "/js/auth/fromResetPassword.js": "/js/auth/fromResetPassword.js",
     "/js/auth/formularioRegistro.js": "/js/auth/formularioRegistro.js",
     "/js/auth/validarInputs.js": "/js/auth/validarInputs.js",
     "/js/components/authUserMenu.js": "/js/components/authUserMenu.js",

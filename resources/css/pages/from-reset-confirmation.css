@@ -1,0 +1,110 @@
+/* ==========================================================================
+   FORMULARIO DE RESTABLECIMIENTO DE CONTRASEÑA (COMPATIBLE TAILWIND 2.1.4)
+   ========================================================================== */
+
+/* Contenedor principal centrado */
+.reset-container {
+    min-height: 60vh; /* Ajuste para evitar clases arbitrarias [] */
+    @apply flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8;
+}
+
+/* Tarjeta contenedora */
+.reset-card {
+    @apply max-w-md w-full bg-white p-8 rounded-2xl shadow-xl border border-gray-100 transition-all duration-300;
+}
+
+/* Título del formulario */
+.reset-title {
+    @apply text-2xl font-bold text-gray-800 mb-6 text-left tracking-tight;
+}
+
+/* Estructura del formulario */
+.reset-form {
+    @apply space-y-5;
+}
+
+.form-group {
+    @apply flex flex-col space-y-2;
+}
+
+.form-label {
+    @apply text-sm font-semibold text-gray-600 tracking-wide;
+}
+
+/* Manejo de iconos dentro de inputs */
+.input-icon-wrapper {
+    @apply relative flex items-center;
+}
+
+.input-icon {
+    @apply absolute left-3 text-gray-400 w-5 h-5 flex items-center justify-center pointer-events-none;
+}
+
+.input-suffix-icon {
+    @apply absolute right-3 text-green-500 w-5 h-5 flex items-center justify-center pointer-events-none transition-all duration-200;
+}
+
+/* Campos de entrada de datos (Inputs) */
+.form-input {
+    /* Separada la opacidad del ring y usando colores estándar de v2 */
+    @apply w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-20 focus:border-green-500 focus:bg-white text-base sm:text-sm;
+}
+
+/* Estado de solo lectura para el Email */
+.form-input[readonly] {
+    @apply bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed shadow-inner;
+}
+
+/* Mensajes de error de Laravel */
+.form-error {
+    @apply text-xs font-medium text-red-500 mt-1 pl-1;
+}
+
+/* Indicador de Fortaleza de Contraseña */
+.strength-container {
+    @apply my-1 space-y-2;
+}
+
+.strength-bars {
+    @apply grid grid-cols-3 gap-2 px-1;
+}
+
+.strength-bar {
+    @apply h-2 rounded-full bg-gray-200 transition-all duration-300;
+}
+
+.strength-labels {
+    @apply flex justify-end px-1;
+}
+
+.strength-text {
+    font-size: 11px; /* Ajuste para evitar clases arbitrarias [] */
+    @apply font-bold tracking-wider uppercase text-gray-400 transition-colors duration-200;
+}
+
+/* Estados dinámicos del medidor (Colores estándar de Tailwind v2) */
+.bg-debil { @apply bg-red-500; }
+.bg-media { @apply bg-yellow-500; }
+.bg-fuerte { @apply bg-green-500; }
+
+.text-debil { @apply text-red-500; }
+.text-media { @apply text-yellow-500; }
+.text-fuerte { @apply text-green-500; }
+
+/* Botón principal */
+.btn-submit-reset {
+    background-color: #00a86b; /* Color exacto de tu marca usando CSS estándar */
+    @apply w-full flex items-center justify-center space-x-2 text-white font-bold py-3 px-4 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-all duration-200 mt-2 cursor-pointer text-sm tracking-wide;
+}
+
+.btn-submit-reset:hover {
+    background-color: #00925d;
+}
+
+.btn-submit-reset svg {
+    @apply w-4 h-4 transition-transform duration-200;
+}
+
+.btn-submit-reset:hover svg {
+    @apply transform translate-x-0.5 -translate-y-0.5;
+}
