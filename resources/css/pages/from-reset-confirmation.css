@@ -108,3 +108,12 @@
 .btn-submit-reset:hover svg {
     @apply transform translate-x-0.5 -translate-y-0.5;
 }
+
+/* Toggle para mostrar/ocultar contraseña */
+.toggle-password {
+    @apply absolute right-3 text-gray-400 w-5 h-5 flex items-center justify-center pointer-events-auto transition-all duration-200 cursor-pointer hover:text-gray-600;
+}
+
+.toggle-password.active {
+    @apply text-emerald-500;
+}
