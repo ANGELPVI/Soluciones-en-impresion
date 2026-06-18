@@ -58,5 +58,27 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   confirmPassword.addEventListener('input', checkMatch);
 });
+
+// Toggle para mostrar/ocultar contraseña
+document.addEventListener('DOMContentLoaded', function () {
+  var togglePassword = document.getElementById('toggle-password');
+  var togglePasswordConfirm = document.getElementById('toggle-password-confirm');
+  var passwordInput = document.getElementById('password');
+  var passwordConfirmInput = document.getElementById('password-confirm');
+  if (togglePassword) {
+    togglePassword.addEventListener('click', function () {
+      var type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      this.classList.toggle('active');
+    });
+  }
+  if (togglePasswordConfirm) {
+    togglePasswordConfirm.addEventListener('click', function () {
+      var type = passwordConfirmInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordConfirmInput.setAttribute('type', type);
+      this.classList.toggle('active');
+    });
+  }
+});
 /******/ })()
 ;

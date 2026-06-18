@@ -2834,6 +2834,34 @@ box-shadow: 0px 0px 30px rgba(17, 24, 39, 0.25);
     transform: var(--tw-transform);
     transform: var(--tw-transform);
 }
+
+/* Toggle para mostrar/ocultar contraseña */
+.toggle-password {
+    pointer-events: auto;
+    position: absolute;
+    right: 0.75rem;
+    display: flex;
+    height: 1.25rem;
+    width: 1.25rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    --tw-text-opacity: 1;
+    color: rgba(156, 163, 175, var(--tw-text-opacity));
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    transition-duration: 200ms;
+}
+.toggle-password:hover {
+    --tw-text-opacity: 1;
+    color: rgba(75, 85, 99, var(--tw-text-opacity));
+}
+
+.toggle-password.active {
+    --tw-text-opacity: 1;
+    color: rgba(16, 185, 129, var(--tw-text-opacity));
+}
 /*! tailwindcss v2.2.19 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
@@ -3475,6 +3503,9 @@ video {
 }
 .pointer-events-none {
 	pointer-events: none;
+}
+.pointer-events-auto {
+	pointer-events: auto;
 }
 .absolute {
 	position: absolute;

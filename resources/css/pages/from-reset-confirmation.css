@@ -115,5 +115,5 @@
 }
 
 .toggle-password.active {
-    @apply text-emerald-500;
+    @apply text-green-500;
 }
