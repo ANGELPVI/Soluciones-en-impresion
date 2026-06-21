@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class PasswordResetController extends Controller
@@ -56,11 +57,20 @@ class PasswordResetController extends Controller
             function ($user, $password) {
                 $user->password = $password;
                 $user->save();
+
+                // Opcional: Iniciar sesión automáticamente después de resetear
+                Auth::login($user);
+
             }
         );
+        
+        if($status===Password::PASSWORD_RESET){
+            return redirect('/')->with('status', __($status));
+        }
+        return back()->withErrors(['email' => __($status)]);
 
-        return $status === Password::PASSWORD_RESET
-            ? redirect('/login')->with('status', __($status))
-            : back()->withErrors(['email' => __($status)]);
+        // return $status === Password::PASSWORD_RESET
+        //     ? redirect('/login')->with('status', __($status))
+        //     : back()->withErrors(['email' => __($status)]);
     }
 }
