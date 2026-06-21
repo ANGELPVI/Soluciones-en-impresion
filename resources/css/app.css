@@ -16,7 +16,9 @@
 @import 'layaut/footer.css';
 @import 'components/linkFooter.css';
 @import 'base/typografia.css';
-
+@import 'pages/from-send-link-reset.css';
+@import 'pages/notificacion-exito-link-reset.css';
+@import 'pages/from-reset-confirmation.css';
 
 
 

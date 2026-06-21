@@ -121,6 +121,7 @@
   <script type="module" src="{{asset('js/components/carrucel.js')}}"></script>
   <script type="module" src="{{asset('js/auth/loginValidator.js')}}"></script>
   <script type="module" src="{{asset('js/auth/formularioRegistro.js')}}"></script>
+  <script type="module" src="{{asset('js/auth/fromResetPassword.js')}}"></script>
   
   
 </body>
