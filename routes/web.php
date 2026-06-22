@@ -39,31 +39,31 @@ Route::post('/revisarEmail',[registro::class,'revisarEmail'])->name('registro.re
 Route::post('/duplicacionDeTel',[registro::class,'duplicacionDeTel'])->name('duplicacionDeTel');
 
 Route::get('/nuestra-historia', function () {
-    return view('nuestra-historia');
+    return view('pages.about.nuestra-historia');
 })->name('nuestra-historia');
 
 Route::get('/mision-vision', function () {
-    return view('mision-vision');
+    return view('pages.about.mision-vision');
 })->name('mision-vision');
 
 Route::get('/servicios-especializados', function () {
-    return view('servicios-especializados');
+    return view('pages.about.servicios-especializados');
 })->name('servicios-especializados');
 
 Route::get('/cobertura-atencion', function () {
-    return view('cobertura-atencion');
+    return view('pages.about.cobertura-atencion');
 })->name('cobertura-atencion');
 
 Route::get('/preguntas-frecuentes', function () {
-    return view('preguntas-frecuentes');
+    return view('pages.help.preguntas-frecuentes');
 })->name('preguntas-frecuentes');
 
 Route::get('/guia-compra', function () {
-    return view('guia-compra');
+    return view('pages.help.guia-compra');
 })->name('guia-compra');
 
 Route::get('/politica-garantia', function () {
-    return view('politica-garantia');
+    return view('pages.help.politica-garantia');
 })->name('politica-garantia');
 
 // Formulario para solicitar reset

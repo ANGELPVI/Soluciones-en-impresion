@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('layouts.app')
 @section('sesion')
 <div class="garantia-container">
     <h2 class="garantia-titulo">Política de Garantía</h2>

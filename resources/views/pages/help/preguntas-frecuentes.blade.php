@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('layouts.app')
 @section('sesion')
 <div class="preguntas-container">
     <h2 class="pregunta-titulo">Preguntas Frecuentes</h2>
