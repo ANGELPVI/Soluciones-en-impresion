@@ -30,12 +30,12 @@ Route::get('/oficina',[pageController::class,'oficina'])->name('oficina');
 
 Route::get('/login',[pageController::class,'login'])->name('login')->middleware('guest');
 
-Route::post('/login', [login::class,'store'])->name('store');
+Route::post('/login', [login::class,'store'])->name('login.store');
 
 Route::get('/registro',[pageController::class,'registro'])->name('registro')->middleware('guest');
 
-Route::post('/registro',[registro::class,'store'])->name('store');
-Route::post('/revisarEmail',[registro::class,'revisarEmail'])->name('revisarEmail');
+Route::post('/registro',[registro::class,'store'])->name('registro.store');
+Route::post('/revisarEmail',[registro::class,'revisarEmail'])->name('registro.revisarEmail');
 Route::post('/duplicacionDeTel',[registro::class,'duplicacionDeTel'])->name('duplicacionDeTel');
 
 Route::get('/nuestra-historia', function () {
