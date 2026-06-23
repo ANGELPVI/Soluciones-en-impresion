@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('layouts.app')
 @section('sesion')
 <div class="guia-container">
     <h2 class="guia-titulo">Guía de Compra</h2>

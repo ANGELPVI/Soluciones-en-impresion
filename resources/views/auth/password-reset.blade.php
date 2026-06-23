@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('layouts.app')
 
 @section('sesion')
        <div class="flex items-center justify-center min-h-[50vh] px-4">

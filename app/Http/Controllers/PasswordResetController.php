@@ -13,13 +13,13 @@ class PasswordResetController extends Controller
     // Mostrar formulario de solicitud de reset
     public function showRequestForm(Request $request, $token = null)
     {
-        return view('password-reset');
+        return view('auth.password-reset');
     }
 
     // Mostrar formulario para RESTABLECER contraseña (con token)
     public function showResetForm($token)
     {
-        return view('reset-password', [
+        return view('auth.reset-password', [
             'token' => $token,
             'email' => request('email'),
         ]);
@@ -40,7 +40,7 @@ class PasswordResetController extends Controller
     // Mostrar mensaje de link enviado correctamente
     public function showSentMessage()
     {
-        return view('password-reset-sent');
+        return view('auth.password-reset-sent');
     }
 
     // Actualizar contraseña

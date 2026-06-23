@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('layouts.app')
 @section('sesion')
 <div class="link-footer-container">
     <h2 class="link-footer-titulo">Servicios Especializados</h2>
