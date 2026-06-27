@@ -1,0 +1,260 @@
+.productoDetallePagina {
+    @apply bg-gray-200 min-h-screen py-6 font-descrip;
+}
+
+.productoDetalleContenedor {
+    @apply w-11/12 max-w-6xl mx-auto;
+}
+
+.productoDetalleSugerencias {
+    @apply hidden md:flex items-center text-sm text-gray-800 mb-5;
+}
+
+.productoDetalleSugerencias span {
+    @apply mr-1;
+}
+
+.productoDetalleSugerencias a {
+    @apply text-blue-600 mr-1 hover:text-blue-800;
+}
+
+.productoDetalleNavegacion {
+    @apply flex flex-col md:flex-row md:items-center md:justify-between mb-3 text-sm;
+}
+
+.productoDetalleBreadcrumb {
+    @apply flex flex-wrap items-center text-blue-600;
+}
+
+.productoDetalleBreadcrumb a {
+    @apply hover:text-blue-800;
+}
+
+.productoDetalleBreadcrumb i,
+.productoDetalleBreadcrumb span {
+    @apply text-gray-500 mx-2;
+}
+
+.productoDetalleAccionesTop {
+    @apply hidden md:flex items-center text-blue-600;
+}
+
+.productoDetalleAccionesTop a,
+.productoDetalleAccionesTop button {
+    @apply hover:text-blue-800;
+}
+
+.productoDetalleAccionesTop span {
+    @apply text-gray-400 mx-3;
+}
+
+.productoDetalleTarjeta {
+    @apply bg-white border border-gray-300 rounded shadow-sm p-4 md:p-6;
+}
+
+@screen lg {
+    .productoDetalleTarjeta {
+        display: grid;
+        grid-template-columns: 72px minmax(330px, 1fr) minmax(300px, 365px) 310px;
+        gap: 24px;
+        align-items: start;
+    }
+}
+
+.productoDetalleGaleria {
+    @apply grid grid-cols-4 gap-3 mb-5;
+}
+
+@screen lg {
+    .productoDetalleGaleria {
+        @apply flex flex-col mb-0;
+    }
+}
+
+.productoDetalleMiniatura {
+    @apply bg-white border border-gray-300 rounded p-1 transition duration-200 focus:outline-none;
+    height: 58px;
+}
+
+.productoDetalleMiniatura:hover,
+.productoDetalleMiniaturaActiva {
+    @apply border-blue-500;
+}
+
+.productoDetalleMiniatura img {
+    @apply w-full h-full object-contain;
+}
+
+.productoDetalleImagenPrincipal {
+    @apply flex items-center justify-center bg-white;
+    min-height: 360px;
+}
+
+.productoDetalleImagenPrincipal img {
+    @apply w-full object-contain;
+    max-height: 470px;
+}
+
+.productoDetalleInformacion {
+    @apply mt-6 lg:mt-0;
+}
+
+.productoDetalleEstado {
+    @apply flex items-center text-sm text-gray-500 mb-2;
+}
+
+.productoDetalleEstado span {
+    @apply mr-2;
+}
+
+.productoDetalleTituloFila {
+    @apply flex items-start justify-between;
+}
+
+.productoDetalleTituloFila h1 {
+    @apply text-2xl font-bold text-gray-900 leading-tight pr-4;
+}
+
+.productoDetalleTituloFila button {
+    @apply text-3xl text-blue-600 hover:text-blue-800 focus:outline-none;
+}
+
+.productoDetalleRating {
+    @apply flex items-center mt-2 text-sm text-gray-500;
+}
+
+.productoDetalleRating i {
+    @apply text-blue-600 ml-1;
+}
+
+.productoDetalleRating span {
+    @apply mr-1;
+}
+
+.productoDetalleEtiqueta {
+    @apply inline-block mt-3 text-white text-xs font-bold uppercase px-2 py-1 rounded;
+    background-color: #ff7733;
+}
+
+.productoDetallePrecio {
+    @apply text-4xl font-normal text-gray-900 mt-5;
+}
+
+.productoDetallePago {
+    @apply text-sm text-gray-700 mt-2;
+}
+
+.productoDetalleFinanciamiento {
+    @apply text-sm text-green-700 mt-3 leading-relaxed;
+}
+
+.productoDetalleCaracteristicas {
+    @apply mt-8 text-gray-800;
+}
+
+.productoDetalleCaracteristicas h2 {
+    @apply text-base font-bold mb-4;
+}
+
+.productoDetalleCaracteristicas ul {
+    @apply list-disc pl-5 space-y-3 text-sm;
+}
+
+.productoDetalleCaracteristicas p {
+    @apply text-sm leading-relaxed;
+}
+
+.productoDetalleCaracteristicas button {
+    @apply text-blue-600 text-sm mt-5 hover:text-blue-800 focus:outline-none;
+}
+
+.productoDetalleCompra {
+    @apply mt-8 lg:mt-0 border border-gray-300 rounded-lg p-5 text-gray-800;
+}
+
+.productoDetalleEnvio,
+.productoDetalleRetiro,
+.productoDetalleStock {
+    @apply mb-5;
+}
+
+.productoDetalleEnvio p,
+.productoDetalleRetiro p {
+    @apply text-base mb-1;
+}
+
+.productoDetalleEnvio strong,
+.productoDetalleRetiro strong {
+    @apply text-green-600;
+}
+
+.productoDetalleEnvio span,
+.productoDetalleRetiro span,
+.productoDetalleStock span {
+    @apply block text-sm text-gray-500 leading-relaxed;
+}
+
+.productoDetalleEnvio a {
+    @apply inline-block text-blue-600 text-sm mt-2 hover:text-blue-800;
+}
+
+.productoDetalleStock strong {
+    @apply block text-lg text-gray-900 mb-1;
+}
+
+.productoDetalleMeta {
+    @apply grid grid-cols-1 gap-2 mb-5 text-sm;
+}
+
+.productoDetalleMeta div {
+    @apply border border-gray-200 rounded p-3;
+}
+
+.productoDetalleMeta span {
+    @apply block text-gray-500;
+}
+
+.productoDetalleMeta strong {
+    @apply block text-gray-900 mt-1;
+}
+
+.productoDetalleBotonCompra,
+.productoDetalleBotonCarrito {
+    @apply w-full flex items-center justify-center font-bold rounded py-3 px-4 transition duration-300;
+}
+
+.productoDetalleBotonCompra {
+    @apply bg-blue-600 text-white hover:bg-blue-700 mb-2;
+}
+
+.productoDetalleBotonCarrito {
+    @apply bg-blue-100 text-blue-700 hover:bg-blue-200;
+}
+
+.productoDetalleBotonCarrito i {
+    @apply mr-2;
+}
+
+.productoDetalleBeneficio {
+    @apply flex items-start border border-gray-200 rounded shadow mt-6 p-4 bg-white;
+}
+
+.productoDetalleBeneficio i {
+    @apply bg-green-600 text-white rounded-full p-3 mr-3;
+}
+
+.productoDetalleBeneficio strong {
+    @apply block text-sm text-gray-900;
+}
+
+.productoDetalleBeneficio span {
+    @apply block text-sm text-gray-700 mt-1 leading-relaxed;
+}
+
+.productoDetalleVendedor {
+    @apply text-sm text-gray-600 mt-6;
+}
+
+.productoDetalleVendedor strong {
+    @apply text-blue-600;
+}

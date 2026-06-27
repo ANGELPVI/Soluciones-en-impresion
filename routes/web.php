@@ -23,10 +23,13 @@ Route::get('/',[pageController::class, 'inicio']);
 Route::get('/',[pageController::class, 'inicio'])->name('inicio');
 
 Route::get('/impresoras',[pageController::class, 'impresoras'])->name('impresoras');
+Route::get('/impresoras/{id}',[pageController::class, 'showImpresora'])->name('impresoras.show');
 
 Route::get('/consumibles',[pageController::class,'consumibles'])->name('consumibles');
+Route::get('/consumibles/{id}',[pageController::class,'showConsumible'])->name('consumibles.show');
 
 Route::get('/oficina',[pageController::class,'oficina'])->name('oficina');
+Route::get('/oficina/{id}',[pageController::class,'showOficina'])->name('oficina.show');
 
 Route::get('/login',[pageController::class,'login'])->name('login')->middleware('guest');
 
