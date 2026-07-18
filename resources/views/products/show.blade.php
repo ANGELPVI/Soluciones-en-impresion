@@ -11,7 +11,19 @@
         $mensajeCompra = rawurlencode('Hola, me interesa comprar el producto: ' . $titulo . ' con precio $' . number_format($producto->precio, 2, '.', ','));
     @endphp
 
-    <main class="productoDetallePagina">
+                <h1>{{ $titulo }}</h1>
+                <p>{{ $descripcion }}</p>
+        <img src="{{ $imagenPrincipal }}" alt="{{ $titulo }}">
+
+        <div class="productoDetalleGaleria" id="productGallery">
+                    @foreach ($imagenes as $imagen)
+                        <button type="button" class="productoDetalleMiniatura product-thumb" data-image="{{ $imagen }}">
+                            <img src="{{ $imagen }}" alt="{{ $titulo }}">
+                        </button>
+                    @endforeach
+                </div>
+
+    {{-- <main class="productoDetallePagina">
         <div class="productoDetalleContenedor">
             <div class="productoDetalleSugerencias">
                 <span>Tambien puede interesarte:</span>
@@ -206,5 +218,5 @@
                 });
             }
         });
-    </script>
+    </script> --}}
 @endsection
