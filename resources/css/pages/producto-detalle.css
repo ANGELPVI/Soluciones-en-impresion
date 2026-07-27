@@ -1,260 +1,240 @@
-.productoDetallePagina {
-    @apply bg-gray-200 min-h-screen py-6 font-descrip;
+.producto-show-pagina {
+    @apply w-full min-h-screen bg-gray-100 font-descrip text-gray-900;
 }
 
-.productoDetalleContenedor {
-    @apply w-11/12 max-w-6xl mx-auto;
+.producto-show-contenedor {
+    @apply w-11/12 max-w-6xl mx-auto py-6;
 }
 
-.productoDetalleSugerencias {
-    @apply hidden md:flex items-center text-sm text-gray-800 mb-5;
-}
-
-.productoDetalleSugerencias span {
-    @apply mr-1;
-}
-
-.productoDetalleSugerencias a {
-    @apply text-blue-600 mr-1 hover:text-blue-800;
-}
-
-.productoDetalleNavegacion {
-    @apply flex flex-col md:flex-row md:items-center md:justify-between mb-3 text-sm;
-}
-
-.productoDetalleBreadcrumb {
-    @apply flex flex-wrap items-center text-blue-600;
-}
-
-.productoDetalleBreadcrumb a {
-    @apply hover:text-blue-800;
-}
-
-.productoDetalleBreadcrumb i,
-.productoDetalleBreadcrumb span {
-    @apply text-gray-500 mx-2;
-}
-
-.productoDetalleAccionesTop {
-    @apply hidden md:flex items-center text-blue-600;
-}
-
-.productoDetalleAccionesTop a,
-.productoDetalleAccionesTop button {
-    @apply hover:text-blue-800;
-}
-
-.productoDetalleAccionesTop span {
-    @apply text-gray-400 mx-3;
-}
-
-.productoDetalleTarjeta {
-    @apply bg-white border border-gray-300 rounded shadow-sm p-4 md:p-6;
+.producto-show-grid {
+    @apply grid grid-cols-1 gap-6;
 }
 
 @screen lg {
-    .productoDetalleTarjeta {
-        display: grid;
-        grid-template-columns: 72px minmax(330px, 1fr) minmax(300px, 365px) 310px;
-        gap: 24px;
+    .producto-show-grid {
+        grid-template-columns: minmax(0, 1fr) 490px;
+        gap: 28px;
         align-items: start;
     }
 }
 
-.productoDetalleGaleria {
-    @apply grid grid-cols-4 gap-3 mb-5;
+.producto-show-media,
+.producto-show-lateral {
+    @apply w-full;
 }
 
-@screen lg {
-    .productoDetalleGaleria {
-        @apply flex flex-col mb-0;
+.producto-show-imagen-principal {
+    @apply relative flex items-center justify-center w-full bg-white rounded-lg overflow-hidden shadow;
+    min-height: 260px;
+}
+
+@screen md {
+    .producto-show-imagen-principal {
+        min-height: 430px;
     }
 }
 
-.productoDetalleMiniatura {
-    @apply bg-white border border-gray-300 rounded p-1 transition duration-200 focus:outline-none;
-    height: 58px;
-}
-
-.productoDetalleMiniatura:hover,
-.productoDetalleMiniaturaActiva {
-    @apply border-blue-500;
-}
-
-.productoDetalleMiniatura img {
-    @apply w-full h-full object-contain;
-}
-
-.productoDetalleImagenPrincipal {
-    @apply flex items-center justify-center bg-white;
-    min-height: 360px;
-}
-
-.productoDetalleImagenPrincipal img {
+.producto-show-imagen-principal img {
     @apply w-full object-contain;
-    max-height: 470px;
+    height: 260px;
 }
 
-.productoDetalleInformacion {
-    @apply mt-6 lg:mt-0;
+@screen md {
+    .producto-show-imagen-principal img {
+        height: 430px;
+    }
 }
 
-.productoDetalleEstado {
-    @apply flex items-center text-sm text-gray-500 mb-2;
+.producto-show-flecha {
+    @apply absolute hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white text-blue-600 shadow focus:outline-none transition duration-300;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.productoDetalleEstado span {
-    @apply mr-2;
+.producto-show-flecha:hover {
+    @apply bg-blue-600 text-white;
 }
 
-.productoDetalleTituloFila {
-    @apply flex items-start justify-between;
+.producto-show-flecha-izquierda {
+    @apply left-4;
 }
 
-.productoDetalleTituloFila h1 {
-    @apply text-2xl font-bold text-gray-900 leading-tight pr-4;
+.producto-show-flecha-derecha {
+    @apply right-4;
 }
 
-.productoDetalleTituloFila button {
-    @apply text-3xl text-blue-600 hover:text-blue-800 focus:outline-none;
+.producto-show-miniaturas {
+    @apply grid grid-cols-4 gap-4 mt-4;
 }
 
-.productoDetalleRating {
-    @apply flex items-center mt-2 text-sm text-gray-500;
+.producto-show-miniatura {
+    @apply bg-white rounded-lg overflow-hidden border-2 border-transparent shadow-sm p-1 focus:outline-none transition duration-300;
+    height: 74px;
 }
 
-.productoDetalleRating i {
-    @apply text-blue-600 ml-1;
+@screen md {
+    .producto-show-miniatura {
+        height: 86px;
+    }
 }
 
-.productoDetalleRating span {
-    @apply mr-1;
+.producto-show-miniatura:hover,
+.producto-show-miniatura-activa {
+    @apply border-blue-600;
 }
 
-.productoDetalleEtiqueta {
-    @apply inline-block mt-3 text-white text-xs font-bold uppercase px-2 py-1 rounded;
-    background-color: #ff7733;
+.producto-show-miniatura img {
+    @apply w-full h-full object-cover rounded;
 }
 
-.productoDetallePrecio {
-    @apply text-4xl font-normal text-gray-900 mt-5;
+.producto-show-caracteristicas {
+    @apply mt-8 px-4 md:px-6;
 }
 
-.productoDetallePago {
-    @apply text-sm text-gray-700 mt-2;
+.producto-show-caracteristicas h2,
+.producto-show-descripcion h2,
+.producto-show-relacionados h2 {
+    @apply flex items-center text-2xl font-bold text-gray-900 mb-3;
 }
 
-.productoDetalleFinanciamiento {
-    @apply text-sm text-green-700 mt-3 leading-relaxed;
+.producto-show-caracteristicas h2 i,
+.producto-show-descripcion h2 i,
+.producto-show-relacionados h2 i {
+    @apply mr-3 text-gray-800;
 }
 
-.productoDetalleCaracteristicas {
-    @apply mt-8 text-gray-800;
+.producto-show-caracteristicas ul {
+    @apply list-disc pl-10 text-base text-gray-800 leading-7;
 }
 
-.productoDetalleCaracteristicas h2 {
-    @apply text-base font-bold mb-4;
+.producto-show-caracteristicas p {
+    @apply text-base text-gray-800 leading-7;
 }
 
-.productoDetalleCaracteristicas ul {
-    @apply list-disc pl-5 space-y-3 text-sm;
+.producto-show-card-compra {
+    @apply bg-white rounded-lg shadow-lg px-5 py-5 md:px-6 md:py-6;
 }
 
-.productoDetalleCaracteristicas p {
-    @apply text-sm leading-relaxed;
+.producto-show-card-compra h1 {
+    @apply text-2xl font-bold leading-tight text-black mb-2;
 }
 
-.productoDetalleCaracteristicas button {
-    @apply text-blue-600 text-sm mt-5 hover:text-blue-800 focus:outline-none;
+@screen md {
+    .producto-show-card-compra h1 {
+        @apply text-3xl;
+    }
 }
 
-.productoDetalleCompra {
-    @apply mt-8 lg:mt-0 border border-gray-300 rounded-lg p-5 text-gray-800;
+.producto-show-precio {
+    @apply text-2xl text-gray-900 mb-4;
 }
 
-.productoDetalleEnvio,
-.productoDetalleRetiro,
-.productoDetalleStock {
-    @apply mb-5;
+.producto-show-opciones {
+    @apply grid grid-cols-1 gap-4 mb-6;
 }
 
-.productoDetalleEnvio p,
-.productoDetalleRetiro p {
-    @apply text-base mb-1;
+@screen sm {
+    .producto-show-opciones {
+        @apply grid-cols-2;
+    }
 }
 
-.productoDetalleEnvio strong,
-.productoDetalleRetiro strong {
-    @apply text-green-600;
+.producto-show-opciones span {
+    @apply block text-base text-gray-800 mb-2;
 }
 
-.productoDetalleEnvio span,
-.productoDetalleRetiro span,
-.productoDetalleStock span {
-    @apply block text-sm text-gray-500 leading-relaxed;
+.producto-show-grupo-botones {
+    @apply flex items-center gap-2;
 }
 
-.productoDetalleEnvio a {
-    @apply inline-block text-blue-600 text-sm mt-2 hover:text-blue-800;
+.producto-show-opcion,
+.producto-show-variante {
+    @apply px-4 py-2 rounded border border-gray-300 bg-white text-gray-900 text-base focus:outline-none transition duration-300;
 }
 
-.productoDetalleStock strong {
-    @apply block text-lg text-gray-900 mb-1;
+.producto-show-opcion:hover,
+.producto-show-variante:hover,
+.producto-show-opcion-activa,
+.producto-show-variante-activa {
+    @apply border-blue-600;
+    box-shadow: 0 0 0 1px #2563eb;
 }
 
-.productoDetalleMeta {
-    @apply grid grid-cols-1 gap-2 mb-5 text-sm;
+.producto-show-variante-oscura {
+    @apply bg-black text-white border-black;
 }
 
-.productoDetalleMeta div {
-    @apply border border-gray-200 rounded p-3;
+.producto-show-btn-carrito,
+.producto-show-btn-comprar {
+    @apply flex items-center justify-center w-full rounded text-base py-3 px-4 transition duration-300;
 }
 
-.productoDetalleMeta span {
-    @apply block text-gray-500;
+.producto-show-btn-carrito {
+    @apply bg-blue-600 text-white shadow hover:bg-blue-700 mb-3;
 }
 
-.productoDetalleMeta strong {
-    @apply block text-gray-900 mt-1;
+.producto-show-btn-comprar {
+    @apply bg-white text-gray-700 border-2 border-blue-600 hover:bg-blue-50;
 }
 
-.productoDetalleBotonCompra,
-.productoDetalleBotonCarrito {
-    @apply w-full flex items-center justify-center font-bold rounded py-3 px-4 transition duration-300;
+.producto-show-descripcion {
+    @apply mt-6 px-4 md:px-6;
 }
 
-.productoDetalleBotonCompra {
-    @apply bg-blue-600 text-white hover:bg-blue-700 mb-2;
+.producto-show-descripcion p {
+    @apply text-base text-gray-800 leading-7;
 }
 
-.productoDetalleBotonCarrito {
-    @apply bg-blue-100 text-blue-700 hover:bg-blue-200;
+.producto-show-detalles {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4 text-sm text-gray-600;
 }
 
-.productoDetalleBotonCarrito i {
-    @apply mr-2;
+.producto-show-detalles span {
+    @apply bg-white rounded px-3 py-2 shadow-sm;
 }
 
-.productoDetalleBeneficio {
-    @apply flex items-start border border-gray-200 rounded shadow mt-6 p-4 bg-white;
+.producto-show-relacionados {
+    @apply mt-7 px-4 md:px-6;
 }
 
-.productoDetalleBeneficio i {
-    @apply bg-green-600 text-white rounded-full p-3 mr-3;
+.producto-show-relacionados-grid {
+    @apply grid grid-cols-1 sm:grid-cols-3 gap-4;
 }
 
-.productoDetalleBeneficio strong {
-    @apply block text-sm text-gray-900;
+.producto-show-relacionado-card {
+    @apply block bg-white rounded-lg shadow overflow-hidden p-3 transition duration-300;
 }
 
-.productoDetalleBeneficio span {
-    @apply block text-sm text-gray-700 mt-1 leading-relaxed;
+.producto-show-relacionado-card:hover {
+    @apply shadow-lg;
+    transform: translateY(-3px);
 }
 
-.productoDetalleVendedor {
-    @apply text-sm text-gray-600 mt-6;
+.producto-show-relacionado-card img {
+    @apply w-full object-contain mb-3;
+    height: 105px;
 }
 
-.productoDetalleVendedor strong {
-    @apply text-blue-600;
+.producto-show-relacionado-card strong {
+    @apply block text-sm text-gray-900 leading-tight;
+}
+
+.producto-show-relacionado-card span {
+    @apply block text-blue-600 font-bold mt-2;
+}
+
+@media (max-width: 767px) {
+    .producto-show-contenedor {
+        @apply w-full px-4 py-4;
+    }
+
+    .producto-show-card-compra {
+        @apply mt-2;
+    }
+
+    .producto-show-caracteristicas,
+    .producto-show-descripcion,
+    .producto-show-relacionados {
+        @apply px-0;
+    }
 }

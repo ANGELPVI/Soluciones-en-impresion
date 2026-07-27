@@ -3,220 +3,122 @@
 @section('sesion')
     @php
         $imagenPrincipal = $imagenes->first() ?: $producto->img;
-        $caracteristicas = collect(explode('|', $descripcion))->map(function ($item) {
-            return trim($item);
-        })->filter()->values();
-        $modelo = $producto->modelo ?? $producto->nombre ?? '';
+        $caracteristicas = collect(explode('|', $descripcion))
+            ->map(function ($item) {
+                return trim($item);
+            })
+            ->filter()
+            ->values();
+        $modelo = $producto->modelo ?? ($producto->nombre ?? '');
         $sku = $producto->sku ?? strtoupper($tipo) . '-' . $producto->id;
-        $mensajeCompra = rawurlencode('Hola, me interesa comprar el producto: ' . $titulo . ' con precio $' . number_format($producto->precio, 2, '.', ','));
+        $mensajeCompra = rawurlencode(
+            'Hola, me interesa comprar el producto: ' .
+                $titulo .
+                ' con precio $' .
+                number_format($producto->precio, 2, '.', ','),
+        );
     @endphp
 
-                <h1>{{ $titulo }}</h1>
-                <p>{{ $descripcion }}</p>
-        <img src="{{ $imagenPrincipal }}" alt="{{ $titulo }}">
-
-        <div class="productoDetalleGaleria" id="productGallery">
-                    @foreach ($imagenes as $imagen)
-                        <button type="button" class="productoDetalleMiniatura product-thumb" data-image="{{ $imagen }}">
-                            <img src="{{ $imagen }}" alt="{{ $titulo }}">
+    <main class="producto-show-pagina">
+        <section class="producto-show-contenedor">
+            <div class="producto-show-grid">
+                <div class="producto-show-media">
+                    <div class="producto-show-imagen-principal">
+                        <button type="button" class="producto-show-flecha producto-show-flecha-izquierda" id="productoImagenAnterior" aria-label="Imagen anterior">
+                            <i class="fas fa-chevron-left"></i>
                         </button>
-                    @endforeach
-                </div>
 
-    {{-- <main class="productoDetallePagina">
-        <div class="productoDetalleContenedor">
-            <div class="productoDetalleSugerencias">
-                <span>Tambien puede interesarte:</span>
-                <a href="{{ route('impresoras') }}">impresoras</a>
-                <span>-</span>
-                <a href="{{ route('consumibles') }}">consumibles</a>
-                <span>-</span>
-                <a href="{{ route('oficina') }}">productos de oficina</a>
-            </div>
+                        <img id="productoImagenPrincipal" src="{{ $imagenPrincipal }}" alt="{{ $titulo }}">
 
-            <div class="productoDetalleNavegacion">
-                <div class="productoDetalleBreadcrumb">
-                    <a href="{{ $backUrl }}">Volver al listado</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <span>{{ ucfirst($tipo) }}</span>
-                    <i class="fas fa-chevron-right"></i>
-                    <span>{{ $titulo }}</span>
-                </div>
-
-                <div class="productoDetalleAccionesTop">
-                    <a href="{{ $backUrl }}">Vender uno igual</a>
-                    <span>|</span>
-                    <button type="button">Compartir</button>
-                </div>
-            </div>
-
-            <section class="productoDetalleTarjeta">
-                <div class="productoDetalleGaleria" id="productGallery">
-                    @foreach ($imagenes as $imagen)
-                        <button type="button" class="productoDetalleMiniatura product-thumb" data-image="{{ $imagen }}">
-                            <img src="{{ $imagen }}" alt="{{ $titulo }}">
-                        </button>
-                    @endforeach
-                </div>
-
-                <div class="productoDetalleImagenPrincipal">
-                    <img id="productMainImage" src="{{ $imagenPrincipal }}" alt="{{ $titulo }}">
-                </div>
-
-                <article class="productoDetalleInformacion">
-                    <div class="productoDetalleEstado">
-                        <span>Nuevo</span>
-                        <span>|</span>
-                        <span>{{ $producto->stock }} disponibles</span>
-                    </div>
-
-                    <div class="productoDetalleTituloFila">
-                        <h1>{{ $titulo }}</h1>
-                        <button type="button" aria-label="Guardar producto">
-                            <i class="far fa-heart"></i>
+                        <button type="button" class="producto-show-flecha producto-show-flecha-derecha" id="productoImagenSiguiente" aria-label="Imagen siguiente">
+                            <i class="fas fa-chevron-right"></i>
                         </button>
                     </div>
 
-                    <div class="productoDetalleRating">
-                        <span>4.8</span>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                        <span>(19)</span>
+                    <div class="producto-show-miniaturas" id="productoGaleriaMiniaturas">
+                        @foreach ($imagenes as $imagen)
+                            <button type="button" class="producto-show-miniatura" data-image="{{ $imagen }}" data-index="{{ $loop->index }}">
+                                <img src="{{ $imagen }}" alt="{{ $titulo }}">
+                            </button>
+                        @endforeach
                     </div>
 
-                    @if ($producto->stock <= 3)
-                        <span class="productoDetalleEtiqueta">Ultimas unidades</span>
-                    @endif
+                    <div class="producto-show-caracteristicas">
+                        <h2><i class="far fa-star"></i> Caracteristicas Principales</h2>
 
-                    <p class="productoDetallePrecio">${{ number_format($producto->precio, 2, '.', ',') }}</p>
-                    <p class="productoDetallePago">IVA incluido</p>
-                    <p class="productoDetalleFinanciamiento">Pregunta por promociones y pagos flexibles con nuestros asesores.</p>
-
-                    <div class="productoDetalleCaracteristicas">
-                        <h2>Lo que tienes que saber de este producto</h2>
-
-                        @if ($caracteristicas->count() > 1)
+                        @if ($caracteristicas->count())
                             <ul>
-                                @foreach ($caracteristicas->take(5) as $caracteristica)
+                                @foreach ($caracteristicas->take(4) as $caracteristica)
                                     <li>{{ $caracteristica }}</li>
                                 @endforeach
                             </ul>
                         @else
                             <p>{{ $descripcion }}</p>
                         @endif
-
-                        <button type="button">Ver caracteristicas</button>
                     </div>
-                </article>
+                </div>
 
-                <aside class="productoDetalleCompra">
-                    <div class="productoDetalleEnvio">
-                        <p><strong>Llega gratis</strong> consultando disponibilidad</p>
-                        <span>Entrega local y atencion personalizada.</span>
-                        <a href="https://wa.me/527581036078" target="_blank" rel="noopener">Consultar cobertura</a>
-                    </div>
+                <div class="producto-show-lateral">
+                    <div class="producto-show-card-compra">
+                        <h1>{{ $titulo }}</h1>
+                        <p class="producto-show-precio">${{ number_format($producto->precio, 2, '.', ',') }} MXN</p>
 
-                    <div class="productoDetalleRetiro">
-                        <p><strong>Retira gratis</strong> o solicita entrega</p>
-                        <span>Te contactamos para confirmar compra y entrega.</span>
-                    </div>
+                        <div class="producto-show-opciones">
+                            <div>
+                                <span>Cantidad</span>
+                                <div class="producto-show-grupo-botones">
+                                    <button type="button" class="producto-show-opcion producto-show-opcion-activa" data-cantidad="1">1</button>
+                                    <button type="button" class="producto-show-opcion" data-cantidad="2">2</button>
+                                    <button type="button" class="producto-show-opcion" data-cantidad="3">3+</button>
+                                </div>
+                            </div>
 
-                    <div class="productoDetalleStock">
-                        @if ($producto->stock > 0)
-                            <strong>Stock disponible</strong>
-                            <span>{{ $producto->stock }} piezas en inventario</span>
-                        @else
-                            <strong>Sin stock disponible</strong>
-                            <span>Pregunta por disponibilidad con un asesor.</span>
-                        @endif
-                    </div>
-
-                    <div class="productoDetalleMeta">
-                        <div>
-                            <span>Marca</span>
-                            <strong>{{ $producto->marca }}</strong>
+                            <div>
+                                <span>Variante</span>
+                                <div class="producto-show-grupo-botones">
+                                    <button type="button" class="producto-show-variante producto-show-variante-activa">White</button>
+                                    <button type="button" class="producto-show-variante producto-show-variante-oscura">Black</button>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <span>Modelo</span>
-                            <strong>{{ $modelo }}</strong>
-                        </div>
-                        <div>
-                            <span>SKU</span>
-                            <strong>{{ $sku }}</strong>
-                        </div>
+
+                        <button type="button" id="addProductToCart" class="producto-show-btn-carrito" data-id="{{ $producto->id }}" data-type="{{ $tipo }}" data-title="{{ $titulo }}" data-price="{{ $producto->precio }}" data-image="{{ $imagenPrincipal }}">
+                            Anadir al Carrito
+                        </button>
+
+                        <a href="https://wa.me/527581036078?text={{ $mensajeCompra }}" target="_blank" rel="noopener" class="producto-show-btn-comprar">
+                            Comprar Ahora
+                        </a>
                     </div>
 
-                    <a href="https://wa.me/527581036078?text={{ $mensajeCompra }}" target="_blank" rel="noopener" class="productoDetalleBotonCompra">
-                        Comprar ahora
-                    </a>
-
-                    <button type="button" id="addProductToCart" class="productoDetalleBotonCarrito" data-id="{{ $producto->id }}" data-type="{{ $tipo }}" data-title="{{ $titulo }}" data-price="{{ $producto->precio }}" data-image="{{ $imagenPrincipal }}">
-                        <i class="fas fa-cart-plus"></i>
-                        Agregar al carrito
-                    </button>
-
-                    <div class="productoDetalleBeneficio">
-                        <i class="fas fa-truck"></i>
-                        <div>
-                            <strong>Consigue envio gratis</strong>
-                            <span>Arma un pedido con varios productos y consulta el beneficio.</span>
+                    <div class="producto-show-descripcion">
+                        <h2><i class="far fa-compass"></i> Descripcion Rapida</h2>
+                        <p>{{ $descripcion }}</p>
+                        <div class="producto-show-detalles">
+                            <span>Marca: {{ $producto->marca }}</span>
+                            <span>Modelo: {{ $modelo }}</span>
+                            <span>SKU: {{ $sku }}</span>
+                            <span>Stock: {{ $producto->stock }} piezas</span>
                         </div>
                     </div>
 
-                    <p class="productoDetalleVendedor">Vendido por <strong>Soluciones En Impresion</strong></p>
-                </aside>
-            </section>
-        </div>
+                    <div class="producto-show-relacionados">
+                        <h2><i class="fas fa-store"></i> Productos relacionados:</h2>
+
+                        <div class="producto-show-relacionados-grid">
+                            @foreach ($productosRelacionados as $relacionado)
+                                <a href="{{ $relacionado['url'] }}" class="producto-show-relacionado-card">
+                                    <img src="{{ $relacionado['img'] }}" alt="{{ $relacionado['titulo'] }}">
+                                    <strong>{{ $relacionado['titulo'] }}</strong>
+                                    <span>${{ number_format($relacionado['precio'], 2, '.', ',') }}</span>
+                                </a>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var mainImage = document.getElementById('productMainImage');
-            var thumbnails = document.querySelectorAll('.product-thumb');
-            var cartButton = document.getElementById('addProductToCart');
-
-            thumbnails.forEach(function (thumbnail) {
-                thumbnail.addEventListener('click', function () {
-                    mainImage.src = this.dataset.image;
-                    thumbnails.forEach(function (item) {
-                        item.classList.remove('productoDetalleMiniaturaActiva');
-                    });
-                    this.classList.add('productoDetalleMiniaturaActiva');
-                });
-            });
-
-            if (thumbnails.length) {
-                thumbnails[0].classList.add('productoDetalleMiniaturaActiva');
-            }
-
-            if (cartButton) {
-                cartButton.addEventListener('click', function () {
-                    var product = {
-                        id: this.dataset.id,
-                        type: this.dataset.type,
-                        title: this.dataset.title,
-                        price: Number(this.dataset.price),
-                        image: this.dataset.image,
-                        quantity: 1
-                    };
-                    var cart = JSON.parse(localStorage.getItem('productCart') || '[]');
-                    var existing = cart.find(function (item) {
-                        return item.id === product.id && item.type === product.type;
-                    });
-
-                    if (existing) {
-                        existing.quantity += 1;
-                    } else {
-                        cart.push(product);
-                    }
-
-                    localStorage.setItem('productCart', JSON.stringify(cart));
-                    this.innerHTML = '<i class="fas fa-check"></i> Agregado';
-                });
-            }
-        });
-    </script> --}}
+    
 @endsection

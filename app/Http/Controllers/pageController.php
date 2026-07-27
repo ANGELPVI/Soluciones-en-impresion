@@ -82,7 +82,50 @@ class pageController extends Controller
             'descripcion' => $descripcion,
             'imagenes' => $imagenes->filter()->unique()->values(),
             'backUrl' => $backUrl,
+            'productosRelacionados' => $this->getRelatedProducts($tipo, $producto->id),
         ];
+    }
+
+    private function getRelatedProducts($tipo, $productoId){
+        if ($tipo === 'impresora') {
+            return App\Models\Impresora::where('id', '!=', $productoId)
+                ->take(3)
+                ->get()
+                ->map(function ($item) {
+                    return [
+                        'titulo' => $item->marca . ' ' . $item->modelo,
+                        'precio' => $item->precio,
+                        'img' => $item->img,
+                        'url' => route('impresoras.show', $item->id),
+                    ];
+                });
+        }
+
+        if ($tipo === 'consumible') {
+            return App\Models\Consumibles::where('id', '!=', $productoId)
+                ->take(3)
+                ->get()
+                ->map(function ($item) {
+                    return [
+                        'titulo' => $item->marca . ' ' . $item->modelo,
+                        'precio' => $item->precio,
+                        'img' => $item->img,
+                        'url' => route('consumibles.show', $item->id),
+                    ];
+                });
+        }
+
+        return App\Models\ProductosOficina::where('id', '!=', $productoId)
+            ->take(3)
+            ->get()
+            ->map(function ($item) {
+                return [
+                    'titulo' => $item->marca . ' ' . $item->nombre,
+                    'precio' => $item->precio,
+                    'img' => $item->img,
+                    'url' => route('oficina.show', $item->id),
+                ];
+            });
     }
 
     public function login(){
