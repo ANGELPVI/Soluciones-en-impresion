@@ -22,9 +22,9 @@ class ProductImagesSeeder extends Seeder
                 'table' => 'consumibles',
                 'where' => ['modelo', 'like', '%58A%'],
                 'images' => [
-                    'https://www.kabifperu.com/imagenes/toner-hp-58a-laserjet-pro-m428fdw-cf258a-deta-13092022125640.jpg',
-                    'https://shop.dupapier.com.mx/cdn/shop/files/TONER-58A-CF258A-NEGRO-3000-PAGINAS_C067-517-_1.jpg?v=1761232770',
-                    'https://shop.dupapier.com.mx/cdn/shop/files/TONER-58A-CF258A-NEGRO-3000-PAGINAS_C067-517-_1.jpg?v=1761232770',
+                    'https://i.ebayimg.com/images/g/ODUAAOSw8Wtnfe-8/s-l1600.webp',
+                    'https://i.ebayimg.com/images/g/nKoAAOSwBg5nfe-9/s-l1600.webp',
+                    'https://i.ebayimg.com/images/g/CRwAAOSwqzJnfe--/s-l1600.webp',
                 ],
             ],
             [
@@ -34,7 +34,7 @@ class ProductImagesSeeder extends Seeder
                 'images' => [
                     'https://cdn.cs.1worldsync.com/ab/47/ab47aed4-4471-4134-8b69-c74cf83798c0.jpg',
                     'https://cdn.cs.1worldsync.com/16/2b/162baa2b-6302-4c9e-9315-18d6aeaaa2fc.jpg',
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgQItbOmEUxryM2etkkfd05J8ZnW0dlRZyZQ&s',
+                    'https://cdn.cs.1worldsync.com/1f/3e/1f3eeb43-a916-4eec-b1c1-d2e4a6dfc33c.jpg',
                 ],
             ],
             [
@@ -42,9 +42,9 @@ class ProductImagesSeeder extends Seeder
                 'table' => 'productos_oficina',
                 'where' => ['sku', '=', 'SSD-001'],
                 'images' => [
-                    'https://www.serversupply.com/images/WebPImage/333454.webp?v=04-X-yePcLAJoRpoyc63sM1fgxZ6j5LOiDwnb99gCJo',
-                    'https://www.serversupply.com/images/mproductimages/333454_0_100.jpg?v=638527295529935956%3Fv%3D639120491599480048',
-                    'https://www.serversupply.com/images/mproductimages/333454_1_100.jpg?v=638527295530404789%3Fv%3D639120491599480164',
+                    'https://m.media-amazon.com/images/I/71f2I8cltBL._AC_SL1500_.jpg',
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCMO8hZrUFVtsjtzCjRK_6luEmkXywEiF_8DM2W3vCrq8VXtmmkyqEsYK1&s=10',
+                    'https://tuprecio-bucket-api.s3.us-east-2.amazonaws.com/product-photo-66bc9d55659d16a1821098b0-1723637404646-0',
                 ],
             ],
             [
@@ -52,7 +52,7 @@ class ProductImagesSeeder extends Seeder
                 'table' => 'productos_oficina',
                 'where' => ['sku', '=', 'HDD-001'],
                 'images' => [
-                    'https://m.media-amazon.com/images/I/51LaSbUPn0L.jpg',
+                    'https://m.media-amazon.com/images/I/71I%2BBQbC%2BkL._AC_SL1500_.jpg',
                     'https://images-na.ssl-images-amazon.com/images/I/71I%2BBQbC%2BkL._AC_SL1500_.jpg',
                     'https://images-na.ssl-images-amazon.com/images/I/61uF7GopfcL._AC_SL1500_.jpg',
                 ],

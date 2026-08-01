@@ -80,6 +80,7 @@ class pageController extends Controller
             'tipo' => $tipo,
             'titulo' => $titulo,
             'descripcion' => $descripcion,
+            'caracteristicas' => $this->parseCaracteristicas($descripcion),
             'imagenes' => $imagenes->filter()->unique()->values(),
             'backUrl' => $backUrl,
             'productosRelacionados' => $this->getRelatedProducts($tipo, $producto->id),
@@ -89,7 +90,7 @@ class pageController extends Controller
     private function getRelatedProducts($tipo, $productoId){
         if ($tipo === 'impresora') {
             return App\Models\Impresora::where('id', '!=', $productoId)
-                ->take(3)
+                ->take(6)
                 ->get()
                 ->map(function ($item) {
                     return [
@@ -103,7 +104,7 @@ class pageController extends Controller
 
         if ($tipo === 'consumible') {
             return App\Models\Consumibles::where('id', '!=', $productoId)
-                ->take(3)
+                ->take(6)
                 ->get()
                 ->map(function ($item) {
                     return [
@@ -116,7 +117,7 @@ class pageController extends Controller
         }
 
         return App\Models\ProductosOficina::where('id', '!=', $productoId)
-            ->take(3)
+            ->take(6)
             ->get()
             ->map(function ($item) {
                 return [
@@ -126,6 +127,23 @@ class pageController extends Controller
                     'url' => route('oficina.show', $item->id),
                 ];
             });
+    }
+
+    private function parseCaracteristicas($descripcion){
+        if (empty($descripcion)) {
+            return collect();
+        }
+
+        $texto = trim(strip_tags($descripcion));
+        $texto = preg_replace('/\s+/', ' ', $texto);
+        $partes = preg_split('/\s*(?:\||;|,|\r\n|\r|\n)\s*/', $texto);
+
+        return collect($partes)
+            ->map(function ($item) {
+                return ucfirst(trim($item));
+            })
+            ->filter()
+            ->values();
     }
 
     public function login(){

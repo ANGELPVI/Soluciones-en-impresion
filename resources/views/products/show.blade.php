@@ -3,12 +3,7 @@
 @section('sesion')
     @php
         $imagenPrincipal = $imagenes->first() ?: $producto->img;
-        $caracteristicas = collect(explode('|', $descripcion))
-            ->map(function ($item) {
-                return trim($item);
-            })
-            ->filter()
-            ->values();
+        $caracteristicas = collect($caracteristicas ?? []);
         $modelo = $producto->modelo ?? ($producto->nombre ?? '');
         $sku = $producto->sku ?? strtoupper($tipo) . '-' . $producto->id;
         $mensajeCompra = rawurlencode(
@@ -24,20 +19,23 @@
             <div class="producto-show-grid">
                 <div class="producto-show-media">
                     <div class="producto-show-imagen-principal">
-                        <button type="button" class="producto-show-flecha producto-show-flecha-izquierda" id="productoImagenAnterior" aria-label="Imagen anterior">
+                        <button type="button" class="producto-show-flecha producto-show-flecha-izquierda"
+                            id="productoImagenAnterior" aria-label="Imagen anterior">
                             <i class="fas fa-chevron-left"></i>
                         </button>
 
                         <img id="productoImagenPrincipal" src="{{ $imagenPrincipal }}" alt="{{ $titulo }}">
 
-                        <button type="button" class="producto-show-flecha producto-show-flecha-derecha" id="productoImagenSiguiente" aria-label="Imagen siguiente">
+                        <button type="button" class="producto-show-flecha producto-show-flecha-derecha"
+                            id="productoImagenSiguiente" aria-label="Imagen siguiente">
                             <i class="fas fa-chevron-right"></i>
                         </button>
                     </div>
 
                     <div class="producto-show-miniaturas" id="productoGaleriaMiniaturas">
                         @foreach ($imagenes as $imagen)
-                            <button type="button" class="producto-show-miniatura" data-image="{{ $imagen }}" data-index="{{ $loop->index }}">
+                            <button type="button" class="producto-show-miniatura" data-image="{{ $imagen }}"
+                                data-index="{{ $loop->index }}">
                                 <img src="{{ $imagen }}" alt="{{ $titulo }}">
                             </button>
                         @endforeach
@@ -48,7 +46,7 @@
 
                         @if ($caracteristicas->count())
                             <ul>
-                                @foreach ($caracteristicas->take(4) as $caracteristica)
+                                @foreach ($caracteristicas as $caracteristica)
                                     <li>{{ $caracteristica }}</li>
                                 @endforeach
                             </ul>
@@ -57,6 +55,8 @@
                         @endif
                     </div>
                 </div>
+
+
 
                 <div class="producto-show-lateral">
                     <div class="producto-show-card-compra">
@@ -67,33 +67,36 @@
                             <div>
                                 <span>Cantidad</span>
                                 <div class="producto-show-grupo-botones">
-                                    <button type="button" class="producto-show-opcion producto-show-opcion-activa" data-cantidad="1">1</button>
+                                    <button type="button" class="producto-show-opcion producto-show-opcion-activa"
+                                        data-cantidad="1">1</button>
                                     <button type="button" class="producto-show-opcion" data-cantidad="2">2</button>
                                     <button type="button" class="producto-show-opcion" data-cantidad="3">3+</button>
                                 </div>
                             </div>
 
-                            <div>
+                            {{-- <div>
                                 <span>Variante</span>
                                 <div class="producto-show-grupo-botones">
                                     <button type="button" class="producto-show-variante producto-show-variante-activa">White</button>
                                     <button type="button" class="producto-show-variante producto-show-variante-oscura">Black</button>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
 
-                        <button type="button" id="addProductToCart" class="producto-show-btn-carrito" data-id="{{ $producto->id }}" data-type="{{ $tipo }}" data-title="{{ $titulo }}" data-price="{{ $producto->precio }}" data-image="{{ $imagenPrincipal }}">
+                        <button type="button" id="addProductToCart" class="producto-show-btn-carrito"
+                            data-id="{{ $producto->id }}" data-type="{{ $tipo }}"
+                            data-title="{{ $titulo }}" data-price="{{ $producto->precio }}"
+                            data-image="{{ $imagenPrincipal }}">
                             Anadir al Carrito
                         </button>
 
-                        <a href="https://wa.me/527581036078?text={{ $mensajeCompra }}" target="_blank" rel="noopener" class="producto-show-btn-comprar">
+                        <a href="https://wa.me/527581036078?text={{ $mensajeCompra }}" target="_blank" rel="noopener"
+                            class="producto-show-btn-comprar">
                             Comprar Ahora
                         </a>
                     </div>
 
                     <div class="producto-show-descripcion">
-                        <h2><i class="far fa-compass"></i> Descripcion Rapida</h2>
-                        <p>{{ $descripcion }}</p>
                         <div class="producto-show-detalles">
                             <span>Marca: {{ $producto->marca }}</span>
                             <span>Modelo: {{ $modelo }}</span>
@@ -120,5 +123,5 @@
         </section>
     </main>
 
-    
+
 @endsection

@@ -37,6 +37,8 @@
 .producto-show-imagen-principal img {
     @apply w-full object-contain;
     height: 260px;
+    max-width: 92%;
+    image-rendering: auto;
 }
 
 @screen md {
@@ -84,7 +86,8 @@
 }
 
 .producto-show-miniatura img {
-    @apply w-full h-full object-cover rounded;
+    @apply w-full h-full object-contain rounded;
+    image-rendering: auto;
 }
 
 .producto-show-caracteristicas {
@@ -160,9 +163,9 @@
     box-shadow: 0 0 0 1px #2563eb;
 }
 
-.producto-show-variante-oscura {
+ .producto-show-variante-oscura {
     @apply bg-black text-white border-black;
-}
+} 
 
 .producto-show-btn-carrito,
 .producto-show-btn-comprar {
