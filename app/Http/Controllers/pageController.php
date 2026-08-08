@@ -83,8 +83,77 @@ class pageController extends Controller
             'caracteristicas' => $this->parseCaracteristicas($descripcion),
             'imagenes' => $imagenes->filter()->unique()->values(),
             'backUrl' => $backUrl,
+            'idealPara' => $this->getIdealPara($tipo, $titulo),
+            'beneficiosCompra' => $this->getBeneficiosCompra(),
             'productosRelacionados' => $this->getRelatedProducts($tipo, $producto->id),
         ];
+    }
+
+    private function getIdealPara($tipo, $titulo){
+        $titulo = strtolower($titulo);
+
+        if ($tipo === 'impresora') {
+            return collect([
+                'Oficinas que imprimen documentos todos los dias',
+                'Negocios que necesitan equipos confiables',
+                'Usuarios que buscan buena velocidad de impresion',
+                'Areas administrativas, recepcion o ventas',
+            ]);
+        }
+
+        if ($tipo === 'consumible') {
+            return collect([
+                'Reponer tinta o toner antes de detener el trabajo',
+                'Mantener impresoras listas para uso diario',
+                'Negocios con volumen constante de impresion',
+                'Usuarios que buscan compatibilidad y rendimiento',
+            ]);
+        }
+
+        if (strpos($titulo, 'ssd') !== false) {
+            return collect([
+                'Mejorar la velocidad de una laptop o PC',
+                'Instalar Windows y programas con arranque rapido',
+                'Reemplazar discos duros lentos',
+                'Trabajo de oficina, escuela y uso diario',
+            ]);
+        }
+
+        if (strpos($titulo, 'silla') !== false || strpos($titulo, 'escritorio') !== false) {
+            return collect([
+                'Crear un espacio de trabajo mas comodo',
+                'Oficinas, recepciones y areas administrativas',
+                'Jornadas largas frente al escritorio',
+                'Equipar estaciones de trabajo profesionales',
+            ]);
+        }
+
+        return collect([
+            'Complementar tu espacio de trabajo',
+            'Oficinas, negocios y uso personal',
+            'Mejorar productividad y organizacion',
+            'Usuarios que buscan soluciones practicas',
+        ]);
+    }
+
+    private function getBeneficiosCompra(){
+        return collect([
+            [
+                'icono' => 'fas fa-comments',
+                'titulo' => 'Asesoria antes de comprar',
+                'texto' => 'Te ayudamos a confirmar si el producto se adapta a tu equipo o necesidad.',
+            ],
+            [
+                'icono' => 'fas fa-truck',
+                'titulo' => 'Entrega local disponible',
+                'texto' => 'Coordinamos entrega o recoleccion segun disponibilidad y ubicacion.',
+            ],
+            [
+                'icono' => 'fas fa-tools',
+                'titulo' => 'Soporte tecnico especializado',
+                'texto' => 'Contamos con experiencia en impresoras, consumibles y equipo de oficina.',
+            ],
+        ]);
     }
 
     private function getRelatedProducts($tipo, $productoId){

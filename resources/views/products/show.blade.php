@@ -4,6 +4,8 @@
     @php
         $imagenPrincipal = $imagenes->first() ?: $producto->img;
         $caracteristicas = collect($caracteristicas ?? []);
+        $idealPara = collect($idealPara ?? []);
+        $beneficiosCompra = collect($beneficiosCompra ?? []);
         $modelo = $producto->modelo ?? ($producto->nombre ?? '');
         $sku = $producto->sku ?? strtoupper($tipo) . '-' . $producto->id;
         $mensajeCompra = rawurlencode(
@@ -53,6 +55,19 @@
                         @else
                             <p>{{ $descripcion }}</p>
                         @endif
+                    </div>
+
+                    <div class="producto-show-ideal">
+                        <h2><i class="far fa-lightbulb"></i> Ideal para</h2>
+
+                        <div class="producto-show-ideal-grid">
+                            @foreach ($idealPara as $item)
+                                <div class="producto-show-ideal-card">
+                                    <i class="fas fa-check"></i>
+                                    <span>{{ $item }}</span>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
 
@@ -105,6 +120,22 @@
                         </div>
                     </div>
 
+                    <div class="producto-show-beneficios">
+                        <h2><i class="fas fa-shield-alt"></i> Beneficios de comprar con nosotros</h2>
+
+                        <div class="producto-show-beneficios-lista">
+                            @foreach ($beneficiosCompra as $beneficio)
+                                <div class="producto-show-beneficio-card">
+                                    <i class="{{ $beneficio['icono'] }}"></i>
+                                    <div>
+                                        <strong>{{ $beneficio['titulo'] }}</strong>
+                                        <p>{{ $beneficio['texto'] }}</p>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+
                     <div class="producto-show-relacionados">
                         <h2><i class="fas fa-store"></i> Productos relacionados:</h2>
 
@@ -123,5 +154,96 @@
         </section>
     </main>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var imagenPrincipal = document.getElementById('productoImagenPrincipal');
+            var miniaturas = document.querySelectorAll('.producto-show-miniatura');
+            var botonAnterior = document.getElementById('productoImagenAnterior');
+            var botonSiguiente = document.getElementById('productoImagenSiguiente');
+            var botonCarrito = document.getElementById('addProductToCart');
+            var botonesCantidad = document.querySelectorAll('.producto-show-opcion');
+            var indiceActual = 0;
+
+            function mostrarImagen(indice) {
+                if (!miniaturas.length) {
+                    return;
+                }
+
+                if (indice < 0) {
+                    indiceActual = miniaturas.length - 1;
+                } else if (indice >= miniaturas.length) {
+                    indiceActual = 0;
+                } else {
+                    indiceActual = indice;
+                }
+
+                imagenPrincipal.src = miniaturas[indiceActual].dataset.image;
+
+                miniaturas.forEach(function (miniatura) {
+                    miniatura.classList.remove('producto-show-miniatura-activa');
+                });
+
+                miniaturas[indiceActual].classList.add('producto-show-miniatura-activa');
+            }
+
+            miniaturas.forEach(function (miniatura) {
+                miniatura.addEventListener('click', function () {
+                    mostrarImagen(Number(this.dataset.index));
+                });
+            });
+
+            if (botonAnterior) {
+                botonAnterior.addEventListener('click', function () {
+                    mostrarImagen(indiceActual - 1);
+                });
+            }
+
+            if (botonSiguiente) {
+                botonSiguiente.addEventListener('click', function () {
+                    mostrarImagen(indiceActual + 1);
+                });
+            }
+
+            botonesCantidad.forEach(function (boton) {
+                boton.addEventListener('click', function () {
+                    botonesCantidad.forEach(function (item) {
+                        item.classList.remove('producto-show-opcion-activa');
+                    });
+                    this.classList.add('producto-show-opcion-activa');
+                });
+            });
+
+            if (botonCarrito) {
+                botonCarrito.addEventListener('click', function () {
+                    var cantidadActiva = document.querySelector('.producto-show-opcion-activa');
+                    var cantidad = cantidadActiva ? cantidadActiva.dataset.cantidad : '1';
+                    var product = {
+                        id: this.dataset.id,
+                        type: this.dataset.type,
+                        title: this.dataset.title,
+                        price: Number(this.dataset.price),
+                        image: imagenPrincipal.src,
+                        quantity: cantidad === '3' ? 3 : Number(cantidad)
+                    };
+                    var cart = JSON.parse(localStorage.getItem('productCart') || '[]');
+                    var existing = cart.find(function (item) {
+                        return item.id === product.id && item.type === product.type;
+                    });
+
+                    if (existing) {
+                        existing.quantity += product.quantity;
+                        existing.image = product.image;
+                    } else {
+                        cart.push(product);
+                    }
+
+                    localStorage.setItem('productCart', JSON.stringify(cart));
+                    this.textContent = 'Agregado al Carrito';
+                });
+            }
+
+            mostrarImagen(0);
+        });
+    </script>
 
 @endsection
