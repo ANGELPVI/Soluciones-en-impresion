@@ -4,7 +4,6 @@
     @php
         $imagenPrincipal = $imagenes->first() ?: $producto->img;
         $caracteristicas = collect($caracteristicas ?? []);
-        $idealPara = collect($idealPara ?? []);
         $beneficiosCompra = collect($beneficiosCompra ?? []);
         $modelo = $producto->modelo ?? ($producto->nombre ?? '');
         $sku = $producto->sku ?? strtoupper($tipo) . '-' . $producto->id;
@@ -57,18 +56,6 @@
                         @endif
                     </div>
 
-                    <div class="producto-show-ideal">
-                        <h2><i class="far fa-lightbulb"></i> Ideal para</h2>
-
-                        <div class="producto-show-ideal-grid">
-                            @foreach ($idealPara as $item)
-                                <div class="producto-show-ideal-card">
-                                    <i class="fas fa-check"></i>
-                                    <span>{{ $item }}</span>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
                 </div>
 
 

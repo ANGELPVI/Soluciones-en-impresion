@@ -95,7 +95,6 @@
 }
 
 .producto-show-caracteristicas h2,
-.producto-show-ideal h2,
 .producto-show-beneficios h2,
 .producto-show-descripcion h2,
 .producto-show-relacionados h2 {
@@ -103,7 +102,6 @@
 }
 
 .producto-show-caracteristicas h2 i,
-.producto-show-ideal h2 i,
 .producto-show-beneficios h2 i,
 .producto-show-descripcion h2 i,
 .producto-show-relacionados h2 i {
@@ -116,26 +114,6 @@
 
 .producto-show-caracteristicas p {
     @apply text-base text-gray-800 leading-7;
-}
-
-.producto-show-ideal {
-    @apply mt-8 px-4 md:px-6;
-}
-
-.producto-show-ideal-grid {
-    @apply grid grid-cols-1 md:grid-cols-2 gap-3;
-}
-
-.producto-show-ideal-card {
-    @apply flex items-start bg-white rounded-lg shadow-sm px-4 py-3 text-gray-800;
-}
-
-.producto-show-ideal-card i {
-    @apply text-green-600 mr-3 mt-1;
-}
-
-.producto-show-ideal-card span {
-    @apply text-sm leading-6;
 }
 
 .producto-show-card-compra {
@@ -284,7 +262,6 @@
     }
 
     .producto-show-caracteristicas,
-    .producto-show-ideal,
     .producto-show-beneficios,
     .producto-show-descripcion,
     .producto-show-relacionados {
