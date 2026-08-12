@@ -42,7 +42,6 @@ class ProductImagesSeeder extends Seeder
                 'table' => 'productos_oficina',
                 'where' => ['sku', '=', 'SSD-001'],
                 'images' => [
-                    'https://m.media-amazon.com/images/I/71f2I8cltBL._AC_SL1500_.jpg',
                     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCMO8hZrUFVtsjtzCjRK_6luEmkXywEiF_8DM2W3vCrq8VXtmmkyqEsYK1&s=10',
                     'https://tuprecio-bucket-api.s3.us-east-2.amazonaws.com/product-photo-66bc9d55659d16a1821098b0-1723637404646-0',
                 ],
