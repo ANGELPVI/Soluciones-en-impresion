@@ -1,0 +1,169 @@
+.carrito-pagina {
+    @apply w-full min-h-screen bg-gray-100 font-descrip text-gray-900;
+}
+
+.carrito-contenedor {
+    @apply w-11/12 max-w-5xl mx-auto py-8;
+}
+
+.carrito-panel {
+    @apply bg-gray-100 rounded-lg shadow-md px-4 py-6;
+}
+
+@screen md {
+    .carrito-panel {
+        @apply px-12 py-10;
+    }
+}
+
+.carrito-alerta,
+.producto-show-alerta {
+    @apply w-full rounded px-4 py-3 mb-4 text-sm;
+}
+
+.carrito-alerta-exito,
+.producto-show-alerta-exito {
+    @apply bg-green-100 text-green-800;
+}
+
+.carrito-alerta-error,
+.producto-show-alerta-error {
+    @apply bg-red-100 text-red-800;
+}
+
+.carrito-item {
+    @apply relative grid gap-4 items-center bg-white rounded shadow-sm px-4 py-4 mb-5;
+    grid-template-columns: 84px minmax(0, 1fr);
+}
+
+@screen md {
+    .carrito-item {
+        grid-template-columns: 96px minmax(0, 1fr) 96px 120px 42px;
+        @apply px-6;
+    }
+}
+
+.carrito-item-imagen {
+    @apply flex items-center justify-center w-full bg-white;
+    aspect-ratio: 1 / 1;
+}
+
+.carrito-item-imagen img {
+    @apply w-full h-full object-contain;
+}
+
+.carrito-item-info {
+    @apply min-w-0;
+}
+
+.carrito-item-info h2 {
+    @apply text-base md:text-lg font-bold text-gray-700 leading-tight mb-2;
+}
+
+.carrito-item-info p,
+.carrito-item-info span {
+    @apply block text-sm text-gray-500 leading-5;
+}
+
+.carrito-item-controles {
+    @apply flex items-center justify-start;
+}
+
+@screen md {
+    .carrito-item-controles {
+        @apply justify-center;
+    }
+}
+
+.carrito-cantidad,
+.carrito-cantidad-numero {
+    @apply flex items-center justify-center;
+}
+
+.carrito-cantidad button,
+.carrito-cantidad-numero {
+    @apply w-8 h-8 border border-gray-200 bg-white text-blue-500 text-sm font-bold;
+}
+
+.carrito-cantidad:first-child button {
+    @apply rounded-l;
+}
+
+.carrito-cantidad:last-child button {
+    @apply rounded-r;
+}
+
+.carrito-cantidad button:hover:not(:disabled) {
+    @apply bg-blue-50;
+}
+
+.carrito-cantidad button:disabled,
+.producto-show-btn-carrito:disabled {
+    @apply opacity-50 cursor-not-allowed;
+}
+
+.carrito-item-total {
+    @apply text-xl md:text-2xl font-bold text-gray-900;
+}
+
+.carrito-eliminar {
+    @apply absolute right-3 top-3;
+}
+
+@screen md {
+    .carrito-eliminar {
+        @apply static flex justify-end;
+    }
+}
+
+.carrito-eliminar button {
+    @apply flex items-center justify-center w-9 h-9 rounded text-gray-400 hover:text-red-600 hover:bg-red-50 transition duration-300;
+}
+
+.carrito-resumen {
+    @apply flex flex-col items-center mt-8;
+}
+
+.carrito-total {
+    @apply flex items-center justify-center gap-5 text-xl md:text-2xl font-bold text-black mb-8;
+}
+
+.carrito-total span,
+.carrito-total strong {
+    @apply font-titulo;
+}
+
+.carrito-pedido {
+    @apply flex items-center justify-center w-full max-w-sm rounded-full bg-green-500 text-black font-bold text-xl py-3 px-6 transition duration-300;
+}
+
+.carrito-pedido:hover {
+    @apply bg-green-600 text-white;
+}
+
+.carrito-vacio {
+    @apply flex flex-col items-center justify-center text-center bg-white rounded shadow-sm px-5 py-14;
+}
+
+.carrito-vacio i {
+    @apply text-5xl text-gray-300 mb-4;
+}
+
+.carrito-vacio h1 {
+    @apply text-2xl font-bold text-gray-900 mb-2;
+}
+
+.carrito-vacio p {
+    @apply text-gray-500 mb-6;
+}
+
+.carrito-vacio a {
+    @apply inline-flex items-center justify-center rounded bg-blue-600 text-white px-5 py-3 hover:bg-blue-700;
+}
+
+@media (max-width: 767px) {
+    .carrito-item-controles,
+    .carrito-item-total {
+        grid-column: 2;
+    }
+}

@@ -65,32 +65,41 @@
                         <h1>{{ $titulo }}</h1>
                         <p class="producto-show-precio">${{ number_format($producto->precio, 2, '.', ',') }} MXN</p>
 
-                        <div class="producto-show-opciones">
-                            <div>
-                                <span>Cantidad</span>
-                                <div class="producto-show-grupo-botones">
-                                    <button type="button" class="producto-show-opcion producto-show-opcion-activa"
-                                        data-cantidad="1">1</button>
-                                    <button type="button" class="producto-show-opcion" data-cantidad="2">2</button>
-                                    <button type="button" class="producto-show-opcion" data-cantidad="3">3+</button>
+                        @if (session('cart_success'))
+                            <div class="producto-show-alerta producto-show-alerta-exito">
+                                {{ session('cart_success') }}
+                            </div>
+                        @endif
+
+                        @if ($errors->has('cart'))
+                            <div class="producto-show-alerta producto-show-alerta-error">
+                                {{ $errors->first('cart') }}
+                            </div>
+                        @endif
+
+                        <form action="{{ route('carrito.store') }}" method="POST" class="producto-show-form-carrito">
+                            @csrf
+                            <input type="hidden" name="product_type" value="{{ $tipo }}">
+                            <input type="hidden" name="product_id" value="{{ $producto->id }}">
+                            <input type="hidden" name="quantity" id="productoCantidadSeleccionada" value="1">
+
+                            <div class="producto-show-opciones">
+                                <div>
+                                    <span>Cantidad</span>
+                                    <div class="producto-show-grupo-botones">
+                                        <button type="button" class="producto-show-opcion producto-show-opcion-activa"
+                                            data-cantidad="1">1</button>
+                                        <button type="button" class="producto-show-opcion" data-cantidad="2">2</button>
+                                        <button type="button" class="producto-show-opcion" data-cantidad="3">3</button>
+                                    </div>
                                 </div>
                             </div>
 
-                            {{-- <div>
-                                <span>Variante</span>
-                                <div class="producto-show-grupo-botones">
-                                    <button type="button" class="producto-show-variante producto-show-variante-activa">White</button>
-                                    <button type="button" class="producto-show-variante producto-show-variante-oscura">Black</button>
-                                </div>
-                            </div> --}}
-                        </div>
-
-                        <button type="button" id="addProductToCart" class="producto-show-btn-carrito"
-                            data-id="{{ $producto->id }}" data-type="{{ $tipo }}"
-                            data-title="{{ $titulo }}" data-price="{{ $producto->precio }}"
-                            data-image="{{ $imagenPrincipal }}">
-                            Anadir al Carrito
-                        </button>
+                            <button type="submit" id="addProductToCart" class="producto-show-btn-carrito"
+                                @if ($producto->stock <= 0) disabled @endif>
+                                {{ $producto->stock > 0 ? 'Anadir al Carrito' : 'Sin stock disponible' }}
+                            </button>
+                        </form>
 
                         <a href="https://wa.me/527581036078?text={{ $mensajeCompra }}" target="_blank" rel="noopener"
                             class="producto-show-btn-comprar">
@@ -147,7 +156,7 @@
             var miniaturas = document.querySelectorAll('.producto-show-miniatura');
             var botonAnterior = document.getElementById('productoImagenAnterior');
             var botonSiguiente = document.getElementById('productoImagenSiguiente');
-            var botonCarrito = document.getElementById('addProductToCart');
+            var inputCantidad = document.getElementById('productoCantidadSeleccionada');
             var botonesCantidad = document.querySelectorAll('.producto-show-opcion');
             var indiceActual = 0;
 
@@ -197,37 +206,11 @@
                         item.classList.remove('producto-show-opcion-activa');
                     });
                     this.classList.add('producto-show-opcion-activa');
+                    if (inputCantidad) {
+                        inputCantidad.value = this.dataset.cantidad;
+                    }
                 });
             });
-
-            if (botonCarrito) {
-                botonCarrito.addEventListener('click', function () {
-                    var cantidadActiva = document.querySelector('.producto-show-opcion-activa');
-                    var cantidad = cantidadActiva ? cantidadActiva.dataset.cantidad : '1';
-                    var product = {
-                        id: this.dataset.id,
-                        type: this.dataset.type,
-                        title: this.dataset.title,
-                        price: Number(this.dataset.price),
-                        image: imagenPrincipal.src,
-                        quantity: cantidad === '3' ? 3 : Number(cantidad)
-                    };
-                    var cart = JSON.parse(localStorage.getItem('productCart') || '[]');
-                    var existing = cart.find(function (item) {
-                        return item.id === product.id && item.type === product.type;
-                    });
-
-                    if (existing) {
-                        existing.quantity += product.quantity;
-                        existing.image = product.image;
-                    } else {
-                        cart.push(product);
-                    }
-
-                    localStorage.setItem('productCart', JSON.stringify(cart));
-                    this.textContent = 'Agregado al Carrito';
-                });
-            }
 
             mostrarImagen(0);
         });

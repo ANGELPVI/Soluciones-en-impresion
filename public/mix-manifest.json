@@ -8,5 +8,6 @@
     "/js/components/authUserMenu.js": "/js/components/authUserMenu.js",
     "/js/components/acordion.js": "/js/components/acordion.js",
     "/js/components/carrucel.js": "/js/components/carrucel.js",
+    "/js/components/carrito.js": "/js/components/carrito.js",
     "/css/app.css": "/css/app.css"
 }

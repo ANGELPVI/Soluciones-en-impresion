@@ -9,12 +9,28 @@ class carrito extends Model
 {
     use HasFactory;
 
-    // Relasión tabla carrito
-    public function user(){
-        return $this->belongsTo('App\Modelo\User');
-    }
+    protected $table = 'carrito';
 
-    public function impresora(){
-        return $this->belongsTo('App\Modelo\impresora');
+    protected $fillable = [
+        'userId',
+        'product_type',
+        'product_id',
+        'titulo',
+        'imagen',
+        'productos',
+        'cantidad',
+        'precio_unitario',
+        'total',
+    ];
+
+    protected $casts = [
+        'productos' => 'array',
+        'precio_unitario' => 'decimal:2',
+        'total' => 'decimal:2',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'userId');
     }
 }
