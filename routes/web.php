@@ -6,6 +6,7 @@ use App\Http\Controllers\registro;
 use App\Http\Controllers\login;
 use GuzzleHttp\Middleware;
 use App\Http\Controllers\PasswordResetController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,6 +69,13 @@ Route::get('/guia-compra', function () {
 Route::get('/politica-garantia', function () {
     return view('pages.help.politica-garantia');
 })->name('politica-garantia');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/carrito', [CartController::class, 'index'])->name('carrito.index');
+    Route::post('/carrito', [CartController::class, 'store'])->name('carrito.store');
+    Route::patch('/carrito/{item}', [CartController::class, 'update'])->name('carrito.update');
+    Route::delete('/carrito/{item}', [CartController::class, 'destroy'])->name('carrito.destroy');
+});
 
 // Formulario para solicitar reset
 
