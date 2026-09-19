@@ -40,7 +40,7 @@
         <a href="{{route('oficina')}}" class="nav-items"><i class="fas fa-pen text-xl mr-2"></i>oficina</a>
         <a href="{{route('carrito.index')}}" class="nav-items"><i class="fa-solid fa-cart-shopping text-xl mr-2"></i>Carrito</a>
 
-        {{-- @if (auth()->check())
+        @if (auth()->check())
             <button id="userMenu" class="relative m-3 w-full h-10 grid grid-cols-1 shadow  text-gray-200">
               <div class="pl-2 pr-2 w-full bg-green-500 rounded-full"><p class="font-descrip uppercase text-3xl">{{auth()->user()->nombre[0] }}</p></div>
               
@@ -55,8 +55,8 @@
                         
             
         @else
-        <a href="{{route('login')}}" class="nav-items"><i class="fas fa-user text-xl mr-2"></i>Login</a>
-        @endif --}}
+        <a href="{{route('login')}}" class="nav-items"><i class="fas fa-user text-xl mr-2"></i>Mi Cuenta</a>
+        @endif
         
 
       </div>

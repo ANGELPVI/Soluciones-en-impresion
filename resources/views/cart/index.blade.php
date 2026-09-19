@@ -68,15 +68,27 @@
                 @endforelse
 
                 @if ($items->count())
+                    @php
+                        $detallePedido = $items
+                            ->map(function ($item) {
+                                return '- ' . $item->titulo . ' | Cantidad: ' . $item->cantidad . ' | Subtotal: $' . number_format($item->subtotal_cents / 100, 2, '.', ',') . ' MXN';
+                            })
+                            ->implode("\n");
+
+                        $mensajeWhatsApp = "Hola, quiero solicitar una cotización de los siguientes productos:\n\n" .
+                            $detallePedido .
+                            "\n\nTotal estimado: $" . number_format($totalCents / 100, 2, '.', ',') . ' MXN.';
+                    @endphp
+
                     <div class="carrito-resumen">
                         <div class="carrito-total">
                             <span>Total Productos</span>
                             <strong>${{ number_format($totalCents / 100, 2, '.', ',') }}</strong>
                         </div>
 
-                        <a href="https://wa.me/527581036078?text={{ rawurlencode('Hola, quiero realizar un pedido por un total de $' . number_format($totalCents / 100, 2, '.', ',') . ' MXN.') }}"
+                        <a href="https://wa.me/527581036078?text={{ rawurlencode($mensajeWhatsApp) }}"
                             target="_blank" rel="noopener" class="carrito-pedido">
-                            Realizar pedido
+                            Solicitar cotización
                         </a>
                     </div>
                 @endif
