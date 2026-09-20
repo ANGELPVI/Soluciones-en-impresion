@@ -83,10 +83,23 @@ class CartController extends Controller
                 $item->save();
             });
         } catch (\Symfony\Component\HttpKernel\Exception\HttpException $exception) {
+            if ($request->expectsJson()) {
+                return response()->json([
+                    'message' => $exception->getMessage(),
+                ], $exception->getStatusCode());
+            }
+
             return back()->withErrors(['cart' => $exception->getMessage()]);
         }
 
-        return redirect()->route('carrito.index')->with('cart_success', 'Producto agregado al carrito.');
+        if ($request->expectsJson()) {
+            return response()->json([
+                'message' => 'Producto agregado al carrito.',
+                'cartItemCount' => $this->cartOwnerQuery()->sum('cantidad'),
+            ], 201);
+        }
+
+        return back()->with('cart_success', 'Producto agregado al carrito.');
     }
 
     public function update(Request $request, $itemId)

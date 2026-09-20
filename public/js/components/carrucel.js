@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var miniaturas = document.querySelectorAll('.producto-show-miniatura');
   var botonAnterior = document.getElementById('productoImagenAnterior');
   var botonSiguiente = document.getElementById('productoImagenSiguiente');
-  var botonCarrito = document.getElementById('addProductToCart');
   var botonesCantidad = document.querySelectorAll('.producto-show-opcion');
   var botonesVariante = document.querySelectorAll('.producto-show-variante');
   var indiceActual = 0;
@@ -137,32 +136,6 @@ document.addEventListener('DOMContentLoaded', function () {
       this.classList.add('producto-show-variante-activa');
     });
   });
-  if (botonCarrito) {
-    botonCarrito.addEventListener('click', function () {
-      var cantidadActiva = document.querySelector('.producto-show-opcion-activa');
-      var cantidad = cantidadActiva ? cantidadActiva.dataset.cantidad : '1';
-      var product = {
-        id: this.dataset.id,
-        type: this.dataset.type,
-        title: this.dataset.title,
-        price: Number(this.dataset.price),
-        image: imagenPrincipal.src,
-        quantity: cantidad === '3' ? 3 : Number(cantidad)
-      };
-      var cart = JSON.parse(localStorage.getItem('productCart') || '[]');
-      var existing = cart.find(function (item) {
-        return item.id === product.id && item.type === product.type;
-      });
-      if (existing) {
-        existing.quantity += product.quantity;
-        existing.image = product.image;
-      } else {
-        cart.push(product);
-      }
-      localStorage.setItem('productCart', JSON.stringify(cart));
-      this.textContent = 'Agregado al Carrito';
-    });
-  }
   mostrarImagen(0);
 });
 /******/ })()

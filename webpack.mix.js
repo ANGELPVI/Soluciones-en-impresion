@@ -23,3 +23,6 @@ mix.webpackConfig({
         ignored: /node_modules/
     }
 });
+
+// Evita errores de node-notifier en Windows al compilar o usar watch.
+mix.disableNotifications();

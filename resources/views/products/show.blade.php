@@ -65,18 +65,6 @@
                         <h1>{{ $titulo }}</h1>
                         <p class="producto-show-precio">${{ number_format($producto->precio, 2, '.', ',') }} MXN</p>
 
-                        @if (session('cart_success'))
-                            <div class="producto-show-alerta producto-show-alerta-exito">
-                                {{ session('cart_success') }}
-                            </div>
-                        @endif
-
-                        @if ($errors->has('cart'))
-                            <div class="producto-show-alerta producto-show-alerta-error">
-                                {{ $errors->first('cart') }}
-                            </div>
-                        @endif
-
                         <form action="{{ route('carrito.store') }}" method="POST" class="producto-show-form-carrito">
                             @csrf
                             <input type="hidden" name="product_type" value="{{ $tipo }}">
@@ -99,12 +87,27 @@
                                 @if ($producto->stock <= 0) disabled @endif>
                                 {{ $producto->stock > 0 ? 'Anadir al Carrito' : 'Sin stock disponible' }}
                             </button>
+
                         </form>
 
                         <a href="https://wa.me/527581036078?text={{ $mensajeCompra }}" target="_blank" rel="noopener"
                             class="producto-show-btn-comprar">
                             Comprar Ahora
                         </a>
+
+                        @if (session('cart_success'))
+                            <div class="producto-show-alerta producto-show-alerta-exito mt-4" data-auto-hide-alert>
+                                {{ session('cart_success') }}
+                            </div>
+                        @endif
+
+                        @if ($errors->has('cart'))
+                            <div class="producto-show-alerta producto-show-alerta-error mt-4" data-auto-hide-alert>
+                                {{ $errors->first('cart') }}
+                            </div>
+                        @endif
+
+                        <p id="cartFeedback" class="hidden producto-show-alerta mt-4" role="status" aria-live="polite"></p>
                     </div>
 
                     <div class="producto-show-descripcion">
