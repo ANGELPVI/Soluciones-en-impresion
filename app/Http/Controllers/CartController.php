@@ -11,6 +11,45 @@ use Illuminate\Support\Facades\DB;
 
 class CartController extends Controller
 {
+    public static function mergeGuestCartIntoUser($userId, $sessionId)
+    {
+        if (!$userId || !$sessionId) {
+            return;
+        }
+
+        DB::transaction(function () use ($userId, $sessionId) {
+            $guestItems = carrito::query()
+                ->whereNull('userId')
+                ->where('session_id', $sessionId)
+                ->lockForUpdate()
+                ->get();
+
+            foreach ($guestItems as $guestItem) {
+                $userItem = carrito::query()
+                    ->where('userId', $userId)
+                    ->where('product_type', $guestItem->product_type)
+                    ->where('product_id', $guestItem->product_id)
+                    ->lockForUpdate()
+                    ->first();
+
+                if ($userItem) {
+                    $userItem->cantidad += $guestItem->cantidad;
+                    $userItem->total = self::formatMoney(
+                        ((float) $userItem->precio_unitario) * $userItem->cantidad
+                    );
+                    $userItem->save();
+                    $guestItem->delete();
+
+                    continue;
+                }
+
+                $guestItem->userId = $userId;
+                $guestItem->session_id = null;
+                $guestItem->save();
+            }
+        });
+    }
+
     public function index()
     {
         $items = $this->cartOwnerQuery()
@@ -208,5 +247,10 @@ class CartController extends Controller
     private function centsToMoney($cents)
     {
         return number_format($cents / 100, 2, '.', '');
+    }
+
+    private static function formatMoney($amount)
+    {
+        return number_format($amount, 2, '.', '');
     }
 }
