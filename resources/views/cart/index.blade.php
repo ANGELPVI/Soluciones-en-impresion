@@ -70,14 +70,20 @@
                 @if ($items->count())
                     @php
                         $detallePedido = $items
-                            ->map(function ($item) {
-                                return '- ' . $item->titulo . ' | Cantidad: ' . $item->cantidad . ' | Subtotal: $' . number_format($item->subtotal_cents / 100, 2, '.', ',') . ' MXN';
+                            ->values()
+                            ->map(function ($item, $index) {
+                                return ($index + 1) . '. *' . $item->titulo . "*\n" .
+                                    '   Cantidad: ' . $item->cantidad . "\n" .
+                                    '   Precio unitario: $' . number_format((float) $item->precio_unitario, 2, '.', ',') . " MXN\n" .
+                                    '   Importe: $' . number_format($item->subtotal_cents / 100, 2, '.', ',') . ' MXN';
                             })
-                            ->implode("\n");
+                            ->implode("\n\n");
 
-                        $mensajeWhatsApp = "Hola, quiero solicitar una cotización de los siguientes productos:\n\n" .
+                        $mensajeWhatsApp = "*NUEVA SOLICITUD DE COTIZACIÓN*\n\n" .
+                            "*PRODUCTOS SOLICITADOS*\n\n" .
                             $detallePedido .
-                            "\n\nTotal estimado: $" . number_format($totalCents / 100, 2, '.', ',') . ' MXN.';
+                            "\n\n*TOTAL ESTIMADO: $" . number_format($totalCents / 100, 2, '.', ',') . " MXN*\n\n" .
+                            'Favor de confirmar disponibilidad y tiempo de entrega.';
                     @endphp
 
                     <div class="carrito-resumen">
