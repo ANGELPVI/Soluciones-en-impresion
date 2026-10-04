@@ -11,9 +11,48 @@ use Illuminate\Support\Facades\DB;
 
 class CartController extends Controller
 {
+    public static function mergeGuestCartIntoUser($userId, $sessionId)
+    {
+        if (!$userId || !$sessionId) {
+            return;
+        }
+
+        DB::transaction(function () use ($userId, $sessionId) {
+            $guestItems = carrito::query()
+                ->whereNull('userId')
+                ->where('session_id', $sessionId)
+                ->lockForUpdate()
+                ->get();
+
+            foreach ($guestItems as $guestItem) {
+                $userItem = carrito::query()
+                    ->where('userId', $userId)
+                    ->where('product_type', $guestItem->product_type)
+                    ->where('product_id', $guestItem->product_id)
+                    ->lockForUpdate()
+                    ->first();
+
+                if ($userItem) {
+                    $userItem->cantidad += $guestItem->cantidad;
+                    $userItem->total = self::formatMoney(
+                        ((float) $userItem->precio_unitario) * $userItem->cantidad
+                    );
+                    $userItem->save();
+                    $guestItem->delete();
+
+                    continue;
+                }
+
+                $guestItem->userId = $userId;
+                $guestItem->session_id = null;
+                $guestItem->save();
+            }
+        });
+    }
+
     public function index()
     {
-        $items = carrito::where('userId', auth()->id())
+        $items = $this->cartOwnerQuery()
             ->whereNotNull('product_type')
             ->orderBy('id', 'desc')
             ->get()
@@ -48,25 +87,23 @@ class CartController extends Controller
                     ->lockForUpdate()
                     ->firstOrFail();
 
-                if ($product->stock < $data['quantity']) {
-                    abort(422, 'No hay suficiente stock disponible para agregar esa cantidad.');
-                }
-
-                $item = carrito::where('userId', auth()->id())
+                $item = $this->cartOwnerQuery()
                     ->where('product_type', $data['product_type'])
                     ->where('product_id', $product->id)
                     ->lockForUpdate()
                     ->first();
 
-                $product->stock -= $data['quantity'];
-                $product->save();
+                $quantity = ($item ? $item->cantidad : 0) + $data['quantity'];
+
+                if ($product->stock < $quantity) {
+                    abort(422, 'No hay suficiente stock disponible para agregar esa cantidad.');
+                }
 
                 $unitPriceCents = $this->moneyToCents($product->precio);
-                $quantity = ($item ? $item->cantidad : 0) + $data['quantity'];
 
                 if (!$item) {
                     $item = new carrito();
-                    $item->userId = auth()->id();
+                    $this->assignCartOwner($item);
                     $item->product_type = $data['product_type'];
                     $item->product_id = $product->id;
                 }
@@ -85,44 +122,43 @@ class CartController extends Controller
                 $item->save();
             });
         } catch (\Symfony\Component\HttpKernel\Exception\HttpException $exception) {
+            if ($request->expectsJson()) {
+                return response()->json([
+                    'message' => $exception->getMessage(),
+                ], $exception->getStatusCode());
+            }
+
             return back()->withErrors(['cart' => $exception->getMessage()]);
         }
 
-        return redirect()->route('carrito.index')->with('cart_success', 'Producto agregado al carrito.');
+        if ($request->expectsJson()) {
+            return response()->json([
+                'message' => 'Producto agregado al carrito.',
+                'cartItemCount' => $this->cartOwnerQuery()->sum('cantidad'),
+            ], 201);
+        }
+
+        return back()->with('cart_success', 'Producto agregado al carrito.');
     }
 
-    public function update(Request $request, carrito $item)
+    public function update(Request $request, $itemId)
     {
         $data = $request->validate([
             'quantity' => 'required|integer|min:0|max:99',
         ]);
 
-        if ($item->userId !== auth()->id()) {
-            abort(403);
-        }
-
         try {
-            DB::transaction(function () use ($item, $data) {
-                $item = carrito::whereKey($item->id)->lockForUpdate()->firstOrFail();
+            DB::transaction(function () use ($itemId, $data) {
+                $item = $this->cartOwnerQuery()->whereKey($itemId)->lockForUpdate()->firstOrFail();
                 $product = $this->productQuery($item->product_type)
                     ->whereKey($item->product_id)
                     ->lockForUpdate()
                     ->firstOrFail();
 
                 $newQuantity = $data['quantity'];
-                $difference = $newQuantity - $item->cantidad;
-
-                if ($difference > 0 && $product->stock < $difference) {
+                if ($newQuantity > $product->stock) {
                     abort(422, 'No hay suficiente stock disponible para aumentar esa cantidad.');
                 }
-
-                if ($difference > 0) {
-                    $product->stock -= $difference;
-                } elseif ($difference < 0) {
-                    $product->stock += abs($difference);
-                }
-
-                $product->save();
 
                 if ($newQuantity === 0) {
                     $item->delete();
@@ -141,21 +177,10 @@ class CartController extends Controller
         return back()->with('cart_success', 'Carrito actualizado.');
     }
 
-    public function destroy(carrito $item)
+    public function destroy($itemId)
     {
-        if ($item->userId !== auth()->id()) {
-            abort(403);
-        }
-
-        DB::transaction(function () use ($item) {
-            $item = carrito::whereKey($item->id)->lockForUpdate()->firstOrFail();
-            $product = $this->findProductForUpdate($item->product_type, $item->product_id);
-
-            if ($product) {
-                $product->stock += $item->cantidad;
-                $product->save();
-            }
-
+        DB::transaction(function () use ($itemId) {
+            $item = $this->cartOwnerQuery()->whereKey($itemId)->lockForUpdate()->firstOrFail();
             $item->delete();
         });
 
@@ -181,9 +206,28 @@ class CartController extends Controller
         return $this->productClass($type)::find($id);
     }
 
-    private function findProductForUpdate($type, $id)
+    private function cartOwnerQuery()
     {
-        return $this->productQuery($type)->whereKey($id)->lockForUpdate()->first();
+        if (auth()->check()) {
+            return carrito::query()->where('userId', auth()->id());
+        }
+
+        return carrito::query()
+            ->whereNull('userId')
+            ->where('session_id', session()->getId());
+    }
+
+    private function assignCartOwner(carrito $item)
+    {
+        if (auth()->check()) {
+            $item->userId = auth()->id();
+            $item->session_id = null;
+
+            return;
+        }
+
+        $item->userId = null;
+        $item->session_id = session()->getId();
     }
 
     private function productTitle($product, $type)
@@ -203,5 +247,10 @@ class CartController extends Controller
     private function centsToMoney($cents)
     {
         return number_format($cents / 100, 2, '.', '');
+    }
+
+    private static function formatMoney($amount)
+    {
+        return number_format($amount, 2, '.', '');
     }
 }

@@ -68,15 +68,33 @@
                 @endforelse
 
                 @if ($items->count())
+                    @php
+                        $detallePedido = $items
+                            ->values()
+                            ->map(function ($item, $index) {
+                                return ($index + 1) . '. *' . $item->titulo . "*\n" .
+                                    '   Cantidad: ' . $item->cantidad . "\n" .
+                                    '   Precio unitario: $' . number_format((float) $item->precio_unitario, 2, '.', ',') . " MXN\n" .
+                                    '   Importe: $' . number_format($item->subtotal_cents / 100, 2, '.', ',') . ' MXN';
+                            })
+                            ->implode("\n\n");
+
+                        $mensajeWhatsApp = "*NUEVA SOLICITUD DE COTIZACIÓN*\n\n" .
+                            "*PRODUCTOS SOLICITADOS*\n\n" .
+                            $detallePedido .
+                            "\n\n*TOTAL ESTIMADO: $" . number_format($totalCents / 100, 2, '.', ',') . " MXN*\n\n" .
+                            'Favor de confirmar disponibilidad y tiempo de entrega.';
+                    @endphp
+
                     <div class="carrito-resumen">
                         <div class="carrito-total">
                             <span>Total Productos</span>
                             <strong>${{ number_format($totalCents / 100, 2, '.', ',') }}</strong>
                         </div>
 
-                        <a href="https://wa.me/527581036078?text={{ rawurlencode('Hola, quiero realizar un pedido por un total de $' . number_format($totalCents / 100, 2, '.', ',') . ' MXN.') }}"
+                        <a href="https://wa.me/527581036078?text={{ rawurlencode($mensajeWhatsApp) }}"
                             target="_blank" rel="noopener" class="carrito-pedido">
-                            Realizar pedido
+                            Solicitar cotización
                         </a>
                     </div>
                 @endif

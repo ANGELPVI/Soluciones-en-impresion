@@ -13,6 +13,7 @@ class carrito extends Model
 
     protected $fillable = [
         'userId',
+        'session_id',
         'product_type',
         'product_id',
         'titulo',

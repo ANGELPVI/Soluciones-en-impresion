@@ -10,7 +10,9 @@ use PharIo\Manifest\Email;
 class login extends Controller{
    
     // Funcion que realisa el inicio de sesion del usuario
-    public function store(){
+    public function store(Request $request){
+        $guestSessionId = $request->session()->getId();
+
         // Validar los datos del login
         $datosValidados=$this->validate(request(),[
             'email'=>'required|email',
@@ -24,6 +26,8 @@ class login extends Controller{
                 'error'=>'¡Usuario o contraseña incorrecta!'
             ]);
         }
+
+        CartController::mergeGuestCartIntoUser(auth()->id(), $guestSessionId);
 
          return redirect()->to('/');
     }

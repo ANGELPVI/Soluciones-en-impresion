@@ -38,12 +38,18 @@
         <a href="{{route('impresoras')}}" class="nav-items"><i class="fas fa-print text-xl mr-2"></i>Impresoras</a>
         <a href="{{route('consumibles')}}" class="nav-items"><i class="fas fa-store text-xl mr-2"></i>Consumibles</a>
         <a href="{{route('oficina')}}" class="nav-items"><i class="fas fa-pen text-xl mr-2"></i>oficina</a>
-        <a href="{{route('carrito.index')}}" class="nav-items"><i class="fa-solid fa-cart-shopping text-xl mr-2"></i>Carrito</a>
+        <a href="{{ route('carrito.index') }}" class="nav-items" aria-label="Carrito de compras">
+          <i class="fa-solid fa-cart-shopping text-xl mr-2"></i>
+          <span id="cartItemCount" aria-live="polite" aria-label="{{ $cartItemCount }} productos en el carrito"
+            class="{{ $cartItemCount > 0 ? 'inline-flex' : 'hidden' }} w-5 h-5 items-center justify-center rounded-full bg-green-500 text-xs font-bold text-white">
+            {{ $cartItemCount }}
+          </span>
+        </a>
 
         @if (auth()->check())
             <button id="userMenu" class="relative m-3 w-full h-10 grid grid-cols-1 shadow  text-gray-200">
               <div class="pl-2 pr-2 w-full bg-green-500 rounded-full"><p class="font-descrip uppercase text-3xl">{{auth()->user()->nombre[0] }}</p></div>
-              {{-- <span class="p-2 m-1 hover:bg-gray-100"><i class="fa-solid fa-arrow-down"></i></span> --}}
+              
                 <div class="z-40 absolute hidden top-10 col-span-2 w-40 bg-white text-gray-500 shadow-md mt-1 rounded -ml-36" id="optionUser">
                   <p class="p-2 uppercase font-titulo border-b">{{auth()->user()->nombre }} {{auth()->user()->apellidos}}</p>
                   <ul class="text-left border rounded">
@@ -55,8 +61,7 @@
                         
             
         @else
-        <a href="{{route('login')}}" class="nav-items"><i class="fas fa-user text-xl mr-2"></i>Login</a>
-        {{-- <a href="{{route('registro')}}" class="nav-items"><i class="fas fa-wrench text-xl mr-2"></i>Registro</a> --}}
+        <a href="{{route('login')}}" class="nav-items"><i class="fas fa-user text-xl mr-2"></i>Mi Cuenta</a>
         @endif
         
 

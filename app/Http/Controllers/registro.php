@@ -11,6 +11,7 @@ class registro extends Controller{
     public function store(Request $request){    
        
          try {
+          $guestSessionId = $request->session()->getId();
           // Validación de los datos del formulario
           $this->validate($request,[
             'nombre' => 'required|string|min:3|max:50',
@@ -48,6 +49,7 @@ class registro extends Controller{
         //If que valida si el usuario se registro correctamente. Lo pasa a inisiar sesión si no manda un error. 
         if ($user) {
             auth()->login($user);
+            CartController::mergeGuestCartIntoUser($user->id, $guestSessionId);
             return redirect()->to('/');
         }else{
             return back()->with([
