@@ -7,14 +7,20 @@
         2xl:grid-cols-4;
 }
 
+/* Cada enlace ocupa por completo la celda del grid para que sus tarjetas
+   mantengan la misma altura, incluso si otro producto tiene más texto. */
+.cotenedorPadre > a {
+    @apply w-full h-full;
+}
+
 /*Contenedor de la imagen de la impresora*/
 .contenedorImagen {
-    @apply bg-white col-span-1 w-full mt-5 rounded-lg;
+    @apply bg-white col-span-1 w-full h-full mt-5 rounded-lg flex flex-col overflow-hidden;
 
 }
 
 .imgImpresoras {
-    @apply  w-full;
+    @apply w-full flex-none object-contain;
     height: 400px;
 }
 
@@ -33,9 +39,35 @@
     @apply text-xl font-titulo pl-5 pt-2
 }
 
+/* Se reserva espacio para hasta dos renglones del nombre/modelo. */
+.contenedorImagen .textoModelo {
+    box-sizing: border-box;
+    display: -webkit-box;
+    height: 3.75rem;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
 /*Texto de la descripsion*/
 .textoDescripcion {
     @apply text-left text-sm text-comentario font-descrip pl-5 pr-5 pt-2
+}
+
+/* Todas las tarjetas muestran el mismo espacio de descripción (cuatro líneas).
+   El texto que exceda ese espacio se oculta para evitar tarjetas desiguales. */
+.contenedorImagen .textoDescripcion {
+    box-sizing: border-box;
+    display: -webkit-box;
+    height: 6rem;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+/* Mantiene siempre el llamado a la acción alineado al borde inferior. */
+.contenedorImagen > span {
+    margin-top: auto;
 }
 
 .btnAñadirCarrito {
