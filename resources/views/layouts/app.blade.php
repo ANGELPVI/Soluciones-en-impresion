@@ -47,17 +47,40 @@
         </a>
 
         @if (auth()->check())
-            <button id="userMenu" class="relative m-3 w-full h-10 grid grid-cols-1 shadow  text-gray-200">
-              <div class="pl-2 pr-2 w-full bg-green-500 rounded-full"><p class="font-descrip uppercase text-3xl">{{auth()->user()->nombre[0] }}</p></div>
-              
-                <div class="z-40 absolute hidden top-10 col-span-2 w-40 bg-white text-gray-500 shadow-md mt-1 rounded -ml-36" id="optionUser">
-                  <p class="p-2 uppercase font-titulo border-b">{{auth()->user()->nombre }} {{auth()->user()->apellidos}}</p>
-                  <ul class="text-left border rounded">
+            <div class="menu-usuario">
+              <button id="userMenu" class="menu-usuario-disparador" type="button" aria-expanded="false" aria-controls="optionUser">
+                <span class="menu-usuario-avatar" aria-hidden="true">{{ auth()->user()->nombre[0] }}</span>
+                <span class="menu-usuario-nombre">{{ auth()->user()->nombre }}</span>
+                <i class="fas fa-chevron-down menu-usuario-flecha" aria-hidden="true"></i>
+                <span class="sr-only">Abrir menú de usuario</span>
+              </button>
+
+              <div class="menu-usuario-opciones hidden" id="optionUser" role="menu" aria-label="Opciones de usuario">
+                <div class="menu-usuario-encabezado">
+                  <span class="menu-usuario-avatar menu-usuario-avatar--grande" aria-hidden="true">{{ auth()->user()->nombre[0] }}</span>
+                  <div>
+                    <p class="menu-usuario-saludo">Mi cuenta</p>
+                    <p class="menu-usuario-nombre-completo">{{ auth()->user()->nombre }} {{ auth()->user()->apellidos }}</p>
+                  </div>
+                </div>
+                <div class="menu-usuario-separador"></div>
+                <div class="menu-usuario-opcion menu-usuario-opcion--desactivada" role="menuitem" aria-disabled="true">
+                  <i class="fas fa-cog" aria-hidden="true"></i>
+                  <span>Configuración</span>
+                </div>
+                <a class="menu-usuario-opcion menu-usuario-opcion--salir" href="{{ route('destroy') }}" role="menuitem">
+                  <i class="fas fa-right-from-bracket" aria-hidden="true"></i>
+                  <span>Salir</span>
+                </a>
+                {{-- Marcado anterior del menú, conservado temporalmente fuera del renderizado.
                     <li class="px-4 py-1 mt-3 hover:bg-gray-100 font-descrip">Configuración</li>
                     <li class="px-4 py-1 hover:bg-gray-100 font-descrip"><a href="{{route('destroy')}}">Salir</a></li> 
                   </ul>
                 </div>
             </button>
+                --}}
+              </div>
+            </div>
                         
             
         @else
