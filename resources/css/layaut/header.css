@@ -48,13 +48,13 @@ body {
 }
 
 .fondo-amarillo {
-    background-image: url(../../../public/img/Ellipse\ 3.svg);
+    background-image: url("../../../public/img/Ellipse 3.svg");
     background-repeat: no-repeat;
     background-position: 500px px;
 }
 
 .fondo-magenta {
-    background-image: url(../../../public/img/Ellipse\ 4.png);
+    background-image: url("../../../public/img/Ellipse 4.png");
     background-repeat: no-repeat;
     background-position: 900px -20px;
 }
