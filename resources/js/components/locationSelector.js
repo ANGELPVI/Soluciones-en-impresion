@@ -1,48 +1,65 @@
-//Funcion que rellena el select del los estados
-let select=document.getElementById('estados');
-let SelectMunicipios=document.getElementById('municipios');
-let municipios=[];
+// Selector reutilizable de estados y municipios para registro y perfil.
+const select = document.getElementById('estados');
+const selectMunicipios = document.getElementById('municipios');
 
-function estados(){
-   fetch('js/estados-municipios.json')
-   .then(respuesta => respuesta.json())
-   .then(respuesta=>{
-      municipios=respuesta
-      Object.entries(respuesta).forEach(([key]) => {
-      let option = document.createElement("option"); 
-      option.value =`${key}`;
-      option.text =`${key}`;
-      select && select.appendChild(option);
-      
-   })})
-      
-}
-estados();
-// Funcion que busca los municipios al seleccionar un estado
-select && select.addEventListener('change', function(){
-  SelectMunicipios.innerHTML=`<option>Seleccione un municipio</option>`
-    municipios[select.value].forEach(municipio=>{
-       SelectMunicipios.innerHTML+= `<option value="${municipio}">${municipio}</option>`
+if (select && selectMunicipios) {
+  const estadoGuardado = select.dataset.selected || '';
+  const municipioGuardado = selectMunicipios.dataset.selected || '';
+
+  const crearOpcion = (valor, texto, seleccionada = false) => {
+    const option = document.createElement('option');
+    option.value = valor;
+    option.textContent = texto;
+    option.selected = seleccionada;
+    return option;
+  };
+
+  const llenarMunicipios = (municipios, municipioSeleccionado = '') => {
+    selectMunicipios.innerHTML = '';
+    selectMunicipios.appendChild(crearOpcion('', 'Seleccione un municipio'));
+
+    municipios.forEach((municipio) => {
+      selectMunicipios.appendChild(crearOpcion(municipio, municipio, municipio === municipioSeleccionado));
+    });
+  };
+
+  const selectorScript = Array.from(document.scripts)
+    .find((script) => script.src.includes('locationSelector.js'));
+  const catalogoUrl = selectorScript
+    ? new URL('../estados-municipios.json', selectorScript.src)
+    : '/js/estados-municipios.json';
+
+  fetch(catalogoUrl)
+    .then((respuesta) => {
+      if (!respuesta.ok) throw new Error('No se pudo cargar el catálogo de ubicaciones.');
+      return respuesta.json();
     })
-  
-  
-})
+    .then((ubicaciones) => {
+      select.innerHTML = '';
+      select.appendChild(crearOpcion('', 'Selecciona un estado'));
 
+      Object.keys(ubicaciones).forEach((estado) => {
+        select.appendChild(crearOpcion(estado, estado, estado === estadoGuardado));
+      });
 
-/**Bon resposivo que muestra y oculta el menu*/
-const boton=document.querySelector('#navegation');
-const menu=document.querySelector('#menu'); 
+      llenarMunicipios(estadoGuardado && ubicaciones[estadoGuardado]
+        ? ubicaciones[estadoGuardado]
+        : [], municipioGuardado);
 
-boton.addEventListener('click',()=>{
-  menu.classList.toggle('hidden')
-})
+      select.addEventListener('change', () => {
+        llenarMunicipios(ubicaciones[select.value] || []);
+      });
+    })
+    .catch(() => {
+      selectMunicipios.innerHTML = '';
+      selectMunicipios.appendChild(crearOpcion('', 'No fue posible cargar municipios'));
+    });
+}
 
+// Botón responsivo que muestra y oculta el menú.
+const boton = document.querySelector('#navegation');
+const menu = document.querySelector('#menu');
 
-
-
-
- 
-
-
-
-
+if (boton && menu) {
+  boton.addEventListener('click', () => menu.classList.toggle('hidden'));
+}

@@ -64,10 +64,10 @@
                   </div>
                 </div>
                 <div class="menu-usuario-separador"></div>
-                <div class="menu-usuario-opcion menu-usuario-opcion--desactivada" role="menuitem" aria-disabled="true">
+                <a class="menu-usuario-opcion" href="{{ route('profile.edit') }}" role="menuitem">
                   <i class="fas fa-cog" aria-hidden="true"></i>
                   <span>Configuración</span>
-                </div>
+                </a>
                 <a class="menu-usuario-opcion menu-usuario-opcion--salir" href="{{ route('destroy') }}" role="menuitem">
                   <i class="fas fa-right-from-bracket" aria-hidden="true"></i>
                   <span>Salir</span>

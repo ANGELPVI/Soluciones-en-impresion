@@ -3,45 +3,58 @@ var __webpack_exports__ = {};
 /*!*****************************************************!*\
   !*** ./resources/js/components/locationSelector.js ***!
   \*****************************************************/
-function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
-//Funcion que rellena el select del los estados
+// Selector reutilizable de estados y municipios para registro y perfil.
 var select = document.getElementById('estados');
-var SelectMunicipios = document.getElementById('municipios');
-var municipios = [];
-function estados() {
-  fetch('js/estados-municipios.json').then(function (respuesta) {
-    return respuesta.json();
-  }).then(function (respuesta) {
-    municipios = respuesta;
-    Object.entries(respuesta).forEach(function (_ref) {
-      var _ref2 = _slicedToArray(_ref, 1),
-        key = _ref2[0];
-      var option = document.createElement("option");
-      option.value = "".concat(key);
-      option.text = "".concat(key);
-      select && select.appendChild(option);
+var selectMunicipios = document.getElementById('municipios');
+if (select && selectMunicipios) {
+  var estadoGuardado = select.dataset.selected || '';
+  var municipioGuardado = selectMunicipios.dataset.selected || '';
+  var crearOpcion = function crearOpcion(valor, texto) {
+    var seleccionada = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+    var option = document.createElement('option');
+    option.value = valor;
+    option.textContent = texto;
+    option.selected = seleccionada;
+    return option;
+  };
+  var llenarMunicipios = function llenarMunicipios(municipios) {
+    var municipioSeleccionado = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+    selectMunicipios.innerHTML = '';
+    selectMunicipios.appendChild(crearOpcion('', 'Seleccione un municipio'));
+    municipios.forEach(function (municipio) {
+      selectMunicipios.appendChild(crearOpcion(municipio, municipio, municipio === municipioSeleccionado));
     });
+  };
+  var selectorScript = Array.from(document.scripts).find(function (script) {
+    return script.src.includes('locationSelector.js');
+  });
+  var catalogoUrl = selectorScript ? new URL('../estados-municipios.json', selectorScript.src) : '/js/estados-municipios.json';
+  fetch(catalogoUrl).then(function (respuesta) {
+    if (!respuesta.ok) throw new Error('No se pudo cargar el catálogo de ubicaciones.');
+    return respuesta.json();
+  }).then(function (ubicaciones) {
+    select.innerHTML = '';
+    select.appendChild(crearOpcion('', 'Selecciona un estado'));
+    Object.keys(ubicaciones).forEach(function (estado) {
+      select.appendChild(crearOpcion(estado, estado, estado === estadoGuardado));
+    });
+    llenarMunicipios(estadoGuardado && ubicaciones[estadoGuardado] ? ubicaciones[estadoGuardado] : [], municipioGuardado);
+    select.addEventListener('change', function () {
+      llenarMunicipios(ubicaciones[select.value] || []);
+    });
+  })["catch"](function () {
+    selectMunicipios.innerHTML = '';
+    selectMunicipios.appendChild(crearOpcion('', 'No fue posible cargar municipios'));
   });
 }
-estados();
-// Funcion que busca los municipios al seleccionar un estado
-select && select.addEventListener('change', function () {
-  SelectMunicipios.innerHTML = "<option>Seleccione un municipio</option>";
-  municipios[select.value].forEach(function (municipio) {
-    SelectMunicipios.innerHTML += "<option value=\"".concat(municipio, "\">").concat(municipio, "</option>");
-  });
-});
 
-/**Bon resposivo que muestra y oculta el menu*/
+// Botón responsivo que muestra y oculta el menú.
 var boton = document.querySelector('#navegation');
 var menu = document.querySelector('#menu');
-boton.addEventListener('click', function () {
-  menu.classList.toggle('hidden');
-});
+if (boton && menu) {
+  boton.addEventListener('click', function () {
+    return menu.classList.toggle('hidden');
+  });
+}
 /******/ })()
 ;

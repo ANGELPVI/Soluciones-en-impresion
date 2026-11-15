@@ -7,6 +7,7 @@ use App\Http\Controllers\login;
 use GuzzleHttp\Middleware;
 use App\Http\Controllers\PasswordResetController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,9 @@ Route::get('/registro',[pageController::class,'registro'])->name('registro')->mi
 Route::post('/registro',[registro::class,'store'])->name('registro.store');
 Route::post('/revisarEmail',[registro::class,'revisarEmail'])->name('registro.revisarEmail');
 Route::post('/duplicacionDeTel',[registro::class,'duplicacionDeTel'])->name('duplicacionDeTel');
+
+Route::get('/perfil', [ProfileController::class, 'edit'])->name('profile.edit')->middleware('auth');
+Route::put('/perfil', [ProfileController::class, 'update'])->name('profile.update')->middleware('auth');
 
 Route::get('/nuestra-historia', function () {
     return view('pages.about.nuestra-historia');
